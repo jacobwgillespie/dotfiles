@@ -2,6 +2,10 @@
 
 Lots of great stuff's happening here - have fun!
 
+## Install
+
+To install, just run `rake install` - it can handle file conflicts and stuff
+
 ## Stuff to research
 
 * zsh config
