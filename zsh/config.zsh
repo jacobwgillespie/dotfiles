@@ -11,6 +11,9 @@ fpath=($ZSH/zsh/functions $fpath)
 
 autoload -U $ZSH/zsh/functions/*(:t)
 
+autoload -U compinit
+compinit
+
 HISTFILE=~/.zsh_history
 HISTSIZE=10000
 SAVEHIST=10000

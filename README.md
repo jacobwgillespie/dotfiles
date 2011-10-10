@@ -17,4 +17,8 @@ Lots of great stuff's happening here - have fun!
 
 ## credits
 
-* Rakefile - https://github.com/holman/dotfiles/blob/master/Rakefile
+* https://github.com/holman/dotfiles
+* https://github.com/ryanb/dotfiles
+* https://github.com/mathiasbynens/dotfiles
+* https://github.com/thoughtbot/dotfiles - tmux.conf
+* https://github.com/twerth/dotfiles - bookmarks, rstakeout
