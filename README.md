@@ -22,3 +22,4 @@ Lots of great stuff's happening here - have fun!
 * https://github.com/mathiasbynens/dotfiles
 * https://github.com/thoughtbot/dotfiles - tmux.conf
 * https://github.com/twerth/dotfiles - bookmarks, rstakeout
+* **LOTS** of bits and pieces from the 100s of dotfile repos on GitHub
