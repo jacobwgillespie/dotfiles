@@ -10,16 +10,12 @@ IRB.conf[:PROMPT_MODE] = :SIMPLE
 
 IRB.conf[:AUTO_INDENT] = true
 
-%w[looksee wirble hirb pp].each do |gem|
+%w[pp].each do |gem|
   begin
     require gem
   rescue LoadError
   end
 end
-
-Wirble.init
-Wirble.colorize
-Hirb.enable
 
 class Object
   # list methods which aren't in superclass

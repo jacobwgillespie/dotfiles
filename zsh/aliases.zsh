@@ -50,6 +50,7 @@ alias p="cd ~/Projects"
 alias g="git"
 alias v="vim"
 alias m="mate ."
+alias u="ssh"
 
 # File size
 alias fs="stat -f \"%z bytes\""
@@ -61,8 +62,8 @@ alias rot13='tr a-zA-Z n-za-mN-ZA-M'
 alias emptytrash="rm -rfv ~/.Trash"
 
 # Show/hide hidden files in Finder
-alias show="defaults write com.apple.Finder AppleShowAllFiles -bool true && killall Finder"
-alias hide="defaults write com.apple.Finder AppleShowAllFiles -bool false && killall Finder"
+alias showhidden="defaults write com.apple.Finder AppleShowAllFiles -bool true && killall Finder"
+alias hidehidden="defaults write com.apple.Finder AppleShowAllFiles -bool false && killall Finder"
 
 # Hide/show all desktop icons (useful when presenting)
 alias hidedesktop="defaults write com.apple.finder CreateDesktop -bool false && killall Finder"
