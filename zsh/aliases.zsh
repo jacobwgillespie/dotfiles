@@ -43,6 +43,12 @@ alias flush="dscacheutil -flushcache"
 alias sniff="sudo ngrep -d 'en1' -t '^(GET|POST) ' 'tcp and port 80'"
 alias httpdump="sudo tcpdump -i en1 -n -s 0 -w - | grep -a -o -E \"Host\: .*|GET \/.*\""
 
+# Canonical hex dump; some systems have this symlinked
+type hd > /dev/null || alias hd="hexdump -C"
+
+# OS X has no `md5sum`, so use `md5` as a fallback
+type md5sum > /dev/null || alias md5sum="md5"
+
 # Start an HTTP server from a directory
 alias server="open http://localhost:8080/ && python -m SimpleHTTPServer 8080"
 
@@ -56,6 +62,9 @@ alias g="git"
 alias v="vim"
 alias m="mate ."
 alias u="ssh"
+
+# Recursively delete `.DS_Store` files
+alias cleanup="find . -type f -name '*.DS_Store' -ls -delete"
 
 # File size
 alias fs="stat -f \"%z bytes\""
@@ -73,6 +82,9 @@ alias hidehidden="defaults write com.apple.Finder AppleShowAllFiles -bool false 
 # Hide/show all desktop icons (useful when presenting)
 alias hidedesktop="defaults write com.apple.finder CreateDesktop -bool false && killall Finder"
 alias showdesktop="defaults write com.apple.finder CreateDesktop -bool true && killall Finder"
+
+# URL-encode strings
+alias urlencode='python -c "import sys, urllib as ul; print ul.quote_plus(sys.argv[1]);"'
 
 # Disable Spotlight
 alias spotoff="sudo mdutil -a -i off"
