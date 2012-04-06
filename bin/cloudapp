@@ -3,7 +3,7 @@
 # cloudapp
 # Zach Holman / @holman
 #
-# Uploads a file from the command line to CloudApp, drops it into your 
+# Uploads a file from the command line to CloudApp, drops it into your
 # clipboard (on a Mac, at least).
 #
 # Example:
@@ -20,13 +20,15 @@
 #   password
 
 require 'rubygems'
-begin
-  require 'cloudapp_api'
-rescue LoadError
-  puts "You need to install cloudapp_api: gem install cloudapp_api"
-  exit!(1)
-end
 
+['json', 'cloudapp_api'].each do |gem|
+  begin
+    require gem
+  rescue LoadError
+    puts "You need to install #{gem}: gem install #{gem}"
+    exit!(1)
+  end
+end
 
 config_file = "#{ENV['HOME']}/.cloudapp"
 unless File.exist?(config_file)
@@ -37,20 +39,24 @@ end
 
 email,password = File.read(config_file).split("\n")
 
-class HTTParty::Response
-  # Apparently HTTPOK.ok? IS NOT OKAY WTFFFFFFFFFFUUUUUUUUUUUUUU
-  # LETS MONKEY PATCH IT I FEEL OKAY ABOUT IT
-  def ok? ; true end
+if ARGV[0].nil?
+   puts "You need to specify a file to upload."
+   exit!(1)
 end
 
-CloudApp.authenticate(email,password)
-url = CloudApp::Item.create(:upload, {:file => ARGV[0]}).url
+urls = []
+ARGV.each do |x|
+  CloudApp.authenticate(email,password)
+  puts "Attempting to upload #{x}"
+  url = CloudApp::Item.create(:upload, {:file => x}).url
 
-# Say it for good measure.
-puts "Uploaded to #{url}."
+  # Say it for good measure.
+  puts "Uploaded #{x} to #{url}"
 
-# Get the embed link.
-url = "#{url}/#{ARGV[0].split('/').last}"
+  # Get the embed link.
+  url = "#{url}/#{ARGV[0].split('/').last}"
+  urls << url
+end
 
 # Copy it to your (Mac's) clipboard.
-`echo '#{url}' | tr -d "\n" | pbcopy`
+`echo '#{urls.join(',')}' | tr -d "\n" | pbcopy`

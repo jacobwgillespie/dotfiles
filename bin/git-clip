@@ -1,0 +1,10 @@
+#!/bin/bash
+
+branch=`git branch 2>/dev/null| grep -e ^* | tr -d '* '`
+# Get a log of all commits that are in $branch but not on edge
+commits=`git log origin/master..$branch --pretty=format:'(commit:%h) ── %s'`
+
+clip="Branch $branch
+$commits"
+
+echo "$clip" | xclip

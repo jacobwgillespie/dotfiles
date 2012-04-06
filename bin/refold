@@ -1,0 +1,34 @@
+#!/usr/bin/env ruby
+
+max_length = 80
+
+
+words = []
+output = []
+
+def spew(output)
+  puts output.join(' ') unless output.empty?
+end
+
+while line = gets
+  line.strip!
+  if line.empty?
+    spew output
+    output = []
+    puts ''
+    next
+  end
+
+  words += line.split /\s+/
+
+  while !words.empty?
+    output << words.shift
+    if output.size - 1 + output.map(&:length).inject(0, &:+) > max_length
+      words.unshift output.pop unless output.size == 1
+      spew output
+      output = []
+    end
+  end
+end
+
+spew output

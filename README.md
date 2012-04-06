@@ -6,6 +6,8 @@ Lots of great stuff's happening here - have fun!
 
 To install, just run `rake install` - it can handle file conflicts and stuff
 
+`brew install coreutils`
+
 ## Stuff to research
 
 * zsh config

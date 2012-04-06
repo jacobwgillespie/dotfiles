@@ -1,0 +1,4 @@
+#!/bin/bash
+echo -n '\['
+color.real $1
+echo -n '\]'

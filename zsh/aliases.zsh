@@ -6,14 +6,11 @@ export SSHS="jacobwg.com@s142514.gridserver.com"
 alias sshs="ssh $SSHS"
 alias vps="ssh jacobwg.xen.prgmr.com"
 
-# cd
-alias ..='cd ..'
-
 # ls
 alias ls="ls -F"
 alias l="ls -lAh"
 alias ll="ls -l"
-alias la='ls -A'
+alias la="ls -Gla"
 
 # Easier navigation: .., ..., ~ and -
 alias ..="cd .."
@@ -21,14 +18,20 @@ alias ...="cd ../.."
 alias ~="cd ~" # `cd` is probably faster to type though
 alias -- -="cd -"
 
-# List all files colorized in long format, including dot files
-alias la="ls -Gla"
-
 # List only directories
 alias lsd='ls -l | grep "^d"'
 
+# Alias % for pasting from the web
+alias %=' '
+
 # Undo a `git push`
 alias undopush="git push -f origin HEAD^:master"
+
+# Enable aliases to be sudo'ed
+alias sudo="sudo "
+
+# Update OS X and Homebrew
+alias update='sudo softwareupdate -i -a; brew update'
 
 # IP addresses
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"

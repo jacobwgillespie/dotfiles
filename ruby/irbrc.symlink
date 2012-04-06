@@ -10,19 +10,12 @@ IRB.conf[:PROMPT_MODE] = :SIMPLE
 
 IRB.conf[:AUTO_INDENT] = true
 
-%w[pp].each do |gem|
-  begin
-    require gem
-  rescue LoadError
-  end
-end
-
 class Object
   # list methods which aren't in superclass
   def local_methods(obj = self)
     (obj.methods - obj.class.superclass.instance_methods).sort
   end
-  
+
   # print documentation
   #
   #   ri 'Array#pop'
@@ -39,7 +32,7 @@ class Object
 end
 
 def me
-  User.find_by_login(`echo $USER`.strip)
+  User.find_by_login(ENV['USER'].strip)
 end
 
 def r
