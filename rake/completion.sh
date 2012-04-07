@@ -54,4 +54,5 @@ function _rakecomplete() {
   return 0
 }
 
-complete -o default -o nospace -F _rakecomplete rake
+# TODO: fix this
+# complete -o default -o nospace -F _rakecomplete rake

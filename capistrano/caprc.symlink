@@ -1,0 +1,2 @@
+# automatically colorize capistrano
+require 'capistrano_colors'
