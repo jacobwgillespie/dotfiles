@@ -5,6 +5,7 @@ alias reload!='. ~/.zshrc'
 export SSHS="jacobwg.com@s142514.gridserver.com"
 alias sshs="ssh $SSHS"
 alias vps="ssh jacobwg.xen.prgmr.com"
+alias gbfc="ssh gbfcorg@gbfc.org"
 
 # ls
 alias ls="ls -F"
