@@ -19,6 +19,9 @@ alias ...="cd ../.."
 alias ~="cd ~" # `cd` is probably faster to type though
 alias -- -="cd -"
 
+# Speedtest
+alias speedtest="wget --output-document=/dev/null http://speedtest.wdc01.softlayer.com/downloads/test500.zip"
+
 # List only directories
 alias lsd='ls -l | grep "^d"'
 

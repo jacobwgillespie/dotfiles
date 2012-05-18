@@ -185,6 +185,9 @@ defaults write com.apple.loginwindow LoginwindowLaunchesRelaunchApps -bool false
 # Enable Dashboard dev mode (allows keeping widgets on the desktop)
 defaults write com.apple.dashboard devmode -bool true
 
+# Enable right-click corner
+defaults -currentHost write -g com.apple.trackpad.enableSecondaryClick -bool YES
+
 # Reset Launchpad
 [ -e ~/Library/Application\ Support/Dock/*.db ] && rm ~/Library/Application\ Support/Dock/*.db
 
