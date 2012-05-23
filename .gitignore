@@ -1,5 +1,5 @@
-private/*.zsh
-private/*.config
+private/*
+!private/README.md
 vim/vim.symlink/.netrwhist
 git/gitconfig.symlink
 .rake_t_cache
