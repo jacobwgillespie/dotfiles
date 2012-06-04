@@ -54,6 +54,7 @@ rvm_prompt(){
 # of a motivation to clear out the list.
 todo(){
   #if $(which todo.sh &> /dev/null)
+  command -v todo.sh >/dev/null 2>&1 || return
   if $(command -v todo.sh >/dev/null 2>&1)
   then
     num=$(echo $(todo.sh ls +next | wc -l))
