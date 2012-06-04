@@ -53,7 +53,8 @@ rvm_prompt(){
 # command line. I filter it to only count those tagged as "+next", so it's more
 # of a motivation to clear out the list.
 todo(){
-  if $(which todo.sh &> /dev/null)
+  #if $(which todo.sh &> /dev/null)
+  if $(command -v todo.sh >/dev/null 2>&1)
   then
     num=$(echo $(todo.sh ls +next | wc -l))
     let todos=num-2
