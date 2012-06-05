@@ -29,6 +29,7 @@ alias lsd='ls -l | grep "^d"'
 
 # Alias % for pasting from the web
 alias %=' '
+alias \$=' '
 
 # Undo a `git push`
 alias undopush="git push -f origin HEAD^:master"
@@ -65,8 +66,9 @@ alias server="open http://localhost:8080/ && python -m SimpleHTTPServer 8080"
 alias c="tr -d '\n' | pbcopy"
 
 # Shortcuts
-alias d="cd ~/Dropbox"
-alias p="cd ~/Projects"
+function d() { cd ~/Dropbox/$1 }
+function p() { cd ~/Projects/$1 }
+
 alias g="git"
 alias v="vim"
 alias m="mate ."
