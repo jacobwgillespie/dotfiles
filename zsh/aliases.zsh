@@ -7,6 +7,7 @@ alias sshs="ssh $SSHS"
 alias vps="ssh jacobwg.xen.prgmr.com"
 alias gbfc="ssh gbfcorg@gbfc.org"
 alias cs1="ssh jwg093020@cs1.utdallas.edu"
+alias cso="cs1 -L 1521/csoracle.utdallas.edu/1521"
 
 # ls
 alias ls="ls -F"
