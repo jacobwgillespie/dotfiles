@@ -1,0 +1,7 @@
+#!/bin/bash
+
+ln -s ruby/rbenv.symlink ~/.rbenv
+mkdir -p ~/.rbenv/plugins
+cd ~/.rbenv/plugins
+git clone ~/.rbenv/plugins
+echo "rbenv setup, please install ruby"
