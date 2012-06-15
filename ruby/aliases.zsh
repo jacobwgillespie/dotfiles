@@ -1,5 +1,5 @@
-# Now using ruby-1.9.3-p125
-alias r='rvm use 1.9.3-p125'
+# Now using ruby-1.9.3-p194
+alias r='rbenv local 1.9.3-p194'
 
 # Looks to be from old Rails 2
 # alias sc='script/console'

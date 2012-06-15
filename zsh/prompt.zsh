@@ -40,12 +40,12 @@ need_push () {
   fi
 }
 
-rvm_prompt(){
-  if $(which rvm &> /dev/null)
+rb_prompt(){
+  if $(which rbenv &> /dev/null)
   then
-	  echo "%{$fg_bold[yellow]%}$(rvm tools identifier)%{$reset_color%}"
-	else
-	  echo ""
+    echo "%{$fg_bold[yellow]%}$(rbenv version | awk '{print $1}')%{$reset_color%}"
+  else
+    echo ""
   fi
 }
 
@@ -53,9 +53,7 @@ rvm_prompt(){
 # command line. I filter it to only count those tagged as "+next", so it's more
 # of a motivation to clear out the list.
 todo(){
-  #if $(which todo.sh &> /dev/null)
-  return
-  if $(command -v todo.sh >/dev/null 2>&1)
+  if $(which todo.sh &> /dev/null)
   then
     num=$(echo $(todo.sh ls +next | wc -l))
     let todos=num-2
@@ -78,9 +76,9 @@ color_user(){
     echo "%{$fg_bold[yellow]%}$USER%{$reset_color%}"
 }
 
-export PROMPT=$'\n$(color_user) in $(directory_name) $(git_dirty)$(need_push)\n⚡ '
+export PROMPT=$'\n$(rb_prompt) in $(directory_name) $(git_dirty)$(need_push)\n› '
 set_prompt () {
-  #export RPROMPT="%{$fg_bold[cyan]%}$(todo)%{$reset_color%}"
+  export RPROMPT="%{$fg_bold[cyan]%}$(todo)%{$reset_color%}"
 }
 
 precmd() {

@@ -2,9 +2,20 @@
 
 Lots of great stuff's happening here - have fun!
 
+Right now, it is tested working on Mac OS X and mostly not broken on Linux.
+
 ## Install
 
-To install, just run `rake install` - it can handle file conflicts and stuff
+```
+$ cd ~
+$ git clone https://github.com/jacobwg/dotfiles.git .dotfiles
+$ cd .dotfiles
+$ rake install
+```
+
+If you don't have ruby yet, run `./bootstrap` before `rake install`.
+
+Mac Stuff:
 
 `brew install coreutils`
 

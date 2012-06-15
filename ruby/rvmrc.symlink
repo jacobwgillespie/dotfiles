@@ -1,2 +1,0 @@
-# auto-reload rvm with message (2 for reload without message)
-rvm_auto_reload_flag=1
