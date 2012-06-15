@@ -1,5 +1,23 @@
 require 'rake'
 
+desc "Install rbenv plugins."
+task :rbenv do
+  rbenv_plugins = Dir.glob('*/**{.rbenv}')
+  system "mkdir -p ~/.rbenv/plugins"
+  rbenv_plugins.each do |plugins|
+    File.open(plugins, 'r') do |file|
+      file.each_line do |line|
+        next if line.match /^#/
+        parts = line.split /\s/
+        plugin = parts.first
+        repo = parts.last
+        puts "Installing rbenv plugin #{plugin} from #{repo}"
+        system "git clone #{repo} ~/.rbenv/plugins/#{plugin}"
+      end
+    end
+  end
+end
+
 desc "Hook our dotfiles into system-standard positions."
 task :install do
   linkables = Dir.glob('*/**{.symlink}')
@@ -32,6 +50,7 @@ task :install do
     end
     `ln -s "$PWD/#{linkable}" "#{target}"`
   end
+
 end
 
 desc "Remove symlinks created during installation and attempt to restore backups"
