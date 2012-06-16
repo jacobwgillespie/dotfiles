@@ -1,0 +1,73 @@
+#!/bin/sh
+## Usage: git track
+##        git track <branch>
+## Point the current local branch at <branch> for the purpose
+## of merge tracking, pull, and status features. With no <branch>,
+## write the currently tracked branch to standard output.
+##
+## If you have git's bash-completion support enabled, add this:
+## complete -o default -o nospace -F _git_checkout git-track
+set -e
+
+# bail out with message to stderr and exit status 1
+die() {
+    echo "$(basename $0):" "$@" 1>&2
+    exit 1
+}
+
+# deal with argv
+case "$1" in
+  --help)
+      grep '^##' "$0" | cut -c4-
+      exit
+      ;;
+  "")
+      remote=
+      merge=
+      ;;
+  */*)
+      git rev-parse "$1" >/dev/null
+      remote=$(echo "$1" | sed 's@^\(.*\)/.*@\1@')
+      merge=$(echo "$1"  | sed 's@^.*/\(.*\)@\1@')
+      ;;
+  *)
+      git rev-parse "$1" >/dev/null
+      remote=
+      merge="$1"
+      ;;
+esac
+
+# get the current branch in refs/heads/<branch> form
+ref=$(git symbolic-ref -q HEAD)
+test -n "$ref" ||
+die "you're not on a branch"
+
+# just the branch name please
+branch=$(echo "$ref" | sed 's@^refs/heads/@@')
+test -n "$branch" ||
+die "you're in a weird place; get on a local branch"
+
+# if we don't have a target to track, show the
+# currently tracked stuff.
+test -z "$merge" && {
+    remote=$(git config --get "branch.$branch.remote" || true)
+    merge=$(
+        (git config --get "branch.$branch.merge") |
+        sed 's@refs/heads/@@'
+    )
+    if test -n "$remote" -a -n "$merge"; then
+        echo "$branch -> $remote/$merge"
+    elif test -n "$merge"; then
+        echo "$branch -> $merge"
+    else
+        echo "$branch is not tracking anything"
+    fi
+    exit 0
+}
+
+# set the remote if a full remote/branch ref was given
+test -n "$remote" &&
+git config "branch.$branch.remote" "$remote"
+
+# set the ref in said remote we should track
+git config "branch.$branch.merge" "refs/heads/$merge"

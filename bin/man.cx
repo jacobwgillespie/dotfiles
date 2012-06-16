@@ -12,7 +12,11 @@ set -e
 
 # Command to use when opening URLs. Use the first one found on
 # PATH, unless the BROWSER environment variable is already set.
-: ${BROWSER:=$(command -v xdg-open open firefox | head -1)}
+: ${BROWSER:=$(
+    for c in xdg-open open firefox
+    do command -v $c && break
+    done
+  )}
 
 # The man.cx root URL
 MANCX_URL="http://man.cx"
@@ -40,8 +44,7 @@ esac
 
 # Run over remaining arguments and open in BROWSER.
 for page in "$@"
-do
-    $BROWSER "${MANCX_URL}/${page}${section}"
+do $BROWSER "${MANCX_URL}/${page}${section}"
 done
 
 # Copyright (c) 2010 by Ryan Tomayko <http://tomayko.com/about>

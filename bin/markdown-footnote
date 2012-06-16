@@ -1,0 +1,146 @@
+#!/usr/bin/env ruby
+
+class Link
+
+  attr_accessor :text, :url, :title, :number
+
+  def initialize(text, url, title=nil, number=nil)
+    @text = text
+    @url = url
+    @title = title
+    @number = number
+  end
+
+end
+
+class Links
+
+  include Enumerable
+
+  def to_a
+    @ar ||= []
+  end
+
+  def each(&b)
+    to_a.each(&b)
+  end
+
+  def find(url=nil, &b)
+    if url
+      to_a.find{|l| l.url = url}
+    else
+      to_a.find(&b)
+    end
+  end
+
+  def [](url)
+    find(url)
+  end
+
+  def add_or_update(text, url)
+    if link = find(url)
+      link.text = text || link.text
+      link.title = title || link.title
+    else
+      link = Link.new(text, url, title, to_a.length)
+      to_a << link
+    end
+    link
+  end
+
+end
+
+def nested_brackets_regexp
+  /[^\]]*/
+end
+
+def inline_links_regexp
+  %r{
+   (                                       # wrap whole match in $1
+     \[ (#{nested_brackets_regexp}) \]     # link text in $2
+     \(
+        [ \t]*
+        <?(.*?)>?                          # href = $3
+        [ \t]*
+        (                                  # $4
+          (['"])                           # quote char = $5
+          (.*?)                            # title = $6
+          \5                               # match quote
+        )?                                 # title is optional
+      \)
+    )
+  }mx
+end
+
+def reference_links_regexp
+  %r{
+    (					                   # wrap whole match in $1
+      \[ (#{nested_brackets_regexp}) \]    # link text in $2
+
+      [ ]?                                 # one optional space
+      (?:\n[ ]*)?                          # one optional newline followed by spaces
+
+      \[
+        (\d*?)                              # id = $3
+      \]
+    )
+  }mx
+end
+
+def numbered_footnotes_regexp
+  %r{
+     ^\s*\[(\d+)\]:	           # id = $1
+       [ \t]*
+       \n?                         # maybe *one* newline
+       [ \t]*
+     <?(\S+?)>?                    # url = $2
+       [ \t]*
+       \n?                         # maybe one newline
+       [ \t]*
+     (?:
+     	["(]
+     	(.+?)                      # title = $3
+     	[")]
+     	[ \t]*
+     )?	                           # title is optional
+     (?:\n+|\Z)
+  }mx
+end
+
+# slurp in everything
+buf = ARGF.inject(''){|buf,line| buf << line}
+
+number, links = 0, []
+
+buf.gsub! /#{inline_links_regexp}|#{reference_links_regexp}/mx do |match|
+  number += 1
+  match = Regexp.last_match
+  if match.captures.length == 3
+    links << [ number, $2, nil,  $3, nil ]         # number, text, url, id, title
+  else
+    links << [ number, $2,  $3, nil, $6 ]          # number, text, url, id, title
+  end
+  n, text, url, id, title = links.last
+  "[#{text}][#{number}]"
+end
+
+buf.gsub! numbered_footnotes_regexp do |match|
+  match = Regexp.last_match
+  if link = links.find{|n,t,u,i,l| i == $1}
+    link[2] = $2
+    link[4] = $3
+  else
+    number += 1
+    links << [ number, nil, $2, $1, $3 ]
+  end
+  ""
+end
+
+puts buf
+
+links.each do |n,t,u,i,l|
+  s = ' ' * n.to_s.length
+  puts "[#{n}]: #{u}"
+  puts " #{s}   \"#{l}\"" unless l.nil?
+  puts
+end

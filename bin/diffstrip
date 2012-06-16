@@ -1,0 +1,10 @@
+#!/bin/sh
+# Usage: diffstrip <path-prefix>
+# Strip <path-prefix> from the beginning of all paths in the diff.
+
+sed "
+    s|^diff --git \(.\)/$1/\(.*\) \(.\)/$1/\(.*\)$|diff --git \1/\2 \3/\4|
+
+    s|^--- \(.\)/$1/\(.*\)$|--- \1/\2|
+    s|^+++ \(.\)/$1/\(.*\)$|+++ \1/\2|
+    "

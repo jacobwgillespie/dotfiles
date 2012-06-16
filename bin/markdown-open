@@ -1,0 +1,64 @@
+#!/bin/bash
+
+function debug() {
+  echo "$@" 1>&2
+}
+
+f=$1
+if [ -z "$f" ] || [ "$f" = "-" ] ; then
+  f=/tmp/markdown-$$.txt
+  cat > $f
+  trap "rm -f $f" 0
+fi
+
+bn=$(basename $f | sed 's:^\(.*\)\.txt$:\1:')
+html_file="$(dirname $f)/$bn-markdown.html"
+cat <<EOF > $html_file
+<html>
+  <head>
+  <title>$f</title>
+  <style type="text/css">
+    body {
+      line-height: 1.7;
+      text-align:  center;
+      font-size:   125%;
+    }
+    div#container {
+      max-width:  42em;
+      margin:     4em auto;
+      text-align: left;
+    }
+    hr {
+      border: 0px;
+      background-color: #aaa;
+      height: 1px;
+      margin-top: 18pt;
+      margin-bottom: 18pt;
+    }
+    pre {
+      border: 1px solid #aaa;
+      padding: 2px;
+      background: #eee;
+      line-height: 100%;
+    }
+    code { color: #070 }
+    pre code { color: #000 }
+    blockquote { font-style: normal ; color: #333 }
+    h1 { text-align: center }
+  </style>
+  <body>
+    <div id="container">
+EOF
+cat $f | markdown | smarty >> $html_file
+cat <<EOF >> $html_file
+    </div>
+  </body>
+</html>
+EOF
+rslt=$?
+[ $rslt != 0 ] && exit $rslt
+open $html_file
+exit
+
+# eventually:
+tilt -y tomayko.erb "$@" | bpipe

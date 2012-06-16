@@ -1,0 +1,9 @@
+#!/usr/bin/env ruby
+
+base_dir = ARGV[0] || '.'
+`find #{base_dir} -name *\.orig`.each do |original|
+  original, current = original.strip, original.sub(/\.orig\n$/m, '')
+  next unless File.exist?(current)
+  STDERR.puts "diff -u #{original} #{current}"
+  system "diff", "-u", original, current
+end

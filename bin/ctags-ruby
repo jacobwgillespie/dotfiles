@@ -1,0 +1,14 @@
+#!/bin/sh
+# Usage: ctags-ruby [<options>]
+# Build tags file in current directory. Any <options> provided are passed to
+# ctags. Requires exuberant ctags.
+set -e
+
+ctags --version >/dev/null 2>&1 || {
+    echo "ctags not found or too old." 1>&2
+    exit 1
+}
+
+RUBYALIAS='/.*alias(_method)?[[:space:]]+:([[:alnum:]_=!?]+),?[[:space:]]+:([[:alnum:]_=!]+)/\\2/f/'
+ctags -R --tag-relative=yes --totals=yes \
+    --extra=+f --fields=+iaS --regex-ruby="$RUBYALIAS" "$@"
