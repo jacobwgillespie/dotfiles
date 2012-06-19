@@ -79,7 +79,7 @@ color_user(){
 ssh_host() {
   if [[ -n "$SSH_CONNECTION" ]]
   then
-    echo "@%{$fg_bold[red]}$HOST%{$reset_color%}"
+    echo " %{$fg_bold[green]%}@%{$reset_color%} %{$fg_bold[red]}$HOST%{$reset_color%}"
   fi
 }
 
