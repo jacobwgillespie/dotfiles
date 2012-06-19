@@ -73,12 +73,7 @@ directory_name(){
 }
 
 color_user(){
-  if [[ -n "$SSH_CONNECTION" ]]
-  then
-    echo "%{$fg_bold[green]%}$USER@$HOST%{$reset_color%}"
-  else
-    echo "%{$fg_bold[green]%}$USER%{$reset_color%}"
-  fi
+  echo "%{$fg_bold[green]%}$USER@$HOST%{$reset_color%}"
 }
 
 export PROMPT=$'\n$(color_user) ($(rb_prompt)) in $(directory_name) $(git_dirty)$(need_push)\n› '
