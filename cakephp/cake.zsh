@@ -1,0 +1,1 @@
+alias cake="./Console/cake"
