@@ -10,6 +10,7 @@ alias cs1="ssh jwg093020@cs1.utdallas.edu"
 alias cso="cs1 -L 1521/csoracle.utdallas.edu/1521"
 alias mc="ssh Minecraft@mc.jacobwg.com"
 alias mcs="ssh root@mc.jacobwg.com"
+alias os="ssh jwg093020@rajgir.utdallas.edu"
 
 # ls
 alias ls="ls -F"
