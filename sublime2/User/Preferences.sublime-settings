@@ -1,5 +1,9 @@
-// Place user-specific overrides in this file, to ensure they're preserved
-// when upgrading
 {
-  "theme": "Soda Dark.sublime-theme"
+	"color_scheme": "Packages/Color Scheme - Default/Solarized (Light).tmTheme",
+	"font_size": 12.0,
+	"theme": "Soda Light.sublime-theme",
+	"tab_size": 2,
+	"translate_tabs_to_spaces": true,
+  "trim_trailing_white_space_on_save": true,
+  "draw_white_space": "all"
 }

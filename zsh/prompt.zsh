@@ -88,7 +88,7 @@ set_prompt () {
 precmd() {
   title "zsh" "%m" "%55<...<%~"
   set_prompt
-  print -rP $'\n$(color_user) ($(rb_prompt)) in $(directory_name) $(git_dirty)$(need_push)'
+  print -rP $'\n$(color_user) $(rb_prompt) in $(directory_name) $(git_dirty)$(need_push)'
 }
 
 export PROMPT="› "
