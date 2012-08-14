@@ -5,4 +5,4 @@ export PATH="/opt/local/bin:/opt/local/sbin:$HOME/.dotfiles/bin:$HOME/bin:$HOME/
 export PATH="$HOME/Projects/jacobwg/mediatools/bin:$PATH"
 
 # TODO: add test for MAMP
-export PATH="/Applications/MAMP/bin/php/php5.3.6/bin:$PATH"
+export PATH="/Applications/MAMP/bin/php/php5.4.4/bin:$PATH"

@@ -1,7 +1,7 @@
-# Bashmarks is a simple set of bash functions that allows you to bookmark 
+# Bashmarks is a simple set of bash functions that allows you to bookmark
 # folders in the command-line.
-# 
-# To install, put bashmarks.sh somewhere such as ~/bin, then source it 
+#
+# To install, put bashmarks.sh somewhere such as ~/bin, then source it
 # in your .bashrc file (or other bash startup file):
 #   source ~/bin/bashmarks.sh
 #
@@ -15,11 +15,13 @@
 #
 # To see a list of bookmarks:
 #   bookmarksshow
-# 
+#
 # Tab completion works, to go to the shoobie bookmark:
 #   go sho[tab]
-# 
+#
 # Your bookmarks are stored in the ~/.bookmarks file
+
+return;
 
 bookmarks_file=~/.bookmarks
 
@@ -44,7 +46,7 @@ bookmark (){
       echo "Bookmark already existed"
     fi
   fi
-} 
+}
 
 # Show a list of the bookmarks
 bookmarksshow (){
@@ -64,6 +66,6 @@ go(){
     echo '  bookmark foo'
   else
     dir=`echo "$bookmark" | cut -d\| -f1`
-    cd "$dir" 
+    cd "$dir"
   fi
 }
