@@ -2,18 +2,7 @@
 
 # TODO: make this a lot safer and more user-friendly
 # TODO: make this install necessary stuff for ruby compiles
-
-cd ~/.dotfiles
-git submodule init
-git submodule update
-ln -s ~/.dotfiles/ruby/rbenv.symlink ~/.rbenv
-mkdir -p ~/.rbenv/plugins
-cd ~/.rbenv/plugins
-git clone https://github.com/sstephenson/ruby-build.git
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
-echo "rbenv setup, please install ruby like: rbenv install 1.9.3-p194"
-echo "Once ruby is installed, run:"
+echo "After you set up rbenv manually and add the ruby-build plugin:"
+echo "  $ rbenv install 1.9.3-p194"
 echo "  $ rbenv rehash"
 echo "  $ rbenv global 1.9.3-p194"
-exec $SHELL
