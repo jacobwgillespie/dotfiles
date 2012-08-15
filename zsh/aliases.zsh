@@ -14,11 +14,18 @@ alias cso="cs1 -L 1521/csoracle.utdallas.edu/1521"
 #alias ll="ls -l"
 #alias la="ls -Gla"
 
-# Easier navigation: .., ..., ~ and -
+# Easier navigation: .., ..., ...., ....., ~ and -
 alias ..="cd .."
 alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
 alias ~="cd ~" # `cd` is probably faster to type though
 alias -- -="cd -"
+
+# Shortcuts
+alias d="cd ~/Dropbox"
+#alias h="history"  # using h as cd ~/* completion
+
 
 # Speedtest
 alias speedtest="wget --output-document=/dev/null http://speedtest.wdc01.softlayer.com/downloads/test500.zip"
@@ -30,61 +37,61 @@ alias lsd='ls -l | grep "^d"'
 alias %=' '
 alias \$=' '
 
-# Enable aliases to be sudo'ed
-alias sudo="sudo "
+# Enable aliases to be sudo’ed
+alias sudo='sudo '
 
-# Update OS X and Homebrew
-alias update='sudo softwareupdate -i -a'
+# Get OS X Software Updates, and update Homebrew, npm, and their installed packages
+alias update='sudo softwareupdate -i -a; brew update; brew upgrade; npm update npm -g; npm update -g'
 
 # IP addresses
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
 alias localip="ipconfig getifaddr en1"
-alias ips="ifconfig -a | perl -nle'/(\d+\.\d+\.\d+\.\d+)/ && print $1'"
+alias ips="ifconfig -a | grep -o 'inet6\? \(\([0-9]\+\.[0-9]\+\.[0-9]\+\.[0-9]\+\)\|[a-fA-F0-9:]\+\)' | sed -e 's/inet6* //'"
+
+# Enhanced WHOIS lookups
 alias whois="whois -h whois-servers.net"
 
 # Flush Directory Service cache
 alias flush="dscacheutil -flushcache"
+
+# Clean up LaunchServices to remove duplicates in the “Open With” menu
+alias lscleanup="/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user && killall Finder"
 
 # View HTTP traffic
 alias sniff="sudo ngrep -d 'en1' -t '^(GET|POST) ' 'tcp and port 80'"
 alias httpdump="sudo tcpdump -i en1 -n -s 0 -w - | grep -a -o -E \"Host\: .*|GET \/.*\""
 
 # Canonical hex dump; some systems have this symlinked
-type hd > /dev/null || alias hd="hexdump -C"
+command -v hd > /dev/null || alias hd="hexdump -C"
 
 # OS X has no `md5sum`, so use `md5` as a fallback
-type md5sum > /dev/null || alias md5sum="md5"
-
-# Start an HTTP server from a directory
-alias server="open http://localhost:8080/ && python -m SimpleHTTPServer 8080"
+command -v md5sum > /dev/null || alias md5sum="md5"
 
 # Trim new lines and copy to clipboard
-#alias c="tr -d '\n' | pbcopy"
-
-# Shortcuts
-#function d() { cd ~/Dropbox/$1 }
-#function p() { cd ~/Projects/$1 }
-
-#alias g="git"
-#alias v="vim"
-#alias m="mate ."
-#alias u="ssh"
+alias c="tr -d '\n' | pbcopy"
 
 # Recursively delete `.DS_Store` files
 alias cleanup="find . -type f -name '*.DS_Store' -ls -delete"
 
 # File size
-alias fs="stat -f \"%z bytes\""
+if stat -c '' . > /dev/null 2>&1; then
+  # GNU `stat`
+  alias fs="stat -c \"%s bytes\""
+else
+  # OS X `stat`
+  alias fs="stat -f \"%z bytes\""
+fi
 
 # ROT13-encode text. Works for decoding, too! ;)
 alias rot13='tr a-zA-Z n-za-mN-ZA-M'
 
-# Empty the Trash
-alias emptytrash="rm -rfv ~/.Trash"
+# Empty the Trash on all mounted volumes and the main HDD
+# Also, clear Apple’s System Logs to improve shell startup speed
+alias emptytrash="sudo rm -rfv /Volumes/*/.Trashes; sudo rm -rfv ~/.Trash; sudo rm -rfv /private/var/log/asl/*.asl"
 
 # Show/hide hidden files in Finder
-alias showhidden="defaults write com.apple.Finder AppleShowAllFiles -bool true && killall Finder"
-alias hidehidden="defaults write com.apple.Finder AppleShowAllFiles -bool false && killall Finder"
+alias show="defaults write com.apple.Finder AppleShowAllFiles -bool true && killall Finder"
+alias hide="defaults write com.apple.Finder AppleShowAllFiles -bool false && killall Finder"
 
 # Hide/show all desktop icons (useful when presenting)
 alias hidedesktop="defaults write com.apple.finder CreateDesktop -bool false && killall Finder"
@@ -92,6 +99,10 @@ alias showdesktop="defaults write com.apple.finder CreateDesktop -bool true && k
 
 # URL-encode strings
 alias urlencode='python -c "import sys, urllib as ul; print ul.quote_plus(sys.argv[1]);"'
+
+# Merge PDF files
+# Usage: `mergepdf -o output.pdf input{1,2,3}.pdf`
+alias mergepdf='/System/Library/Automator/Combine\ PDF\ Pages.action/Contents/Resources/join.py'
 
 # Disable Spotlight
 alias spotoff="sudo mdutil -a -i off"
@@ -101,12 +112,15 @@ alias spoton="sudo mdutil -a -i on"
 # PlistBuddy alias, because sometimes `defaults` just doesn’t cut it
 alias plistbuddy="/usr/libexec/PlistBuddy"
 
+# Launch iOS Simulator
+alias ios="open -a /Applications/Xcode.app/Contents/Applications/iPhone\ Simulator.app"
+
 # One of @janmoesen’s ProTip™s
-for method in GET HEAD POST PUT DELETE TRACE OPTIONS; do alias "$method"="lwp-request -m '$method'"; done
+for method in GET HEAD POST PUT DELETE TRACE OPTIONS; do
+  alias "$method"="lwp-request -m '$method'"
+done
 
 # Stuff I never really use but cannot delete either because of http://xkcd.com/530/
 alias stfu="osascript -e 'set volume output muted true'"
-alias pumpitup="osascript -e 'set volume 10'"
-alias hax="growlnotify -a 'Activity Monitor' 'System error' -m 'WUT R U DOIN'"
-
-alias grep='GREP_COLOR="1;37;41" LANG=C grep --color=auto'
+alias pumpitup="osascript -e 'set volume 7'"
+alias hax="growlnotify -a 'Activity Monitor' 'System error' -m 'WTF R U DOIN'"
