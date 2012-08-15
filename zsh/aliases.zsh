@@ -1,4 +1,3 @@
-# reload zsh config
 alias reload!='. ~/.zshrc'
 
 # SSH servers
@@ -8,15 +7,12 @@ alias vps="ssh jacobwg.xen.prgmr.com"
 alias gbfc="ssh gbfcorg@gbfc.org"
 alias cs1="ssh jwg093020@cs1.utdallas.edu -L 2222/rajgir.utdallas.edu/22"
 alias cso="cs1 -L 1521/csoracle.utdallas.edu/1521"
-alias mc="ssh Minecraft@mc.jacobwg.com"
-alias mcs="ssh root@mc.jacobwg.com"
-alias os="ssh jwg093020@rajgir.utdallas.edu"
 
 # ls
-alias ls="ls -F"
-alias l="ls -lAh"
-alias ll="ls -l"
-alias la="ls -Gla"
+#alias ls="ls -F"
+#alias l="ls -lAh"
+#alias ll="ls -l"
+#alias la="ls -Gla"
 
 # Easier navigation: .., ..., ~ and -
 alias ..="cd .."
@@ -34,14 +30,11 @@ alias lsd='ls -l | grep "^d"'
 alias %=' '
 alias \$=' '
 
-# Undo a `git push`
-alias undopush="git push -f origin HEAD^:master"
-
 # Enable aliases to be sudo'ed
 alias sudo="sudo "
 
 # Update OS X and Homebrew
-alias update='sudo softwareupdate -i -a; brew update'
+alias update='sudo softwareupdate -i -a'
 
 # IP addresses
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
@@ -66,16 +59,16 @@ type md5sum > /dev/null || alias md5sum="md5"
 alias server="open http://localhost:8080/ && python -m SimpleHTTPServer 8080"
 
 # Trim new lines and copy to clipboard
-alias c="tr -d '\n' | pbcopy"
+#alias c="tr -d '\n' | pbcopy"
 
 # Shortcuts
-function d() { cd ~/Dropbox/$1 }
-function p() { cd ~/Projects/$1 }
+#function d() { cd ~/Dropbox/$1 }
+#function p() { cd ~/Projects/$1 }
 
-alias g="git"
-alias v="vim"
-alias m="mate ."
-alias u="ssh"
+#alias g="git"
+#alias v="vim"
+#alias m="mate ."
+#alias u="ssh"
 
 # Recursively delete `.DS_Store` files
 alias cleanup="find . -type f -name '*.DS_Store' -ls -delete"

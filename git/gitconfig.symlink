@@ -1,0 +1,33 @@
+# This file is customized for me personally
+# Please change this file if you clone this repo
+
+[hub]
+  protocol = https
+[user]
+  name = Jacob Gillespie
+  email = mail@jacobwg.com
+[credential]
+  helper = osxkeychain
+[alias]
+  co      = checkout
+  promote = !$ZSH/bin/git-promote
+  wtf     = !$ZSH/bin/git-wtf
+  rank-contributers = !$ZSH/bin/git-rank-contributers
+  count   = !git shortlog -sn
+  undo-push = !git push -f origin HEAD^:master
+[color]
+  diff = auto
+  status = auto
+  branch = auto
+  ui = true
+[core]
+  excludesfile = ~/.gitignore
+  editor = e -w
+[apply]
+  whitespace = nowarn
+[mergetool]
+  keepBackup = false
+[difftool]
+  prompt = false
+[help]
+  autocorrect = 1

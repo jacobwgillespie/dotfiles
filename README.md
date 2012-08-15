@@ -19,11 +19,6 @@ Mac Stuff:
 
 `brew install coreutils`
 
-## Stuff to research
-
-* Pow
-* https://github.com/37signals/pow/wiki/Running-Pow-with-Apache
-
 ## Credits
 
 * https://github.com/holman/dotfiles
