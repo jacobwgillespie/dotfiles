@@ -24,6 +24,3 @@ Mac Stuff:
 * https://github.com/holman/dotfiles
 * https://github.com/ryanb/dotfiles
 * https://github.com/mathiasbynens/dotfiles
-* https://github.com/thoughtbot/dotfiles
-* https://github.com/twerth/dotfiles
-* **LOTS** of bits and pieces from the 100s of dotfile repos on GitHub
