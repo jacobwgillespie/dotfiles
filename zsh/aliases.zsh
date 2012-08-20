@@ -8,6 +8,8 @@ alias gbfc="ssh gbfcorg@gbfc.org"
 alias cs1="ssh jwg093020@cs1.utdallas.edu -L 2222/rajgir.utdallas.edu/22"
 alias cso="cs1 -L 1521/csoracle.utdallas.edu/1521"
 
+alias q="mosh ubuntu@quorra.jacobwg.com"
+
 # ls
 #alias ls="ls -F"
 #alias l="ls -lAh"
@@ -68,7 +70,7 @@ command -v hd > /dev/null || alias hd="hexdump -C"
 command -v md5sum > /dev/null || alias md5sum="md5"
 
 # Trim new lines and copy to clipboard
-alias c="tr -d '\n' | pbcopy"
+#alias c="tr -d '\n' | pbcopy"
 
 # Recursively delete `.DS_Store` files
 alias cleanup="find . -type f -name '*.DS_Store' -ls -delete"
