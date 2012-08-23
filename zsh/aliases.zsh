@@ -7,6 +7,7 @@ alias vps="ssh jacobwg.xen.prgmr.com"
 alias gbfc="ssh gbfcorg@gbfc.org"
 alias cs1="ssh jwg093020@cs1.utdallas.edu -L 2222/rajgir.utdallas.edu/22"
 alias cso="cs1 -L 1521/csoracle.utdallas.edu/1521"
+alias m="ssh jacobwg.dyndns.org"
 
 alias q="mosh ubuntu@quorra.jacobwg.com"
 
