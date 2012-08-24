@@ -2,7 +2,7 @@
 
 Lots of great stuff's happening here - have fun!
 
-Right now, it is tested working on Mac OS X and mostly not broken on Linux.
+Right now, it is tested working on Mac OS X and mostly working on Linux.
 
 ## Install
 
@@ -13,7 +13,7 @@ $ cd .dotfiles
 $ rake install
 ```
 
-If you don't have ruby yet, run `./bootstrap` to setup rbenv, then install ruby before `rake install`.
+If you don't have ruby yet, run `./bootstrap` to setup rbenv, then install a ruby before `rake install`.
 
 Mac Stuff:
 
@@ -21,6 +21,8 @@ Mac Stuff:
 
 ## Credits
 
-* https://github.com/holman/dotfiles
-* https://github.com/ryanb/dotfiles
-* https://github.com/mathiasbynens/dotfiles
+I actively watch the following repositories and add the best changes to this repository:
+
+* [holman/dotfiles](https://github.com/holman/dotfiles)
+* [ryanb/dotfiles](https://github.com/ryanb/dotfiles)
+* [mathiasbynes/dotfiles](https://github.com/mathiasbynens/dotfiles)
