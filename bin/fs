@@ -1,0 +1,13 @@
+#!/bin/bash
+
+if du -shb /dev/null > /dev/null 2>&1; then
+  arg=-sbh
+else
+  arg=-skh
+fi
+
+if [[ -n "$@" ]]; then
+  du $arg -- "$@"
+else
+  du $arg .[^.]* *
+fi

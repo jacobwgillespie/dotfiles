@@ -11,12 +11,6 @@ alias m="ssh jacobwg.dyndns.org"
 
 alias q="mosh ubuntu@quorra.jacobwg.com"
 
-# ls
-#alias ls="ls -F"
-#alias l="ls -lAh"
-#alias ll="ls -l"
-#alias la="ls -Gla"
-
 # Easier navigation: .., ..., ...., ....., ~ and -
 alias ..="cd .."
 alias ...="cd ../.."
@@ -26,8 +20,10 @@ alias ~="cd ~" # `cd` is probably faster to type though
 alias -- -="cd -"
 
 # Shortcuts
-alias d="cd ~/Dropbox"
-#alias h="history"  # using h as cd ~/* completion
+alias g="git"
+alias o="open"
+alias o="open ."
+
 
 
 # Speedtest
@@ -55,7 +51,9 @@ alias ips="ifconfig -a | grep -o 'inet6\? \(\([0-9]\+\.[0-9]\+\.[0-9]\+\.[0-9]\+
 alias whois="whois -h whois-servers.net"
 
 # Flush Directory Service cache
-alias flush="dscacheutil -flushcache"
+# Necessary to kill mDNSResponder in OS X 10.7 and 10.8 (see http://support.apple.com/kb/HT5343)
+# TODO: drop OS X 10.6 support?
+alias flush="dscacheutil -flushcache && killall -HUP mDNSResponder"
 
 # Clean up LaunchServices to remove duplicates in the “Open With” menu
 alias lscleanup="/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user && killall Finder"
@@ -75,15 +73,6 @@ command -v md5sum > /dev/null || alias md5sum="md5"
 
 # Recursively delete `.DS_Store` files
 alias cleanup="find . -type f -name '*.DS_Store' -ls -delete"
-
-# File size
-if stat -c '' . > /dev/null 2>&1; then
-  # GNU `stat`
-  alias fs="stat -c \"%s bytes\""
-else
-  # OS X `stat`
-  alias fs="stat -f \"%z bytes\""
-fi
 
 # ROT13-encode text. Works for decoding, too! ;)
 alias rot13='tr a-zA-Z n-za-mN-ZA-M'
