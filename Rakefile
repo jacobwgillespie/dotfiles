@@ -27,6 +27,7 @@ task :install do
   backup_all = false
 
   linkables.each do |linkable|
+    skip = false
     overwrite = false
     backup = false
 
@@ -42,9 +43,10 @@ task :install do
         when 'O' then overwrite_all = true
         when 'B' then backup_all = true
         when 'S' then skip_all = true
-        when 's' then next
+        when 's' then skip = true
         end
       end
+      next if skip || skip_all
       FileUtils.rm_rf(target) if overwrite || overwrite_all
       `mv "$HOME/.#{file}" "$HOME/.#{file}.backup"` if backup || backup_all
     end
