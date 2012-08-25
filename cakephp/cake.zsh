@@ -1,1 +1,0 @@
-alias cake="./Console/cake"
