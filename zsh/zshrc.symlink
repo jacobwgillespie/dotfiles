@@ -5,6 +5,7 @@ export ZSH=$HOME/.dotfiles
 export PROJECTS=~/Code
 
 # source every .zsh file in this rep
+for config_file ($ZSH/**/*.zsh) [[ "$(basename $config_file)" == "completion.zsh" ]] || echo $config_file
 for config_file ($ZSH/**/*.zsh) source $config_file
 
 # use .localrc for SUPER SECRET STUFF that you don't
