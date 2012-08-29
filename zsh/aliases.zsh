@@ -39,6 +39,9 @@ alias \$=' '
 # Enable aliases to be sudo’ed
 alias sudo='sudo '
 
+# Gzip-enabled `curl`
+alias gurl="curl --compressed"
+
 # Get OS X Software Updates, and update Homebrew, npm, and their installed packages
 alias update='sudo softwareupdate -i -a; brew update; brew upgrade; npm update npm -g; npm update -g'
 
