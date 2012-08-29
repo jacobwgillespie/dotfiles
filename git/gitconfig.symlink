@@ -15,6 +15,7 @@
   rank-contributers = !$ZSH/bin/git-rank-contributers
   count   = !git shortlog -sn
   undo-push = !git push -f origin HEAD^:master
+  reb = "!r() { git rebase -i HEAD~$1; }; r"
 
   # from legit (brew install legit)
   switch = !legit switch \"$@\"
