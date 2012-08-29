@@ -72,13 +72,21 @@ directory_name(){
   echo "%{$fg_bold[cyan]%}%1/%\/%{$reset_color%}"
 }
 
+current_user(){
+  echo "%{$fg_bold[yellow]%}$USER%{$reset_color%}"
+}
+
+current_host(){
+  echo "%{$fg_bold[magenta]%}$(hostname -s)%{$reset_color%}"
+}
+
 export PROMPT="› "
 set_prompt () {
-  export RPROMPT="%{$fg_bold[cyan]%}$(todo)%{$reset_color%}"
+  export RPROMPT="$(rb_prompt) %{$fg_bold[cyan]%}$(todo)%{$reset_color%}"
 }
 
 precmd() {
   title "zsh" "%m" "%55<...<%~"
   set_prompt
-  print -rP $'\n$(rb_prompt) in $(directory_name) $(git_dirty)$(need_push)'
+  print -rP $'\n$(current_user) at $(current_host) in $(directory_name) $(git_dirty)$(need_push)'
 }
