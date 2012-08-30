@@ -77,7 +77,7 @@ current_user(){
 }
 
 current_host(){
-  echo "%{$fg_bold[magenta]%}$(hostname -s)%{$reset_color%}"
+  echo "%{$fg_bold[blue]%}$(hostname -s)%{$reset_color%}"
 }
 
 export PROMPT="› "
