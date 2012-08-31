@@ -1,0 +1,6 @@
+#!/bin/bash
+
+# Manually remove a downloaded app or file from the quarantine
+for attribute in com.apple.metadata:kMDItemDownloadedDate com.apple.metadata:kMDItemWhereFroms com.apple.quarantine; do
+  xattr -r -d "$attribute" "$@"
+done

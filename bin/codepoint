@@ -1,0 +1,5 @@
+#!/bin/bash
+
+# Get a character’s Unicode code point
+perl -e "use utf8; print sprintf('U+%04X', ord(\"$@\"))"
+echo # newline
