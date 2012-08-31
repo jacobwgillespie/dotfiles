@@ -6,10 +6,9 @@ Right now, it is tested working on Mac OS X and mostly working on Linux.
 
 ## Install
 
-```
-$ cd ~
-$ git clone https://github.com/jacobwg/dotfiles.git .dotfiles
-$ cd .dotfiles
+``` bash
+$ git clone https://github.com/jacobwg/dotfiles.git ~/.dotfiles
+$ cd ~/.dotfiles
 $ rake install
 ```
 
@@ -19,7 +18,7 @@ Mac Stuff:
 
 `brew install coreutils`
 
-## Credits
+## thanks
 
 I actively watch the following repositories and add the best changes to this repository:
 
