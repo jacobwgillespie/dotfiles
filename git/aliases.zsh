@@ -9,6 +9,3 @@ fi
 alias ga='git add'
 alias gl='git pull --prune'
 alias gp='git push origin HEAD'
-alias gs='git status -sb'
-alias grm="git status | grep deleted | awk '{print \$3}' | xargs git rm"
-alias changelog='git log `git log -1 --format=%H -- CHANGELOG*`..; cat CHANGELOG*'

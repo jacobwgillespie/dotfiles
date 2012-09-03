@@ -16,6 +16,9 @@
   # View the current working tree status using the short format
   s = status -s
 
+  # Display the CHANGELOG
+  changelog = !"git log `git log -1 --format=%H -- CHANGELOG*`..; cat CHANGELOG*"
+
   # Show the diff between the latest commit and the current state
   d = !"git diff-index --quiet HEAD -- || clear; git diff --patch-with-stat"
 
@@ -64,6 +67,9 @@
 
   # List authors by number of diffs
   rank-contributers = !$ZSH/bin/git-rank-contributers
+
+  # Clean up deleted files (broken, probably from the $)
+  #clean-rm = "!f() { git status | grep deleted | awk '{print \$3}' | xargs git rm }; f"
 
   # from legit (brew install legit)
   switch = !legit switch \"$@\"
