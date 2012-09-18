@@ -2,29 +2,25 @@ autoload colors && colors
 # cheers, @ehrenmurdick
 # http://github.com/ehrenmurdick/config/blob/master/zsh/prompt.zsh
 
+is_git() {
+  /usr/bin/git rev-parse --is-inside-work-tree &> /dev/null
+}
+
 git_branch() {
-  echo $(/usr/bin/git symbolic-ref HEAD 2>/dev/null | awk -F/ {'print $NF'})
+  echo $(/usr/bin/git rev-parse --abbrev-ref HEAD 2>/dev/null)
 }
 
 git_dirty() {
-  st=$(/usr/bin/git status 2>/dev/null | tail -n 1)
-  if [[ $st == "" ]]
+  if $(/usr/bin/git diff --quiet --exit-code HEAD .)
   then
-    echo ""
+    echo "on %{$fg_bold[green]%}$(git_branch)%{$reset_color%}"
   else
-    if [[ $st == "nothing to commit (working directory clean)" ]]
-    then
-      echo "on %{$fg_bold[green]%}$(git_prompt_info)%{$reset_color%}"
-    else
-      echo "on %{$fg_bold[red]%}$(git_prompt_info)%{$reset_color%}"
-    fi
+    echo "on %{$fg_bold[red]%}$(git_branch)%{$reset_color%}"
   fi
 }
 
 git_prompt_info () {
- ref=$(/usr/bin/git symbolic-ref HEAD 2>/dev/null) || return
-# echo "(%{\e[0;33m%}${ref#refs/heads/}%{\e[0m%})"
- echo "${ref#refs/heads/}"
+  is_git && git_dirty && need_push
 }
 
 unpushed () {
@@ -88,5 +84,5 @@ set_prompt () {
 precmd() {
   title "zsh" "%m" "%55<...<%~"
   set_prompt
-  print -rP $'\n$(current_user) at $(current_host) in $(directory_name) $(git_dirty)$(need_push)'
+  print -rP $'\n$(current_user) at $(current_host) in $(directory_name) $(git_prompt_info)'
 }
