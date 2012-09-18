@@ -20,7 +20,7 @@ git_dirty() {
 }
 
 git_prompt_info () {
-  is_git && git_dirty && need_push
+  is_git && git_dirty
 }
 
 unpushed () {
@@ -84,5 +84,5 @@ set_prompt () {
 precmd() {
   title "zsh" "%m" "%55<...<%~"
   set_prompt
-  print -rP $'\n$(current_user) at $(current_host) in $(directory_name) $(git_prompt_info)'
+  print -rP $'\n$(current_user) at $(current_host) in $(directory_name) $(git_prompt_info)$(need_push)'
 }
