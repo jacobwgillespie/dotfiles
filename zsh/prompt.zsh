@@ -2,25 +2,29 @@ autoload colors && colors
 # cheers, @ehrenmurdick
 # http://github.com/ehrenmurdick/config/blob/master/zsh/prompt.zsh
 
-is_git() {
-  /usr/bin/git rev-parse --is-inside-work-tree &> /dev/null
-}
-
 git_branch() {
-  echo $(/usr/bin/git rev-parse --abbrev-ref HEAD 2>/dev/null)
+  echo $(/usr/bin/git symbolic-ref HEAD 2>/dev/null | awk -F/ {'print $NF'})
 }
 
 git_dirty() {
-  if $(/usr/bin/git diff --quiet --exit-code HEAD .)
+  st=$(/usr/bin/git status 2>/dev/null | tail -n 1)
+  if [[ $st == "" ]]
   then
-    echo "on %{$fg_bold[green]%}$(git_branch)%{$reset_color%}"
+    echo ""
   else
-    echo "on %{$fg_bold[red]%}$(git_branch)%{$reset_color%}"
+    if [[ $st == "nothing to commit (working directory clean)" ]]
+    then
+      echo "on %{$fg_bold[green]%}$(git_prompt_info)%{$reset_color%}"
+    else
+      echo "on %{$fg_bold[red]%}$(git_prompt_info)%{$reset_color%}"
+    fi
   fi
 }
 
 git_prompt_info () {
-  is_git && git_dirty
+ ref=$(/usr/bin/git symbolic-ref HEAD 2>/dev/null) || return
+# echo "(%{\e[0;33m%}${ref#refs/heads/}%{\e[0m%})"
+ echo "${ref#refs/heads/}"
 }
 
 unpushed () {
@@ -68,21 +72,12 @@ directory_name(){
   echo "%{$fg_bold[cyan]%}%1/%\/%{$reset_color%}"
 }
 
-current_user(){
-  echo "%{$fg_bold[yellow]%}$USER%{$reset_color%}"
-}
-
-current_host(){
-  echo "%{$fg_bold[blue]%}$(hostname -s)%{$reset_color%}"
-}
-
-export PROMPT="› "
+export PROMPT=$'\n$(rb_prompt) in $(directory_name) $(git_dirty)$(need_push)\n› '
 set_prompt () {
-  export RPROMPT="$(rb_prompt) %{$fg_bold[cyan]%}$(todo)%{$reset_color%}"
+  export RPROMPT="%{$fg_bold[cyan]%}$(todo)%{$reset_color%}"
 }
 
 precmd() {
   title "zsh" "%m" "%55<...<%~"
   set_prompt
-  print -rP $'\n$(current_user) at $(current_host) in $(directory_name) $(git_prompt_info)$(need_push)'
 }
