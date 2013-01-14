@@ -1,8 +1,0 @@
-#!/bin/bash
-
-# TODO: make this a lot safer and more user-friendly
-# TODO: make this install necessary stuff for ruby compiles
-echo "After you set up rbenv manually and add the ruby-build plugin:"
-echo "  $ rbenv install 1.9.3-p194"
-echo "  $ rbenv rehash"
-echo "  $ rbenv global 1.9.3-p194"
