@@ -53,7 +53,7 @@ alias whois="whois -h whois-servers.net"
 # Flush Directory Service cache
 # Necessary to kill mDNSResponder in OS X 10.7 and 10.8 (see http://support.apple.com/kb/HT5343)
 # TODO: drop OS X 10.6 support?
-alias flush="dscacheutil -flushcache && killall -HUP mDNSResponder"
+alias flush="dscacheutil -flushcache && sudo killall -HUP mDNSResponder"
 
 # Clean up LaunchServices to remove duplicates in the “Open With” menu
 alias lscleanup="/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user && killall Finder"
