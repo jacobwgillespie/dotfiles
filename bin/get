@@ -1,3 +1,0 @@
-#!/bin/bash
-# Doesn't really work well...
-brew install $* || sudo apt-get install $*
