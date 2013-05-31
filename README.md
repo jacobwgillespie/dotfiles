@@ -1,6 +1,6 @@
 # opinionated dotfiles
 
-Dotfiles customize your system - these are mine.
+Dotfiles customize your system - these are mine.  [Fork](https://github.com/jacobwg/dotfiles/fork) this repository and make it your own!
 
 ## install
 
