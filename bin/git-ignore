@@ -1,6 +1,0 @@
-#!/bin/sh
-
-for pattern in "$@"
-do
-	echo "$pattern" | tee -a .git/info/exclude
-done
