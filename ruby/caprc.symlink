@@ -1,6 +1,0 @@
-# automatically colorize capistrano
-begin
-  require 'capistrano_colors'
-rescue LoadError
-  puts 'Install the `capistrano_colors` gem for colored output'
-end
