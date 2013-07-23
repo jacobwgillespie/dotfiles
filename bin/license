@@ -8,7 +8,7 @@
 # http://gist.github.com/287717
 exec sh -c "tail -n +$(($LINENO + 2)) < $0 | sed s/DATE/$(date +%Y)/"
 
-Copyright (c) DATE Jacob Gillespie <http://jacobwg.com>
+Copyright (c) DATE Jacob Gillespie <https://jacobwg.com>
 
 Permission  is  hereby granted, free of charge, to any person ob-
 taining a copy of  this  software  and  associated  documentation
