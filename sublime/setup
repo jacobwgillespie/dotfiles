@@ -1,12 +1,13 @@
 #!/bin/sh
-# Setup a machine for Sublime Text 2
-set -x
+# Setup a machine for Sublime Text
 
-# symlink settings in
-sublime_dir=~/Library/Application\ Support/Sublime\ Text\ 2/Packages
-mv "$sublime_dir/User" "$sublime_dir/User.backup"
-ln -s "$ZSH/sublime2/User" "$sublime_dir"
+sublime_dir=~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User
 
-# Grab the Soda theme
-cd "$sublime_dir"
-git clone https://github.com/buymeasoda/soda-theme/ "Theme - Soda"
+for file_path in $ZSH/sublime/User/*; do
+  [[ -f "$file_path" ]] || continue
+  basename=$(basename "$file_path")
+  echo "Linking $basename"
+  ln -sfv "$file_path" "$sublime_dir/$basename" 1>/dev/null
+done
+
+echo "Done!"

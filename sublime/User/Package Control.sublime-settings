@@ -1,12 +1,17 @@
 {
-	"auto_upgrade_last_run": 1342115546,
-	"installed_packages":
-	[
-		"ERB Insert and Toggle Commands",
-		"LESS",
-		"Package Control",
-		"Ruby Slim",
-		"Sass",
-		"SFTP"
-	]
+  "auto_upgrade_last_run": null,
+  "installed_packages":
+  [
+    "CoffeeScript",
+    "EditorConfig",
+    "Handlebars",
+    "HTML Mustache",
+    "Jade",
+    "LESS",
+    "nginx",
+    "Package Control",
+    "Sass",
+    "SublimeGit",
+    "Theme - Soda"
+  ]
 }
