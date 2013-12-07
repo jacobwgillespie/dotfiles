@@ -1,17 +1,17 @@
 {
-  "auto_upgrade_last_run": null,
-  "installed_packages":
-  [
-    "CoffeeScript",
-    "EditorConfig",
-    "Handlebars",
-    "HTML Mustache",
-    "Jade",
-    "LESS",
-    "nginx",
-    "Package Control",
-    "Sass",
-    "SublimeGit",
-    "Theme - Soda"
-  ]
+	"auto_upgrade_last_run": null,
+	"installed_packages":
+	[
+		"CoffeeScript",
+		"EditorConfig",
+		"Handlebars",
+		"HTML Mustache",
+		"Jade",
+		"LESS",
+		"nginx",
+		"Package Control",
+		"Sass",
+		"SublimeGit",
+		"Theme - Soda"
+	]
 }
