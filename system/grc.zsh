@@ -1,7 +1,5 @@
 # GRC colorizes nifty unix tools all over the place
-if $(grc &>/dev/null) && ! $(brew &>/dev/null)
+if (( $+commands[grc] )) && (( $+commands[brew] ))
 then
- source `brew --prefix`/etc/grc.bashrc
+  source `brew --prefix`/etc/grc.bashrc
 fi
-
-# TODO: make this work without homebrew
