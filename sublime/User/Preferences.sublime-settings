@@ -5,7 +5,7 @@
 	"draw_white_space": "all",
 	"ensure_newline_at_eof_on_save": true,
 	"font_face": "Source Code Pro",
-	"font_size": 12.0,
+	"font_size": 13.0,
 	"ignored_packages":
 	[
 		"Vintage"
