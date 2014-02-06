@@ -18,8 +18,8 @@
 
 local index1, index2
 
-set index1 to 3 -- 1440 x 900 (Best for Retina)
-set index2 to 5 -- 1920 x 1200 (More Space)
+set index1 to 2 -- 1440 x 900 (Best for Retina)
+set index2 to 4 -- 1920 x 1200 (More Space)
 
 tell application "System Preferences"
  activate
@@ -34,7 +34,7 @@ tell application "System Events"
     tell tab group 1
       -- Click the "Scaled" radio button
       click radio button "Scaled"
-      tell radio group 1 of group 1
+      tell radio group 1 of group 2
         -- Depending on what scale option/index is current selected, set the appropriate new option/index to use
         if (value of radio button index1) is true then
                   set indexToUse to index2
