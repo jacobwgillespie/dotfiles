@@ -3,10 +3,10 @@
 # Run ./set-defaults.sh and you'll be good to go.
 
 # Set computer name (as done via System Preferences → Sharing)
-sudo scutil --set ComputerName "jacobwg-mac"
-sudo scutil --set HostName "jacobwg-mac"
-sudo scutil --set LocalHostName "jacobwg-mac"
-sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "jacobwg-mac"
+sudo scutil --set ComputerName "jacobwg-macbook"
+sudo scutil --set HostName "jacobwg-macbook"
+sudo scutil --set LocalHostName "jacobwg-macbook"
+sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "jacobwg-macbook"
 
 # Set standby delay to 24 hours (default is 1 hour)
 #sudo pmset -a standbydelay 86400
