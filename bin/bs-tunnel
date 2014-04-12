@@ -1,6 +1,0 @@
-#!/bin/bash
-
-host=$1
-port=$2
-
-java -jar $ZSH/bin/bs-tunnel.jar $BROWSERSTACK_KEY $host,${port-80},0
