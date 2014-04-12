@@ -1,8 +1,10 @@
 'editor':
-  'fontSize': 15
+  'fontSize': 14
   'showIndentGuide': true
+  'fontFamily': 'Source Code Pro'
+  'showInvisibles': true
 'core':
-  'excludeVcsIgnoredPaths': true
+  'hideGitIgnoredFiles': false
   'ignoredNames': [
     '.bundle'
     '.git'
@@ -13,9 +15,8 @@
   ]
   'themes': [
     'unity-ui'
-    'glacier-syntax'
+    'solarized-light-syntax'
   ]
-  'hideGitIgnoredFiles': true
   'disabledPackages': [
     'background-tips'
     'exception-reporting'
