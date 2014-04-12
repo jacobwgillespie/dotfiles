@@ -1,7 +1,6 @@
 'editor':
-  'fontSize': 14
+  'fontSize': 13
   'showIndentGuide': true
-  'fontFamily': 'Source Code Pro'
   'showInvisibles': true
 'core':
   'hideGitIgnoredFiles': false
@@ -14,14 +13,16 @@
     'vendor'
   ]
   'themes': [
-    'unity-ui'
-    'solarized-light-syntax'
+    'atom-light-ui'
+    'atom-light-syntax'
   ]
   'disabledPackages': [
     'background-tips'
     'exception-reporting'
     'metrics'
+    'autosave'
   ]
+  'excludeVcsIgnoredPaths': false
 'spell-check':
   'grammars': [
     'text.plain'
@@ -33,3 +34,4 @@
 'release-notes':
   'viewedVersion': '0.85.0'
 'tree-view': {}
+'autocomplete-plus': {}
