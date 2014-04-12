@@ -1,0 +1,3 @@
+'.autocomplete-plus input.hidden-input':
+  'tab': 'unset!'
+  'enter': 'autocomplete-plus:confirm'
