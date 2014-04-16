@@ -1,7 +1,7 @@
 'editor':
   'fontSize': 13
-  'showIndentGuide': true
   'showInvisibles': true
+  'showIndentGuide': true
 'core':
   'hideGitIgnoredFiles': false
   'ignoredNames': [
@@ -14,13 +14,14 @@
   ]
   'themes': [
     'atom-light-ui'
-    'atom-light-syntax'
+    'solarized-light-syntax'
   ]
   'disabledPackages': [
     'background-tips'
     'exception-reporting'
     'metrics'
     'autosave'
+    'atom-lint'
   ]
   'excludeVcsIgnoredPaths': false
 'spell-check':
