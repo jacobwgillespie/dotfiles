@@ -12,7 +12,7 @@ alias localip="ipconfig getifaddr en1"
 alias ips="ifconfig -a | grep -o 'inet6\? \(\([0-9]\+\.[0-9]\+\.[0-9]\+\.[0-9]\+\)\|[a-fA-F0-9:]\+\)' | sed -e 's/inet6* //'"
 
 # Enhanced WHOIS lookups
-alias whois="whois -h whois-servers.net"
+#alias whois="whois -h whois-servers.net"
 
 # Flush Directory Service cache
 # Necessary to kill mDNSResponder in OS X 10.7 and 10.8 (see http://support.apple.com/kb/HT5343)
