@@ -3,7 +3,7 @@
   'fontFamily': 'Menlo'
   'fontSize': 15
 'core':
-  'excludeVcsIgnoredPaths': true
+  'excludeVcsIgnoredPaths': false
   'ignoredNames': [
     '.bundle'
     '.git'
@@ -13,10 +13,10 @@
     'vendor'
   ]
   'themes': [
-    'unity-ui'
+    'atom-mac-theme'
     'glacier-syntax'
   ]
-  'hideGitIgnoredFiles': true
+  'hideGitIgnoredFiles': false
   'disabledPackages': [
     'background-tips'
     'exception-reporting'
@@ -33,3 +33,5 @@
 'release-notes':
   'viewedVersion': '0.89.0'
 'tree-view': {}
+'autocomplete-plus':
+  'enableAutoActivation': false
