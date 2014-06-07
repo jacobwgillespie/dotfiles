@@ -32,7 +32,7 @@ class Object
 end
 
 def me
-  User.where(email: 'jacobwgillespie@gmail.com').first
+  User.where(email: `git config --get user.email`.chomp).first
 end
 
 def r
