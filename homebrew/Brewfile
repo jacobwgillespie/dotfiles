@@ -1,0 +1,7 @@
+brew install coreutils
+brew install git
+brew install grc
+brew install hub
+brew install spark
+brew install wget
+brew install zsh

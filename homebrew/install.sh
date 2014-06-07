@@ -13,6 +13,13 @@ then
 fi
 
 # Install homebrew packages
-brew install grc coreutils spark hub
+brew bundle $ZSH/homebrew/Brewfile
+
+# TODO: do this if not already done
+# add zsh as a shell
+#sudo echo "/usr/local/bin/zsh" >> /etc/shells
+#sudo chsh -s /usr/local/bin/zsh `whoami`
+#
+#Echo "Done!"
 
 exit 0
