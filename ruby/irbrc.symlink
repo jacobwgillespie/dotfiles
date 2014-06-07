@@ -32,7 +32,7 @@ class Object
 end
 
 def me
-  User.find_by_login(ENV['USER'].strip)
+  User.where(email: 'jacobwgillespie@gmail.com').first
 end
 
 def r
