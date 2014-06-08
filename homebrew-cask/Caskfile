@@ -28,3 +28,20 @@ cask install transmission
 cask install vagrant
 cask install virtualbox
 cask install vlc
+cask install plex-home-theater
+cask install sublime-text3
+cask install slack
+cask install sourcetree
+cask install fuze
+cask install jawbone-updater
+cask install scummvm
+cask install screenhero
+cask install sizeup
+cask install imageoptim
+cask install postgres
+cask install heroku-toolbelt
+
+# Installed via MAS
+# cask install transmit
+# cask install reeder
+
