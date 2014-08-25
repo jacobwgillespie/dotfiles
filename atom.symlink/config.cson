@@ -1,7 +1,8 @@
 'editor':
   'showIndentGuide': true
   'fontFamily': 'Menlo'
-  'fontSize': 15
+  'fontSize': 14
+  'lineHeight': 1.5
 'core':
   'excludeVcsIgnoredPaths': false
   'ignoredNames': [
@@ -13,14 +14,15 @@
     'vendor'
   ]
   'themes': [
-    'atom-mac-theme'
-    'glacier-syntax'
+    'atom-light-ui'
+    'atom-github-theme'
   ]
   'hideGitIgnoredFiles': false
   'disabledPackages': [
     'background-tips'
     'exception-reporting'
     'metrics'
+    'autocomplete'
   ]
 'spell-check':
   'grammars': [
@@ -33,5 +35,8 @@
 'release-notes':
   'viewedVersion': '0.89.0'
 'tree-view': {}
-'autocomplete-plus':
-  'enableAutoActivation': false
+'autocomplete-plus': {}
+'go-plus':
+  'goPath': '/Users/jacobwgillespie/Code/'
+  'goInstallation': '/usr/local/bin/go'
+  'lintOnSave': false
