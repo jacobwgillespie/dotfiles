@@ -18,7 +18,6 @@ cask install qlmarkdown
 cask install qlstephen
 cask install quicklook-csv
 cask install quicklook-json
-cask install reeder
 cask install sequel-pro
 cask install skype
 cask install spotify
