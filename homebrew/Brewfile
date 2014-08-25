@@ -1,7 +1,7 @@
-brew install coreutils
-brew install git
-brew install grc
-brew install hub
-brew install spark
-brew install wget
-brew install zsh
+install coreutils
+install git
+install grc
+install hub
+install spark
+install wget
+install zsh
