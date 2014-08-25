@@ -5,7 +5,11 @@
 		"Better CoffeeScript",
 		"CoffeeScript",
 		"DashDoc",
+		"Dockerfile Syntax Highlighting",
 		"EditorConfig",
+		"Floobits",
+		"Github Color Theme",
+		"GoSublime",
 		"Handlebars",
 		"HTML Mustache",
 		"INI",
@@ -14,11 +18,17 @@
 		"nginx",
 		"Package Control",
 		"Puppet",
-		"ReactJS",
 		"rsub",
 		"Sass",
 		"SublimeGit",
+		"SublimeLinter",
+		"SublimeLinter-jshint",
+		"Table Cleaner",
 		"Theme - Soda",
 		"TOML"
+	],
+	"repositories":
+	[
+		"https://github.com/DisposaBoy/GoSublime-next"
 	]
 }
