@@ -1,10 +1,9 @@
 'editor':
   'showIndentGuide': true
   'fontFamily': 'Menlo'
-  'fontSize': 14
-  'lineHeight': 1.5
+  'fontSize': 15
+  'invisibles': {}
 'core':
-  'excludeVcsIgnoredPaths': false
   'ignoredNames': [
     '.bundle'
     '.git'
@@ -14,15 +13,14 @@
     'vendor'
   ]
   'themes': [
-    'atom-light-ui'
-    'atom-github-theme'
+    'unity-ui'
+    'glacier-syntax'
   ]
-  'hideGitIgnoredFiles': false
+  'hideGitIgnoredFiles': true
   'disabledPackages': [
     'background-tips'
     'exception-reporting'
     'metrics'
-    'autocomplete'
   ]
 'spell-check':
   'grammars': [
@@ -34,9 +32,3 @@
   'showOnStartup': false
 'release-notes':
   'viewedVersion': '0.89.0'
-'tree-view': {}
-'autocomplete-plus': {}
-'go-plus':
-  'goPath': '/Users/jacobwgillespie/Code/'
-  'goInstallation': '/usr/local/bin/go'
-  'lintOnSave': false
