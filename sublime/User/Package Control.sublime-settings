@@ -25,7 +25,8 @@
 		"SublimeLinter-jshint",
 		"Table Cleaner",
 		"Theme - Soda",
-		"TOML"
+		"TOML",
+		"Vagrant"
 	],
 	"repositories":
 	[
