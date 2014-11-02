@@ -2,9 +2,7 @@
 export ZSH=$HOME/.dotfiles
 
 # your project folder that we can `c [tab]` to
-export PROJECTS=~/Code
-
-export GOPROJECTS=~/Code/src/github.com/playlist-media
+export PROJECTS=~/src
 
 # all of our zsh files
 typeset -U config_files
