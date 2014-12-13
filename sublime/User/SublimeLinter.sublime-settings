@@ -11,20 +11,14 @@
                 "@disable": false,
                 "args": [],
                 "excludes": []
-            },
-            "jsxhint": {
-                "@disable": false,
-                "args": [],
-                "excludes": []
             }
         },
         "mark_style": "outline",
         "no_column_highlights_line": false,
+        "passive_warnings": false,
         "paths": {
             "linux": [],
-            "osx": [
-                "/Users/jacobwgillespie/.nvm/v0.10.29/bin"
-            ],
+            "osx": [],
             "windows": []
         },
         "python_paths": {
