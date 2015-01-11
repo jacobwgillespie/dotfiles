@@ -1,5 +1,13 @@
 {
 	"auto_upgrade_last_run": null,
+	"in_process_packages":
+	[
+	],
+	"installed_dependencies":
+	[
+		"0_package_control_loader",
+		"bz2"
+	],
 	"installed_packages":
 	[
 		"Better CoffeeScript",
@@ -25,6 +33,7 @@
 		"SublimeGit",
 		"SublimeLinter",
 		"SublimeLinter-jshint",
+		"SublimeLinter-rubocop",
 		"Table Cleaner",
 		"TabsToTable",
 		"Theme - Cobalt2",

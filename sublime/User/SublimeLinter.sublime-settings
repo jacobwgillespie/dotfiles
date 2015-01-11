@@ -11,6 +11,14 @@
                 "@disable": false,
                 "args": [],
                 "excludes": []
+            },
+            "rubocop": {
+                "@disable": false,
+                "args": [],
+                "excludes": [
+                    "*/db/*",
+                    "*/db/**/*"
+                ]
             }
         },
         "mark_style": "outline",
@@ -18,7 +26,9 @@
         "passive_warnings": false,
         "paths": {
             "linux": [],
-            "osx": [],
+            "osx": [
+                "/Users/jacobwgillespie/.rbenv/shims"
+            ],
             "windows": []
         },
         "python_paths": {
