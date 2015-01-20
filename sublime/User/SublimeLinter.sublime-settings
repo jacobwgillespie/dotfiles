@@ -7,6 +7,11 @@
         "gutter_theme_excludes": [],
         "lint_mode": "background",
         "linters": {
+            "apiblueprint": {
+                "@disable": false,
+                "args": [],
+                "excludes": []
+            },
             "jshint": {
                 "@disable": false,
                 "args": [],
@@ -16,14 +21,21 @@
                 "@disable": false,
                 "args": [],
                 "excludes": []
+            },
+            "rubocop": {
+                "@disable": false,
+                "args": [],
+                "excludes": []
             }
         },
         "mark_style": "outline",
         "no_column_highlights_line": false,
+        "passive_warnings": false,
         "paths": {
             "linux": [],
             "osx": [
-                "/Users/jacobwgillespie/.nvm/v0.10.29/bin"
+                "/Users/jacobwgillespie/.nvm/v0.10.29/bin",
+                "/Users/jacobwgillespie/.rbenv/shims"
             ],
             "windows": []
         },

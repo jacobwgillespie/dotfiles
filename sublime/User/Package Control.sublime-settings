@@ -1,5 +1,13 @@
 {
 	"auto_upgrade_last_run": null,
+	"in_process_packages":
+	[
+	],
+	"installed_dependencies":
+	[
+		"0_package_control_loader",
+		"bz2"
+	],
 	"installed_packages":
 	[
 		"Better CoffeeScript",
@@ -9,11 +17,13 @@
 		"EditorConfig",
 		"Floobits",
 		"Github Color Theme",
+		"GitHub Flavored Markdown Preview",
 		"GoSublime",
 		"Handlebars",
 		"HTML Mustache",
 		"INI",
 		"Jade",
+		"jsfmt",
 		"LESS",
 		"Markdown Preview",
 		"nginx",
@@ -24,6 +34,7 @@
 		"SublimeGit",
 		"SublimeLinter",
 		"SublimeLinter-jshint",
+		"SublimeLinter-rubocop",
 		"Table Cleaner",
 		"Theme - Cobalt2",
 		"Theme - Soda",
