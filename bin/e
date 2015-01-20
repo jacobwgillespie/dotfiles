@@ -17,5 +17,5 @@
 if [ "$1" = "" ] ; then
   exec $EDITOR .
 else
-  exec $EDITOR $@
+  exec $EDITOR "$@"
 fi
