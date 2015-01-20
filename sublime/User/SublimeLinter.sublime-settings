@@ -17,15 +17,22 @@
                 "args": [],
                 "excludes": []
             },
-            "jsxhint": {
+            "rubocop": {
                 "@disable": false,
                 "args": [],
+<<<<<<< HEAD
                 "excludes": []
             },
             "rubocop": {
                 "@disable": false,
                 "args": [],
                 "excludes": []
+=======
+                "excludes": [
+                    "*/db/*",
+                    "*/db/**/*"
+                ]
+>>>>>>> FETCH_HEAD
             }
         },
         "mark_style": "outline",
@@ -34,7 +41,10 @@
         "paths": {
             "linux": [],
             "osx": [
+<<<<<<< HEAD
                 "/Users/jacobwgillespie/.nvm/v0.10.29/bin",
+=======
+>>>>>>> FETCH_HEAD
                 "/Users/jacobwgillespie/.rbenv/shims"
             ],
             "windows": []

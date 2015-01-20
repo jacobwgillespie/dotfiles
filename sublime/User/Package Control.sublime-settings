@@ -36,8 +36,10 @@
 		"SublimeLinter-jshint",
 		"SublimeLinter-rubocop",
 		"Table Cleaner",
+		"TabsToTable",
 		"Theme - Cobalt2",
 		"Theme - Soda",
+		"Theme - Spacegray",
 		"TOML",
 		"Vagrant"
 	],

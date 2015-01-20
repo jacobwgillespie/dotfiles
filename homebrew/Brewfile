@@ -1,7 +1,0 @@
-install coreutils
-install git
-install grc
-install hub
-install spark
-install wget
-install zsh

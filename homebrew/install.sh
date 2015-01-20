@@ -9,17 +9,10 @@
 if test ! $(which brew)
 then
   echo "  Installing Homebrew for you."
-  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" > /tmp/homebrew-install.log
+  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
 
 # Install homebrew packages
-brew bundle $ZSH/homebrew/Brewfile
-
-# TODO: do this if not already done
-# add zsh as a shell
-#sudo echo "/usr/local/bin/zsh" >> /etc/shells
-#sudo chsh -s /usr/local/bin/zsh `whoami`
-#
-#Echo "Done!"
+brew install grc coreutils hub git wget
 
 exit 0
