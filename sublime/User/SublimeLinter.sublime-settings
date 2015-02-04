@@ -32,6 +32,7 @@
         "paths": {
             "linux": [],
             "osx": [
+                "/Users/jacobwgillespie/.nvm/v0.10.29/bin",
                 "/Users/jacobwgillespie/.rbenv/shims"
             ],
             "windows": []
