@@ -65,3 +65,6 @@ defaults write com.irradiatedsoftware.SizeUp StartAtLogin -bool true
 
 # Don’t show the SizeUp preferences window on next start
 defaults write com.irradiatedsoftware.SizeUp ShowPrefsOnNextStart -bool false
+
+# Disable screenshot shadows (they're HUGE!)
+defaults write com.apple.screencapture disable-shadow -bool true
