@@ -1,0 +1,5 @@
+#!/bin/sh
+
+PORT=${1:-8000}
+
+ruby -run -ehttpd . -p$PORT
