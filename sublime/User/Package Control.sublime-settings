@@ -10,6 +10,7 @@
 	],
 	"installed_packages":
 	[
+		"Base16 Color Schemes",
 		"Better CoffeeScript",
 		"CoffeeScript",
 		"DashDoc",
@@ -32,6 +33,7 @@
 		"Sass",
 		"SublimeGit",
 		"SublimeLinter",
+		"SublimeLinter-contrib-eslint",
 		"SublimeLinter-jshint",
 		"SublimeLinter-rubocop",
 		"Table Cleaner",
