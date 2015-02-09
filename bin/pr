@@ -1,0 +1,7 @@
+#!/bin/bash
+
+URL="$(hub pull-request)"
+CODE=$?
+if [[ $CODE -eq 0 ]]; then
+  open "$URL"
+fi
