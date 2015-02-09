@@ -8,12 +8,17 @@
         "lint_mode": "background",
         "linters": {
             "eslint": {
-                "@disable": false,
+                "@disable": true,
                 "args": [],
                 "excludes": []
             },
             "jshint": {
-                "@disable": true,
+                "@disable": false,
+                "args": [],
+                "excludes": []
+            },
+            "jsxhint": {
+                "@disable": false,
                 "args": [],
                 "excludes": []
             },
