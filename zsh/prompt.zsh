@@ -46,6 +46,29 @@ need_push () {
   fi
 }
 
+refresh_ci_status() {
+  newstatus="$(hub ci-status 2>/dev/null)"
+  if [[ "$newstatus" != "" ]];
+  then
+    $git config ci.status $newstatus
+  fi
+}
+
+ci_status () {
+  $git config ci.status 2>/dev/null
+  (refresh_ci_status) &
+}
+
+ci_status_badge () {
+  case "$(ci_status)" in
+  *success)   echo "%{$fg_bold[green]%}✔ %{$reset_color%}";;
+  *error)     echo "%{$fg_bold[red]%}✘ %{$reset_color%}";;
+  *failure)   echo "%{$fg_bold[red]%}✘ %{$reset_color%}";;
+  *pending)   echo "%{$fg_bold[grey]%}? %{$reset_color%}";;
+  *"no status") echo "%{$fg_bold[grey]%}? %{$reset_color%}";;
+  esac
+}
+
 ruby_version() {
   if (( $+commands[rbenv] ))
   then
@@ -71,7 +94,7 @@ directory_name() {
   echo "%{$fg_bold[cyan]%}%1/%\/%{$reset_color%}"
 }
 
-export PROMPT=$'\n$(rb_prompt)in $(directory_name) $(git_dirty)$(need_push)\n› '
+export PROMPT=$'\n$(ci_status_badge)$(rb_prompt)in $(directory_name) $(git_dirty)$(need_push)\n› '
 set_prompt () {
   export RPROMPT="%{$fg_bold[cyan]%}%{$reset_color%}"
 }
