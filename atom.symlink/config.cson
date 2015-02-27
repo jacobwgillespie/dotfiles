@@ -1,33 +1,33 @@
-global:
+"*":
   editor:
     invisibles: {}
-    fontSize: 15
-    fontFamily: 'Source Code Pro'
+    fontSize: 14
+    fontFamily: "Source Code Pro"
     showInvisibles: true
   core:
     ignoredNames: [
-      '.bundle'
-      '.git'
-      'log'
-      'repositories'
-      'tmp'
-      'vendor'
+      ".bundle"
+      ".git"
+      "log"
+      "repositories"
+      "tmp"
+      "vendor"
     ]
     themes: [
-      'unity-ui'
-      'base16-ocean-dark-spacegray-lighter-invisibles'
+      "one-light-ui"
+      "base16-ocean-dark-spacegray-lighter-invisibles"
     ]
     disabledPackages: [
-      'background-tips'
-      'exception-reporting'
-      'metrics'
+      "background-tips"
+      "exception-reporting"
+      "metrics"
     ]
-  'spell-check':
+  "spell-check":
     grammars: [
-      'text.plain'
-      'source.gfm'
-      'text.git-commit'
+      "text.plain"
+      "source.gfm"
+      "text.git-commit"
     ]
   welcome:
     showOnStartup: false
-  'atom-lint': {}
+  "atom-lint": {}
