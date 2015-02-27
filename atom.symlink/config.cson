@@ -31,3 +31,4 @@
   welcome:
     showOnStartup: false
   "atom-lint": {}
+  linter: {}
