@@ -1,2 +1,4 @@
 export NVM_DIR=~/.nvm
-source $(brew --prefix nvm)/nvm.sh
+if [ -e "$(brew --prefix nvm)/nvm.sh" ]; then
+  source $(brew --prefix nvm)/nvm.sh
+fi
