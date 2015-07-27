@@ -1,7 +1,6 @@
 "*":
   editor:
     invisibles: {}
-    fontSize: 14
     fontFamily: "Source Code Pro"
     showInvisibles: true
   core:
@@ -12,10 +11,6 @@
       "repositories"
       "tmp"
       "vendor"
-    ]
-    themes: [
-      "one-light-ui"
-      "base16-ocean-dark-spacegray-lighter-invisibles"
     ]
     disabledPackages: [
       "background-tips"
