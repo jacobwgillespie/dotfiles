@@ -1,24 +1,24 @@
-# Sets reasonable OS X defaults.
+# Sets reasonable OS X defaults
 #
-# Run ./set-defaults.sh and you'll be good to go.
+# Run ./set-defaults.sh and you'll be good to go
 
-# Disable press-and-hold for keys in favor of key repeat.
+# Disable press-and-hold for keys in favor of key repeat
 defaults write -g ApplePressAndHoldEnabled -bool false
 
-# Always open everything in Finder's list view. This is important.
+# Always open everything in Finder's list view
 defaults write com.apple.Finder FXPreferredViewStyle Nlsv
 
-# Show the ~/Library folder.
+# Show the ~/Library folder
 chflags nohidden ~/Library
 
-# Set a really fast key repeat.
+# Set a really fast key repeat
 defaults write NSGlobalDomain KeyRepeat -int 0
 
-# Set the Finder prefs for showing a few different volumes on the Desktop.
+# Set the Finder prefs for showing a few different volumes on the Desktop
 defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool false
 defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool false
 
-# Put the display to sleep if we're in the bottom-left hot corner.
+# Put the display to sleep if we're in the bottom-left hot corner
 defaults write com.apple.dock wvous-bl-corner -int 10
 defaults write com.apple.dock wvous-bl-modifier -int 0
 
