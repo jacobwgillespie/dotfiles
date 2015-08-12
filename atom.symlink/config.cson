@@ -1,8 +1,9 @@
 "*":
   editor:
     invisibles: {}
-    fontFamily: "Source Code Pro"
     showInvisibles: true
+    fontFamily: "Office Code Pro"
+    fontSize: 15
   core:
     ignoredNames: [
       ".bundle"
@@ -25,5 +26,7 @@
     ]
   welcome:
     showOnStartup: false
-  "atom-lint": {}
-  linter: {}
+  "autocomplete-plus":
+    confirmCompletion: "tab and enter"
+  "tree-view":
+    showOnRightSide: true
