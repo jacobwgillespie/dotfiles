@@ -1,8 +1,8 @@
 "*":
   editor:
     invisibles: {}
-    fontFamily: "Source Code Pro"
     showInvisibles: true
+    fontFamily: "Source Code Pro"
   core:
     ignoredNames: [
       ".bundle"
@@ -27,3 +27,21 @@
     showOnStartup: false
   "atom-lint": {}
   linter: {}
+  "tree-view":
+    showOnRightSide: true
+  "linter-rubocop": {}
+  react:
+    enabledForAllJavascriptFiles: true
+  "linter-flow-plus": {}
+  "file-watcher":
+    promptWhenFileHasChangedOnDisk: false
+  "linter-eslint":
+    disableWhenNoEslintrcFileInPath: true
+  nuclide:
+    remoteProjectsConfig: []
+  "one-light-ui": {}
+  "find-and-replace": {}
+  "linter-jscs":
+    onlyConfig: true
+    fixOnSave: true
+  "go-plus": {}
