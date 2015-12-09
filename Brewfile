@@ -58,6 +58,7 @@ cask 'helium'
 cask 'imageoptim'
 cask 'intellij-idea'
 cask 'iterm2'
+cask 'java'
 cask 'jitouch'
 cask 'league-of-legends'
 cask 'microsoft-office365'
@@ -79,6 +80,9 @@ cask 'transmission'
 cask 'tunnelbear'
 cask 'vlc'
 cask 'ynab'
+
+# Depends on java cask
+brew 'elasticsearch'
 
 # Missing
 #
