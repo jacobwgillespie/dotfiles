@@ -3,6 +3,7 @@
     invisibles: {}
     showInvisibles: true
     fontFamily: "Source Code Pro"
+    preferredLineLength: 100
   core:
     ignoredNames: [
       ".bundle"
