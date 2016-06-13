@@ -1,10 +1,11 @@
 "*":
-  editor:
-    invisibles: {}
-    showInvisibles: true
-    fontFamily: "Source Code Pro"
-    preferredLineLength: 100
+  "atom-lint": {}
   core:
+    disabledPackages: [
+      "background-tips"
+      "exception-reporting"
+      "metrics"
+    ]
     ignoredNames: [
       ".bundle"
       ".git"
@@ -13,36 +14,53 @@
       "tmp"
       "vendor"
     ]
-    disabledPackages: [
-      "background-tips"
-      "exception-reporting"
-      "metrics"
+    themes: [
+      "one-dark-ui"
+      "firewatch-syntax"
     ]
+  editor:
+    fontFamily: "Source Code Pro"
+    invisibles: {}
+    preferredLineLength: 100
+    showInvisibles: true
+  "file-watcher":
+    promptWhenFileHasChangedOnDisk: false
+  "find-and-replace": {}
+  "go-plus": {}
+  linter:
+    errorPanelHeight: 151
+  "linter-eslint":
+    disableWhenNoEslintrcFileInPath: true
+  "linter-rubocop": {}
+  "one-light-ui": {}
+  react:
+    enabledForAllJavascriptFiles: true
   "spell-check":
     grammars: [
       "text.plain"
       "source.gfm"
       "text.git-commit"
+      "source.yaml"
     ]
-  welcome:
-    showOnStartup: false
-  "atom-lint": {}
-  linter: {}
   "tree-view":
     showOnRightSide: true
-  "linter-rubocop": {}
-  react:
-    enabledForAllJavascriptFiles: true
-  "linter-flow-plus": {}
-  "file-watcher":
-    promptWhenFileHasChangedOnDisk: false
-  "linter-eslint":
-    disableWhenNoEslintrcFileInPath: true
-  nuclide:
-    remoteProjectsConfig: []
-  "one-light-ui": {}
-  "find-and-replace": {}
-  "linter-jscs":
-    onlyConfig: true
-    fixOnSave: true
-  "go-plus": {}
+  welcome:
+    showOnStartup: false
+".coffee.jsx.source":
+  editor:
+    preferredLineLength: 100
+".git-commit.text":
+  editor:
+    preferredLineLength: 100
+".git-config.source":
+  editor:
+    preferredLineLength: 100
+".git-rebase.text":
+  editor:
+    preferredLineLength: 100
+".ini.source":
+  editor:
+    preferredLineLength: 100
+".js.jsx.source":
+  editor:
+    preferredLineLength: 100
