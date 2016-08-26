@@ -20,6 +20,7 @@
     ]
   editor:
     fontFamily: "Source Code Pro"
+    fontSize: 13
     invisibles: {}
     preferredLineLength: 100
     showInvisibles: true
@@ -32,6 +33,9 @@
   "linter-eslint":
     disableWhenNoEslintrcFileInPath: true
   "linter-rubocop": {}
+  "one-dark-ui":
+    layoutMode: "Spacious"
+    tabSizing: "Even"
   "one-light-ui": {}
   react:
     enabledForAllJavascriptFiles: true
