@@ -1,4 +1,4 @@
-# Sets reasonable OS X defaults
+# Sets reasonable macOS defaults
 #
 # Run ./set-defaults.sh and you'll be good to go
 
