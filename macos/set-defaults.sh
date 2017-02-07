@@ -5,14 +5,14 @@
 # Disable press-and-hold for keys in favor of key repeat
 defaults write -g ApplePressAndHoldEnabled -bool false
 
+# Use AirDrop over every interface. srsly this should be a default.
+defaults write com.apple.NetworkBrowser BrowseAllInterfaces 1
+
 # Always open everything in Finder's list view
 defaults write com.apple.Finder FXPreferredViewStyle Nlsv
 
 # Show the ~/Library folder
 chflags nohidden ~/Library
-
-# Set a really fast key repeat
-defaults write NSGlobalDomain KeyRepeat -int 0
 
 # Set the Finder prefs for showing a few different volumes on the Desktop
 defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool false
@@ -22,29 +22,23 @@ defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool false
 defaults write com.apple.dock wvous-bl-corner -int 10
 defaults write com.apple.dock wvous-bl-modifier -int 0
 
-# Never go into computer sleep mode
-sudo systemsetup -setcomputersleep Off > /dev/null
-
-# Disable the sound effects on boot
-sudo nvram SystemAudioVolume=" "
-
 # Set the icon size of Dock items to 36 pixels
 defaults write com.apple.dock tilesize -int 36
 
 # Reset Launchpad
 find ~/Library/Application\ Support/Dock -name "*.db" -maxdepth 1 -delete
 
-# Require password immediately after sleep or screen saver begins
-defaults write com.apple.screensaver askForPassword -int 1
-defaults write com.apple.screensaver askForPasswordDelay -int 0
-
-# Disable smart quotes and dashes as they’re annoying when typing code
+# Disable smart quotes as they’re annoying when typing code
 defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
-defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
-defaults write com.apple.messageshelper.MessageController SOInputLineSettings -dict-add "automaticQuoteSubstitutionEnabled" -bool false
 
-# Disable automatic emoji substitution in messages (i.e. use plain text smileys)
+# Disable smart dashes as they’re annoying when typing code
+defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
+
+# Disable automatic emoji substitution (i.e. use plain text smileys)
 defaults write com.apple.messageshelper.MessageController SOInputLineSettings -dict-add "automaticEmojiSubstitutionEnablediMessage" -bool false
+
+# Disable smart quotes as it’s annoying for messages that contain code
+defaults write com.apple.messageshelper.MessageController SOInputLineSettings -dict-add "automaticQuoteSubstitutionEnabled" -bool false
 
 # Trackpad: enable tap to click for this user and for the login screen
 defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
