@@ -67,11 +67,16 @@ rb_prompt() {
   fi
 }
 
+color_hostname() {
+  HASH="$( hostname -s | sha1sum )"
+  printf "\x1b[38;2;%d;%d;%dm$( hostname -s )\x1b[0m " $((0x${HASH:0:2})) $((0x${HASH:2:2})) $((0x${HASH:4:2}))
+}
+
 directory_name() {
   echo "%{$fg_bold[cyan]%}%1/%\/%{$reset_color%}"
 }
 
-export PROMPT=$'\n$(rb_prompt)in $(directory_name) $(git_dirty)$(need_push)\n› '
+export PROMPT=$'\n$(color_hostname)in $(directory_name) $(git_dirty)$(need_push)\n› '
 set_prompt () {
   export RPROMPT="%{$fg_bold[cyan]%}%{$reset_color%}"
 }
