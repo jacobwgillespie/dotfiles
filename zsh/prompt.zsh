@@ -2,6 +2,9 @@ autoload colors && colors
 # cheers, @ehrenmurdick
 # http://github.com/ehrenmurdick/config/blob/master/zsh/prompt.zsh
 
+bold=$(tput bold)
+normal=$(tput sgr0)
+
 if (( $+commands[git] ))
 then
   git="$commands[git]"
@@ -69,7 +72,7 @@ rb_prompt() {
 
 color_hostname() {
   HASH="$( hostname -s | sha1sum )"
-  printf "\x1b[38;2;%d;%d;%dm$( hostname -s )\x1b[0m " $((0x${HASH:0:2})) $((0x${HASH:2:2})) $((0x${HASH:4:2}))
+  printf "${bold}\x1b[38;2;%d;%d;%dm$( hostname -s )\x1b[0m${normal} " $((0x${HASH:0:2})) $((0x${HASH:2:2})) $((0x${HASH:4:2}))
 }
 
 directory_name() {
