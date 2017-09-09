@@ -20,3 +20,4 @@ alias gb='git branch'
 alias gs='git status -sb' # upgrade your git if -sb breaks for you. it's fun.
 alias gnew="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative HEAD..dev"
 alias grb='git rebase --committer-date-is-author-date'
+alias ge='git-edit-new'
