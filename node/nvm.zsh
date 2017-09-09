@@ -8,8 +8,5 @@ if (( $+commands[brew] )); then
 fi
 
 if [ -f "$NVM_SH" ]; then
-  nvm() {
-    source "$NVM_SH"
-    nvm "$@"
-  }
+  source "$NVM_SH"
 fi
