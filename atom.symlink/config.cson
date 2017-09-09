@@ -17,8 +17,9 @@
     telemetryConsent: "limited"
     themes: [
       "one-dark-ui"
-      "firewatch-syntax"
+      "pure-syntax"
     ]
+    titleBar: "custom-inset"
   editor:
     fontFamily: "Source Code Pro"
     fontSize: 13
@@ -29,16 +30,15 @@
     promptWhenFileHasChangedOnDisk: false
   "find-and-replace": {}
   "go-plus": {}
-  linter:
-    errorPanelHeight: 151
+  kite:
+    showKiteTourOnStatup: false
+  linter: {}
   "linter-eslint":
     disableWhenNoEslintrcFileInPath: true
   "linter-rubocop": {}
-  "one-dark-ui":
-    layoutMode: "Spacious"
-    tabSizing: "Even"
-  "one-light-ui": {}
+  "one-dark-ui": {}
   react:
+    disableAutoClose: true
     enabledForAllJavascriptFiles: true
   "spell-check":
     grammars: [
