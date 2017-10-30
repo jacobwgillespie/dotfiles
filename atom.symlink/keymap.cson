@@ -26,3 +26,4 @@
 
 'atom-text-editor:not([mini])':
   'alt-s': 'sort-lines:sort'
+  'ctrl-alt-f': 'linter-eslint:fix-file'
