@@ -1,6 +1,26 @@
 "*":
-  "atom-lint": {}
+  "atom-ide-ui":
+    "atom-ide-diagnostics-ui":
+      autoVisibility: true
+    use:
+      "atom-ide-diagnostics": false
+      "atom-ide-diagnostics-ui": false
   core:
+    customFileTypes:
+      "source.ini": [
+        ".buckconfig"
+        ".flowconfig"
+        ".hgrc"
+      ]
+      "source.json": [
+        "BUCK.autodeps"
+      ]
+      "source.python": [
+        "BUCK"
+      ]
+      "source.shell": [
+        "symlink"
+      ]
     disabledPackages: [
       "background-tips"
       "exception-reporting"
@@ -13,33 +33,27 @@
       "repositories"
       "tmp"
       "vendor"
+      "*.pyc"
     ]
     telemetryConsent: "limited"
-    themes: [
-      "one-dark-ui"
-      "pure-syntax"
-    ]
     titleBar: "custom-inset"
   editor:
-    fontFamily: "Source Code Pro"
-    fontSize: 13
+    fontFamily: "Hasklig"
     invisibles: {}
     preferredLineLength: 100
     showInvisibles: true
-  "file-watcher":
-    promptWhenFileHasChangedOnDisk: false
-  "find-and-replace": {}
-  "go-plus": {}
-  kite:
-    showKiteTourOnStatup: false
-  linter: {}
-  "linter-eslint":
-    disableWhenNoEslintrcFileInPath: true
-  "linter-rubocop": {}
-  "one-dark-ui": {}
-  react:
-    disableAutoClose: true
-    enabledForAllJavascriptFiles: true
+  "flow-ide": {}
+  "ide-flowtype":
+    tryFlowBin: true
+  "linter-flow":
+    executablePath: "/usr/local/bin/flow"
+  "linter-flowtype": {}
+  "linter-pylint":
+    executablePath: "%p/env/bin/pylint"
+    pythonPath: "%p/env/bin/python"
+  "linter-ui-default":
+    panelHeight: 202
+  "one-light-ui": {}
   "spell-check":
     grammars: [
       "text.plain"
@@ -47,25 +61,6 @@
       "text.git-commit"
       "source.yaml"
     ]
-  "tree-view":
-    showOnRightSide: true
+  "tree-view": {}
   welcome:
     showOnStartup: false
-".coffee.jsx.source":
-  editor:
-    preferredLineLength: 100
-".git-commit.text":
-  editor:
-    preferredLineLength: 100
-".git-config.source":
-  editor:
-    preferredLineLength: 100
-".git-rebase.text":
-  editor:
-    preferredLineLength: 100
-".ini.source":
-  editor:
-    preferredLineLength: 100
-".js.jsx.source":
-  editor:
-    preferredLineLength: 100
