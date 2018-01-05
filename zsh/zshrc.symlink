@@ -1,4 +1,7 @@
-# zmodload zsh/zprof
+# If profiling is enabled, collect timing information
+if [ ! -z "$ZSH_PROF" ]; then
+  zmodload zsh/zprof
+fi
 
 # shortcut to this dotfiles path is $ZSH
 export ZSH=$HOME/.dotfiles
@@ -8,7 +11,7 @@ export PROJECTS=~/src
 
 # all of our zsh files
 typeset -U config_files
-config_files=($ZSH/**/*.zsh)
+config_files=($ZSH/*/*.zsh)
 
 # load the path files
 for file in ${(M)config_files:#*/path.zsh}
@@ -50,4 +53,7 @@ zle -N down-line-or-beginning-search
 bindkey "^[[A" up-line-or-beginning-search # Up
 bindkey "^[[B" down-line-or-beginning-search # Down
 
-# zprof
+# If profiling is enabled, display timing information
+if [ ! -z "$ZSH_PROF" ]; then
+  zprof
+fi

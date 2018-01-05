@@ -106,35 +106,6 @@ _prompt_section() {
   echo -n "%{%b%}" # unset bold
 }
 
-# Draw rprompt section (bold is used as default)
-# USAGE:
-#   _rprompt_section <color> [prefix] <content> [suffix]
-RPROMPT_OPENED=false # Internal variable for checking if prompt is opened
-_rprompt_section() {
-  local color prefix content suffix
-  [[ -n $1 ]] && color="%F{$1}"  || color="%f"
-  [[ -n $2 ]] && prefix="$2"     || prefix=""
-  [[ -n $3 ]] && content="$3"    || content=""
-  [[ -n $4 ]] && suffix="$4"     || suffix=""
-
-  [[ -z $3 && -z $4 ]] && content=$2 prefix=''
-
-  echo -n "%{%B%}" # set bold
-  if [[ $RPROMPT_OPENED == true ]]; then
-    echo -n "$prefix"
-  fi
-  RPROMPT_OPENED=true
-  echo -n "%{%b%}" # unset bold
-
-  echo -n "%{%B$color%}" # set color
-  echo -n "$content"     # section content
-  echo -n "%{%b%f%}"     # unset color
-
-  echo -n "%{%B%}" # reset bold, if it was diabled before
-  echo -n "$suffix"
-  echo -n "%{%b%}" # unset bold
-}
-
 # USER
 # If user is root, then paint it in red. Otherwise, just print in yellow.
 prompt_user() {
@@ -272,11 +243,9 @@ prompt_node() {
     return
   fi
 
-  _rprompt_section \
-    "green" \
-    "via " \
-    "⬢ ${node_version}" \
-    " "
+  echo -n "%{%B%F{green}%}"
+  echo -n "⬢ $node_version"
+  echo -n "%{%b%f%}"
 }
 
 # RUBY
@@ -305,7 +274,7 @@ prompt_ruby() {
   _prompt_section \
     "red" \
     "via " \
-    "💎 ${ruby_version}" \
+    "💎  ${ruby_version}" \
     " "
 }
 
@@ -439,97 +408,28 @@ prompt() {
   setopt EXTENDED_GLOB LOCAL_OPTIONS
 
   # Add a newline before the prompt
-  local NEWLINE='
-'
-  echo -n "$NEWLINE"
+  echo ""
 
-  local PROMPT_ORDER=(
-    # time
-    user
-    host
-    dir
-    git
-    # hg
-    # package
-    # node
-    ruby
-    # elixir
-    # xcode
-    # swift
-    # golang
-    # php
-    # rust
-    # haskell
-    # julia
-    # docker
-    aws
-    venv
-    # conda
-    # pyenv
-    # dotnet
-    # ember
-    # kubecontext
-    # exec_time
-    line_sep
-    # battery
-    # vi_mode
-    # jobs
-    # exit_code
-    char
-  )
-
-  # Execute all parts
-  for section in $PROMPT_ORDER; do
-    prompt_$section
-  done
+  # Display prompt sections
+  prompt_user
+  prompt_host
+  prompt_dir
+  prompt_git
+  prompt_ruby
+  prompt_aws
+  prompt_venv
+  prompt_line_sep
+  prompt_char
 }
 
 # Compose whole prompt from smaller parts
 rprompt() {
-  local PROMPT_ORDER=(
-    # time
-    # user
-    # host
-    # dir
-    # git
-    # hg
-    # package
-    node
-    # ruby
-    # elixir
-    # xcode
-    # swift
-    # golang
-    # php
-    # rust
-    # haskell
-    # julia
-    # docker
-    # aws
-    # venv
-    # conda
-    # pyenv
-    # dotnet
-    # ember
-    # kubecontext
-    # exec_time
-    # line_sep
-    # battery
-    # vi_mode
-    # jobs
-    # exit_code
-    # char
-  )
-
-  # Execute all parts
-  for section in $PROMPT_ORDER; do
-    prompt_$section
-  done
+  prompt_node
 }
 
 # PS2 - continuation interactive prompt
 ps2() {
-  _prompt_section "yellow" "❯"
+  _prompt_section "yellow" "❯ "
 }
 
 prompt_set_title() {
@@ -567,8 +467,6 @@ setup() {
 
   # Load zsh modules
   autoload -Uz add-zsh-hook
-  autoload -Uz vcs_info
-  autoload -Uz async && async
 
   # Add zsh hooks
   add-zsh-hook precmd prompt_precmd
