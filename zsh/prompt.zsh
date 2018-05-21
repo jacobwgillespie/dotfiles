@@ -372,11 +372,13 @@ prompt_kubecontext() {
   _exists kubectl || return
   local kube_context=$(kubectl config current-context 2>/dev/null)
   [[ -z $kube_context ]] && return
+  local kube_namespace=$(kubectl config view --minify --output 'jsonpath={..namespace}' 2>/dev/null)
+  kube_namespace=${kube_namespace:-default}
 
   _prompt_section \
-    "cyan" \
-    "at " \
-    "☸️  ${kube_context}" \
+    "033" \
+    "on " \
+    "⎈ ${kube_context}(%{%B%F{246}%}${kube_namespace}%{%B%F{033}%})" \
     " "
 }
 
@@ -417,6 +419,7 @@ prompt() {
   prompt_git
   prompt_ruby
   prompt_aws
+  prompt_kubecontext
   prompt_venv
   prompt_line_sep
   prompt_char
