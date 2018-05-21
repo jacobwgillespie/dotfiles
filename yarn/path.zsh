@@ -1,3 +1,4 @@
 if (( $+commands[yarn] )); then
-  export PATH="`yarn global bin`:$PATH"
+  local YARN_BIN="$(yarn global bin 2>/dev/null)"
+  export PATH="$YARN_BIN:$PATH"
 fi
