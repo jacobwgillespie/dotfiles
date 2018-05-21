@@ -1,5 +1,15 @@
 "*":
+  "atom-ide-ui":
+    "atom-ide-diagnostics-ui":
+      autoVisibility: true
+    hyperclick:
+      darwinTriggerKeys: "altKey"
+    use: {}
   core:
+    customFileTypes:
+      "source.tsx": [
+        "tsx"
+      ]
     disabledPackages: [
       "background-tips"
       "exception-reporting"
@@ -16,6 +26,7 @@
     ]
     telemetryConsent: "limited"
     titleBar: "custom-inset"
+    useTreeSitterParsers: true
   editor:
     fontFamily: "Hasklig"
     invisibles: {}
@@ -25,6 +36,9 @@
   "linter-pylint":
     executablePath: "%p/env/bin/pylint"
     pythonPath: "%p/env/bin/python"
+  "linter-ui-default":
+    panelHeight: 188
+    showPanel: true
   "spell-check":
     grammars: [
       "text.plain"
@@ -32,5 +46,7 @@
       "text.git-commit"
       "source.yaml"
     ]
+  "tool-bar":
+    position: "Right"
   welcome:
     showOnStartup: false
