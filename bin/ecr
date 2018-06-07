@@ -1,0 +1,7 @@
+#!/bin/bash
+
+if [ -n "$1" ]; then
+  export AWS_PROFILE="$1"
+fi
+
+eval "$(aws ecr get-login --no-include-email --region us-east-1)" 2>&1 | grep -v WARNING
