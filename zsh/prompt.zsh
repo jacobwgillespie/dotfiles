@@ -419,7 +419,6 @@ prompt() {
   prompt_git
   prompt_ruby
   prompt_aws
-  prompt_kubecontext
   prompt_venv
   prompt_line_sep
   prompt_char
@@ -427,6 +426,7 @@ prompt() {
 
 # Compose whole prompt from smaller parts
 rprompt() {
+  prompt_kubecontext
   prompt_node
 }
 
