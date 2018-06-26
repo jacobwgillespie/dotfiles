@@ -1,0 +1,37 @@
+slack() {
+  local team=$1
+
+  mkdir -p ~/.slack
+  touch ~/.slack/teams
+
+  if [ -z "$team" ]; then
+    team="$(head -n1 ~/.slack/teams 2>/dev/null)"
+  fi
+
+  if [ -z "$team" ]; then
+    echo "Usage: slack [team]"
+    return 1
+  fi
+
+  read -r -d '' TEAMS <<EOF
+$team
+$(grep -v "$team" ~/.slack/teams)
+EOF
+  echo "$TEAMS" > ~/.slack/teams
+
+  mkdir -p "~/.slack/team/$team"
+
+  (/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome \
+    --app="https://$team.slack.com/messages" \
+    --user-data-dir="~/.slack/team/$team" 2>&1 >/dev/null &) 2>&1 >/dev/null
+}
+
+# _slack_completions()
+# {
+#   lines=`cat ~/.slack/teams`
+#   for line in $lines; do
+#     COMPREPLY+=("$line")
+#   done
+# }
+
+# complete -F _slack_completions slack

@@ -1,0 +1,3 @@
+#compdef slack
+
+_arguments "1: :($(cat ~/.slack/teams))"
