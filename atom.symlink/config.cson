@@ -25,10 +25,6 @@
       "*.pyc"
     ]
     telemetryConsent: "limited"
-    themes: [
-      "one-dark-ui"
-      "one-snazzy-syntax"
-    ]
     titleBar: "custom-inset"
     useTreeSitterParsers: true
   editor:
