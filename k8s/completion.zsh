@@ -1,2 +1,5 @@
-alias k=kubectl
-compdef k=kubectl
+if (( $+commands[kubectl] ))
+then
+  alias k=kubectl
+  compdef k=kubectl
+fi
