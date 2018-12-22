@@ -1,5 +1,7 @@
 {
   "files.associations": {
+    "*.js.symlink": "javascript",
     "*.symlink": "shellscript"
-  }
+  },
+  "eslint.enable": false
 }
