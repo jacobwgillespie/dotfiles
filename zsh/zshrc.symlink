@@ -7,7 +7,7 @@ fi
 export ZSH=$HOME/.dotfiles
 
 # your project folder that we can `c [tab]` to
-export PROJECTS=~/src
+export PROJECTS=~/Code
 
 # all of our zsh files
 typeset -U config_files
