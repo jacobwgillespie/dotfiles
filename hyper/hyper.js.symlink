@@ -33,7 +33,11 @@ module.exports = {
     borderColor: '#333',
 
     // custom css to embed in the main window
-    css: '',
+    css: `
+    .tabs_nav li.tab_active > span {
+      border-bottom: 2px solid #5af78e;
+    }
+    `,
 
     // custom css to embed in the terminal window
     termCSS: '',
