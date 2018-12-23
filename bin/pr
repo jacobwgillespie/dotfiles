@@ -1,7 +1,7 @@
 #!/bin/bash
 
-URL="$(hub pull-request)"
-CODE=$?
-if [[ $CODE -eq 0 ]]; then
-  open "$URL"
+if [ -z "$1" ]; then
+  hub pr list
+else
+  hub pr checkout "$1"
 fi

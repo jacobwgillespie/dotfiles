@@ -1,0 +1,3 @@
+#compdef pr
+
+_arguments "1: :((''\:'List all PRs' $(hub pr list -f "%I\:'%t'%n")))"

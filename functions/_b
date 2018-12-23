@@ -1,0 +1,3 @@
+#compdef b
+
+_arguments "1: :(- $(git branch --list --format '%(refname:short)'))"
