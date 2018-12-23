@@ -3,8 +3,12 @@ set -eu
 
 cd "$(dirname $0)"
 
+bold=$(tput bold)
+green=$(tput setaf 2)
+normal=$(tput sgr0)
+
 title() {
-  echo "==> $1"
+  echo "${bold}==> $1${normal}"
   echo
 }
 
@@ -40,6 +44,11 @@ if [[ "$(uname)" == "Darwin" ]]; then
     echo
   fi
 
+  title "Configuring macOS..."
+  ./scripts/configure-osx
+  echo "Defaults configured!" | indent
+  echo
+
 fi
 
 # Install symlinks
@@ -58,3 +67,5 @@ if [[ "$SHELL" != *"zsh"* ]]; then
     echo
   fi
 fi
+
+echo "${green}All done!${normal}" | indent
