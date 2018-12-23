@@ -1,0 +1,60 @@
+#!/bin/bash
+set -eu
+
+cd "$(dirname $0)"
+
+title() {
+  echo "==> $1"
+  echo
+}
+
+indent() {
+  sed 's/^/  /'
+}
+
+echo
+
+# If macOS
+if [[ "$(uname)" == "Darwin" ]]; then
+
+  # Install brew
+  if test ! $(which brew); then
+    title "Installing Homebrew..."
+    if [[ "$(uname)" == "Darwin" ]]; then
+      ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+    elif [[ "$(expr substr $(uname -s) 1 5)" == "Linux" ]]; then
+      ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/linuxbrew/go/install)"
+    fi
+    echo
+  fi
+
+  # Install brew packages
+  title "Installing software..."
+  brew bundle | indent
+  echo
+
+  # Ensure zsh is a valid shell option
+  if ! cat /etc/shells | grep /usr/local/bin/zsh > /dev/null; then
+    title "Adding zsh to list of allowed shells..."
+    sudo sh -c 'echo /usr/local/bin/zsh >> /etc/shells'
+    echo
+  fi
+
+fi
+
+# Install symlinks
+title "Configuring software..."
+./scripts/install-symlinks
+
+# Check that we are using zsh
+if [[ "$SHELL" != *"zsh"* ]]; then
+  if [[ "$(uname)" == "Darwin" ]]; then
+    title "Changing user shell to zsh..."
+    chsh -s /usr/local/bin/zsh
+    echo "Your shell has been changed to zsh, please restart your terminal or tab" | indent
+    echo
+  else
+    echo "You are not using zsh, after installing, please run 'chsh -s /path/to/zsh'" | indent
+    echo
+  fi
+fi

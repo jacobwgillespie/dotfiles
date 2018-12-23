@@ -1,11 +1,3 @@
-atom.symlink/.apm
-atom.symlink/.node-gyp
-atom.symlink/.storage
-atom.symlink/blob-store
-atom.symlink/compile-cache/
-atom.symlink/kite-config.json
-atom.symlink/packages
-atom.symlink/storage
-atom.symlink/themes
-
-git/gitconfig.symlink
+*.log
+node_modules/
+symlinks/gitconfig.symlink

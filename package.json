@@ -1,0 +1,13 @@
+{
+  "private": true,
+  "prettier": {
+    "bracketSpacing": false,
+    "printWidth": 120,
+    "semi": false,
+    "singleQuote": true,
+    "trailingComma": "all"
+  },
+  "devDependencies": {
+    "prettier": "^1.15.3"
+  }
+}

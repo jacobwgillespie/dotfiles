@@ -3,5 +3,6 @@
     "*.js.symlink": "javascript",
     "*.symlink": "shellscript"
   },
-  "eslint.enable": false
+  "eslint.enable": false,
+  "editor.formatOnSave": true
 }

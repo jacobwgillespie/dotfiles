@@ -1,13 +1,9 @@
-#!/usr/bin/env bash
-#
-# bootstrap installs things.
+#!/bin/bash
 
 cd "$(dirname "$0")/.."
 DOTFILES_ROOT=$(pwd)
 
-set -e
-
-echo ''
+set -eu
 
 info () {
   printf "  [ \033[00;34m..\033[0m ] $1"
@@ -28,7 +24,7 @@ fail () {
 }
 
 setup_gitconfig () {
-  if ! [ -f git/gitconfig.symlink ]
+  if ! [ -f symlinks/gitconfig.symlink ]
   then
     info 'setup gitconfig'
 
@@ -43,7 +39,7 @@ setup_gitconfig () {
     user ' - What is your github author email?'
     read -e git_authoremail
 
-    sed -e "s/AUTHORNAME/$git_authorname/g" -e "s/AUTHOREMAIL/$git_authoremail/g" -e "s/GIT_CREDENTIAL_HELPER/$git_credential/g" git/gitconfig.symlink.example > git/gitconfig.symlink
+    sed -e "s/AUTHORNAME/$git_authorname/g" -e "s/AUTHOREMAIL/$git_authoremail/g" -e "s/GIT_CREDENTIAL_HELPER/$git_credential/g" symlinks/gitconfig.symlink.example > symlinks/gitconfig.symlink
 
     success 'gitconfig'
   fi
@@ -130,7 +126,7 @@ install_dotfiles () {
 
   local overwrite_all=false backup_all=false skip_all=false
 
-  for src in $(find "$DOTFILES_ROOT" -maxdepth 2 -name '*.symlink' -not -path '*.git*')
+  for src in $(find "$DOTFILES_ROOT/symlinks" -maxdepth 2 -name '*.symlink' -not -path '*.git*')
   do
     dst="$HOME/.$(basename "${src%.*}")"
     link_file "$src" "$dst"
@@ -139,18 +135,6 @@ install_dotfiles () {
 
 setup_gitconfig
 install_dotfiles
-
-# If we're on a Mac, let's install and setup homebrew.
-if [ "$(uname -s)" == "Darwin" ]
-then
-  info "installing dependencies"
-  if source bin/dot | while read -r data; do info "$data"; done
-  then
-    success "dependencies installed"
-  else
-    fail "error installing dependencies"
-  fi
-fi
 
 echo ''
 echo '  All installed!'
