@@ -10,6 +10,10 @@ export CLICOLOR=true
 export ZSH=$HOME/.dotfiles
 export PROJECTS=~/Code
 
+# Configure PATH
+export PATH="./bin:$HOME/bin:$HOME/.rbenv/shims:/usr/local/bin:/usr/local/sbin:$ZSH/bin:$PATH:/sbin"
+export MANPATH="/usr/local/man:/usr/local/mysql/man:/usr/local/git/man:$MANPATH"
+
 # Source configuration files
 for file in $ZSH/config/*.zsh; do source $file; done
 if [[ -a ~/.localrc ]]; then source ~/.localrc; fi
