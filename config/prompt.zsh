@@ -405,7 +405,7 @@ setup() {
   export VIRTUAL_ENV_DISABLE_PROMPT=true
 
   # Prevent percentage showing up if output doesn't end with a newline.
-	export PROMPT_EOL_MARK=''
+  export PROMPT_EOL_MARK=''
 
   # Load zsh modules
   autoload -Uz add-zsh-hook
