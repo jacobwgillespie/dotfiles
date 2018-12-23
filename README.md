@@ -1,8 +1,6 @@
 # dotfiles
 
-Dotfiles for configuring macOS or Linux with ZSH and Homebrew
-
-Dotfiles customize your system - these are mine. [Fork](https://github.com/jacobwgillespie/dotfiles/fork) this repository and make it your own!
+Dotfiles for configuring macOS or Linux with ZSH and Homebrew.
 
 ## Requirements
 
