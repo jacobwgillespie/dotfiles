@@ -34,45 +34,55 @@ git_prompt_status() {
   local INDEX STATUS
   INDEX=$(command git status --porcelain -b 2> /dev/null)
   STATUS=""
+
   if $(echo "$INDEX" | command grep -E '^\?\? ' &> /dev/null); then
-    STATUS="$ZSH_THEME_GIT_PROMPT_UNTRACKED$STATUS"
+    STATUS="?$STATUS"
   fi
+
   if $(echo "$INDEX" | grep '^A  ' &> /dev/null); then
-    STATUS="$ZSH_THEME_GIT_PROMPT_ADDED$STATUS"
+    STATUS="+$STATUS"
   elif $(echo "$INDEX" | grep '^M  ' &> /dev/null); then
-    STATUS="$ZSH_THEME_GIT_PROMPT_ADDED$STATUS"
+    STATUS="+$STATUS"
   fi
+
   if $(echo "$INDEX" | grep '^ M ' &> /dev/null); then
-    STATUS="$ZSH_THEME_GIT_PROMPT_MODIFIED$STATUS"
+    STATUS="!$STATUS"
   elif $(echo "$INDEX" | grep '^AM ' &> /dev/null); then
-    STATUS="$ZSH_THEME_GIT_PROMPT_MODIFIED$STATUS"
+    STATUS="!$STATUS"
   elif $(echo "$INDEX" | grep '^ T ' &> /dev/null); then
-    STATUS="$ZSH_THEME_GIT_PROMPT_MODIFIED$STATUS"
+    STATUS="!$STATUS"
   fi
+
   if $(echo "$INDEX" | grep '^R  ' &> /dev/null); then
-    STATUS="$ZSH_THEME_GIT_PROMPT_RENAMED$STATUS"
+    STATUS="»$STATUS"
   fi
+
   if $(echo "$INDEX" | grep '^ D ' &> /dev/null); then
-    STATUS="$ZSH_THEME_GIT_PROMPT_DELETED$STATUS"
+    STATUS="✘$STATUS"
   elif $(echo "$INDEX" | grep '^D  ' &> /dev/null); then
-    STATUS="$ZSH_THEME_GIT_PROMPT_DELETED$STATUS"
+    STATUS="✘$STATUS"
   elif $(echo "$INDEX" | grep '^AD ' &> /dev/null); then
-    STATUS="$ZSH_THEME_GIT_PROMPT_DELETED$STATUS"
+    STATUS="✘$STATUS"
   fi
+
   if $(command git rev-parse --verify refs/stash >/dev/null 2>&1); then
-    STATUS="$ZSH_THEME_GIT_PROMPT_STASHED$STATUS"
+    STATUS="$$STATUS"
   fi
+
   if $(echo "$INDEX" | grep '^UU ' &> /dev/null); then
-    STATUS="$ZSH_THEME_GIT_PROMPT_UNMERGED$STATUS"
+    STATUS="=$STATUS"
   fi
+
   if $(echo "$INDEX" | grep '^## [^ ]\+ .*ahead' &> /dev/null); then
-    STATUS="$ZSH_THEME_GIT_PROMPT_AHEAD$STATUS"
+    STATUS="⇡$STATUS"
   fi
+
   if $(echo "$INDEX" | grep '^## [^ ]\+ .*behind' &> /dev/null); then
-    STATUS="$ZSH_THEME_GIT_PROMPT_BEHIND$STATUS"
+    STATUS="⇣$STATUS"
   fi
+
   if $(echo "$INDEX" | grep '^## [^ ]\+ .*diverged' &> /dev/null); then
-    STATUS="$ZSH_THEME_GIT_PROMPT_DIVERGED$STATUS"
+    STATUS="⇕$STATUS"
   fi
   echo $STATUS
 }
@@ -109,8 +119,6 @@ _prompt_section() {
 # USER
 # If user is root, then paint it in red. Otherwise, just print in yellow.
 prompt_user() {
-  # [[ $SPACESHIP_USER_SHOW == false ]] && return
-
   if [[ $LOGNAME != $USER ]] || [[ $UID == 0 ]] || [[ -n $SSH_CONNECTION ]]; then
     local user_color
 
@@ -184,17 +192,6 @@ prompt_git_branch() {
 #   https://github.com/robbyrussell/oh-my-zsh/blob/master/lib/git.zsh
 prompt_git_status() {
   _is_git || return
-
-  ZSH_THEME_GIT_PROMPT_UNTRACKED="?"
-  ZSH_THEME_GIT_PROMPT_ADDED="+"
-  ZSH_THEME_GIT_PROMPT_MODIFIED="!"
-  ZSH_THEME_GIT_PROMPT_RENAMED="»"
-  ZSH_THEME_GIT_PROMPT_DELETED="✘"
-  ZSH_THEME_GIT_PROMPT_STASHED="$"
-  ZSH_THEME_GIT_PROMPT_UNMERGED="="
-  ZSH_THEME_GIT_PROMPT_AHEAD="⇡"
-  ZSH_THEME_GIT_PROMPT_BEHIND="⇣"
-  ZSH_THEME_GIT_PROMPT_DIVERGED="⇕"
 
   local git_status="$(git_prompt_status)"
 
@@ -278,64 +275,6 @@ prompt_ruby() {
     " "
 }
 
-# GOLANG
-# Show current version of Go
-prompt_golang() {
-  # If there are Go-specific files in current directory, or current directory is under the GOPATH
-  [[ -d Godeps || -f glide.yaml || -n *.go(#qN^/) || -f Gopkg.yml || -f Gopkg.lock || ( $GOPATH && $PWD =~ $GOPATH ) ]] || return
-
-  _exists go || return
-
-  local go_version=$(go version | grep --colour=never -oE '[[:digit:]].[[:digit:]]')
-
-  _prompt_section \
-    "cyan " \
-    "via " \
-    "🐹 v${go_version}" \
-    " "
-}
-
-# RUST
-# Show current version of Rust
-prompt_rust() {
-  # If there are Rust-specific files in current directory
-  [[ -f Cargo.toml || -n *.rs(#qN^/) ]] || return
-
-  _exists rustc || return
-
-  local rust_version=$(rustc --version | grep --colour=never -oE '[[:digit:]]+\.[[:digit:]]+\.[[:digit:]]')
-
-  _prompt_section \
-    "red" \
-    "via " \
-    "𝗥 v${rust_version}" \
-    " "
-}
-
-# DOCKER
-# Show current Docker version and connected machine
-prompt_docker() {
-  _exists docker || return
-
-  # Show Docker status only for Docker-specific folders
-  [[ -f Dockerfile || -f docker-compose.yml ]] || return
-
-  # if docker daemon isn't running you'll get an error saying it can't connect
-  docker info 2>&1 | grep -q "Cannot connect" && return
-
-  local docker_version=$(docker version -f "{{.Server.Version}}")
-
-  if [[ -n $DOCKER_MACHINE_NAME ]]; then
-    docker_version+=" via ($DOCKER_MACHINE_NAME)"
-  fi
-
-  _prompt_section \
-    "cyan" \
-    "on " \
-    "🐳 v${docker_version}" \
-    " "
-}
-
 # Amazon Web Services (AWS)
 # Shows selected AWS cli profile.
 prompt_aws() {
@@ -378,7 +317,7 @@ prompt_kubecontext() {
   _prompt_section \
     "033" \
     "on " \
-    "⎈ ${kube_context}(%{%B%F{246}%}${kube_namespace}%{%B%F{033}%})" \
+    "⎈ ${kube_context} %{%B%F{246}%}${kube_namespace}" \
     " "
 }
 
@@ -399,7 +338,7 @@ prompt_char() {
 
 # Compose whole prompt from smaller parts
 prompt() {
-  # Retirve exit code of last command to use in exit_code
+  # Retrieve exit code of last command to use in exit_code
   # Must be captured before any other command in prompt is executed
   RETVAL=$?
 
