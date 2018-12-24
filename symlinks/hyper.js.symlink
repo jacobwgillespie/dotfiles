@@ -34,8 +34,9 @@ module.exports = {
 
     // custom css to embed in the main window
     css: `
-    .tabs_nav li.tab_active > span {
-      border-bottom: 2px solid #5af78e;
+    .tab_tab::before {
+      background-color: #5af78e;
+      height: 2px;
     }
     `,
 
@@ -121,7 +122,7 @@ module.exports = {
   //   `hyperpower`
   //   `@company/project`
   //   `project#1.0.1`
-  plugins: ['hyperterm-snazzy', 'hyper-font-ligatures'],
+  plugins: ['hyper-snazzy', 'hyper-font-ligatures'],
 
   // in development, you can create a directory under
   // `~/.hyper_plugins/local/` and include it here
