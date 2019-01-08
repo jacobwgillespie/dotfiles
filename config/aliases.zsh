@@ -5,7 +5,7 @@ alias reload!='. ~/.zshrc'
 alias jitouch="(pkill Jitouch || true) && open /Library/PreferencePanes/Jitouch.prefPane/Contents/Resources/Jitouch.app"
 
 # Speedtest
-alias speedtest="wget --output-document=/dev/null http://speedtest.wdc01.softlayer.com/downloads/test500.zip"
+alias speedtest="wget --output-document=/dev/null http://speedtest.dal01.softlayer.com/downloads/test500.zip"
 
 # Enable aliases to be sudo’ed
 alias sudo='sudo '
