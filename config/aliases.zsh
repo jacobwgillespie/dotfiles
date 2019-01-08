@@ -7,6 +7,9 @@ alias jitouch="(pkill Jitouch || true) && open /Library/PreferencePanes/Jitouch.
 # Speedtest
 alias speedtest="wget --output-document=/dev/null http://speedtest.dal01.softlayer.com/downloads/test500.zip"
 
+# Clear and reset the screen
+alias clr="tput reset"
+
 # Enable aliases to be sudo’ed
 alias sudo='sudo '
 
