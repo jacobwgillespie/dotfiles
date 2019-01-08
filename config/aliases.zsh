@@ -1,6 +1,9 @@
 # Reload zsh configuration
 alias reload!='. ~/.zshrc'
 
+# Restart Jitouch
+alias jitouch="(pkill Jitouch || true) && open /Library/PreferencePanes/Jitouch.prefPane/Contents/Resources/Jitouch.app"
+
 # Speedtest
 alias speedtest="wget --output-document=/dev/null http://speedtest.wdc01.softlayer.com/downloads/test500.zip"
 
