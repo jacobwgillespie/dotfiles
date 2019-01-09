@@ -3,6 +3,7 @@ tap 'homebrew/cask'
 tap 'homebrew/cask-drivers'
 tap 'homebrew/cask-versions'
 
+brew '1password'
 brew 'ark'
 brew 'awscli'
 brew 'circleci'
