@@ -18,6 +18,20 @@ $ ./setup
 
 This will install all required dotfiles in your home directory as symlinks. Everything is then configured via modifying files in `~/.dotfiles`.
 
+## Software
+
+The `Brewfile` installs most all of the software and applications I have installed on my Mac. I typically also install:
+
+- App Store
+  - Lungo
+  - Pixelmator
+  - Reeder
+  - Things
+  - Tweetbot
+  - Xcode
+- Standalone
+  - Microsoft Office 365
+
 ## Structure
 
 The repository is organized as follows:
