@@ -365,8 +365,10 @@ prompt() {
 
 # Compose whole prompt from smaller parts
 rprompt() {
-  prompt_kubecontext
-  prompt_node
+  if [ -z "$PROMPT_PRESENTATION_MODE" ]; then
+    prompt_kubecontext
+    prompt_node
+  fi
 }
 
 # PS2 - continuation interactive prompt
@@ -398,6 +400,14 @@ prompt_precmd() {
 }
 
 prompt_preexec() {
+}
+
+present() {
+  if [ -z "$PROMPT_PRESENTATION_MODE" ]; then
+    export PROMPT_PRESENTATION_MODE=1
+  else
+    unset PROMPT_PRESENTATION_MODE
+  fi
 }
 
 setup() {
