@@ -85,6 +85,7 @@ cask 'kaleidoscope'
 cask 'kap-beta'
 cask 'krisp'
 cask 'league-of-legends'
+cask 'minikube'
 # cask 'moneywell' # temporarily unavailable
 cask 'musicbrainz-picard'
 cask 'plex-media-player'
