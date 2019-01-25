@@ -24,13 +24,12 @@ The `Brewfile` installs most all of the software and applications I have install
 
 - App Store
   - Lungo
+  - Microsoft Office 365
   - Pixelmator
   - Reeder
   - Things
   - Tweetbot
   - Xcode
-- Standalone
-  - Microsoft Office 365
 
 ## Structure
 
