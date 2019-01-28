@@ -1,6 +1,12 @@
 #!/bin/bash
 
+bold=$(tput bold)
+normal=$(tput sgr0)
+
 if [ -z "$1" ]; then
+  echo
+  echo "${bold}Pull Requests${normal}"
+  echo
   hub pr list
 else
   hub pr checkout "$1"
