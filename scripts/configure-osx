@@ -23,6 +23,12 @@ defaults write com.apple.dock wvous-bl-modifier -int 0
 # Set the icon size of Dock items to 36 pixels
 defaults write com.apple.dock tilesize -int 36
 
+# Place the Dock on the left side of the screen
+defaults write com.apple.dock orientation left
+
+# Hide recent apps from Dock
+defaults write com.apple.dock show-recents -bool false
+
 # Reset Launchpad
 find ~/Library/Application\ Support/Dock -name "*.db" -maxdepth 1 -delete
 
