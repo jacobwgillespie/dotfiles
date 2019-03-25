@@ -1,5 +1,4 @@
-if (( $+commands[rbenv] ))
-then
+if (( $+commands[rbenv] )); then
   eval "$(rbenv init -)"
 else
   if [ -d "$HOME/.rbenv/bin" ]; then

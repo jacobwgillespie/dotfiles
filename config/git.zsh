@@ -1,5 +1,4 @@
-if (( $+commands[hub] ))
-then
+if (( $+commands[hub] )); then
   alias git=$(which hub)
 fi
 
@@ -10,5 +9,4 @@ alias gp='git push origin HEAD'
 alias gpf='git push origin HEAD --force-with-lease'
 alias gs='git status -sb'
 alias grb='git rebase --committer-date-is-author-date'
-alias gpr='git pull --rebase'
 alias s='git sync'

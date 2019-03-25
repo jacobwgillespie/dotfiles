@@ -35,10 +35,9 @@ alias cleanup="find . -type f -name '*.DS_Store' -ls -delete"
 alias show="defaults write com.apple.finder AppleShowAllFiles -bool true && killall Finder"
 alias hide="defaults write com.apple.finder AppleShowAllFiles -bool false && killall Finder"
 
-# Disable Spotlight
-alias spotoff="sudo mdutil -a -i off"
-# Enable Spotlight
+# Enable/disable Spotlight
 alias spoton="sudo mdutil -a -i on"
+alias spotoff="sudo mdutil -a -i off"
 
 # Load .env file
 function loadenv() { cat .env | while read a; do export $a; done }
