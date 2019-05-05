@@ -355,10 +355,12 @@ prompt() {
   prompt_user
   prompt_host
   prompt_dir
-  prompt_git
-  prompt_ruby
-  prompt_aws
-  prompt_venv
+  if [ -z "$PROMPT_PRESENTATION_MODE" ]; then
+    prompt_git
+    prompt_ruby
+    prompt_aws
+    prompt_venv
+  fi
   prompt_line_sep
   prompt_char
 }
