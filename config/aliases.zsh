@@ -10,9 +10,6 @@ alias speedtest="wget --output-document=/dev/null http://speedtest.dal01.softlay
 # Clear and reset the screen
 alias clr="tput reset"
 
-# Enable aliases to be sudo’ed
-alias sudo='sudo '
-
 # Flush DNS cache
 alias flush="sudo killall -HUP mDNSResponder"
 
