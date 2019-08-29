@@ -72,6 +72,6 @@ module.exports = {
   },
 
   keymaps: {},
-  plugins: ['hyper-font-ligatures'],
   localPlugins: [],
+  plugins: ['hyper-font-ligatures', 'hyper-search'],
 }
