@@ -49,7 +49,7 @@ setup() {
   add-zsh-hook preexec prompt_preexec
 
   # Configure prompt
-  eval "$($ZSH/prompt/prompt init zsh)"
+  eval "$(prompt init zsh)"
 
   # LSCOLORS
   # Online editor: https://geoff.greer.fm/lscolors/
