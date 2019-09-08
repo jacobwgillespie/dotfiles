@@ -1,0 +1,4 @@
+#!/bin/sh -e
+curl -LSs "https://releases.hashicorp.com/terraform-provider-$1/" 2> /dev/null \
+  | grep -m1 -o "terraform-provider-${1}_[0-9.]*" \
+  | cut -d_ -f2
