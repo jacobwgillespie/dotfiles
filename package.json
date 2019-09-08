@@ -8,6 +8,6 @@
     "trailingComma": "all"
   },
   "devDependencies": {
-    "prettier": "^1.15.3"
+    "prettier": "^1.18.2"
   }
 }
