@@ -1,14 +1,19 @@
+# Taps
+tap 'derailed/k9s'
+tap 'derailed/popeye'
 tap 'homebrew/bundle'
 tap 'homebrew/cask'
 tap 'homebrew/cask-versions'
 tap 'homebrew/services'
+tap 'instrumenta/instrumenta'
 
+# Formulae
 brew 'ack'
 brew 'aws-iam-authenticator'
 brew 'aws-okta'
 brew 'awscli'
 brew 'chamber'
-brew 'instrumenta/instrumenta/conftest'
+brew 'conftest'
 brew 'coreutils'
 brew 'ffmpeg'
 brew 'fish'
@@ -22,21 +27,20 @@ brew 'helmfile'
 brew 'httpie'
 brew 'hub'
 brew 'jq'
-brew 'derailed/k9s/k9s'
+brew 'k9s'
 brew 'kubernetes-cli'
 brew 'kubectx'
-brew 'garethr/kubeval/kubeval'
+brew 'kubeval'
 brew 'kustomize'
-brew 'libxml2'
-brew 'libyaml'
 brew 'mas'
-brew 'media-info'
 brew 'n'
 brew 'node'
 brew 'opa'
 brew 'pinentry-mac'
 brew 'pipenv'
+brew 'popeye'
 brew 'python@2'
+brew 'ruby'
 brew 'shellcheck'
 brew 'stern'
 brew 'telnet'
@@ -49,6 +53,7 @@ brew 'youtube-dl'
 brew 'zsh'
 brew 'zsh-syntax-highlighting'
 
+# Casks
 cask '1password'
 cask '1password-cli'
 cask 'ballast'
@@ -101,10 +106,10 @@ cask 'vlc'
 cask 'whatsapp'
 cask 'zoomus'
 
+# Mac App Store Applications
 mas 'Apple Configurator 2', id: 1_037_126_344
 mas 'Battery Indicator', id: 1_206_020_918
-mas 'Deliveries', id: 924_726_344
-mas 'Fantastical', id: 975_937_182
+mas 'Dato', id: 1_470_584_107
 mas 'Microsoft Excel', id: 462_058_435
 mas 'Microsoft Remote Desktop 10', id: 1_295_203_466
 mas 'Microsoft Word', id: 462_054_704
