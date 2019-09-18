@@ -34,6 +34,7 @@ brew 'kustomize'
 brew 'librdkafka'
 brew 'libxml2'
 brew 'libyaml'
+brew 'mas'
 brew 'maven'
 brew 'media-info'
 brew 'mysql'
@@ -66,22 +67,19 @@ brew 'zsh'
 brew 'zsh-syntax-highlighting'
 
 cask '1password'
-cask 'atom'
-cask 'aws-vault'
-cask 'balenaetcher'
 cask 'ballast'
+cask 'blitz'
 cask 'blu-ray-player-pro'
+cask 'boxy-suite'
 cask 'cleanmymac'
 cask 'daisydisk'
 cask 'dash'
 cask 'dbngin'
 cask 'deluge'
-cask 'devdocs'
 cask 'discord'
 cask 'docker'
 cask 'dropbox'
 cask 'duet'
-cask 'expressions'
 cask 'firefox'
 cask 'github'
 cask 'google-chrome'
@@ -95,25 +93,21 @@ cask 'insomnia'
 cask 'java'
 cask 'kaleidoscope'
 cask 'kap-beta'
+cask 'keybase'
 cask 'krisp'
 cask 'league-of-legends'
+cask 'microsoft-edge-beta'
+cask 'minecraft'
 cask 'minikube'
-# cask 'moneywell' # temporarily unavailable
-cask 'musicbrainz-picard'
-cask 'plex-media-player'
-cask 'postgres'
-cask 'private-internet-access'
-cask 'roon'
+cask 'plex'
 cask 'screens'
-cask 'shimo'
-cask 'signal'
 cask 'sizeup'
+cask 'sketch'
 cask 'skype'
 cask 'slack'
 cask 'sonos'
 cask 'sony-ps4-remote-play'
 cask 'spotify'
-cask 'steam'
 cask 'sublime-text'
 cask 'tableplus'
 cask 'the-unarchiver'
@@ -125,3 +119,17 @@ cask 'visual-studio-code'
 cask 'vlc'
 cask 'whatsapp'
 cask 'zoomus'
+
+mas 'Apple Configurator 2', id: 1_037_126_344
+mas 'Battery Indicator', id: 1_206_020_918
+mas 'Deliveries', id: 924_726_344
+mas 'Fantastical', id: 975_937_182
+mas 'Microsoft Excel', id: 462_058_435
+mas 'Microsoft Remote Desktop 10', id: 1_295_203_466
+mas 'Microsoft Word', id: 462_054_704
+mas 'Pixelmator', id: 407_963_104
+mas 'Reeder 4', id: 1_449_412_482
+mas 'Things 3', id: 904_280_696
+mas 'Tweetbot', id: 1_384_080_005
+mas 'WireGuard', id: 1_451_685_025
+mas 'Xcode', id: 497_799_835

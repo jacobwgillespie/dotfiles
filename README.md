@@ -20,16 +20,7 @@ This will install all required dotfiles in your home directory as symlinks. Ever
 
 ## Software
 
-The `Brewfile` installs most all of the software and applications I have installed on my Mac. I typically also install:
-
-- App Store
-  - Lungo
-  - Microsoft Office 365
-  - Pixelmator
-  - Reeder
-  - Things
-  - Tweetbot
-  - Xcode
+The `Brewfile` installs all of the software and applications I have installed on my Mac, including Homebrew formulae, Homebrew casks, and Mac App Store applications.
 
 ## Structure
 

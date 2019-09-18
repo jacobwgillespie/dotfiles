@@ -1,8 +1,19 @@
 {
   "files.associations": {
+    "Brewfile": "ruby",
+    "gitconfig.*": "ini",
     "*.js.symlink": "javascript",
     "*.symlink": "shellscript"
   },
   "eslint.enable": false,
-  "editor.formatOnSave": true
+  "editor.formatOnSave": true,
+  "cSpell.words": [
+    "brewfile",
+    "dotfiles",
+    "gitignore",
+    "symlink",
+    "symlinked",
+    "symlinks",
+    "tweetbot"
+  ]
 }
