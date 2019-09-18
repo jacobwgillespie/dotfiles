@@ -14,10 +14,6 @@ export PROJECTS=~/Code
 export PATH="./bin:$HOME/bin:$HOME/.rbenv/shims:/usr/local/bin:/usr/local/sbin:$ZSH/bin:$PATH:/sbin"
 export MANPATH="/usr/local/man:/usr/local/mysql/man:/usr/local/git/man:$MANPATH"
 
-# Source configuration files
-for file in $ZSH/config/*.zsh; do source $file; done
-if [[ -a ~/.localrc ]]; then source ~/.localrc; fi
-
 # load functions
 fpath=($ZSH/functions $fpath)
 autoload -U compinit
@@ -29,6 +25,10 @@ autoload -U $ZSH/functions/*(:t)
 compinit
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}' # match lowercase as case-insensitive
 zstyle ':completion:*' insert-tab pending # pasted tabs don't trigger completion
+
+# Source configuration files
+for file in $ZSH/config/*.zsh; do source $file; done
+if [[ -a ~/.localrc ]]; then source ~/.localrc; fi
 
 # Configure zsh history behavior
 HISTFILE=~/.zsh_history
