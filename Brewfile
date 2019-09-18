@@ -1,5 +1,6 @@
 tap 'homebrew/bundle'
 tap 'homebrew/cask'
+tap 'homebrew/cask-versions'
 tap 'homebrew/services'
 
 brew 'ack'
