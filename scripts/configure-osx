@@ -23,6 +23,9 @@ defaults write com.apple.dock wvous-bl-modifier -int 0
 # Set the icon size of Dock items to 36 pixels
 defaults write com.apple.dock tilesize -int 36
 
+# Prevent changing the Dock size
+defaults write com.apple.dock size-immutable -bool true
+
 # Place the Dock on the left side of the screen
 defaults write com.apple.dock orientation left
 
