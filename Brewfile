@@ -107,6 +107,7 @@ cask 'whatsapp'
 cask 'zoomus'
 
 # Mac App Store Applications
+mas '1Blocker', id: 1_107_421_413
 mas 'Apple Configurator 2', id: 1_037_126_344
 mas 'Battery Indicator', id: 1_206_020_918
 mas 'Dato', id: 1_470_584_107
