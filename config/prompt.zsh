@@ -18,7 +18,6 @@ prompt_set_title() {
   print -n '\a'
 }
 
-
 prompt_precmd() {
   prompt_set_title 'expand-prompt' '%~'
 }
