@@ -1,6 +1,8 @@
 # Setup kubectl alias
 if (( $+commands[kubectl] )); then
+  source <(kubectl completion zsh)
   alias k=kubectl
+  complete -o default -F __start_kubectl k
 fi
 
 # Setup stern autocompletion
