@@ -1,3 +1,4 @@
 *.log
 node_modules/
 symlinks/gitconfig.symlink
+Brewfile.lock.json
