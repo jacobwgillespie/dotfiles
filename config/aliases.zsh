@@ -37,4 +37,4 @@ alias spoton="sudo mdutil -a -i on"
 alias spotoff="sudo mdutil -a -i off"
 
 # Load .env file
-function loadenv() { cat .env | while read a; do export $a; done }
+function loadenv() { cat .env | grep -v '^#' | grep -v '^$' | while read a; do export $a; done }
