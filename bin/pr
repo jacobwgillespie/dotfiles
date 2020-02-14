@@ -4,10 +4,9 @@ bold=$(tput bold)
 normal=$(tput sgr0)
 
 if [ -z "$1" ]; then
-  echo
-  echo "${bold}Pull Requests${normal}"
-  echo
-  hub pr list
+  gh pr list
+elif [[ "$1" =~ ^[0-9]+$ ]]; then
+  gh pr checkout "$1"
 else
-  hub pr checkout "$1"
+  gh pr $@
 fi
