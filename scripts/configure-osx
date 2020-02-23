@@ -3,6 +3,9 @@
 # Disable press-and-hold for keys in favor of key repeat
 defaults write -g ApplePressAndHoldEnabled -bool false
 
+# Set key repeat to 60hz to match screen refresh rate
+defaults write NSGlobalDomain KeyRepeat -int 1
+
 # Use AirDrop over every interface
 defaults write com.apple.NetworkBrowser BrowseAllInterfaces 1
 
