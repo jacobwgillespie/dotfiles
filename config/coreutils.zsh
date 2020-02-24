@@ -24,4 +24,5 @@ fi
 # Override cat with bat
 if (( $+commands[bat] )); then
   alias cat=bat
+  export BAT_STYLE=plain # only enable syntax highlighting
 fi
