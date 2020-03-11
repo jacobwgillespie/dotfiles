@@ -4,4 +4,11 @@ if [ -n "$1" ]; then
   export AWS_PROFILE="$1"
 fi
 
-eval "$(aws ecr get-login --no-include-email --region us-east-1)" 2>&1 | grep -v WARNING
+ACCOUNT_ID="$(aws sts get-caller-identity | jq -r .Account)"
+REGION="$(aws configure get region)"
+
+aws ecr get-login-password | \
+  docker login \
+    --username AWS \
+    --password-stdin \
+    "https://$ACCOUNT_ID.dkr.ecr.$REGION.amazonaws.com"
