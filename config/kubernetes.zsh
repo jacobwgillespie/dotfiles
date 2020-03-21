@@ -19,3 +19,8 @@ fi
 if (( $+commands[kubens] )); then
   alias kn=kubens
 fi
+
+# Include krew plugins
+if [[ -d ~/.krew/bin ]]; then
+  export PATH="$PATH:$HOME/.krew/bin"
+fi
