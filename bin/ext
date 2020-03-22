@@ -1,0 +1,135 @@
+#!/bin/bash
+
+# Utils
+bold="$(tput bold)"
+normal="$(tput sgr0)"
+indent() {
+  sed 's/^/  /'
+}
+
+# Lists installed packages that aren't in the CodeExtensions
+list_extra() {
+  diff \
+    --changed-group-format='%>' \
+    --unchanged-group-format='' \
+    CodeExtensions <(code --list-extensions)
+}
+
+# Lists packages in the CodeExtensions that aren't installed
+list_missing() {
+  diff \
+    --changed-group-format='%>' \
+    --unchanged-group-format='' \
+    <(code --list-extensions) CodeExtensions
+}
+
+# Lists all installed extensions
+list_extensions() {
+  code --list-extensions
+}
+
+# Lists difference between installed extensions and CodeExtensions
+diff_extensions() {
+  extra="$(list_extra)"
+  missing="$(list_missing)"
+
+  if [[ "$missing" != "" ]]; then
+    echo "${bold}Not Installed${normal}"
+    echo "$missing" | indent
+  fi
+
+  if [[ "$extra" != "" ]]; then
+    echo "${bold}Missing from CodeExtensions${normal}"
+    echo "$extra" | indent
+  fi
+}
+
+# Installs a single extension
+install_extension() {
+  code --install-extension "$1"
+}
+
+# Installs all extensions in the CodeExtensions
+bundle_extensions() {
+  missing="$(list_missing)"
+  if [[ "$missing" == "" ]]; then
+    echo "No extensions to install"
+    exit 0
+  fi
+
+  echo "$missing" | xargs -n 1 code --install-extension
+}
+
+cleanup_extensions() {
+  force=0
+  if [[ "$1" == "-f" ]]; then force=1; fi
+
+  extra="$(list_extra)"
+
+  if [[ "$extra" != "" ]] && [[ "$force" != "1" ]]; then
+    echo "${bold}Warning:${normal} would uninstall the following extensions:"
+    echo "$extra" | indent
+    echo ""
+    echo "Run again with -f to uninstall."
+    exit 0
+  fi
+
+  if [[ "$extra" == "" ]]; then
+    echo "No extensions to uninstall"
+    exit 0
+  fi
+
+  echo "$extra" | xargs -n 1 code --uninstall-extension
+}
+
+# Exports installed extensions to CodeExtensions file
+export_extensions() {
+  force=0
+  if [[ "$1" == "-f" ]]; then force=1; fi
+
+  missing="$(list_missing)"
+  if [[ "$missing" != "" ]] && [[ "$force" != "1" ]]; then
+    echo "${bold}Error:${normal} some extensions listed in CodeExtensions are not installed:"
+    echo "$missing" | indent
+    echo ""
+    echo "Run again with -f to overwrite."
+    exit 1
+  fi
+
+  list_extensions > CodeExtensions
+}
+
+subcommand=$1
+case $subcommand in
+  "list")
+    list_extensions
+    ;;
+
+  "diff")
+    diff_extensions
+    ;;
+
+  "install")
+    shift
+    install_extension "$@"
+    ;;
+
+  "bundle")
+    bundle_extensions
+    ;;
+
+  "cleanup")
+    shift
+    cleanup_extensions "$@"
+    ;;
+
+  "export")
+    shift
+    export_extensions "$@"
+    ;;
+
+  *)
+    echo "Usage: ext [list|diff|install|bundle|cleanup|export]"
+    ;;
+
+esac
