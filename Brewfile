@@ -8,6 +8,7 @@ tap 'homebrew/bundle'
 tap 'homebrew/cask'
 tap 'homebrew/cask-drivers'
 tap 'homebrew/cask-versions'
+tap 'homebrew/cask-fonts'
 tap 'homebrew/services'
 tap 'instrumenta/instrumenta'
 tap 'replicatedhq/replicated'
@@ -142,6 +143,10 @@ cask 'visual-studio-code'
 cask 'vlc'
 cask 'whatsapp'
 cask 'zoomus'
+
+# Fonts
+cask 'font-hasklig'
+cask 'font-source-code-pro'
 
 # Mac App Store Applications
 mas '1Blocker', id: 1_107_421_413
