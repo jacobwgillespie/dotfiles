@@ -8,6 +8,7 @@ export CLICOLOR=true
 
 # Configure directories
 export ZSH=$HOME/.dotfiles
+export XDG_CONFIG_HOME=$HOME/.config
 export PROJECTS=~/Code
 
 # Configure PATH
