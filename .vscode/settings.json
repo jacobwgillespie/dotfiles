@@ -1,7 +1,7 @@
 {
   "files.associations": {
     "Brewfile": "ruby",
-    "gitconfig.*": "ini",
+    ".gitconfig.*": "properties",
     "*.conf.symlink": "properties",
     "*.js.symlink": "javascript",
     "*.json.symlink": "json",

@@ -1,30 +1,30 @@
 [hub]
-        protocol = https
+	protocol = https
 [user]
-        name = AUTHORNAME
-        email = AUTHOREMAIL
+	name = AUTHORNAME
+	email = AUTHOREMAIL
 [credential]
-        helper = GIT_CREDENTIAL_HELPER
+	helper = GIT_CREDENTIAL_HELPER
 [alias]
-        co = checkout
-        ca = !git add -A && git commit -av
+	co = checkout
+	ca = !git add -A && git commit -av
 [color]
-        diff = auto
-        status = auto
-        branch = auto
-        ui = true
+	diff = auto
+	status = auto
+	branch = auto
+	ui = true
 [core]
-        excludesfile = ~/.gitignore
-        editor = e -w
+	excludesfile = ~/.gitignore
+	editor = e -w
 [apply]
-        whitespace = nowarn
+	whitespace = nowarn
 [mergetool]
-        keepBackup = false
+	keepBackup = false
 [difftool]
-        prompt = false
+	prompt = false
 [help]
-        autocorrect = 1
+	autocorrect = 1
 [push]
-        default = simple
+	default = simple
 [protocol]
-        version = 2
+	version = 2
