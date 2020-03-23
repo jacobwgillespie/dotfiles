@@ -2,6 +2,8 @@
   "files.associations": {
     "Brewfile": "ruby",
     ".gitconfig.*": "properties",
+    "keybindings.json.symlink": "jsonc",
+    "settings.json.symlink": "jsonc",
     "*.conf.symlink": "properties",
     "*.js.symlink": "javascript",
     "*.json.symlink": "json",
