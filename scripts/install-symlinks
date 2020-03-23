@@ -64,7 +64,7 @@ link_file () {
     if [ "$overwrite_all" == "false" ] && [ "$backup_all" == "false" ] && [ "$skip_all" == "false" ]
     then
 
-      local currentSrc="$(readlink $dst)"
+      local currentSrc="$(readlink "$dst")"
 
       if [ "$currentSrc" == "$src" ]
       then
@@ -132,8 +132,15 @@ install_dotfiles () {
 
   local overwrite_all=false backup_all=false skip_all=false
 
-  for src in $(find "$DOTFILES_ROOT/symlinks" -maxdepth 10 -name '*.symlink' -not -path '*.git/*' -not -path '*/node_modules/*')
+  OLDIFS=$IFS
+  IFS=$'\n'
+  local all_files=($(find "$DOTFILES_ROOT/symlinks" -maxdepth 10 -name '*.symlink' -not -path '*.git/*' -not -path '*/node_modules/*'))
+  IFS=$OLDIFS
+
+  local files_len=${#all_files[@]}
+  for (( i=0; i<$files_len; i++ ));
   do
+    src="${all_files[$i]}"
     dst="${src#"$DOTFILES_ROOT/symlinks/"}"
     dst="$HOME/${dst%.*}"
     link_file "$src" "$dst"
