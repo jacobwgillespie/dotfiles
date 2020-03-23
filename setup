@@ -51,6 +51,13 @@ fi
 title "Configuring software..."
 ./scripts/install-symlinks
 
+# Install yarn packages
+if test $(which yarn); then
+  title "Installing yarn packages..."
+  (cd "$HOME"/.config/yarn/global && yarn install 2>&1) | indent
+  echo
+fi
+
 # Check that we are using zsh
 if [[ "$SHELL" != *"zsh"* ]]; then
   if [[ "$(uname)" == "Darwin" ]]; then

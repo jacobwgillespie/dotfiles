@@ -3,17 +3,10 @@
     "Brewfile": "ruby",
     "gitconfig.*": "ini",
     "*.js.symlink": "javascript",
+    "*.json.symlink": "json",
     "*.symlink": "shellscript"
   },
   "eslint.enable": false,
   "editor.formatOnSave": true,
-  "cSpell.words": [
-    "brewfile",
-    "dotfiles",
-    "gitignore",
-    "symlink",
-    "symlinked",
-    "symlinks",
-    "tweetbot"
-  ]
+  "cSpell.words": ["brewfile", "dotfiles", "gitignore", "symlink", "symlinked", "symlinks", "tweetbot"]
 }
