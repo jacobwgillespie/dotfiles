@@ -24,7 +24,7 @@ fail () {
 }
 
 setup_gitconfig () {
-  if ! [ -f symlinks/gitconfig.symlink ]
+  if ! [ -f symlinks/.gitconfig.symlink ]
   then
     info 'setup gitconfig'
 
@@ -126,9 +126,10 @@ install_dotfiles () {
 
   local overwrite_all=false backup_all=false skip_all=false
 
-  for src in $(find "$DOTFILES_ROOT/symlinks" -maxdepth 2 -name '*.symlink' -not -path '*.git*')
+  for src in $(find "$DOTFILES_ROOT/symlinks" -maxdepth 10 -name '*.symlink' -not -path '*.git/*' -not -path '*/node_modules/*')
   do
-    dst="$HOME/.$(basename "${src%.*}")"
+    dst="${src#"$DOTFILES_ROOT/symlinks/"}"
+    dst="$HOME/${dst%.*}"
     link_file "$src" "$dst"
   done
 }
