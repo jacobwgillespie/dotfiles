@@ -52,6 +52,10 @@ link_file () {
   local overwrite= backup= skip=
   local action=
 
+  if [ ! -d "$(dirname "$dst")" ]; then
+    mkdir -p "$(dirname "$dst")"
+  fi
+
   if [ -f "$dst" -o -d "$dst" -o -L "$dst" ]
   then
 
