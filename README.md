@@ -31,7 +31,7 @@ The repository is organized as follows:
 - `bin/*` - any executable scripts in this directory are added to your `$PATH`
 - `config/*.zsh` - configuration files for ZSH, they are all sourced automatically into any new shell
 - `functions/*` - zsh functions and autocomplete completion definitions
-- `symlinks/*` - any files ending in `*.symlink` get symlinked into your home directory, with an added dot and missing the suffix (e.g. `gitignore.symlink` becomes `~/.gitignore`) - automatically symlinked via the `./setup` script
+- `symlinks/*` - any files ending in `*.symlink` get symlinked by the `./setup` script into your home directory with the suffix removed (e.g. `gitignore.symlink` becomes `~/.gitignore`)
 
 ## License
 
