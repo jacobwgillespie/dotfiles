@@ -1,7 +1,4 @@
 alanz.vscode-hie-server
-amazonwebservices.aws-toolkit-vscode
-apollographql.vscode-apollo
-asvetliakov.snapshot-tools
 BazelBuild.vscode-bazel
 bungcip.better-toml
 casualjim.gotemplate
@@ -33,19 +30,13 @@ ms-vscode-remote.remote-wsl
 ms-vscode-remote.vscode-remote-extensionpack
 ms-vscode.cpptools
 ms-vscode.Go
-ms-vscode.vscode-typescript-tslint-plugin
 ms-vsliveshare.vsliveshare
 msjsdiag.debugger-for-chrome
-npclaudiu.vscode-gn
-please-build.plz-vscode
 rafamel.subtle-brackets
 rbbit.typescript-hero
 rebornix.ruby
 redhat.vscode-yaml
 rust-lang.rust
-silvenon.mdx
-skyapps.fish-vscode
-sourcegraph.sourcegraph
 streetsidesoftware.code-spell-checker
 swashata.beautiful-ui
 vadimcn.vscode-lldb
