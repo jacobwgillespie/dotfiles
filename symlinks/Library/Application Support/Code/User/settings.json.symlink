@@ -1,6 +1,5 @@
 {
   "breadcrumbs.enabled": false,
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.fontFamily": "Hasklig, Source Code Pro, Menlo, Monaco, Consolas, 'Courier New', monospace",
   "editor.fontLigatures": true,
   "editor.fontSize": 14,
@@ -43,7 +42,10 @@
     "enabled": false,
     "liveIndexing": false,
     "delay": 500,
-    "exclude": [".terraform/**/*", "**/.terraform/**/*"]
+    "exclude": [
+      ".terraform/**/*",
+      "**/.terraform/**/*"
+    ]
   },
   "terraform.languageServer": {
     "enabled": true,
@@ -56,5 +58,14 @@
   "workbench.iconTheme": "file-icons",
   "workbench.startupEditor": "newUntitledFile",
   "yaml.format.enable": true,
-  "yaml.format.singleQuote": true
+  "yaml.format.singleQuote": true,
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+  },
+  "[yaml]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+  }
 }
