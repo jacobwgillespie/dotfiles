@@ -1,5 +1,4 @@
 alanz.vscode-hie-server
-BazelBuild.vscode-bazel
 bungcip.better-toml
 casualjim.gotemplate
 codezombiech.gitignore
@@ -11,7 +10,6 @@ file-icons.file-icons
 fwcd.kotlin
 GitHub.vscode-pull-request-github
 jakearl.search-editor-apply-changes
-joaomoreno.github-sharp-theme
 jpoissonnier.vscode-styled-components
 justusadam.language-haskell
 KnisterPeter.vscode-github
@@ -34,14 +32,12 @@ ms-vsliveshare.vsliveshare
 msjsdiag.debugger-for-chrome
 rafamel.subtle-brackets
 rbbit.typescript-hero
-rebornix.ruby
 redhat.vscode-yaml
 rust-lang.rust
 streetsidesoftware.code-spell-checker
 swashata.beautiful-ui
 vadimcn.vscode-lldb
 VisualStudioExptTeam.vscodeintellicode
-WallabyJs.quokka-vscode
 wayou.vscode-todo-highlight
 wingrunr21.vscode-ruby
 zamerick.vscode-caddyfile-syntax
