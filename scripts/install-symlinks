@@ -41,7 +41,7 @@ setup_gitconfig () {
     user ' - What is your signing key?'
     read -e git_signingkey
 
-    sed -e "s/AUTHORNAME/$git_authorname/g" -e "s/AUTHOREMAIL/$git_authoremail/g" -e "s/SIGNINGKEY/$git_signingkey/g" -e "s/GIT_CREDENTIAL_HELPER/$git_credential/g" symlinks/gitconfig.symlink.example > symlinks/gitconfig.symlink
+    sed -e "s/AUTHORNAME/$git_authorname/g" -e "s/AUTHOREMAIL/$git_authoremail/g" -e "s/SIGNINGKEY/$git_signingkey/g" -e "s/GIT_CREDENTIAL_HELPER/$git_credential/g" symlinks/.gitconfig.symlink.example > symlinks/.gitconfig.symlink
 
     success 'gitconfig'
   fi
