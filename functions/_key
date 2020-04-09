@@ -1,0 +1,3 @@
+#compdef key
+
+_arguments "1: :(- rsa gen gen-rsa help)"
