@@ -134,7 +134,6 @@ cask 'transmit'
 cask 'visual-studio-code'
 cask 'vlc'
 cask 'whatsapp'
-cask 'zoomus'
 
 # Fonts
 cask 'font-hasklig'
