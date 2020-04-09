@@ -4,7 +4,7 @@ fi
 
 export PATH="${PATH}:$(git --exec-path)"
 
-alias glog="git log --graph --pretty=format:'%Cred%h%Creset %an: %s - %Creset %C(yellow)%d%Creset %Cgreen(%cr)%Creset' --abbrev-commit --date=relative"
+alias glog="git log --graph --pretty=format:'%Cred%h%Creset %an: %s%Creset%C(yellow)%d%Creset %Cgreen(%cr)%Creset' --abbrev-commit --date=relative"
 alias gp='git push origin HEAD'
 alias gpf='git push origin HEAD --force-with-lease'
 alias gs='git status -sb'
