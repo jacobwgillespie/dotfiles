@@ -1,7 +1,0 @@
-# Load .env file into current session
-
-function envup() {
-  if [ -f .env ]; then
-    export `cat .env`
-  fi
-}
