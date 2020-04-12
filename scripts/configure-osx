@@ -15,9 +15,6 @@ defaults write com.apple.NetworkBrowser BrowseAllInterfaces 1
 # Always open everything in Finder's column view
 defaults write com.apple.Finder FXPreferredViewStyle clmv
 
-# Show the ~/Library folder
-chflags nohidden ~/Library
-
 # Hide external drives or removeable media from the desktop
 defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool false
 defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool false
