@@ -38,13 +38,14 @@ if [ -z $GH_EMAIL_TOKEN ]; then
   fade "       export GH_EMAIL_TOKEN=<token>"
   fade "   You'll also want to add that line to your shell configuration (e.g. .bashrc)"
 else
-  curl "https://api.github.com/users/$user?access_token=$GH_EMAIL_TOKEN" -s \
+  curl "https://api.github.com/users/$user" -s \
+    -H "Authorization: token $GH_EMAIL_TOKEN" \
     | sed -nE 's#^.*"email": "([^"]+)",.*$#\1#p'
 fi
 
 header 'Email on npm'
 if hash jq 2>/dev/null; then
-  curl "https://registry.npmjs.org/-/user/org.couchdb.user:$user" -s | jq -r '.email'
+  curl "https://r.cnpmjs.org/-/user/org.couchdb.user:$user" -s | jq -r '.email'
 else
   echo " … skipping …. Please: brew install jq"
 fi
@@ -52,6 +53,7 @@ fi
 
 header 'Emails from recent commits'
 curl "https://api.github.com/users/$user/events" -s \
+  -H "Authorization: token $GH_EMAIL_TOKEN" \
   | sed -nE 's#^.*"(email)": "([^"]+)",.*$#\2#p' \
   | sort -u
 
@@ -60,11 +62,13 @@ header 'Emails from owned-repo recent activity'
 if [[ -z $repo ]]; then
   # get all owned repos
   repo="$(curl "https://api.github.com/users/$user/repos?type=owner&sort=updated" -s \
+    -H "Authorization: token $GH_EMAIL_TOKEN" \
     | sed -nE 's#^.*"name": "([^"]+)",.*$#\1#p' \
     | head -n1)"
 fi
 
 curl "https://api.github.com/repos/$user/$repo/commits" -s \
+  -H "Authorization: token $GH_EMAIL_TOKEN" \
   | sed -nE 's#^.*"(email|name)": "([^"]+)",.*$#\2#p'  \
   | /usr/bin/pr -2 -at \
   | sort -u
