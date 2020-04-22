@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "@eradb/dev": "^0.1.0",
     "@jacobwgillespie/prompt": "^0.1.4",
     "create-next-app": "^9.3.0",
     "fast-cli": "^2.3.0",
