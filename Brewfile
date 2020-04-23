@@ -64,6 +64,7 @@ brew 'sccache'
 brew 'shellcheck'
 brew 'stern'
 brew 'telnet'
+brew 'terraform-docs'
 brew 'tfenv'
 brew 'tflint'
 brew 'watchman'
@@ -89,6 +90,7 @@ cask 'dbngin'
 cask 'deluge'
 cask 'discord'
 cask 'docker'
+cask 'elgato-control-center'
 cask 'firefox'
 cask 'github'
 cask 'google-chrome'
@@ -126,6 +128,8 @@ cask 'transmit'
 cask 'visual-studio-code'
 cask 'vlc'
 cask 'whatsapp'
+cask 'wire'
+cask 'zoomus'
 
 # Fonts
 cask 'font-hasklig'
@@ -136,6 +140,7 @@ mas '1Blocker', id: 1_107_421_413
 mas 'Apple Configurator 2', id: 1_037_126_344
 mas 'Dato', id: 1_470_584_107
 mas 'Fantastical', id: 975_937_182
+mas 'Jiffy', id: 1_502_527_999
 mas 'Lungo', id: 1_263_070_803
 mas 'Microsoft Excel', id: 462_058_435
 mas 'Microsoft Remote Desktop 10', id: 1_295_203_466
