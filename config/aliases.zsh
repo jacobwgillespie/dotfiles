@@ -1,9 +1,6 @@
 # Reload zsh configuration
 alias reload!='. ~/.zshrc'
 
-# Speedtest
-alias speedtest="wget --output-document=/dev/null http://speedtest.dal01.softlayer.com/downloads/test500.zip"
-
 # Clear and reset the screen
 alias clr="tput reset"
 
@@ -33,8 +30,8 @@ alias show="defaults write com.apple.finder AppleShowAllFiles -bool true && kill
 alias hide="defaults write com.apple.finder AppleShowAllFiles -bool false && killall Finder"
 
 # Enable/disable Spotlight
-alias spoton="sudo mdutil -a -i on"
-alias spotoff="sudo mdutil -a -i off"
+alias spot-on="sudo mdutil -a -i on"
+alias spot-off="sudo mdutil -a -i off"
 
 # Load .env file
 function loadenv() { cat .env | grep -v '^#' | grep -v '^$' | while read a; do export $a; done }
