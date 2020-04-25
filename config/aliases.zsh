@@ -7,6 +7,9 @@ alias speedtest="wget --output-document=/dev/null http://speedtest.dal01.softlay
 # Clear and reset the screen
 alias clr="tput reset"
 
+# Restart audio service to fix issues
+alias fix-audio="sudo pkill coreaudiod"
+
 # Flush DNS cache
 alias flush="sudo killall -HUP mDNSResponder"
 
