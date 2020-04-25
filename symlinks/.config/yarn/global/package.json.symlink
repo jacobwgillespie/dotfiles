@@ -1,11 +1,11 @@
 {
   "dependencies": {
-    "@eradb/dev": "^0.1.0",
+    "@eradb/dev": "^0.3.0",
     "@jacobwgillespie/prompt": "^0.1.4",
-    "create-next-app": "^9.3.0",
+    "create-next-app": "^9.3.5",
     "fast-cli": "^2.3.0",
     "fkill-cli": "^6.0.1",
-    "now": "^17.0.4",
+    "now": "^18.0.0",
     "serve": "^11.3.0",
     "sloc": "^0.2.1"
   }
