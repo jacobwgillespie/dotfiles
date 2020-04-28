@@ -150,5 +150,4 @@ mas 'Reeder 4', id: 1_449_412_482
 mas 'Things 3', id: 904_280_696
 mas 'Tweetbot', id: 1_384_080_005
 mas 'WireGuard', id: 1_451_685_025
-mas 'Woven Calendar', id: 1_455_876_530
 mas 'Xcode', id: 497_799_835
