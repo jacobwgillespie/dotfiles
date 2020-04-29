@@ -1,8 +1,5 @@
 #!/bin/bash
 
-bold=$(tput bold)
-normal=$(tput sgr0)
-
 if [ -z "$1" ]; then
   gh pr list
 elif [[ "$1" =~ ^[0-9]+$ ]]; then
