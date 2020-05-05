@@ -1,7 +1,8 @@
-alanz.vscode-hie-server
+42Crunch.vscode-openapi
 bungcip.better-toml
 casualjim.gotemplate
 codezombiech.gitignore
+cschleiden.vscode-github-actions
 dbaeumer.vscode-eslint
 EditorConfig.EditorConfig
 esbenp.prettier-vscode
@@ -9,8 +10,8 @@ file-icons.file-icons
 GitHub.vscode-pull-request-github
 jakearl.search-editor-apply-changes
 jpoissonnier.vscode-styled-components
-justusadam.language-haskell
 mariusschulz.yarn-lock-syntax
+matklad.rust-analyzer
 mauve.terraform
 mgmcdermott.vscode-language-babel
 mikestead.dotenv
@@ -20,11 +21,8 @@ ms-python.python
 ms-vscode.cpptools
 ms-vscode.Go
 ms-vsliveshare.vsliveshare
-msjsdiag.debugger-for-chrome
 rafamel.subtle-brackets
-rbbit.typescript-hero
 redhat.vscode-yaml
-rust-lang.rust
 streetsidesoftware.code-spell-checker
 swashata.beautiful-ui
 vadimcn.vscode-lldb
