@@ -13,6 +13,6 @@ function iterm2_print_user_vars() {
   fi
 }
 
-if [ -e ~/.iterm2_shell_integration.zsh ]; then
-  source ~/.iterm2_shell_integration.zsh
+if [ -e "$ZSH/config/iterm/shell-integration.zsh" ]; then
+  source "$ZSH/config/iterm/shell-integration.zsh"
 fi
