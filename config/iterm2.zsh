@@ -11,6 +11,9 @@ function iterm2_print_user_vars() {
     node_version=$(node -v 2>/dev/null)
     [[ $node_version == "" ]] || iterm2_set_user_var node_version "$node_version"
   fi
+
+  # Disable custom rprompt
+  export RPROMPT=""
 }
 
 if [ -e "$ZSH/config/iterm/shell-integration.zsh" ]; then
