@@ -70,6 +70,9 @@
   "workbench.startupEditor": "newUntitledFile",
   "yaml.format.enable": true,
   "yaml.format.singleQuote": true,
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
