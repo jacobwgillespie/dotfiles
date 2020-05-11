@@ -65,7 +65,7 @@
   "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": false,
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
   "workbench.activityBar.visible": true,
-  "workbench.colorTheme": "βui - Ayu Dark",
+  "workbench.colorTheme": "Popping and Locking",
   "workbench.iconTheme": "file-icons",
   "workbench.startupEditor": "newUntitledFile",
   "yaml.format.enable": true,
