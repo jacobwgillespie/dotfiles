@@ -1,5 +1,6 @@
 {
   "breadcrumbs.enabled": false,
+  "editor.acceptSuggestionOnCommitCharacter": false,
   "editor.fontFamily": "Hasklig, Source Code Pro, Menlo, Monaco, Consolas, 'Courier New', monospace",
   "editor.fontLigatures": true,
   "editor.fontSize": 14,
@@ -53,10 +54,7 @@
     "enabled": false,
     "liveIndexing": false,
     "delay": 500,
-    "exclude": [
-      ".terraform/**/*",
-      "**/.terraform/**/*"
-    ]
+    "exclude": [".terraform/**/*", "**/.terraform/**/*"]
   },
   "terraform.languageServer": {
     "enabled": true,
@@ -65,7 +63,7 @@
   "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": false,
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
   "workbench.activityBar.visible": true,
-  "workbench.colorTheme": "Popping and Locking",
+  "workbench.colorTheme": "Ultimate White",
   "workbench.iconTheme": "file-icons",
   "workbench.startupEditor": "newUntitledFile",
   "yaml.format.enable": true,
@@ -74,12 +72,12 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[yaml]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
 }
