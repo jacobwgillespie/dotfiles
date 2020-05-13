@@ -1,6 +1,11 @@
 .DS_Store
-*~
-*.swp
-.idea
-*.iml
+.idea/libraries
+.idea/modules.xml
+.idea/shelf
+.idea/tasks.xml
+.idea/usage.statistics.xml
+.idea/workspace.xml
 .vscode/tags
+*.iws
+*.swp
+*~
