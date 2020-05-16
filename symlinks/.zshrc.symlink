@@ -22,6 +22,12 @@ autoload -U up-line-or-beginning-search
 autoload -U down-line-or-beginning-search
 autoload -U $ZSH/functions/*(:t)
 
+# If zsh complains about insecure directories, run
+#   chmod go-w '/usr/local/share'
+if type brew &>/dev/null; then
+  fpath=($(brew --prefix)/share/zsh-completions $fpath)
+fi
+
 # Setup completion
 compinit
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}' # match lowercase as case-insensitive
@@ -74,6 +80,18 @@ bindkey "^[[B" down-line-or-beginning-search # Down
 # Enable syntax highlighting
 if [ -f /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]; then
   source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+fi
+
+# Enable auto-suggestions
+if [ -f /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh ]; then
+  source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+fi
+
+# Enable substring history matching
+if [ -f /usr/local/share/zsh-history-substring-search/zsh-history-substring-search.zsh ]; then
+  source /usr/local/share/zsh-history-substring-search/zsh-history-substring-search.zsh
+  bindkey "^[[A" history-substring-search-up # Up
+  bindkey "^[[B" history-substring-search-down # Down
 fi
 
 # If profiling is enabled, display timing information
