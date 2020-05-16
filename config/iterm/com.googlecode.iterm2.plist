@@ -1660,9 +1660,9 @@
 	<key>NSWindow Frame NSNavPanelAutosaveName</key>
 	<string>1538 -634 799 448 0 0 2560 1417 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>1043 -1120 894 1097 1042 -1120 1792 1097 </string>
+	<string>47 82 1278 1015 0 0 1792 1097 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>1304 0 1256 1417 0 0 2560 1417 </string>
+	<string>1042 -1120 1792 1097 1042 -1120 1792 1097 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
 	<string>921 0 870 1097 0 0 1792 1097 </string>
 	<key>New Bookmarks</key>
@@ -1783,13 +1783,13 @@
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.27058823529411763</real>
+				<real>0.34509803921568627</real>
 				<key>Color Space</key>
 				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.65098039215686276</real>
+				<real>0.81568627450980391</real>
 				<key>Red Component</key>
-				<real>0.16078431372549021</real>
+				<real>0.20392156862745098</real>
 			</dict>
 			<key>Ansi 3 Color</key>
 			<dict>
@@ -2502,13 +2502,13 @@
 									<key>Alpha Component</key>
 									<real>1</real>
 									<key>Blue Component</key>
-									<real>0.25882352941176473</real>
+									<real>0.34509803921568627</real>
 									<key>Color Space</key>
 									<string>sRGB</string>
 									<key>Green Component</key>
-									<real>0.65098039215686276</real>
+									<real>0.81568627450980391</real>
 									<key>Red Component</key>
-									<real>0.16078431372549021</real>
+									<real>0.20392156862745098</real>
 								</dict>
 							</dict>
 							<key>layout advanced configuration dictionary value</key>
@@ -2565,14 +2565,14 @@
 	<key>NoSyncFrame_SharedPreferences</key>
 	<dict>
 		<key>screenFrame</key>
-		<string>{{0, 0}, {2560, 1440}}</string>
+		<string>{{0, 0}, {1792, 1120}}</string>
 		<key>topLeft</key>
-		<string>{812, 891}</string>
+		<string>{510, 793}</string>
 	</dict>
 	<key>NoSyncInstallationId</key>
 	<string>834B46C0-13C6-42C2-9D3C-E4FD4ADF2735</string>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>19</integer>
+	<integer>22</integer>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
@@ -3453,7 +3453,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2020-05-13T17:13:46Z</date>
+	<date>2020-05-16T00:31:33Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SoundForEsc</key>
