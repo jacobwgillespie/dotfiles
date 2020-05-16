@@ -7,7 +7,8 @@
     "*.conf.symlink": "properties",
     "*.js.symlink": "javascript",
     "*.json.symlink": "json",
-    "*.symlink": "shellscript"
+    "*.symlink": "shellscript",
+    "*.yml.symlink": "yaml"
   },
   "eslint.enable": false,
   "editor.formatOnSave": true,
