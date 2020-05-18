@@ -1599,7 +1599,7 @@
 	<key>HideTab</key>
 	<true/>
 	<key>HideTabNumber</key>
-	<false/>
+	<true/>
 	<key>HotkeyMigratedFromSingleToMulti</key>
 	<true/>
 	<key>LoadPrefsFromCustomFolder</key>
@@ -1660,7 +1660,7 @@
 	<key>NSWindow Frame NSNavPanelAutosaveName</key>
 	<string>1538 -634 799 448 0 0 2560 1417 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>1043 -1120 894 1097 1042 -1120 1792 1097 </string>
+	<string>413 -1120 894 1097 412 -1120 1792 1097 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>1042 -1120 1792 1097 1042 -1120 1792 1097 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
@@ -2565,14 +2565,14 @@
 	<key>NoSyncFrame_SharedPreferences</key>
 	<dict>
 		<key>screenFrame</key>
-		<string>{{1042, -1120}, {1792, 1120}}</string>
+		<string>{{412, -1120}, {1792, 1120}}</string>
 		<key>topLeft</key>
-		<string>{1307, -308}</string>
+		<string>{1181, -135}</string>
 	</dict>
 	<key>NoSyncInstallationId</key>
 	<string>834B46C0-13C6-42C2-9D3C-E4FD4ADF2735</string>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>27</integer>
+	<integer>28</integer>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
@@ -3473,7 +3473,7 @@
 	<key>VisualIndicatorForEsc</key>
 	<false/>
 	<key>WindowNumber</key>
-	<true/>
+	<false/>
 	<key>findMode_iTerm</key>
 	<integer>0</integer>
 	<key>iTerm Version</key>
