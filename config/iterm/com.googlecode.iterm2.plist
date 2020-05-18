@@ -1660,7 +1660,7 @@
 	<key>NSWindow Frame NSNavPanelAutosaveName</key>
 	<string>1538 -634 799 448 0 0 2560 1417 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>47 82 1278 1015 0 0 1792 1097 </string>
+	<string>1043 -1120 894 1097 1042 -1120 1792 1097 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>1042 -1120 1792 1097 1042 -1120 1792 1097 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
@@ -1757,13 +1757,13 @@
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>1</real>
+				<real>0.90196078431372551</real>
 				<key>Color Space</key>
 				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.792156862745098</real>
+				<real>0.89803921568627454</real>
 				<key>Red Component</key>
-				<real>0.61960784313725492</real>
+				<real>0.078431372549019607</real>
 			</dict>
 			<key>Ansi 15 Color</key>
 			<dict>
@@ -1835,13 +1835,13 @@
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>1</real>
+				<real>0.90196078431372551</real>
 				<key>Color Space</key>
 				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.792156862745098</real>
+				<real>0.89803921568627454</real>
 				<key>Red Component</key>
-				<real>0.61960784313725492</real>
+				<real>0.078431372549019607</real>
 			</dict>
 			<key>Ansi 7 Color</key>
 			<dict>
@@ -2565,14 +2565,14 @@
 	<key>NoSyncFrame_SharedPreferences</key>
 	<dict>
 		<key>screenFrame</key>
-		<string>{{0, 0}, {1792, 1120}}</string>
+		<string>{{1042, -1120}, {1792, 1120}}</string>
 		<key>topLeft</key>
-		<string>{510, 793}</string>
+		<string>{1307, -308}</string>
 	</dict>
 	<key>NoSyncInstallationId</key>
 	<string>834B46C0-13C6-42C2-9D3C-E4FD4ADF2735</string>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>22</integer>
+	<integer>27</integer>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
@@ -3453,7 +3453,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2020-05-16T00:31:33Z</date>
+	<date>2020-05-18T01:57:04Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SoundForEsc</key>
