@@ -1,23 +1,23 @@
 // See https://hyper.is#cfg for all currently supported options
 
-const foregroundColor = '#eff0eb'
-const backgroundColor = '#282a36'
-const red = '#ff5c57'
-const green = '#5af78e'
-const yellow = '#f3f99d'
-const blue = '#57c7ff'
-const magenta = '#ff6ac1'
-const cyan = '#9aedfe'
+const foregroundColor = '#fafbfc'
+const backgroundColor = '#24292e'
+const red = '#ea4a5a'
+const green = '#28a745'
+const yellow = '#ffd33d'
+const blue = '#2188ff'
+const magenta = '#b392f0'
+const cyan = '#17e5e6'
 
 module.exports = {
   config: {
     backgroundColor,
     bell: false,
-    borderColor: '#222430',
+    borderColor: '#444d56',
     copyOnSelect: false,
     cursorAccentColor: backgroundColor,
     cursorBlink: false,
-    cursorColor: '#97979b',
+    cursorColor: '#d1d5da',
     cursorShape: 'BLOCK',
     env: {},
     fontFamily: 'Hasklig, "Source Code Pro", monospace',
@@ -25,7 +25,7 @@ module.exports = {
     foregroundColor,
     padding: '12px 14px',
     scrollback: 10000,
-    selectionColor: 'rgba(151, 151, 155, 0.2)',
+    selectionColor: 'rgba(158, 203, 255, 0.1)',
     shell: '',
     shellArgs: ['--login'],
     showHamburgerMenu: '',
@@ -41,8 +41,8 @@ module.exports = {
       blue,
       magenta,
       cyan,
-      white: '#f1f1f0',
-      lightBlack: '#686868',
+      white: '#fafbfc',
+      lightBlack: '#6a737d',
       lightRed: red,
       lightGreen: green,
       lightYellow: yellow,
@@ -53,20 +53,18 @@ module.exports = {
     },
 
     css: `
-      /* Hide title when only one tab */
+      /* Hide title text when only one tab */
       .tabs_title {
-        display: none !important;
+        background-color: #24292e;
+        color: #24292e;
       }
 
-      /* Add a highlight line below the active tab */
-      .tab_tab.tab_active::before {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        height: 2px;
-        background-color: #5af78e;
+      .tabs_nav {
+        background-color: #1b1f23;
+      }
+
+      .tab_tab.tab_active {
+        background-color: #24292e;
       }
     `,
   },
