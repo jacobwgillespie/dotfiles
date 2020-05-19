@@ -1,11 +1,9 @@
 {
   "dependencies": {
-    "@eradb/dev": "^0.3.1",
-    "create-next-app": "^9.3.6",
+    "@eradb/dev": "^0.4.0",
     "fast-cli": "^2.3.0",
     "fkill-cli": "^6.0.1",
     "serve": "^11.3.0",
-    "sloc": "^0.2.1",
-    "vercel": "^19.0.0"
+    "vercel": "^19.0.1"
   }
 }
