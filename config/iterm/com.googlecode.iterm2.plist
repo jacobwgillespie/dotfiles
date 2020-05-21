@@ -2,6 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>AlternateMouseScroll</key>
+	<true/>
 	<key>AppleAntiAliasingThreshold</key>
 	<integer>1</integer>
 	<key>ApplePressAndHoldEnabled</key>
@@ -1660,7 +1662,7 @@
 	<key>NSWindow Frame NSNavPanelAutosaveName</key>
 	<string>1538 -634 799 448 0 0 2560 1417 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>413 -1120 894 1097 412 -1120 1792 1097 </string>
+	<string>1403 -1120 1430 1097 1042 -1120 1792 1097 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>1042 -1120 1792 1097 1042 -1120 1792 1097 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
@@ -1970,13 +1972,13 @@
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.96544981002807617</real>
+				<real>0.0</real>
 				<key>Color Space</key>
-				<string>Calibrated</string>
+				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.96543341875076294</real>
+				<real>0.0</real>
 				<key>Red Component</key>
-				<real>0.96546226739883423</real>
+				<real>0.0</real>
 			</dict>
 			<key>Cursor Type</key>
 			<integer>2</integer>
@@ -2345,13 +2347,13 @@
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>1</real>
+				<real>0.9882352941176471</real>
 				<key>Color Space</key>
 				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>1</real>
+				<real>0.98431372549019602</real>
 				<key>Red Component</key>
-				<real>1</real>
+				<real>0.98039215686274506</real>
 			</dict>
 			<key>Selection Color</key>
 			<dict>
@@ -2558,6 +2560,7 @@
 	</array>
 	<key>NoSyncBFPRecents</key>
 	<array>
+		<string>Iosevka Term</string>
 		<string>Hasklig</string>
 	</array>
 	<key>NoSyncCommandHistoryHasEverBeenUsed</key>
@@ -2565,14 +2568,14 @@
 	<key>NoSyncFrame_SharedPreferences</key>
 	<dict>
 		<key>screenFrame</key>
-		<string>{{412, -1120}, {1792, 1120}}</string>
+		<string>{{1042, -1120}, {1792, 1120}}</string>
 		<key>topLeft</key>
-		<string>{1181, -135}</string>
+		<string>{1943, -242}</string>
 	</dict>
 	<key>NoSyncInstallationId</key>
 	<string>834B46C0-13C6-42C2-9D3C-E4FD4ADF2735</string>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>28</integer>
+	<integer>33</integer>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
@@ -3453,7 +3456,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2020-05-18T01:57:04Z</date>
+	<date>2020-05-21T14:45:54Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SoundForEsc</key>
