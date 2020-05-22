@@ -92,6 +92,8 @@ if [ -f /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh ]; then
   export ZSH_AUTOSUGGEST_STRATEGY=(completion history)
   # Disable automatic rebind (better performance)
   export ZSH_AUTOSUGGEST_MANUAL_REBIND=1
+  # Completions for man are slow
+  export ZSH_AUTOSUGGEST_COMPLETION_IGNORE="man *"
 fi
 
 # Enable substring history matching
