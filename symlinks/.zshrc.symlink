@@ -88,6 +88,10 @@ fi
 # Enable auto-suggestions
 if [ -f /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh ]; then
   source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+  # Suggest from completion first, then history if nothing is found
+  export ZSH_AUTOSUGGEST_STRATEGY=(completion history)
+  # Disable automatic rebind (better performance)
+  export ZSH_AUTOSUGGEST_MANUAL_REBIND=1
 fi
 
 # Enable substring history matching
@@ -95,6 +99,7 @@ if [ -f /usr/local/share/zsh-history-substring-search/zsh-history-substring-sear
   source /usr/local/share/zsh-history-substring-search/zsh-history-substring-search.zsh
   bindkey "^[[A" history-substring-search-up # Up
   bindkey "^[[B" history-substring-search-down # Down
+  export HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_FOUND="bg=green,fg=white,bold"
 fi
 
 # If profiling is enabled, display timing information
