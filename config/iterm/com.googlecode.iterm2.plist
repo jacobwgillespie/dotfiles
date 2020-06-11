@@ -1481,6 +1481,10 @@
 	</dict>
 	<key>Default Bookmark Guid</key>
 	<string>BF9988EF-65ED-4D41-9ED7-D351F96EC132</string>
+	<key>DimInactiveSplitPanes</key>
+	<true/>
+	<key>DimOnlyText</key>
+	<true/>
 	<key>GlobalKeyMap</key>
 	<dict>
 		<key>0x19-0x60000</key>
@@ -1662,7 +1666,7 @@
 	<key>NSWindow Frame NSNavPanelAutosaveName</key>
 	<string>1538 -634 799 448 0 0 2560 1417 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>1403 -1120 1430 1097 1042 -1120 1792 1097 </string>
+	<string>0 0 1792 1097 0 0 1792 1097 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>1042 -1120 1792 1097 1042 -1120 1792 1097 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
@@ -2568,14 +2572,14 @@
 	<key>NoSyncFrame_SharedPreferences</key>
 	<dict>
 		<key>screenFrame</key>
-		<string>{{1042, -1120}, {1792, 1120}}</string>
+		<string>{{2090, -1024}, {1366, 1024}}</string>
 		<key>topLeft</key>
-		<string>{1943, -242}</string>
+		<string>{2415, -186}</string>
 	</dict>
 	<key>NoSyncInstallationId</key>
 	<string>834B46C0-13C6-42C2-9D3C-E4FD4ADF2735</string>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>33</integer>
+	<integer>43</integer>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
@@ -3456,7 +3460,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2020-05-21T14:45:54Z</date>
+	<date>2020-05-29T01:41:46Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SoundForEsc</key>
