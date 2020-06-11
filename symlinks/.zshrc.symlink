@@ -33,7 +33,7 @@ fi
 # Setup completion
 compinit
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}' # match lowercase as case-insensitive
-zstyle ':completion:*' insert-tab pending # pasted tabs don't trigger completion
+# zstyle ':completion:*' insert-tab pending # pasted tabs don't trigger completion
 zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS} # set file completion suggestions to ls colors
 
 # Source configuration files
@@ -88,12 +88,12 @@ fi
 # Enable auto-suggestions
 if [ -f /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh ]; then
   source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+  # Fetch suggestions asynchronously
+  export ZSH_AUTOSUGGEST_USE_ASYNC=1
   # Suggest from completion first, then history if nothing is found
   export ZSH_AUTOSUGGEST_STRATEGY=(completion history)
   # Disable automatic rebind (better performance)
   export ZSH_AUTOSUGGEST_MANUAL_REBIND=1
-  # Disable slow completions (fall back to history search)
-  export ZSH_AUTOSUGGEST_COMPLETION_IGNORE="(man|brew|kn) *"
 fi
 
 # Enable substring history matching
