@@ -24,3 +24,5 @@ fi
 if [[ -d ~/.krew/bin ]]; then
   export PATH="$PATH:$HOME/.krew/bin"
 fi
+
+export KUBE_EDITOR="code -w"
