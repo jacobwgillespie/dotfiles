@@ -40,7 +40,7 @@ prompt_order = [
 ]
 
 [character]
-style_success = "bold purple"
+symbol = "•"
 
 [directory]
 style = "bold blue"
