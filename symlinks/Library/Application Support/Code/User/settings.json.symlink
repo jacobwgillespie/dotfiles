@@ -57,10 +57,9 @@
     "exclude": [".terraform/**/*", "**/.terraform/**/*"]
   },
   "terraform.languageServer": {
-    "external": true,
-    "args": [
-      "serve"
-    ]
+    "enabled": true,
+    "args": ["serve"],
+    "external": true
   },
   "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": false,
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
@@ -82,6 +81,5 @@
   "[yaml]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "vsonline.accountProvider": "Microsoft",
   "codespaces.accountProvider": "Microsoft"
 }
