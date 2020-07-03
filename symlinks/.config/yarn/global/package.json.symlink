@@ -1,10 +1,11 @@
 {
   "dependencies": {
-    "@eradb/dev": "^0.10.0",
+    "@eradb/dev": "^0.11.0",
     "fast-cli": "^2.3.0",
     "fkill-cli": "^6.0.1",
     "gatsby-cli": "^2.12.44",
+    "github-release-from-changelog": "^2.1.1",
     "serve": "^11.3.0",
-    "vercel": "^19.0.1"
+    "vercel": "^19.1.1"
   }
 }
