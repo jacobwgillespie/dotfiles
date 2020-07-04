@@ -16,8 +16,8 @@ function iterm2_print_user_vars() {
   export RPROMPT=""
 }
 
-if [ -e "$ZSH/config/iterm/shell-integration.zsh" ]; then
-  source "$ZSH/config/iterm/shell-integration.zsh"
+if [ -e "$DOTFILES/config/iterm/shell-integration.zsh" ]; then
+  source "$DOTFILES/config/iterm/shell-integration.zsh"
 fi
 
 # Alias clr to clear scrollback

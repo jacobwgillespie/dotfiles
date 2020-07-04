@@ -13,7 +13,7 @@ set_window_title() {
 precmd_functions+=(set_window_title)
 
 # Read prompt config from ~/.dotfiles
-export STARSHIP_CONFIG="$ZSH/config/starship/config.toml"
+export STARSHIP_CONFIG="$DOTFILES/config/starship/config.toml"
 
 # Prevent percentage showing up if output doesn't end with a newline.
 export PROMPT_EOL_MARK=''
