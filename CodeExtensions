@@ -9,13 +9,14 @@ file-icons.file-icons
 fwcd.kotlin
 GitHub.github-vscode-theme
 GitHub.vscode-pull-request-github
-golang.Go
+golang.go
 jakearl.search-editor-apply-changes
 kamikillerto.vscode-colorize
 mariusschulz.yarn-lock-syntax
 matklad.rust-analyzer
 mauve.terraform
 mikestead.dotenv
+ms-azuretools.vscode-azurefunctions
 ms-azuretools.vscode-docker
 ms-kubernetes-tools.kind-vscode
 ms-kubernetes-tools.vscode-kubernetes-tools
@@ -27,7 +28,6 @@ ms-vsonline.vsonline
 redhat.vscode-yaml
 silvenon.mdx
 streetsidesoftware.code-spell-checker
-swashata.beautiful-ui
 vadimcn.vscode-lldb
 VisualStudioExptTeam.vscodeintellicode
 wayou.vscode-todo-highlight
