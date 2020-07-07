@@ -1,5 +1,6 @@
 {
   "breadcrumbs.enabled": false,
+  "customizeUI.titleBar": "inline",
   "editor.acceptSuggestionOnCommitCharacter": false,
   "editor.fontFamily": "Hasklig, Source Code Pro, Menlo, Monaco, Consolas, 'Courier New', monospace",
   "editor.fontLigatures": true,
@@ -47,7 +48,7 @@
   "go.useLanguageServer": true,
   "javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": false,
   "npm.bin": "yarn",
-  "python.jediEnabled": false,
+  "python.languageServer": "Microsoft",
   "terminal.integrated.fontSize": 14,
   "terraform.codelens.enabled": false,
   "terraform.indexing": {
@@ -63,12 +64,25 @@
   },
   "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": false,
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "window.titleBarStyle": "native",
   "workbench.activityBar.visible": true,
   "workbench.colorTheme": "GitHub Dark",
   "workbench.iconTheme": "file-icons",
   "workbench.startupEditor": "newUntitledFile",
   "yaml.format.enable": true,
   "yaml.format.singleQuote": true,
+  "files.associations": {
+    "action.yaml": "yaml",
+    "**/.github/workflows/*.yaml": "yaml",
+    "**/.github/workflows/*.yml": "yaml"
+  },
+  "yaml.schemas": {
+    "http://json.schemastore.org/github-workflow": [
+      "**/.github/workflows/*.yaml",
+      "**/.github/workflows/*.yml"
+    ],
+    "http://json.schemastore.org/github-action": ["action.yaml", "action.yml"]
+  },
   "[jsonc]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
@@ -80,7 +94,5 @@
   },
   "[yaml]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "codespaces.accountProvider": "Microsoft",
-  "python.languageServer": "Microsoft"
+  }
 }
