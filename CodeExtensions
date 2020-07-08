@@ -10,7 +10,10 @@ fwcd.kotlin
 GitHub.github-vscode-theme
 GitHub.vscode-pull-request-github
 golang.go
+iocave.customize-ui
+iocave.monkey-patch
 jakearl.search-editor-apply-changes
+jpoissonnier.vscode-styled-components
 kamikillerto.vscode-colorize
 mariusschulz.yarn-lock-syntax
 matklad.rust-analyzer
@@ -24,7 +27,6 @@ ms-python.python
 ms-vscode.azure-account
 ms-vscode.cpptools
 ms-vsliveshare.vsliveshare
-ms-vsonline.vsonline
 redhat.vscode-yaml
 silvenon.mdx
 streetsidesoftware.code-spell-checker
