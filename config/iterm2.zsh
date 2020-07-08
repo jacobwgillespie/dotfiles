@@ -8,7 +8,7 @@ function iterm2_print_user_vars() {
 
   # Node version
   if (( $+commands[node] )); then
-    node_version=$(node -v 2>/dev/null)
+    node_version=$(node -e 'console.log(process.version.slice(1))' 2>/dev/null)
     [[ $node_version == "" ]] || iterm2_set_user_var node_version "$node_version"
   fi
 
