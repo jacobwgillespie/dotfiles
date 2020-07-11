@@ -2,7 +2,11 @@
 function iterm2_print_user_vars() {
   # Kubernetes context
   if (( $+commands[kubectl] )); then
-    iterm2_set_user_var kubecontext $(kubectl config current-context 2>/dev/null)
+    local kubecontext="$(kubectl config current-context 2>/dev/null)"
+    if [[ "$kubecontext" != "" ]]; then
+      kubecontext="⎈ $kubecontext"
+    fi
+    iterm2_set_user_var kubecontext $kubecontext
     iterm2_set_user_var kubenamespace $(kubectl config view --minify --output 'jsonpath={..namespace}' 2>/dev/null)
   fi
 

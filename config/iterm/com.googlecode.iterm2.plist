@@ -1665,10 +1665,12 @@
 	<string>1598 -777 445 205 1042 -1120 1792 1097 </string>
 	<key>NSWindow Frame NSNavPanelAutosaveName</key>
 	<string>1538 -634 799 448 0 0 2560 1417 </string>
+	<key>NSWindow Frame SUUpdateAlert</key>
+	<string>1008 768 620 392 0 0 1792 1097 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 0 1792 1097 0 0 1792 1097 </string>
+	<string>47 0 1745 1097 0 0 1792 1097 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>1042 -1120 1792 1097 1042 -1120 1792 1097 </string>
+	<string>538 180 670 529 0 0 1792 1097 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
 	<string>921 0 870 1097 0 0 1792 1097 </string>
 	<key>New Bookmarks</key>
@@ -2388,6 +2390,8 @@
 				<dict>
 					<key>algorithm</key>
 					<integer>1</integer>
+					<key>auto-rainbow style</key>
+					<integer>0</integer>
 					<key>font</key>
 					<string>Hasklig-Bold 12</string>
 				</dict>
@@ -2430,7 +2434,7 @@
 								<key>base: priority</key>
 								<real>5</real>
 								<key>expression</key>
-								<string>⎈ \(user.kubecontext)</string>
+								<string>\(user.kubecontext)</string>
 								<key>shared text color</key>
 								<dict>
 									<key>Alpha Component</key>
@@ -2440,9 +2444,9 @@
 									<key>Color Space</key>
 									<string>sRGB</string>
 									<key>Green Component</key>
-									<real>0.52941176470588236</real>
+									<real>0.52941179275512695</real>
 									<key>Red Component</key>
-									<real>0.13333333333333333</real>
+									<real>0.13333334028720856</real>
 								</dict>
 							</dict>
 							<key>layout advanced configuration dictionary value</key>
@@ -2561,6 +2565,8 @@
 	<key>NoSyncAllAppVersions</key>
 	<array>
 		<string>3.3.9</string>
+		<string>3.3.11</string>
+		<string>3.3.12</string>
 	</array>
 	<key>NoSyncBFPRecents</key>
 	<array>
@@ -2569,17 +2575,24 @@
 	</array>
 	<key>NoSyncCommandHistoryHasEverBeenUsed</key>
 	<true/>
+	<key>NoSyncFrame_SessionsPreferences</key>
+	<dict>
+		<key>screenFrame</key>
+		<string>{{1042, -1120}, {1792, 1120}}</string>
+		<key>topLeft</key>
+		<string>{1635, -161}</string>
+	</dict>
 	<key>NoSyncFrame_SharedPreferences</key>
 	<dict>
 		<key>screenFrame</key>
-		<string>{{2090, -1024}, {1366, 1024}}</string>
+		<string>{{1042, -1120}, {1792, 1120}}</string>
 		<key>topLeft</key>
-		<string>{2415, -186}</string>
+		<string>{1322, -204}</string>
 	</dict>
 	<key>NoSyncInstallationId</key>
 	<string>834B46C0-13C6-42C2-9D3C-E4FD4ADF2735</string>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>43</integer>
+	<integer>80</integer>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
@@ -3460,8 +3473,12 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2020-05-29T01:41:46Z</date>
+	<date>2020-07-10T12:24:41Z</date>
 	<key>SUSendProfileInfo</key>
+	<false/>
+	<key>SUUpdateGroupIdentifier</key>
+	<integer>2330555364</integer>
+	<key>SUUpdateRelaunchingMarker</key>
 	<false/>
 	<key>SoundForEsc</key>
 	<false/>
@@ -3484,7 +3501,7 @@
 	<key>findMode_iTerm</key>
 	<integer>0</integer>
 	<key>iTerm Version</key>
-	<string>3.3.9</string>
+	<string>3.3.12</string>
 	<key>kCPKSelectionViewPreferredModeKey</key>
 	<integer>0</integer>
 	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>
