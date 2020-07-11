@@ -59,14 +59,14 @@
   "terminal.integrated.fontSize": 14,
   "terraform.codelens.enabled": false,
   "terraform.indexing": {
-    "enabled": false,
-    "liveIndexing": false,
     "delay": 500,
-    "exclude": [".terraform/**/*", "**/.terraform/**/*"]
+    "enabled": false,
+    "exclude": [".terraform/**/*", "**/.terraform/**/*"],
+    "liveIndexing": false
   },
   "terraform.languageServer": {
-    "enabled": true,
     "args": ["serve"],
+    "enabled": true,
     "external": true
   },
   "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": false,
@@ -74,6 +74,7 @@
   "window.titleBarStyle": "native",
   "workbench.colorTheme": "GitHub Dark",
   "workbench.iconTheme": "file-icons",
+  "workbench.sideBar.location": "right",
   "workbench.startupEditor": "newUntitledFile",
   "yaml.format.enable": true,
   "yaml.format.singleQuote": true,
