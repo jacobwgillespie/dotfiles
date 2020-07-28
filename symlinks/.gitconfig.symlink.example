@@ -24,6 +24,8 @@
 	autocorrect = 1
 [hub]
 	protocol = https
+[init]
+	defaultBranch = main
 [interactive]
 	diffFilter = delta --color-only
 [mergetool]
