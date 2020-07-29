@@ -63,6 +63,7 @@ brew 'mtr'
 brew 'n'
 brew 'node'
 brew 'pgcli'
+brew 'pgformatter'
 brew 'postgresql'
 brew 'pinentry-mac'
 brew 'pkg-config'
@@ -153,6 +154,8 @@ cask 'zoomus'
 
 # Fonts
 cask 'font-hasklig'
+cask 'font-inter'
+cask 'font-jetbrains-mono'
 cask 'font-source-code-pro'
 
 # Mac App Store Applications
