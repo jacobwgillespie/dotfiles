@@ -75,7 +75,7 @@
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
   "window.titleBarStyle": "native",
   "workbench.colorTheme": "GitHub Dark",
-  "workbench.iconTheme": "file-icons",
+  "workbench.iconTheme": "quill-icons",
   "workbench.sideBar.location": "right",
   "workbench.startupEditor": "newUntitledFile",
   "yaml.format.enable": true,

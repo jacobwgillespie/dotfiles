@@ -2,6 +2,7 @@ bierner.emojisense
 bierner.markdown-checkbox
 bradymholt.pgformatter
 bungcip.better-toml
+cdonohue.quill-icons
 cschleiden.vscode-github-actions
 dbaeumer.vscode-eslint
 EditorConfig.EditorConfig
@@ -22,13 +23,11 @@ ms-azuretools.vscode-docker
 ms-kubernetes-tools.vscode-kubernetes-tools
 ms-python.python
 ms-vsliveshare.vsliveshare
-Prisma.prisma
 redhat.vscode-yaml
 silvenon.mdx
 streetsidesoftware.code-spell-checker
-vadimcn.vscode-lldb
+teabyii.ayu
 VisualStudioExptTeam.vscodeintellicode
-vsls-contrib.codetour
 vsls-contrib.gistfs
 wayou.vscode-todo-highlight
 wingrunr21.vscode-ruby
