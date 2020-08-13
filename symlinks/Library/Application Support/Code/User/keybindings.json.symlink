@@ -9,5 +9,10 @@
     "key": "ctrl+shift+a",
     "command": "explorer.newFolder",
     "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceReadonly && !inputFocus"
+  },
+  {
+    "key": "cmd+s",
+    "command": "searchEditorApplyChanges.apply",
+    "when": "inSearchEditor"
   }
 ]
