@@ -56,6 +56,7 @@
   "javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": false,
   "npm.bin": "yarn",
   "python.languageServer": "Microsoft",
+  "python.showStartPage": false,
   "terminal.integrated.fontSize": 14,
   "terraform.codelens.enabled": false,
   "terraform.indexing": {
