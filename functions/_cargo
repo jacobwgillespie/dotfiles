@@ -1,0 +1,5 @@
+#compdef cargo
+
+if (( $+commands[rustc] )); then
+  source $(rustc --print sysroot)/share/zsh/site-functions/_cargo
+fi
