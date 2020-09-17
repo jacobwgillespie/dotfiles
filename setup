@@ -40,6 +40,13 @@ if [[ "$(uname)" == "Darwin" ]]; then
     echo
   fi
 
+  # Use Touch ID for sudo
+  if ! cat /etc/pam.d/sudo | grep pam_tid > /dev/null; then
+    sudo sed -i '' '2i\
+auth       sufficient     pam_tid.so
+' /etc/pam.d/sudo
+  fi
+
   title "Configuring macOS..."
   ./scripts/configure-osx
   echo "Defaults configured!" | indent
