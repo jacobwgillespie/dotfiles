@@ -7,6 +7,6 @@
     "fkill-cli": "^6.0.1",
     "github-release-from-changelog": "^2.1.1",
     "serve": "^11.3.2",
-    "vercel": "^20.1.0"
+    "vercel": "^20.1.1"
   }
 }
