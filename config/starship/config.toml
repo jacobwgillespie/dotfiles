@@ -1,43 +1,16 @@
-prompt_order = [
-  "username",
-  "hostname",
-  # "kubernetes",
-  "directory",
-  "git_branch",
-  "git_commit",
-  "git_state",
-  "git_status",
-  # "hg_branch",
-  # "docker_context",
-  # "package",
-  # "dotnet",
-  # "elixir",
-  # "elm",
-  # "erlang",
-  # "golang",
-  # "haskell",
-  # "java",
-  # "julia",
-  # "nodejs",
-  # "php",
-  # "python",
-  # "ruby",
-  # "rust",
-  # "terraform",
-  # "nix_shell",
-  # "conda",
-  # "memory_usage",
-  # "aws",
-  # "env_var",
-  # "crystal",
-  "cmd_duration",
-  # "custom",
-  "line_break",
-  "jobs",
-  # "battery",
-  # "time",
-  "character",
-]
+format = """\
+  $username\
+  $hostname\
+  $directory\
+  $git_branch\
+  $git_commit\
+  $git_state\
+  $git_status\
+  $cmd_duration\
+  $line_break\
+  $jobs\
+  $character\
+  """
 
 [character]
 symbol = "•"
@@ -50,5 +23,4 @@ truncate_to_repo = false
 style = "bold yellow"
 
 [git_status]
-prefix = ""
-suffix = " "
+format = "([$all_status$ahead_behind]($style) )"
