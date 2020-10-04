@@ -23,6 +23,11 @@
   "explorer.confirmDragAndDrop": false,
   "explorer.openEditors.visible": 0,
   "extensions.showRecommendationsOnlyOnDemand": true,
+  "files.associations": {
+    "action.yaml": "yaml",
+    "**/.github/workflows/*.yaml": "yaml",
+    "**/.github/workflows/*.yml": "yaml"
+  },
   "files.autoSave": "off",
   "files.exclude": {
     "**/.git": true,
@@ -81,11 +86,6 @@
   "workbench.startupEditor": "newUntitledFile",
   "yaml.format.enable": true,
   "yaml.format.singleQuote": true,
-  "files.associations": {
-    "action.yaml": "yaml",
-    "**/.github/workflows/*.yaml": "yaml",
-    "**/.github/workflows/*.yml": "yaml"
-  },
   "yaml.schemas": {
     "http://json.schemastore.org/github-workflow": [
       "**/.github/workflows/*.yaml",
