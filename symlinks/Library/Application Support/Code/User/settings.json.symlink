@@ -44,6 +44,7 @@
   "git.autofetch": true,
   "git.confirmSync": false,
   "git.enableSmartCommit": true,
+  "github-actions.org-features": true,
   "githubIssues.queries": [
     {
       "label": "My Issues",
