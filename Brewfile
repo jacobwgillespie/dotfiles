@@ -70,6 +70,7 @@ brew 'poetry'
 brew 'popeye'
 brew 'pyenv'
 brew 'pyenv-virtualenv'
+brew 'rancher-cli'
 brew 'rustup-init'
 brew 'sccache'
 brew 'shellcheck'
@@ -171,7 +172,8 @@ mas 'Microsoft Excel', id: 462_058_435
 mas 'Microsoft Remote Desktop 10', id: 1_295_203_466
 mas 'Microsoft Word', id: 462_054_704
 mas 'Pixelmator', id: 407_963_104
-mas 'Reeder 4', id: 1_449_412_482
+mas 'Poolside FM', id: 1_514_817_810
+mas 'Reeder 5', id: 1_529_448_980
 mas 'Tweetbot', id: 1_384_080_005
 mas 'WireGuard', id: 1_451_685_025
 mas 'Xcode', id: 497_799_835
