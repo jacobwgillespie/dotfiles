@@ -1,12 +1,12 @@
 {
   "dependencies": {
-    "@cloudflare/wrangler": "^1.11.0",
+    "@cloudflare/wrangler": "^1.12.2",
     "@eradb/dev": "^0.16.0",
-    "create-next-app": "^9.5.3",
+    "create-next-app": "^10.0.1",
     "fast-cli": "^2.4.0",
     "fkill-cli": "^6.0.1",
     "github-release-from-changelog": "^2.1.1",
     "serve": "^11.3.2",
-    "vercel": "^20.1.1"
+    "vercel": "^20.1.2"
   }
 }
