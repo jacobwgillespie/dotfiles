@@ -4,7 +4,7 @@
   "customizeUI.activityBar": "bottom",
   "customizeUI.activityBarHideSettings": true,
   "editor.acceptSuggestionOnCommitCharacter": false,
-  "editor.fontFamily": "Hasklig, Source Code Pro, Menlo, Monaco, Consolas, 'Courier New', monospace",
+  "editor.fontFamily": "Jetbrains Mono, Hasklig, Source Code Pro, Menlo, Monaco, Consolas, 'Courier New', monospace",
   "editor.fontLigatures": true,
   "editor.fontSize": 14,
   "editor.formatOnSave": true,
