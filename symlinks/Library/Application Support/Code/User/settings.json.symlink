@@ -61,7 +61,7 @@
   "javascript.autoClosingTags": false,
   "javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": false,
   "npm.bin": "yarn",
-  "python.languageServer": "Microsoft",
+  "python.languageServer": "Pylance",
   "python.showStartPage": false,
   "terminal.integrated.fontSize": 14,
   "terraform.codelens.enabled": false,
