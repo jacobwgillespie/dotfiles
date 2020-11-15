@@ -48,7 +48,7 @@ auth       sufficient     pam_tid.so
   fi
 
   title "Configuring macOS..."
-  ./scripts/configure-osx
+  ./scripts/configure-macos
   echo "Defaults configured!" | indent
   echo
 
