@@ -180,7 +180,7 @@ mas 'Lungo', id: 1_263_070_803
 mas 'Microsoft Excel', id: 462_058_435
 mas 'Microsoft Remote Desktop 10', id: 1_295_203_466
 mas 'Microsoft Word', id: 462_054_704
-mas 'Pixelmator', id: 407_963_104
+mas 'Pixelmator Pro', id: 1_289_583_905
 mas 'Poolside FM', id: 1_514_817_810
 mas 'Reeder 5', id: 1_529_448_980
 mas 'Tweetbot', id: 1_384_080_005
