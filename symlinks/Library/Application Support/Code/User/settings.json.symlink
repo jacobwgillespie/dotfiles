@@ -4,9 +4,10 @@
   "customizeUI.activityBar": "bottom",
   "customizeUI.activityBarHideSettings": true,
   "editor.acceptSuggestionOnCommitCharacter": false,
-  "editor.fontFamily": "Jetbrains Mono, Hasklig, Source Code Pro, Menlo, Monaco, Consolas, 'Courier New', monospace",
+  "editor.fontFamily": "Hasklig, Source Code Pro, Menlo, Monaco, Consolas, 'Courier New', monospace",
   "editor.fontLigatures": true,
-  "editor.fontSize": 14,
+  "editor.fontSize": 15,
+  "editor.lineHeight": 0,
   "editor.formatOnSave": true,
   "editor.hideCursorInOverviewRuler": true,
   "editor.minimap.enabled": false,
@@ -22,7 +23,7 @@
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
   "explorer.openEditors.visible": 0,
-  "extensions.showRecommendationsOnlyOnDemand": true,
+  "extensions.ignoreRecommendations": true,
   "files.associations": {
     "action.yaml": "yaml",
     "**/.github/workflows/*.yaml": "yaml",
@@ -61,19 +62,11 @@
   "javascript.autoClosingTags": false,
   "javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": false,
   "npm.bin": "yarn",
+  "prolog.executablePath": "/usr/local/bin/swipl",
   "python.languageServer": "Pylance",
   "python.showStartPage": false,
   "terminal.integrated.fontSize": 14,
-  "terraform.codelens.enabled": false,
-  "terraform.indexing": {
-    "delay": 500,
-    "enabled": false,
-    "exclude": [".terraform/**/*", "**/.terraform/**/*"],
-    "liveIndexing": false
-  },
   "terraform.languageServer": {
-    "args": ["serve"],
-    "enabled": true,
     "external": true
   },
   "typescript.autoClosingTags": false,
@@ -94,10 +87,16 @@
     ],
     "http://json.schemastore.org/github-action": ["action.yaml", "action.yml"]
   },
-  "[jsonc]": {
+  "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "[javascript]": {
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[ruby]": {
@@ -114,5 +113,8 @@
   },
   "[yaml]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "vs-kubernetes": {
+    "vs-kubernetes.minikube-path.mac": "~/.vs-kubernetes/tools/minikube/darwin-amd64/minikube"
   }
 }
