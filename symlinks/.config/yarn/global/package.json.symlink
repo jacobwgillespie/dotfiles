@@ -1,7 +1,7 @@
 {
   "dependencies": {
     "@cloudflare/wrangler": "^1.13.0",
-    "@eradb/dev": "^0.19.1",
+    "@eradb/dev": "^0.19.3",
     "create-next-app": "^10.0.5",
     "fast-cli": "^2.4.0",
     "fkill-cli": "^6.1.0",
