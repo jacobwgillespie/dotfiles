@@ -24,7 +24,7 @@ if [[ "$(uname)" == "Darwin" ]]; then
   # Install brew
   if test ! $(which brew); then
     title "Installing Homebrew..."
-    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
     echo
   fi
 
