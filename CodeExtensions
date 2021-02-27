@@ -28,6 +28,7 @@ jtr.vscode-position
 kamikillerto.vscode-colorize
 mariusschulz.yarn-lock-syntax
 matklad.rust-analyzer
+matthewpi.caddyfile-support
 mike-lischke.vscode-antlr4
 mikestead.dotenv
 mrmlnc.vscode-json5
