@@ -1,0 +1,9 @@
+#!/bin/bash
+set -euo pipefail
+
+if [[ "$#" != 2 ]]; then
+  echo "Usage: $0 [repo] [count-to-keep]"
+  exit 1
+fi
+
+exec docker run -it --rm -v "$HOME/.config/gcloud:/gcloud:ro" -e GOOGLE_APPLICATION_CREDENTIALS=/gcloud/application_default_credentials.json us-docker.pkg.dev/gcr-cleaner/gcr-cleaner/gcr-cleaner-cli -keep "$2" -repo "$1" -allow-tagged
