@@ -57,6 +57,7 @@
     }
   ],
   "go.formatTool": "goimports",
+  "go.toolsManagement.autoUpdate": true,
   "go.useLanguageServer": true,
   "html.autoClosingTags": false,
   "javascript.autoClosingTags": false,
