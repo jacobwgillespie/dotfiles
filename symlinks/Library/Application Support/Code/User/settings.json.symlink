@@ -6,7 +6,7 @@
   "editor.acceptSuggestionOnCommitCharacter": false,
   "editor.fontFamily": "Hasklig, Source Code Pro, Menlo, Monaco, Consolas, 'Courier New', monospace",
   "editor.fontLigatures": true,
-  "editor.fontSize": 15,
+  "editor.fontSize": 13.5,
   "editor.lineHeight": 0,
   "editor.formatOnSave": true,
   "editor.hideCursorInOverviewRuler": true,
