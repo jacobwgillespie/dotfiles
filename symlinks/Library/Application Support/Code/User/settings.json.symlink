@@ -66,6 +66,11 @@
   "prolog.executablePath": "/usr/local/bin/swipl",
   "python.languageServer": "Pylance",
   "python.showStartPage": false,
+  "settingsSync.ignoredExtensions": [
+    "iocave.customize-ui",
+    "iocave.monkey-patch"
+  ],
+  "settingsSync.ignoredSettings": ["window.titleBarStyle"],
   "terminal.integrated.fontSize": 14,
   "terraform.languageServer": {
     "external": true
@@ -87,6 +92,9 @@
       "**/.github/workflows/*.yml"
     ],
     "http://json.schemastore.org/github-action": ["action.yaml", "action.yml"]
+  },
+  "vs-kubernetes": {
+    "vs-kubernetes.minikube-path.mac": "~/.vs-kubernetes/tools/minikube/darwin-amd64/minikube"
   },
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -114,8 +122,5 @@
   },
   "[yaml]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "vs-kubernetes": {
-    "vs-kubernetes.minikube-path.mac": "~/.vs-kubernetes/tools/minikube/darwin-amd64/minikube"
   }
 }
