@@ -25,5 +25,5 @@ fi
 if (( $+commands[bat] )); then
   alias cat=bat
   export BAT_STYLE=plain # only enable syntax highlighting
-  export BAT_THEME="ansi-dark"
+  export BAT_THEME="ansi"
 fi

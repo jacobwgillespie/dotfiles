@@ -190,7 +190,6 @@ cask 'font-source-code-pro'
 mas '1Blocker', id: 1_107_421_413
 mas 'Apple Configurator 2', id: 1_037_126_344
 mas 'Dato', id: 1_470_584_107
-mas 'Fantastical', id: 975_937_182
 mas 'Jiffy', id: 1_502_527_999
 mas 'Lungo', id: 1_263_070_803
 mas 'Microsoft Excel', id: 462_058_435

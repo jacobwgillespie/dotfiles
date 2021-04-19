@@ -4,6 +4,7 @@ fi
 
 export N_PREFIX="$HOME/.n"
 export PATH="$N_PREFIX/bin:$PATH"
+export NPM_CONFIG_FUND=false
 
 # This is a private CLI, you can ignore this file
 if (( $+commands[dev] )); then

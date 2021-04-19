@@ -2,7 +2,6 @@
   "breadcrumbs.enabled": false,
   "customizeUI.titleBar": "inline",
   "customizeUI.activityBar": "bottom",
-  "customizeUI.activityBarHideSettings": true,
   "editor.acceptSuggestionOnCommitCharacter": false,
   "editor.fontFamily": "Hasklig, Source Code Pro, Menlo, Monaco, Consolas, 'Courier New', monospace",
   "editor.fontLigatures": true,
@@ -122,5 +121,11 @@
   },
   "[yaml]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  }
+  },
+  "workbench.editorAssociations": [
+    {
+      "viewType": "jupyter.notebook.ipynb",
+      "filenamePattern": "*.ipynb"
+    }
+  ]
 }
