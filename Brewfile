@@ -203,6 +203,7 @@ mas 'Pixelmator Pro', id: 1_289_583_905
 mas 'Poolside FM', id: 1_514_817_810
 mas 'Reeder 5', id: 1_529_448_980
 mas 'Refined GitHub', id: 1_519_867_270
+mas 'Simplify for Gmail', id: 1_544_668_450
 mas 'Tweetbot', id: 1_384_080_005
 mas 'WireGuard', id: 1_451_685_025
 mas 'Xcode', id: 497_799_835
