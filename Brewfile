@@ -191,7 +191,7 @@ cask 'font-jetbrains-mono'
 cask 'font-source-code-pro'
 
 # Mac App Store Applications
-mas '1Blocker', id: 1_107_421_413
+mas '1Blocker', id: 1_365_531_024
 mas 'Apple Configurator 2', id: 1_037_126_344
 mas 'Dato', id: 1_470_584_107
 mas 'Jiffy', id: 1_502_527_999
