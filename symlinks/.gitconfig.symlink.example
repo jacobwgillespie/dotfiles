@@ -16,6 +16,8 @@
 	pager = delta
 [credential]
 	helper = GIT_CREDENTIAL_HELPER
+[delta]
+	syntax-theme = Sublime Snazzy
 [difftool]
 	prompt = false
 [gpg]
