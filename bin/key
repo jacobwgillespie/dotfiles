@@ -11,8 +11,17 @@ case "$cmd" in
     ssh-keygen -o -a 100 -t ed25519 -f ~/.ssh/id_ed25519 -C "$(git config --global user.email)"
     ;;
 
+  gen-ed25519-sk)
+    ssh-keygen -o -a 100 -t ed25519-sk -f ~/.ssh/id_ed25519_sk -C "$(git config --global user.email)"
+    ;;
+
   gen-rsa)
     ssh-keygen -t rsa -f ~/.ssh/id_rsa -C "$(git config --global user.email)"
+    ;;
+
+  ed25519-sk)
+    cat ~/.ssh/id_ed25519_sk.pub | pbcopy
+    echo "=> Public key copied to pasteboard (Ed25519-sk)"
     ;;
 
   rsa)
