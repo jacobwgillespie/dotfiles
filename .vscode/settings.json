@@ -7,10 +7,10 @@
     "*.conf.symlink": "properties",
     "*.js.symlink": "javascript",
     "*.json.symlink": "json",
+    "*.plist.symlink": "xml",
     "*.symlink": "shellscript",
     "*.yml.symlink": "yaml"
   },
-  "eslint.enable": false,
   "editor.formatOnSave": true,
   "cSpell.words": ["brewfile", "dotfiles", "gitignore", "symlink", "symlinked", "symlinks", "tweetbot"]
 }

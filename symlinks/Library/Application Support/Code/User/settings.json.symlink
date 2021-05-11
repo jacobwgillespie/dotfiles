@@ -65,6 +65,7 @@
   "prolog.executablePath": "/usr/local/bin/swipl",
   "python.languageServer": "Pylance",
   "python.showStartPage": false,
+  "redhat.telemetry.enabled": false,
   "settingsSync.ignoredExtensions": [
     "iocave.customize-ui",
     "iocave.monkey-patch"
@@ -80,6 +81,12 @@
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
   "window.titleBarStyle": "native",
   "workbench.colorTheme": "GitHub Dark",
+  "workbench.editorAssociations": [
+    {
+      "viewType": "jupyter.notebook.ipynb",
+      "filenamePattern": "*.ipynb"
+    }
+  ],
   "workbench.iconTheme": "quill-icons",
   "workbench.sideBar.location": "right",
   "workbench.startupEditor": "newUntitledFile",
@@ -121,11 +128,5 @@
   },
   "[yaml]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "workbench.editorAssociations": [
-    {
-      "viewType": "jupyter.notebook.ipynb",
-      "filenamePattern": "*.ipynb"
-    }
-  ]
+  }
 }
