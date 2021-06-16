@@ -81,12 +81,9 @@
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
   "window.titleBarStyle": "native",
   "workbench.colorTheme": "GitHub Dark",
-  "workbench.editorAssociations": [
-    {
-      "viewType": "jupyter.notebook.ipynb",
-      "filenamePattern": "*.ipynb"
-    }
-  ],
+  "workbench.editorAssociations": {
+    "*.ipynb": "jupyter.notebook.ipynb"
+  },
   "workbench.iconTheme": "quill-icons",
   "workbench.sideBar.location": "right",
   "workbench.startupEditor": "newUntitledFile",

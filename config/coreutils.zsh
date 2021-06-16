@@ -1,6 +1,6 @@
 # Colorize common tools with grc
 if (( $+commands[grc] )) && (( $+commands[brew] )); then
-  source `brew --prefix`/etc/grc.bashrc
+  source `brew --prefix`/etc/grc.zsh
 fi
 
 # Override ls with exa or gls, add colors
