@@ -1,7 +1,3 @@
-if (( $+commands[hub] )); then
-  alias git=$(which hub)
-fi
-
 alias g=git
 compdef g=git
 

@@ -24,8 +24,6 @@
 	program = /usr/local/bin/gpg
 [help]
 	autocorrect = 1
-[hub]
-	protocol = https
 [init]
 	defaultBranch = main
 [interactive]
