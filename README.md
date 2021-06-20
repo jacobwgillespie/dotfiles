@@ -27,7 +27,7 @@ The `Brewfile` installs all of the software and applications I have installed on
 The repository is organized as follows:
 
 - `setup` - setup script that can be used to install or update the dotfiles on your system
-- `Brewfile` - a list of software to install via Homebrew
+- `Brewfile` - a list of software to install via Homebrew (see `brew bundle` and `brew bundle cleanup`)
 - `bin/*` - any executable scripts in this directory are added to your `$PATH`
 - `config/*.zsh` - configuration files for ZSH, they are all sourced automatically into any new shell
 - `functions/*` - zsh functions and autocomplete completion definitions
