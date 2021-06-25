@@ -1,0 +1,8 @@
+# Returns an error when executing yarn in a directory containing a pnpm-lock.yaml file
+yarn() {
+  if [ -f pnpm-lock.yaml ]; then
+    echo "Did you mean $(tput bold)pnpm$(tput sgr0)?" 1>&2
+    return 1
+  fi
+  command yarn "$@"
+}
