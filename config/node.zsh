@@ -12,3 +12,8 @@ if (( $+commands[dev] )); then
   alias d=dev
   compdef d=dev
 fi
+
+# Integrate with modules using tabtab
+if [[ -f ~/.config/tabtab/zsh/__tabtab.zsh ]]; then
+  source ~/.config/tabtab/zsh/__tabtab.zsh || true
+fi
