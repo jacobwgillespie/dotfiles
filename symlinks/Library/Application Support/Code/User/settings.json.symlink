@@ -9,6 +9,7 @@
   "editor.lineHeight": 0,
   "editor.formatOnSave": true,
   "editor.hideCursorInOverviewRuler": true,
+  "editor.inlineSuggest.enabled": true,
   "editor.minimap.enabled": false,
   "editor.multiCursorModifier": "ctrlCmd",
   "editor.occurrencesHighlight": false,
@@ -44,6 +45,9 @@
   "git.autofetch": true,
   "git.confirmSync": false,
   "git.enableSmartCommit": true,
+  "github.copilot.enable": {
+    "*": true
+  },
   "github-actions.org-features": true,
   "githubIssues.queries": [
     {
@@ -98,6 +102,9 @@
   },
   "vs-kubernetes": {
     "vs-kubernetes.minikube-path.mac": "~/.vs-kubernetes/tools/minikube/darwin-amd64/minikube"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
