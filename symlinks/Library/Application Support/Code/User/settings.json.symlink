@@ -70,6 +70,7 @@
   "python.languageServer": "Pylance",
   "python.showStartPage": false,
   "redhat.telemetry.enabled": false,
+  "rust-analyzer.checkOnSave.command": "clippy",
   "settingsSync.ignoredExtensions": [
     "iocave.customize-ui",
     "iocave.monkey-patch"
