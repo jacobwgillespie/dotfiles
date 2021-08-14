@@ -3,7 +3,7 @@
   "customizeUI.titleBar": "inline",
   "customizeUI.activityBar": "bottom",
   "editor.acceptSuggestionOnCommitCharacter": false,
-  "editor.fontFamily": "Fira Code, Comic Code Ligatures, Hasklig, Source Code Pro, Menlo, Monaco, Consolas, 'Courier New', monospace",
+  "editor.fontFamily": "JetBrains Mono, Fira Code, Comic Code Ligatures, Hasklig, Source Code Pro, Menlo, Monaco, Consolas, 'Courier New', monospace",
   "editor.fontLigatures": true,
   "editor.fontSize": 15,
   "editor.formatOnSave": true,
