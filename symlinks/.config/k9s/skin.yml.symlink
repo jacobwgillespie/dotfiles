@@ -5,9 +5,22 @@ k9s:
     fgColor: "#fafbfc"
     bgColor: "#24292e"
     logoColor: "#28a745"
+  prompt:
+    fgColor: "#fafbfc"
+    bgColor: "#24292e"
+    suggestColor: "#e1e4e8"
   info:
     fgColor: white
     sectionColor: "#28a745"
+  dialog:
+    fgColor: dodgerblue
+    bgColor: black
+    buttonFgColor: black
+    buttonBgColor: dodgerblue
+    buttonFocusFgColor: white
+    buttonFocusBgColor: fuchsia
+    labelFgColor: fuchsia
+    fieldFgColor: dodgerblue
   frame:
     border:
       fgColor: "#28a745"
@@ -25,6 +38,7 @@ k9s:
       modifyColor: "#28a745"
       addColor: "#79b8ff"
       errorColor: "#f97583"
+      pendingColor: darkorange
       highlightcolor: "#ffd33d"
       killColor: mediumpurple
       completedColor: gray
