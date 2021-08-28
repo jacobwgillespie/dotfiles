@@ -481,8 +481,16 @@
 	<true/>
 	<key>HideTabNumber</key>
 	<true/>
+	<key>Hotkey</key>
+	<false/>
+	<key>HotkeyChar</key>
+	<integer>96</integer>
+	<key>HotkeyCode</key>
+	<integer>50</integer>
 	<key>HotkeyMigratedFromSingleToMulti</key>
 	<true/>
+	<key>HotkeyModifiers</key>
+	<integer>262401</integer>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -1207,7 +1215,7 @@
 					<key>auto-rainbow style</key>
 					<integer>0</integer>
 					<key>font</key>
-					<string>JetBrainsMonoRoman-Bold 12</string>
+					<string>JetBrainsMonoRoman-Medium 12</string>
 					<key>remove empty components</key>
 					<false/>
 				</dict>
@@ -1236,7 +1244,7 @@
 								<key>auto-rainbow style</key>
 								<integer>0</integer>
 								<key>font</key>
-								<string>JetBrainsMonoRoman-Bold 12</string>
+								<string>JetBrainsMonoRoman-Medium 12</string>
 								<key>remove empty components</key>
 								<false/>
 							</dict>
@@ -1280,7 +1288,7 @@
 								<key>auto-rainbow style</key>
 								<integer>0</integer>
 								<key>font</key>
-								<string>JetBrainsMonoRoman-Bold 12</string>
+								<string>JetBrainsMonoRoman-Medium 12</string>
 								<key>remove empty components</key>
 								<false/>
 							</dict>
@@ -1299,6 +1307,10 @@
 								<real>5</real>
 								<key>expression</key>
 								<string>\(user.kubenamespace)</string>
+								<key>maxwidth</key>
+								<real>+infinity</real>
+								<key>minwidth</key>
+								<string>0</string>
 								<key>shared text color</key>
 								<dict>
 									<key>Alpha Component</key>
@@ -1320,7 +1332,7 @@
 								<key>auto-rainbow style</key>
 								<integer>0</integer>
 								<key>font</key>
-								<string>JetBrainsMonoRoman-Bold 12</string>
+								<string>JetBrainsMonoRoman-Medium 12</string>
 								<key>remove empty components</key>
 								<false/>
 							</dict>
@@ -1338,19 +1350,23 @@
 								<key>base: priority</key>
 								<real>5</real>
 								<key>expression</key>
-								<string>⬢ \(user.node_version)</string>
+								<string>\(user.rust_version)</string>
+								<key>maxwidth</key>
+								<real>+infinity</real>
+								<key>minwidth</key>
+								<string>0</string>
 								<key>shared text color</key>
 								<dict>
 									<key>Alpha Component</key>
 									<real>1</real>
 									<key>Blue Component</key>
-									<real>0.34509803921568627</real>
+									<real>0.0</real>
 									<key>Color Space</key>
 									<string>sRGB</string>
 									<key>Green Component</key>
-									<real>0.81568627450980391</real>
+									<real>0.40392157435417175</real>
 									<key>Red Component</key>
-									<real>0.20392156862745098</real>
+									<real>0.96470588445663452</real>
 								</dict>
 							</dict>
 							<key>layout advanced configuration dictionary value</key>
@@ -1360,7 +1376,51 @@
 								<key>auto-rainbow style</key>
 								<integer>0</integer>
 								<key>font</key>
-								<string>JetBrainsMonoRoman-Bold 12</string>
+								<string>JetBrainsMonoRoman-Medium 12</string>
+								<key>remove empty components</key>
+								<false/>
+							</dict>
+						</dict>
+					</dict>
+					<dict>
+						<key>class</key>
+						<string>iTermStatusBarSwiftyStringComponent</string>
+						<key>configuration</key>
+						<dict>
+							<key>knobs</key>
+							<dict>
+								<key>base: compression resistance</key>
+								<integer>1</integer>
+								<key>base: priority</key>
+								<real>5</real>
+								<key>expression</key>
+								<string>\(user.node_version)</string>
+								<key>maxwidth</key>
+								<real>+infinity</real>
+								<key>minwidth</key>
+								<string>0</string>
+								<key>shared text color</key>
+								<dict>
+									<key>Alpha Component</key>
+									<real>1</real>
+									<key>Blue Component</key>
+									<real>0.34509804844856262</real>
+									<key>Color Space</key>
+									<string>sRGB</string>
+									<key>Green Component</key>
+									<real>0.81568628549575806</real>
+									<key>Red Component</key>
+									<real>0.20392157137393951</real>
+								</dict>
+							</dict>
+							<key>layout advanced configuration dictionary value</key>
+							<dict>
+								<key>algorithm</key>
+								<integer>1</integer>
+								<key>auto-rainbow style</key>
+								<integer>0</integer>
+								<key>font</key>
+								<string>JetBrainsMonoRoman-Medium 12</string>
 								<key>remove empty components</key>
 								<false/>
 							</dict>
