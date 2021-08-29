@@ -22,6 +22,12 @@ function iterm2_print_user_vars() {
     [[ $rust_version == "" ]] || iterm2_set_user_var rust_version "Rust $rust_version"
   fi
 
+  # Terraform version
+  if (( $+commands[terraform] )); then
+    terraform_version=$(terraform --version 2>/dev/null | head -n1 | cut -d' ' -f2 | cut -d'v' -f2)
+    [[ $terraform_version == "" ]] || iterm2_set_user_var terraform_version "Terraform $terraform_version"
+  fi
+
   # Disable custom rprompt
   export RPROMPT=""
 }
