@@ -14,5 +14,10 @@
     "key": "cmd+s",
     "command": "searchEditorApplyChanges.apply",
     "when": "inSearchEditor"
+  },
+  {
+    "key": "alt+f",
+    "command": "rust-analyzer.toggleInlayHints",
+    "when": "editorTextFocus && editorLangId == 'rust'"
   }
 ]
