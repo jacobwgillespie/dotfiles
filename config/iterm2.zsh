@@ -28,6 +28,12 @@ function iterm2_print_user_vars() {
     [[ $terraform_version == "" ]] || iterm2_set_user_var terraform_version "Terraform $terraform_version"
   fi
 
+  # Go version
+  if (( $+commands[go] )); then
+    go_version=$(go version | cut -d' ' -f3 | sed 's/go//')
+    [[ $go_version == "" ]] || iterm2_set_user_var go_version "Go $go_version"
+  fi
+
   # Disable custom rprompt
   export RPROMPT=""
 }
