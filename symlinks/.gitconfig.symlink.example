@@ -18,6 +18,8 @@
 	helper = GIT_CREDENTIAL_HELPER
 [delta]
 	syntax-theme = Sublime Snazzy
+[diff]
+	tool = Kaleidoscope
 [difftool]
 	prompt = false
 [gpg]
@@ -28,6 +30,8 @@
 	defaultBranch = main
 [interactive]
 	diffFilter = delta --color-only
+[merge]
+	tool = Kaleidoscope
 [mergetool]
 	keepBackup = false
 [protocol]
@@ -40,3 +44,13 @@
 	name = AUTHORNAME
 	email = AUTHOREMAIL
 	signingkey = SIGNINGKEY
+[difftool "Kaleidoscope"]
+	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
+[mergetool "Kaleidoscope"]
+	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
+	trustExitCode = true
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
