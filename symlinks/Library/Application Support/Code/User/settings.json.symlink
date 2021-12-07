@@ -103,6 +103,9 @@
   "vs-kubernetes": {
     "vs-kubernetes.minikube-path.mac": "~/.vs-kubernetes/tools/minikube/darwin-amd64/minikube"
   },
+  "[helm]": {
+    "editor.formatOnSave": false
+  },
   "[html]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
