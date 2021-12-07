@@ -1,6 +1,6 @@
 # Setup kubectl alias
 if (( $+commands[kubectl] )); then
-  source <(kubectl completion zsh)
+  source <(kubectl completion zsh 2>/dev/null)
   alias k=kubectl
   complete -o default -F __start_kubectl k
 fi
