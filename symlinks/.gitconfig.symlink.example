@@ -23,7 +23,7 @@
 [difftool]
 	prompt = false
 [gpg]
-	program = /usr/local/bin/gpg
+	program = gpg
 [help]
 	autocorrect = 1
 [init]
