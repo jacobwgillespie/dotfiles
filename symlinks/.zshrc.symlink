@@ -4,7 +4,9 @@ if [ ! -z "$ZSH_PROF" ]; then
 fi
 
 # Set Homebrew environment
-eval "$(/opt/homebrew/bin/brew shellenv)"
+if [[ -f /opt/homebrew/bin/brew ]]; then
+  eval "$(/opt/homebrew/bin/brew shellenv)"
+fi
 
 # Enable CLI colors (https://geoff.greer.fm/lscolors/)
 export CLICOLOR=true
