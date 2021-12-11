@@ -65,9 +65,7 @@
   "javascript.autoClosingTags": false,
   "javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": false,
   "npm.bin": "yarn",
-  "prolog.executablePath": "/usr/local/bin/swipl",
   "python.languageServer": "Pylance",
-  "python.showStartPage": false,
   "redhat.telemetry.enabled": false,
   "rust-analyzer.checkOnSave.command": "clippy",
   "settingsSync.ignoredExtensions": [
