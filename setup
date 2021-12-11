@@ -25,6 +25,7 @@ if [[ "$(uname)" == "Darwin" ]]; then
   if test ! $(which brew); then
     title "Installing Homebrew..."
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    eval "$(/opt/homebrew/bin/brew shellenv)"
     echo
   fi
 
@@ -34,9 +35,9 @@ if [[ "$(uname)" == "Darwin" ]]; then
   echo
 
   # Ensure zsh is a valid shell option
-  if ! cat /etc/shells | grep /usr/local/bin/zsh > /dev/null; then
+  if ! cat /etc/shells | grep $HOMEBREW_PREFIX/bin/zsh > /dev/null; then
     title "Adding zsh to list of allowed shells..."
-    sudo sh -c 'echo /usr/local/bin/zsh >> /etc/shells'
+    sudo sh -c "echo $HOMEBREW_PREFIX/bin/zsh >> /etc/shells"
     echo
   fi
 
@@ -62,7 +63,7 @@ title "Configuring software..."
 if [[ "$SHELL" != *"zsh"* ]]; then
   if [[ "$(uname)" == "Darwin" ]]; then
     title "Changing user shell to zsh..."
-    chsh -s /usr/local/bin/zsh
+    chsh -s $HOMEBREW_PREFIX/bin/zsh
     echo "Your shell has been changed to zsh, please restart your terminal or tab" | indent
     echo
   else
