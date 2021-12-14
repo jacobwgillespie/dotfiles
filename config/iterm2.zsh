@@ -1,5 +1,10 @@
 # Expose variables to iTerm2 (for statusbar integration)
 function iterm2_print_user_vars() {
+  # Execute in the background to display next prompt faster
+  ( _async_iterm2_print_user_vars & ) 2>/dev/null
+}
+
+function _async_iterm2_print_user_vars() {
   # Kubernetes context
   if (( $+commands[kubectl] )); then
     local kubecontext="$(kubectl config current-context 2>/dev/null)"
