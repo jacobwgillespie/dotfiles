@@ -204,3 +204,11 @@ mas 'Tweetbot', id: 1_384_080_005
 mas 'Ulysses', id: 1_225_570_693
 mas 'WireGuard', id: 1_451_685_025
 mas 'Xcode', id: 497_799_835
+
+# Legacy apps installed on certain devices
+if File.exist?(ENV['HOME'] + '/.legacy-apps')
+  cask 'microsoft-auto-update'
+  cask 'microsoft-edge'
+  cask 'vagrant'
+  cask 'virtualbox'
+end
