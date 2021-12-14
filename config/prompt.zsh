@@ -19,4 +19,6 @@ export STARSHIP_CONFIG="$DOTFILES/config/starship/config.toml"
 export PROMPT_EOL_MARK=''
 
 # Configure prompt
-eval "$(starship init zsh)"
+if (( $+commands[starship] )); then
+  eval "$(starship init zsh)"
+fi

@@ -6,7 +6,7 @@ export N_PREFIX="$HOME/.n"
 export PATH="$N_PREFIX/bin:$PATH"
 export NPM_CONFIG_FUND=false
 
-# This is a private CLI, you can ignore this file
+# This is a private CLI, you can ignore this
 if (( $+commands[dev] )); then
   source <(dev completion script)
   alias d=dev
