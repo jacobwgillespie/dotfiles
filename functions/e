@@ -1,0 +1,8 @@
+#!/bin/zsh
+#
+# Quick shortcut to open VS Code. Run with no arguments to open the current directory.
+if [ "$1" = "" ] ; then
+  code .
+else
+  code "$@"
+fi
