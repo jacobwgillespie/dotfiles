@@ -1,5 +1,9 @@
 # Clear and reset the screen
-alias clr="tput reset"
+if [[ "$TERM_PROGRAM" == "iTerm.app" ]]; then
+  alias clr="echo '\u001b]1337;ClearScrollback\u0007'"
+else
+  alias clr="tput reset"
+fi
 
 # Restart audio service to fix issues
 alias fix-audio="sudo pkill coreaudiod; sudo pkill -9 bluetoothaudiod"

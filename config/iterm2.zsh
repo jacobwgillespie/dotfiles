@@ -46,8 +46,3 @@ function _async_iterm2_print_user_vars() {
 if [ -e "$DOTFILES/config/iterm/shell-integration.zsh" ]; then
   source "$DOTFILES/config/iterm/shell-integration.zsh"
 fi
-
-# Alias clr to clear scrollback
-if [[ "$TERM_PROGRAM" == "iTerm.app" ]]; then
-  alias clr="echo '\u001b]1337;ClearScrollback\u0007'"
-fi
