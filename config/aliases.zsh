@@ -1,6 +1,3 @@
-# Reload zsh configuration
-alias reload!='. ~/.zshrc'
-
 # Clear and reset the screen
 alias clr="tput reset"
 
