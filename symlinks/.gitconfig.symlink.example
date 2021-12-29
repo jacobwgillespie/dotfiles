@@ -11,7 +11,7 @@
 [commit]
 	gpgsign = true
 [core]
-	editor = e -w
+	editor = code --wait
 	excludesfile = ~/.gitignore
 	pager = delta
 [credential]

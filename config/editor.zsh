@@ -1,2 +1,2 @@
 # use VS Code as the system editor
-export EDITOR='code'
+export EDITOR='code --wait'

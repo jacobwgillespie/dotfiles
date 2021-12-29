@@ -18,5 +18,3 @@ fi
 if (( $+commands[kubens] )); then
   alias kn=kubens
 fi
-
-export KUBE_EDITOR="code -w"
