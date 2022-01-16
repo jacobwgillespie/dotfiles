@@ -1,5 +1,6 @@
 {
   "breadcrumbs.enabled": false,
+  "cSpell.enabled": false,
   "customizeUI.titleBar": "inline",
   "customizeUI.activityBar": "bottom",
   "editor.acceptSuggestionOnCommitCharacter": false,
@@ -45,7 +46,10 @@
   "git.confirmSync": false,
   "git.enableSmartCommit": true,
   "github.copilot.enable": {
-    "*": true
+    "*": true,
+    "markdown": false,
+    "plaintext": false,
+    "yaml": true
   },
   "github-actions.org-features": true,
   "githubIssues.queries": [
