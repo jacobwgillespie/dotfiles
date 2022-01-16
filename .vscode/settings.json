@@ -12,5 +12,6 @@
     "*.yml.symlink": "yaml"
   },
   "editor.formatOnSave": true,
-  "cSpell.words": ["brewfile", "dotfiles", "gitignore", "symlink", "symlinked", "symlinks", "tweetbot"]
+  "cSpell.words": ["brewfile", "dotfiles", "gitignore", "symlink", "symlinked", "symlinks", "tweetbot"],
+  "prettier.prettierPath": "node_modules/prettier/index.js"
 }

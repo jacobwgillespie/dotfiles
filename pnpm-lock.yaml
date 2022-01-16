@@ -1,0 +1,23 @@
+lockfileVersion: 5.3
+
+specifiers:
+  '@prettier/plugin-ruby': ^2.0.0
+  prettier: ^2.5.1
+
+devDependencies:
+  '@prettier/plugin-ruby': 2.0.0
+  prettier: 2.5.1
+
+packages:
+
+  /@prettier/plugin-ruby/2.0.0:
+    resolution: {integrity: sha512-pA0rjTi5J7cT86XPNhXp7CpdV2Tlyj5oqDIsnQRxMu2P7LY2KJI/pyOSM8pzTH8BgRyQfe1P1NPCcTwxUnUWtQ==}
+    dependencies:
+      prettier: 2.5.1
+    dev: true
+
+  /prettier/2.5.1:
+    resolution: {integrity: sha512-vBZcPRUR5MZJwoyi3ZoyQlc1rXeEck8KgeC9AwwOn+exuxLxq5toTRDTSaVrXHxelDMHy9zlicw8u66yxoSUFg==}
+    engines: {node: '>=10.13.0'}
+    hasBin: true
+    dev: true
