@@ -1,12 +1,13 @@
 # Returns an error when executing pnpm in a directory containing another package manager's lockfile
-pnpm() {
-  if [ -f yarn.lock ]; then
-    echo "Detected $(tput bold)yarn.lock$(tput sgr0), did you mean $(tput bold)yarn$(tput sgr0)?" 1>&2
-    return 1
-  fi
-  if [ -f package-lock.json ]; then
-    echo "Detected $(tput bold)package-lock.json$(tput sgr0), did you mean $(tput bold)npm$(tput sgr0)?" 1>&2
-    return 1
-  fi
-  command pnpm "$@"
-}
+
+if [ -f yarn.lock ]; then
+  echo "Detected $(tput bold)yarn.lock$(tput sgr0), did you mean $(tput bold)yarn$(tput sgr0)?" 1>&2
+  return 1
+fi
+
+if [ -f package-lock.json ]; then
+  echo "Detected $(tput bold)package-lock.json$(tput sgr0), did you mean $(tput bold)npm$(tput sgr0)?" 1>&2
+  return 1
+fi
+
+command pnpm "$@"
