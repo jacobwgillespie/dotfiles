@@ -3,10 +3,15 @@
 if [ -z "$1" ]; then
   git branch
 else
-  msg="$(git checkout "$1" 2>&1)"
-  if [[ $? = 1 ]]; then
-    git checkout -b "$1"
-  else
-    echo "$msg"
+  local_branch=$(git branch --list $1)
+  if ! [ -z "$local_branch" ]; then
+    exec git switch "$1"
   fi
+
+  remote_branch=$(git ls-remote --heads origin $1)
+  if ! [ -z "$remote_branch" ]; then
+    exec git switch "$1"
+  fi
+
+  exec git switch -c "$1"
 fi
