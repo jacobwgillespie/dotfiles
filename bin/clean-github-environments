@@ -19,7 +19,7 @@ if [[ $confirm != "y" ]]; then
   exit 1
 fi
 
-for id in $(gh api "repos/$org/$repo/deployments?environment=$env" | jq ".[].id"); do
+for id in $(gh api --paginate "repos/$org/$repo/deployments?environment=$env" | jq ".[].id"); do
   gh api "repos/$org/$repo/deployments/$id/statuses" -X POST -F state=inactive -H Accept:application/vnd.github.ant-man-preview+json
   gh api "repos/$org/$repo/deployments/$id" -X DELETE
 done
