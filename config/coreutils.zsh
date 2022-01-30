@@ -8,17 +8,14 @@ if (( $+commands[exa] )); then
   alias ls="exa -F"
   alias l="exa -la"
   alias ll="exa -l"
-  alias la="exa -a"
 elif (( $+commands[gls] )); then
   alias ls="gls -F --color"
   alias l="gls -lAh --color"
   alias ll="gls -l --color"
-  alias la="gls -A --color"
 else
   alias ls="ls -F"
   alias l="ls -lAh"
   alias ll="ls -l"
-  alias la="ls -A"
 fi
 
 # Override cat with bat
