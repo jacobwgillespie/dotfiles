@@ -35,6 +35,9 @@ defaults write com.apple.dock orientation left
 # Hide recent apps from Dock
 defaults write com.apple.dock show-recents -bool false
 
+# Set Dock auto-hide delay to disabled
+defaults write com.apple.Dock autohide-delay -float 0
+
 # Reset Launchpad
 find ~/Library/Application\ Support/Dock -name "*.db" -maxdepth 1 -delete
 
