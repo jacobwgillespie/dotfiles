@@ -16,7 +16,6 @@ GitHub.vscode-pull-request-github
 golang.go
 GraphQL.vscode-graphql
 hashicorp.terraform
-heybourn.headwind
 iocave.customize-ui
 iocave.monkey-patch
 jakearl.search-editor-apply-changes
@@ -45,6 +44,7 @@ streetsidesoftware.code-spell-checker
 tamasfe.even-better-toml
 Tim-Koehler.helm-intellisense
 toba.vsfire
+usernamehw.errorlens
 vadimcn.vscode-lldb
 VisualStudioExptTeam.vscodeintellicode
 vsls-contrib.gistfs
