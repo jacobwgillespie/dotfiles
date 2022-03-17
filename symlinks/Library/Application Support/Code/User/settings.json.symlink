@@ -90,7 +90,7 @@
   "workbench.editorAssociations": {
     "*.ipynb": "jupyter.notebook.ipynb"
   },
-  "workbench.iconTheme": "quill-icons-minimal",
+  "workbench.iconTheme": "minimal-icons",
   "workbench.sideBar.location": "right",
   "workbench.startupEditor": "newUntitledFile",
   "yaml.format.enable": true,
