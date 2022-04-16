@@ -87,9 +87,6 @@
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
   "window.titleBarStyle": "native",
   "workbench.colorTheme": "GitHub Dark",
-  "workbench.editorAssociations": {
-    "*.ipynb": "jupyter.notebook.ipynb"
-  },
   "workbench.iconTheme": "minimal-icons",
   "workbench.sideBar.location": "right",
   "workbench.startupEditor": "newUntitledFile",

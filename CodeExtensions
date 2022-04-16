@@ -1,7 +1,6 @@
-bierner.emojisense
+bierner.color-info
 bradlc.vscode-tailwindcss
 bufbuild.vscode-buf
-cdonohue.quill-icons
 cschleiden.vscode-github-actions
 dbaeumer.vscode-eslint
 deerawan.vscode-dash
@@ -19,15 +18,12 @@ iocave.monkey-patch
 jacobwgillespie.minimal-icons
 jakearl.search-editor-apply-changes
 jtr.vscode-position
-kamikillerto.vscode-colorize
 magicstack.edgedb
 matklad.rust-analyzer
 mikestead.dotenv
 ms-azuretools.vscode-docker
 ms-kubernetes-tools.vscode-kubernetes-tools
-ms-ossdata.vscode-postgresql
-ms-python.python
-ms-python.vscode-pylance
+ms-playwright.playwright
 ms-vscode-remote.remote-containers
 ms-vscode-remote.remote-ssh
 ms-vscode-remote.remote-ssh-edit
