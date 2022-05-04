@@ -1215,7 +1215,7 @@
 					<key>auto-rainbow style</key>
 					<integer>0</integer>
 					<key>font</key>
-					<string>JetBrainsMonoRoman-Medium 12</string>
+					<string>BerkeleyMono-Regular 12</string>
 					<key>remove empty components</key>
 					<false/>
 				</dict>
@@ -1244,7 +1244,7 @@
 								<key>auto-rainbow style</key>
 								<integer>0</integer>
 								<key>font</key>
-								<string>JetBrainsMonoRoman-Medium 12</string>
+								<string>BerkeleyMono-Regular 12</string>
 								<key>remove empty components</key>
 								<false/>
 							</dict>
@@ -1288,7 +1288,7 @@
 								<key>auto-rainbow style</key>
 								<integer>0</integer>
 								<key>font</key>
-								<string>JetBrainsMonoRoman-Medium 12</string>
+								<string>BerkeleyMono-Regular 12</string>
 								<key>remove empty components</key>
 								<false/>
 							</dict>
@@ -1332,7 +1332,7 @@
 								<key>auto-rainbow style</key>
 								<integer>0</integer>
 								<key>font</key>
-								<string>JetBrainsMonoRoman-Medium 12</string>
+								<string>BerkeleyMono-Regular 12</string>
 								<key>remove empty components</key>
 								<false/>
 							</dict>
@@ -1376,7 +1376,7 @@
 								<key>auto-rainbow style</key>
 								<integer>0</integer>
 								<key>font</key>
-								<string>JetBrainsMonoRoman-Medium 12</string>
+								<string>BerkeleyMono-Regular 12</string>
 								<key>remove empty components</key>
 								<false/>
 							</dict>
@@ -1420,7 +1420,7 @@
 								<key>auto-rainbow style</key>
 								<integer>0</integer>
 								<key>font</key>
-								<string>JetBrainsMonoRoman-Medium 12</string>
+								<string>BerkeleyMono-Regular 12</string>
 								<key>remove empty components</key>
 								<false/>
 							</dict>
@@ -1464,7 +1464,7 @@
 								<key>auto-rainbow style</key>
 								<integer>0</integer>
 								<key>font</key>
-								<string>JetBrainsMonoRoman-Medium 12</string>
+								<string>BerkeleyMono-Regular 12</string>
 								<key>remove empty components</key>
 								<false/>
 							</dict>
@@ -1508,7 +1508,7 @@
 								<key>auto-rainbow style</key>
 								<integer>0</integer>
 								<key>font</key>
-								<string>JetBrainsMonoRoman-Medium 12</string>
+								<string>BerkeleyMono-Regular 12</string>
 								<key>remove empty components</key>
 								<false/>
 							</dict>
