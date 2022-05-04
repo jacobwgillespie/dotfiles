@@ -27,7 +27,8 @@
   "files.associations": {
     "action.yaml": "yaml",
     "**/.github/workflows/*.yaml": "yaml",
-    "**/.github/workflows/*.yml": "yaml"
+    "**/.github/workflows/*.yml": "yaml",
+    "*.tf": "terraform"
   },
   "files.autoSave": "off",
   "files.exclude": {
@@ -101,6 +102,10 @@
   },
   "vs-kubernetes": {
     "vs-kubernetes.minikube-path.mac": "~/.vs-kubernetes/tools/minikube/darwin-amd64/minikube"
+  },
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
   },
   "[helm]": {
     "editor.formatOnSave": false
