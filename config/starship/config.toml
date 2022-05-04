@@ -6,11 +6,17 @@ format = """\
   $git_commit\
   $git_state\
   $git_status\
+  $aws\
   $cmd_duration\
   $line_break\
   $jobs\
   $character\
   """
+
+[aws]
+format = 'on [$symbol$profile ]($style)'
+style = "bold 202"
+symbol = "🅰 "
 
 [character]
 success_symbol = "[•](bold green)"
