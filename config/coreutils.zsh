@@ -1,6 +1,9 @@
 # Colorize common tools with grc
 if (( $+commands[grc] )) && (( $+commands[brew] )); then
   source $HOMEBREW_PREFIX/etc/grc.zsh
+
+  # Remove docker, as it breaks interactive mode
+  unset -f docker
 fi
 
 # Override ls with exa or gls, add colors

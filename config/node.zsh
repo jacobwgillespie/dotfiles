@@ -1,3 +1,8 @@
+if (( $+commands[pnpm] )); then
+  export PNPM_HOME="/Users/jacobwgillespie/Library/pnpm"
+  export PATH="$PNPM_HOME:$PATH"
+fi
+
 if (( $+commands[yarn] )); then
   export PATH="$(yarn global bin 2>/dev/null):$PATH"
 fi
