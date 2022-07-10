@@ -1,19 +1,20 @@
 {
   "breadcrumbs.enabled": false,
   "cSpell.enabled": false,
-  "customizeUI.titleBar": "inline",
   "customizeUI.activityBar": "bottom",
+  "customizeUI.titleBar": "inline",
   "editor.acceptSuggestionOnCommitCharacter": false,
+  "editor.bracketPairColorization.enabled": false,
   "editor.fontFamily": "Berkeley Mono, JetBrains Mono, SF Mono, Fira Code, Hasklig, Source Code Pro, Menlo, Monaco, Consolas, 'Courier New', monospace",
   "editor.fontLigatures": true,
   "editor.fontSize": 14,
   "editor.formatOnSave": true,
+  "editor.guides.indentation": false,
   "editor.hideCursorInOverviewRuler": true,
   "editor.inlineSuggest.enabled": true,
   "editor.minimap.enabled": false,
   "editor.multiCursorModifier": "ctrlCmd",
   "editor.occurrencesHighlight": false,
-  "editor.renderIndentGuides": false,
   "editor.renderWhitespace": "boundary",
   "editor.scrollbar.horizontal": "hidden",
   "editor.scrollBeyondLastLine": false,
@@ -22,6 +23,8 @@
   "emmet.showExpandedAbbreviation": "never",
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
+  "explorer.fileNesting.enabled": true,
+  "explorer.fileNesting.expand": false,
   "explorer.openEditors.visible": 0,
   "extensions.ignoreRecommendations": true,
   "files.associations": {
@@ -48,11 +51,10 @@
   "git.enableSmartCommit": true,
   "github.copilot.enable": {
     "*": true,
-    "markdown": false,
+    "yaml": true,
     "plaintext": false,
-    "yaml": true
+    "markdown": true
   },
-  "github-actions.org-features": true,
   "githubIssues.queries": [
     {
       "label": "My Issues",
@@ -69,8 +71,6 @@
   "html.autoClosingTags": false,
   "javascript.autoClosingTags": false,
   "javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": false,
-  "npm.bin": "yarn",
-  "python.languageServer": "Pylance",
   "redhat.telemetry.enabled": false,
   "rust-analyzer.checkOnSave.command": "clippy",
   "settingsSync.ignoredExtensions": [
@@ -86,6 +86,7 @@
   "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": false,
   "typescript.tsserver.maxTsServerMemory": 8192,
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "window.commandCenter": true,
   "window.titleBarStyle": "native",
   "workbench.colorTheme": "GitHub Dark",
   "workbench.iconTheme": "minimal-icons",
@@ -139,8 +140,5 @@
   },
   "[yaml]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-
-  "explorer.experimental.fileNesting.enabled": true,
-  "explorer.experimental.fileNesting.expand": false
+  }
 }
