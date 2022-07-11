@@ -222,8 +222,6 @@ mas 'Xcode', id: 497_799_835
 # Legacy apps installed on certain devices
 if File.exist?(ENV['HOME'] + '/.legacy-apps')
   cask 'balance-lock'
-  cask 'microsoft-auto-update'
-  cask 'microsoft-edge'
   cask 'vagrant'
   cask 'virtualbox'
 end
