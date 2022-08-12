@@ -359,6 +359,8 @@
 	<key>DimOnlyText</key>
 	<true/>
 	<key>EnableAPIServer</key>
+	<false/>
+	<key>EnableDivisionView</key>
 	<true/>
 	<key>GlobalKeyMap</key>
 	<dict>
@@ -1155,7 +1157,7 @@
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>JetBrainsMono-Regular 14</string>
+			<string>BerkeleyMono-Regular 14</string>
 			<key>Only The Default BG Color Uses Transparency</key>
 			<false/>
 			<key>Option Key Sends</key>
