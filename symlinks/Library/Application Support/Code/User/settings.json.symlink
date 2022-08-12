@@ -65,6 +65,7 @@
       "query": "author:${user} state:open repo:${owner}/${repository} sort:updated-desc"
     }
   ],
+  "githubPullRequests.pullBranch": "never",
   "go.formatTool": "goimports",
   "go.toolsManagement.autoUpdate": true,
   "go.useLanguageServer": true,
