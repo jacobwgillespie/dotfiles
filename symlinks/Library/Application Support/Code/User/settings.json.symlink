@@ -80,9 +80,7 @@
   ],
   "settingsSync.ignoredSettings": ["window.titleBarStyle"],
   "terminal.integrated.fontSize": 14,
-  "terraform.languageServer": {
-    "external": true
-  },
+  "terraform.languageServer.enable": true,
   "typescript.autoClosingTags": false,
   "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": false,
   "typescript.tsserver.maxTsServerMemory": 8192,
