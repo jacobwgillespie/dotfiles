@@ -28,6 +28,7 @@ truncate_to_repo = false
 
 [git_branch]
 style = "bold yellow"
+symbol = ""
 
 [git_status]
 format = "([$all_status$ahead_behind]($style) )"
