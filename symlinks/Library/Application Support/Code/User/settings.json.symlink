@@ -5,6 +5,7 @@
   "customizeUI.titleBar": "inline",
   "editor.acceptSuggestionOnCommitCharacter": false,
   "editor.bracketPairColorization.enabled": false,
+  "editor.cursorSmoothCaretAnimation": true,
   "editor.fontFamily": "Berkeley Mono, JetBrains Mono, SF Mono, Fira Code, Hasklig, Source Code Pro, Menlo, Monaco, Consolas, 'Courier New', monospace",
   "editor.fontLigatures": true,
   "editor.fontSize": 14,
