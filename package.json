@@ -8,7 +8,7 @@
     "trailingComma": "all"
   },
   "devDependencies": {
-    "@prettier/plugin-ruby": "^2.0.0",
-    "prettier": "^2.5.1"
+    "@prettier/plugin-ruby": "^3.2.2",
+    "prettier": "^2.7.1"
   }
 }
