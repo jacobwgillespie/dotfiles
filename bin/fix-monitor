@@ -4,6 +4,6 @@ set -e
 # This fixes the refresh rate of my primary monitor by swapping to 50hz and back to 60hz.
 
 config="$(displayplacer list | grep '^displayplacer "id:')"
-config50="$(echo "$config" | sed 's/hz:60/hz:50/')"
+config50="$(echo "$config" | sed 's/hz:60/hz:50/g')"
 eval "$config50"
 eval "$config"
