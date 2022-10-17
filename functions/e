@@ -1,8 +1,22 @@
 #!/bin/zsh
 #
 # Quick shortcut to open VS Code. Run with no arguments to open the current directory.
-if [ "$1" = "" ] ; then
-  code .
-else
-  code "$@"
-fi
+
+# when on macOS, use `open` as it's faster than calling `code` directly
+case "$OSTYPE" in
+  darwin*)
+    if [ "$1" = "" ] ; then
+      open -a 'Visual Studio Code' .
+    else
+      open -a 'Visual Studio Code' "$@"
+    fi
+    ;;
+
+  *)
+    if [ "$1" = "" ] ; then
+      code .
+    else
+      code "$@"
+    fi
+    ;;
+esac
