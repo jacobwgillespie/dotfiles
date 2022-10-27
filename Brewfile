@@ -124,7 +124,7 @@ brew 'zsh-syntax-highlighting'
 # Casks
 cask '1password-cli'
 cask '1password'
-cask 'ableton-live-intro'
+cask 'balenaetcher'
 cask 'bettertouchtool'
 cask 'blitz'
 cask 'blu-ray-player-pro'
@@ -196,7 +196,6 @@ cask 'font-source-code-pro'
 
 # Mac App Store Applications
 mas '1Blocker', id: 1_365_531_024
-mas 'Apple Configurator 2', id: 1_037_126_344
 mas 'Dato', id: 1_470_584_107
 mas 'Jiffy', id: 1_502_527_999
 mas 'Lungo', id: 1_263_070_803
