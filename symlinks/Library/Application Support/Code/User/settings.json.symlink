@@ -101,9 +101,6 @@
     ],
     "http://json.schemastore.org/github-action": ["action.yaml", "action.yml"]
   },
-  "vs-kubernetes": {
-    "vs-kubernetes.minikube-path.mac": "~/.vs-kubernetes/tools/minikube/darwin-amd64/minikube"
-  },
   "[css]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": true
