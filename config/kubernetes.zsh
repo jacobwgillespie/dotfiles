@@ -18,3 +18,5 @@ fi
 if (( $+commands[kubens] )); then
   alias kn=kubens
 fi
+
+export USE_GKE_GCLOUD_AUTH_PLUGIN=True
