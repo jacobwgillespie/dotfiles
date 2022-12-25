@@ -87,7 +87,7 @@
   "typescript.tsserver.maxTsServerMemory": 8192,
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
   "window.commandCenter": true,
-  "window.titleBarStyle": "native",
+  "window.titleBarStyle": "custom",
   "workbench.colorTheme": "GitHub Dark",
   "workbench.iconTheme": "minimal-icons",
   "workbench.sideBar.location": "right",
