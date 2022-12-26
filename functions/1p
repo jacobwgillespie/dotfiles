@@ -1,0 +1,4 @@
+#!/bin/zsh
+#
+# Run a binary with credentials from 1Password
+op plugin run -- "$@"
