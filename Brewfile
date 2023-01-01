@@ -129,6 +129,10 @@ brew 'zsh-syntax-highlighting'
 cask '1password-cli'
 cask '1password'
 cask 'ableton-live-intro'
+cask 'affinity-designer'
+cask 'affinity-photo'
+cask 'affinity-publisher'
+cask 'arc'
 cask 'audio-hijack'
 cask 'balenaetcher'
 cask 'bettertouchtool'
@@ -147,6 +151,7 @@ cask 'elgato-control-center'
 cask 'elgato-stream-deck'
 cask 'figma'
 cask 'firefox'
+cask 'focusrite-control'
 cask 'github'
 cask 'google-cloud-sdk'
 cask 'handbrake'
@@ -185,7 +190,6 @@ cask 'sony-ps-remote-play'
 cask 'spotify'
 cask 'steam'
 cask 'sublime-text'
-cask 'superhuman'
 cask 'tableplus'
 cask 'tidal'
 cask 'transmission'
@@ -208,6 +212,9 @@ cask 'font-source-code-pro'
 # Mac App Store Applications
 mas '1Blocker', id: 1_365_531_024
 mas 'Dato', id: 1_470_584_107
+mas 'Endel', id: 1_484_348_796
+mas 'Flighty', id: 1_358_823_008
+mas 'Infuse', id: 1_136_220_934
 mas 'Jiffy', id: 1_502_527_999
 mas 'Lungo', id: 1_263_070_803
 mas 'Microsoft Excel', id: 462_058_435
@@ -217,8 +224,8 @@ mas 'Pixelmator Pro', id: 1_289_583_905
 mas 'Poolside FM', id: 1_514_817_810
 mas 'Reeder 5', id: 1_529_448_980
 mas 'Refined GitHub', id: 1_519_867_270
+mas 'Simplified for Twitter', id: 1_479_307_973
 mas 'Simplify for Gmail', id: 1_544_668_450
-mas 'Speediness', id: 1_596_706_466
 mas 'Tailscale', id: 1_475_387_142
 mas 'Tweetbot', id: 1_384_080_005
 mas 'Ulysses', id: 1_225_570_693
