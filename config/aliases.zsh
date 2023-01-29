@@ -28,5 +28,8 @@ alias hide="defaults write com.apple.finder AppleShowAllFiles -bool false && kil
 alias spot-on="sudo mdutil -a -i on"
 alias spot-off="sudo mdutil -a -i off"
 
+# Fun!
+alias tada="open -g raycast://confetti"
+
 # Load .env file
 function loadenv() { cat .env | grep -v '^#' | grep -v '^$' | while read a; do export $a; done }
