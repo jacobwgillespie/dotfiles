@@ -5,7 +5,7 @@
   "customizeUI.titleBar": "inline",
   "editor.acceptSuggestionOnCommitCharacter": false,
   "editor.bracketPairColorization.enabled": false,
-  "editor.cursorSmoothCaretAnimation": true,
+  "editor.cursorSmoothCaretAnimation": "on",
   "editor.fontFamily": "Berkeley Mono, JetBrains Mono, SF Mono, Fira Code, Hasklig, Source Code Pro, Menlo, Monaco, Consolas, 'Courier New', monospace",
   "editor.fontLigatures": true,
   "editor.fontSize": 14,
@@ -68,13 +68,14 @@
   ],
   "githubPullRequests.pullBranch": "never",
   "go.formatTool": "goimports",
+  "go.lintFlags": ["--fast"],
+  "go.lintTool": "golangci-lint",
   "go.toolsManagement.autoUpdate": true,
   "go.useLanguageServer": true,
   "html.autoClosingTags": false,
   "javascript.autoClosingTags": false,
   "javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": false,
   "redhat.telemetry.enabled": false,
-  "rust-analyzer.checkOnSave.command": "clippy",
   "settingsSync.ignoredExtensions": [
     "iocave.customize-ui",
     "iocave.monkey-patch"
@@ -121,6 +122,9 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[markdown]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[ruby]": {

@@ -11,6 +11,7 @@ EditorConfig.EditorConfig
 esbenp.prettier-vscode
 GitHub.codespaces
 GitHub.copilot
+GitHub.copilot-labs
 GitHub.github-vscode-theme
 GitHub.vscode-pull-request-github
 golang.go
@@ -40,7 +41,6 @@ RapidAPI.vscode-rapidapi-client
 redhat.vscode-commons
 redhat.vscode-xml
 redhat.vscode-yaml
-Redocly.openapi-vs-code
 rust-lang.rust-analyzer
 streetsidesoftware.code-spell-checker
 tamasfe.even-better-toml
