@@ -22,3 +22,7 @@ fi
 if [[ -f ~/.config/tabtab/zsh/__tabtab.zsh ]]; then
   source ~/.config/tabtab/zsh/__tabtab.zsh || true
 fi
+
+if (( $+commands[github-copilot-cli] )); then
+  eval "$(github-copilot-cli alias -- "$0")"
+fi
