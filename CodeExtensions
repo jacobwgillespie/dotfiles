@@ -3,16 +3,15 @@ bbenoist.Nix
 bierner.color-info
 bradlc.vscode-tailwindcss
 bufbuild.vscode-buf
-cschleiden.vscode-github-actions
 dbaeumer.vscode-eslint
 deerawan.vscode-dash
-denoland.vscode-deno
 EditorConfig.EditorConfig
 esbenp.prettier-vscode
 GitHub.codespaces
 GitHub.copilot
 GitHub.copilot-labs
 GitHub.github-vscode-theme
+github.vscode-github-actions
 GitHub.vscode-pull-request-github
 golang.go
 hashicorp.hcl
@@ -37,7 +36,6 @@ ms-vsliveshare.vsliveshare
 osohq.oso
 pbkit.vscode-pbkit
 Prisma.prisma
-RapidAPI.vscode-rapidapi-client
 redhat.vscode-commons
 redhat.vscode-xml
 redhat.vscode-yaml
@@ -50,3 +48,4 @@ vadimcn.vscode-lldb
 VisualStudioExptTeam.vscodeintellicode
 wayou.vscode-todo-highlight
 wingrunr21.vscode-ruby
+yoavbls.pretty-ts-errors
