@@ -206,25 +206,25 @@ cask 'font-outfit'
 cask 'font-source-code-pro'
 
 # Mac App Store Applications
-mas '1Blocker', id: 1_365_531_024
-mas 'Camera Preview', id: 1_632_827_132
-mas 'Dato', id: 1_470_584_107
-mas 'Endel', id: 1_484_348_796
-mas 'Flighty', id: 1_358_823_008
-mas 'Infuse', id: 1_136_220_934
-mas 'Jiffy', id: 1_502_527_999
-mas 'Lungo', id: 1_263_070_803
-mas 'Microsoft Excel', id: 462_058_435
-mas 'Microsoft Remote Desktop 10', id: 1_295_203_466
-mas 'Microsoft Word', id: 462_054_704
-mas 'Pixelmator Pro', id: 1_289_583_905
-mas 'Poolside FM', id: 1_514_817_810
-mas 'Reeder 5', id: 1_529_448_980
-mas 'Refined GitHub', id: 1_519_867_270
-mas 'Simplified for Twitter', id: 1_479_307_973
-mas 'Simplify for Gmail', id: 1_544_668_450
-mas 'Tailscale', id: 1_475_387_142
-mas 'Tweetbot', id: 1_384_080_005
-mas 'Ulysses', id: 1_225_570_693
-mas 'WireGuard', id: 1_451_685_025
-mas 'Xcode', id: 497_799_835
+mas '1Blocker', id: 1365531024
+mas 'Camera Preview', id: 1632827132
+mas 'Dato', id: 1470584107
+mas 'Endel', id: 1484348796
+mas 'Flighty', id: 1358823008
+mas 'Infuse', id: 1136220934
+mas 'Jiffy', id: 1502527999
+mas 'Lungo', id: 1263070803
+mas 'Microsoft Excel', id: 462058435
+mas 'Microsoft Remote Desktop 10', id: 1295203466
+mas 'Microsoft Word', id: 462054704
+mas 'Pixelmator Pro', id: 1289583905
+mas 'Poolside FM', id: 1514817810
+mas 'Reeder 5', id: 1529448980
+mas 'Refined GitHub', id: 1519867270
+mas 'Simplified for Twitter', id: 1479307973
+mas 'Simplify for Gmail', id: 1544668450
+mas 'Tailscale', id: 1475387142
+mas 'Tweetbot', id: 1384080005
+mas 'Ulysses', id: 1225570693
+mas 'WireGuard', id: 1451685025
+mas 'Xcode', id: 497799835
