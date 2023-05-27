@@ -207,6 +207,7 @@ cask 'font-source-code-pro'
 
 # Mac App Store Applications
 mas '1Blocker', id: 1_365_531_024
+mas 'Camera Preview', id: 1_632_827_132
 mas 'Dato', id: 1_470_584_107
 mas 'Endel', id: 1_484_348_796
 mas 'Flighty', id: 1_358_823_008
