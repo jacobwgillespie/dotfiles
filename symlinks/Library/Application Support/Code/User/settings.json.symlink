@@ -1,8 +1,19 @@
 {
+  "apc.activityBar": {
+    "hideSettings": true,
+    "position": "bottom",
+    "size": 32
+  },
+  "apc.electron": {
+    "titleBarStyle": "hiddenInset"
+  },
+  "apc.stylesheet": {
+    "body:not(.frameless-title-bar) .monaco-workbench.sidebar-right.noauxiliarybar .split-view-view:nth-child(1) .split-view-view:nth-child(1) .tabs-and-actions-container .inline-tabs-placeholder": {
+      "width": "calc(var(--traffic-X) + 68px)"
+    }
+  },
   "breadcrumbs.enabled": false,
   "cSpell.enabled": false,
-  "customizeUI.activityBar": "bottom",
-  "customizeUI.titleBar": "inline",
   "editor.acceptSuggestionOnCommitCharacter": false,
   "editor.bracketPairColorization.enabled": false,
   "editor.cursorSmoothCaretAnimation": "on",
@@ -88,7 +99,8 @@
   "typescript.tsserver.maxTsServerMemory": 8192,
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
   "window.commandCenter": true,
-  "window.titleBarStyle": "custom",
+  "window.nativeTabs": false,
+  "window.titleBarStyle": "native",
   "workbench.colorTheme": "GitHub Dark",
   "workbench.iconTheme": "minimal-icons",
   "workbench.sideBar.location": "right",
@@ -141,5 +153,6 @@
   },
   "[yaml]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  }
+  },
+  "comments.openView": "never"
 }
