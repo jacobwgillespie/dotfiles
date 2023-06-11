@@ -37,7 +37,6 @@
   "explorer.confirmDragAndDrop": false,
   "explorer.fileNesting.enabled": true,
   "explorer.fileNesting.expand": false,
-  "explorer.openEditors.visible": 0,
   "extensions.ignoreRecommendations": true,
   "files.associations": {
     "action.yaml": "yaml",
