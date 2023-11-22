@@ -9,14 +9,16 @@
   },
   "apc.stylesheet": {
     "body:not(.frameless-title-bar) .monaco-workbench.sidebar-right.noauxiliarybar .split-view-view:nth-child(1) .split-view-view:nth-child(1) .tabs-and-actions-container .inline-tabs-placeholder": {
-      "width": "calc(var(--traffic-X) + 68px)"
+      "width": "calc(var(--traffic-X) + 72px) !important"
     }
   },
   "breadcrumbs.enabled": false,
+  "comments.openView": "never",
   "cSpell.enabled": false,
   "editor.acceptSuggestionOnCommitCharacter": false,
   "editor.bracketPairColorization.enabled": false,
   "editor.cursorSmoothCaretAnimation": "on",
+  "editor.experimental.asyncTokenization": true,
   "editor.fontFamily": "Berkeley Mono, JetBrains Mono, SF Mono, Fira Code, Hasklig, Source Code Pro, Menlo, Monaco, Consolas, 'Courier New', monospace",
   "editor.fontLigatures": true,
   "editor.fontSize": 14,
@@ -39,10 +41,7 @@
   "explorer.fileNesting.expand": false,
   "extensions.ignoreRecommendations": true,
   "files.associations": {
-    "action.yaml": "yaml",
-    "**/.github/workflows/*.yaml": "yaml",
-    "**/.github/workflows/*.yml": "yaml",
-    "*.tf": "terraform"
+    "atlas.hcl": "atlas-config"
   },
   "files.autoSave": "off",
   "files.exclude": {
@@ -86,10 +85,6 @@
   "javascript.autoClosingTags": false,
   "javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": false,
   "redhat.telemetry.enabled": false,
-  "settingsSync.ignoredExtensions": [
-    "iocave.customize-ui",
-    "iocave.monkey-patch"
-  ],
   "settingsSync.ignoredSettings": ["window.titleBarStyle"],
   "terminal.integrated.fontSize": 14,
   "terraform.languageServer.enable": true,
@@ -152,6 +147,5 @@
   },
   "[yaml]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "comments.openView": "never"
+  }
 }
