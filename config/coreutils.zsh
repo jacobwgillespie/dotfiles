@@ -6,11 +6,12 @@ if (( $+commands[grc] )) && (( $+commands[brew] )); then
   unset -f docker
 fi
 
-# Override ls with exa or gls, add colors
-if (( $+commands[exa] )); then
-  alias ls="exa -F"
-  alias l="exa -la"
-  alias ll="exa -l"
+# Override ls with eza or gls, add colors
+if (( $+commands[eza] )); then
+  alias ls="eza -F"
+  alias l="eza -la"
+  alias ll="eza -l"
+  alias tree="eza -TF"
 elif (( $+commands[gls] )); then
   alias ls="gls -F --color"
   alias l="gls -lAh --color"
