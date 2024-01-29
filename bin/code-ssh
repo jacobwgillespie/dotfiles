@@ -1,0 +1,31 @@
+#!/bin/bash
+
+max_retry=10
+
+for i in $(seq 1 $max_retry); do
+  recent_folder=$(find $HOME/.vscode-server/bin/ -mindepth 1 -maxdepth 1 -type d | head -n"$i" | tail -1)
+  if [[ -z ${recent_folder} ]]; then
+    echo "VS Code remote folder not found"
+    exit 1
+  fi
+
+  script="$recent_folder/bin/remote-cli/code"
+  if [[ -z ${script} ]]; then
+    echo "VS Code remote script not found"
+    exit 1
+  fi
+
+  socket=$(ls /run/user/$UID/vscode-ipc-* -t | head -n"$i" | tail -1)
+  if [[ -z ${socket} ]]; then
+    echo "VS Code IPC socket not found"
+    exit 1
+  fi
+
+  export VSCODE_IPC_HOOK_CLI=${socket}
+
+  if ${script} "$@" 2>/dev/null ; then
+    exit 0
+  fi
+done
+
+echo "Failed to find valid VS Code connection"
