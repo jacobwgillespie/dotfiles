@@ -18,32 +18,32 @@ indent() {
 
 echo
 
+# Install brew
+if test ! $(which brew); then
+  title "Installing Homebrew..."
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+  if [[ -d /home/linuxbrew/.linuxbrew ]]; then
+    eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+  else
+    eval "$(/opt/homebrew/bin/brew shellenv)"
+  fi
+  echo
+fi
+
+# Install brew packages
+title "Installing software..."
+brew bundle | indent
+echo
+
+# Ensure zsh is a valid shell option
+if ! cat /etc/shells | grep $HOMEBREW_PREFIX/bin/zsh > /dev/null; then
+  title "Adding zsh to list of allowed shells..."
+  sudo sh -c "echo $HOMEBREW_PREFIX/bin/zsh >> /etc/shells"
+  echo
+fi
+
 # If macOS
 if [[ "$(uname)" == "Darwin" ]]; then
-
-  # Install brew
-  if test ! $(which brew); then
-    title "Installing Homebrew..."
-    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-    if [[ -d /home/linuxbrew/.linuxbrew ]]; then
-      eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-    else
-      eval "$(/opt/homebrew/bin/brew shellenv)"
-    fi
-    echo
-  fi
-
-  # Install brew packages
-  title "Installing software..."
-  brew bundle | indent
-  echo
-
-  # Ensure zsh is a valid shell option
-  if ! cat /etc/shells | grep $HOMEBREW_PREFIX/bin/zsh > /dev/null; then
-    title "Adding zsh to list of allowed shells..."
-    sudo sh -c "echo $HOMEBREW_PREFIX/bin/zsh >> /etc/shells"
-    echo
-  fi
 
   # Use Touch ID for sudo
   if [ ! -f /etc/pam.d/sudo_local ]; then
@@ -53,21 +53,6 @@ if [[ "$(uname)" == "Darwin" ]]; then
   title "Configuring macOS..."
   ./scripts/configure-macos
   echo "Defaults configured!" | indent
-  echo
-
-elif [[ "$(uname)" == "Linux" ]]; then
-
-  # Install brew
-  if test ! $(which brew); then
-    title "Installing Homebrew..."
-    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-    eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-    echo
-  fi
-
-  # Install brew packages
-  title "Installing software..."
-  brew bundle | indent
   echo
 
 fi
