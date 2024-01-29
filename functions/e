@@ -13,10 +13,14 @@ case "$OSTYPE" in
     ;;
 
   *)
+    code_cmd="code"
+    if [[ -n "$SSH_CLIENT" ]]; then
+      code_cmd="code-ssh"
+    fi
     if [ "$1" = "" ] ; then
-      code .
+      $code_cmd .
     else
-      code "$@"
+      $code_cmd "$@"
     fi
     ;;
 esac
