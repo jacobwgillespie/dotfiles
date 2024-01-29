@@ -252,3 +252,9 @@ if /darwin/ =~ RUBY_PLATFORM
   mas 'WireGuard', id: 1451685025
   mas 'Xcode', id: 497799835
 end
+
+# Only install on Linux
+if /linux/ =~ RUBY_PLATFORM
+  # Formulae
+  brew 'gcc'
+end
