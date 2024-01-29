@@ -3,7 +3,7 @@
 max_retry=10
 
 for i in $(seq 1 $max_retry); do
-  recent_folder=$(find $HOME/.vscode-server/bin/ -mindepth 1 -maxdepth 1 -type d | head -n"$i" | tail -1)
+  recent_folder=$(find "$HOME/.vscode-server/bin/" -mindepth 1 -maxdepth 1 -type d | head -n"$i" | tail -1)
   if [[ -z ${recent_folder} ]]; then
     echo "VS Code remote folder not found"
     exit 1
@@ -15,7 +15,7 @@ for i in $(seq 1 $max_retry); do
     exit 1
   fi
 
-  socket=$(ls /run/user/$UID/vscode-ipc-* -t | head -n"$i" | tail -1)
+  socket=$(find /run/user/$UID/ -mindepth 1 -maxdepth 1 -name 'vscode-ipc-*' | head -n"$i" | tail -1)
   if [[ -z ${socket} ]]; then
     echo "VS Code IPC socket not found"
     exit 1
