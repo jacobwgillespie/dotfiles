@@ -46,15 +46,28 @@ if [[ "$(uname)" == "Darwin" ]]; then
   fi
 
   # Use Touch ID for sudo
-  if ! cat /etc/pam.d/sudo | grep pam_tid > /dev/null; then
-    sudo sed -i '' '2i\
-auth       sufficient     pam_tid.so
-' /etc/pam.d/sudo
+  if [ ! -f /etc/pam.d/sudo_local ]; then
+    echo "auth       sufficient     pam_tid.so" | sudo tee /etc/pam.d/sudo_local
   fi
 
   title "Configuring macOS..."
   ./scripts/configure-macos
   echo "Defaults configured!" | indent
+  echo
+
+elif [[ "$(uname)" == "Linux" ]]; then
+
+  # Install brew
+  if test ! $(which brew); then
+    title "Installing Homebrew..."
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+    echo
+  fi
+
+  # Install brew packages
+  title "Installing software..."
+  brew bundle | indent
   echo
 
 fi
