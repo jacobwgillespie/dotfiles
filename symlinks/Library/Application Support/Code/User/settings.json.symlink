@@ -86,6 +86,7 @@
   "javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": false,
   "redhat.telemetry.enabled": false,
   "settingsSync.ignoredSettings": ["window.titleBarStyle"],
+  "terminal.integrated.defaultProfile.linux": "zsh",
   "terminal.integrated.fontSize": 14,
   "terraform.languageServer.enable": true,
   "typescript.autoClosingTags": false,
