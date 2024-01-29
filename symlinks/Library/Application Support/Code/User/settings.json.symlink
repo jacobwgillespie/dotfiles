@@ -8,8 +8,8 @@
     "titleBarStyle": "hiddenInset"
   },
   "apc.stylesheet": {
-    "body:not(.frameless-title-bar) .monaco-workbench.sidebar-right.noauxiliarybar .split-view-view:nth-child(1) .split-view-view:nth-child(1) .tabs-and-actions-container .inline-tabs-placeholder": {
-      "width": "calc(var(--traffic-X) + 72px) !important"
+    ".monaco-workbench .part.editor>.content .editor-group-container>.title .tabs-container": {
+      "padding-left": "calc(var(--traffic-X)) !important"
     }
   },
   "breadcrumbs.enabled": false,
@@ -28,7 +28,7 @@
   "editor.inlineSuggest.enabled": true,
   "editor.minimap.enabled": false,
   "editor.multiCursorModifier": "ctrlCmd",
-  "editor.occurrencesHighlight": false,
+  "editor.occurrencesHighlight": "off",
   "editor.renderWhitespace": "boundary",
   "editor.scrollbar.horizontal": "hidden",
   "editor.scrollBeyondLastLine": false,
