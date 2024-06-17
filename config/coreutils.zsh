@@ -8,10 +8,10 @@ fi
 
 # Override ls with eza or gls, add colors
 if (( $+commands[eza] )); then
-  alias ls="eza -F"
+  alias ls="eza -F auto"
   alias l="eza -la"
   alias ll="eza -l"
-  alias tree="eza -TF"
+  alias tree="eza -TF auto"
 elif (( $+commands[gls] )); then
   alias ls="gls -F --color"
   alias l="gls -lAh --color"
