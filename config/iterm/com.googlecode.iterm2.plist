@@ -6,6 +6,8 @@
 	<true/>
 	<key>BootstrapDaemon</key>
 	<false/>
+	<key>ClickToSelectCommand</key>
+	<false/>
 	<key>CopySelection</key>
 	<false/>
 	<key>Custom Color Presets</key>
@@ -1159,7 +1161,7 @@
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>CommitMono-Regular 14</string>
+			<string>BerkeleyMonoVariable-Regular 14</string>
 			<key>Only The Default BG Color Uses Transparency</key>
 			<false/>
 			<key>Option Key Sends</key>
