@@ -3,6 +3,7 @@ tap 'ariga/tap'
 tap 'aws/tap'
 tap 'bufbuild/buf'
 tap 'cloudflare/cloudflare'
+tap 'dagger/tap'
 tap 'depot/tap'
 tap 'github/gh'
 tap 'hashicorp/tap'
@@ -13,7 +14,10 @@ tap 'homebrew/services'
 tap 'jacobwgillespie/tap'
 tap 'jakehilborn/jakehilborn'
 tap 'oven-sh/bun'
+tap 'peak/tap'
 tap 'planetscale/tap'
+tap 'pulumi/tap'
+tap 'rwx-research/tap'
 tap 'superfly/tap'
 tap 'yt-dlp/taps'
 
@@ -77,6 +81,7 @@ brew 'n'
 brew 'nmap'
 brew 'node'
 brew 'openssh'
+brew 'oras'
 brew 'oven-sh/bun/bun'
 brew 'packer'
 brew 'postgresql@14'
@@ -92,6 +97,7 @@ brew 'rbenv'
 brew 'rclone'
 brew 'redis'
 brew 'ripgrep'
+brew 'ruff'
 brew 'run'
 brew 'rustup-init'
 brew 'sccache'
@@ -107,6 +113,7 @@ brew 'terraform-docs'
 brew 'tflint'
 brew 'tf-shim'
 brew 'tokei'
+brew 'uv'
 brew 'wget'
 brew 'wrk'
 brew 'xh'
@@ -119,6 +126,12 @@ brew 'zsh-autosuggestions'
 brew 'zsh-completions'
 brew 'zsh-history-substring-search'
 brew 'zsh-syntax-highlighting'
+
+brew 'dagger/tap/dagger'
+brew 'pulumi/tap/pulumi'
+brew 'pulumi/tap/pulumictl'
+brew 'rwx-research/tap/mint'
+brew 'peak/tap/s5cmd'
 
 # Only install on macOS
 if /darwin/ =~ RUBY_PLATFORM
@@ -140,12 +153,14 @@ if /darwin/ =~ RUBY_PLATFORM
   cask 'arq'
   cask 'audio-hijack'
   cask 'balenaetcher'
+  cask 'battery'
   cask 'betterdisplay'
   cask 'bettertouchtool'
   cask 'blitz'
+  cask 'chatgpt'
   cask 'cleanmymac'
+  cask 'clickhouse'
   cask 'cloudflare-warp'
-  cask 'cron'
   cask 'daisydisk'
   cask 'dash'
   cask 'dbngin'
@@ -181,7 +196,9 @@ if /darwin/ =~ RUBY_PLATFORM
   cask 'microsoft-edge'
   cask 'minecraft'
   cask 'mullvadvpn'
+  cask 'ngrok'
   cask 'notion'
+  cask 'notion-calendar'
   cask 'now-tv-player'
   cask 'obs'
   cask 'openphone'
@@ -258,6 +275,7 @@ if /darwin/ =~ RUBY_PLATFORM
   vscode "bierner.color-info"
   vscode "bradlc.vscode-tailwindcss"
   vscode "bufbuild.vscode-buf"
+  vscode "charliermarsh.ruff"
   vscode "dbaeumer.vscode-eslint"
   vscode "deerawan.vscode-dash"
   vscode "drcika.apc-extension"
@@ -272,6 +290,7 @@ if /darwin/ =~ RUBY_PLATFORM
   vscode "github.vscode-github-actions"
   vscode "GitHub.vscode-pull-request-github"
   vscode "golang.go"
+  vscode "hangxingliu.vscode-systemd-support"
   vscode "hashicorp.hcl"
   vscode "hashicorp.terraform"
   vscode "inferrinizzard.prettier-sql-vscode"
@@ -279,11 +298,15 @@ if /darwin/ =~ RUBY_PLATFORM
   vscode "jakearl.search-editor-apply-changes"
   vscode "jdinhlife.gruvbox"
   vscode "jtr.vscode-position"
+  vscode "joshferge.clickhouse-query-formatter"
   vscode "mikestead.dotenv"
   vscode "mindaro-dev.file-downloader"
   vscode "ms-azuretools.vscode-docker"
   vscode "ms-kubernetes-tools.vscode-kubernetes-tools"
   vscode "ms-playwright.playwright"
+  vscode "ms-python.debugpy"
+  vscode "ms-python.python"
+  vscode "ms-python.vscode-pylance"
   vscode "ms-vscode-remote.remote-containers"
   vscode "ms-vscode-remote.remote-ssh"
   vscode "ms-vscode-remote.remote-ssh-edit"
@@ -297,7 +320,6 @@ if /darwin/ =~ RUBY_PLATFORM
   vscode "redhat.vscode-yaml"
   vscode "rust-lang.rust-analyzer"
   vscode "Shopify.ruby-lsp"
-  vscode "sourcegraph.cody-ai"
   vscode "sswg.swift-lang"
   vscode "streetsidesoftware.code-spell-checker"
   vscode "tamasfe.even-better-toml"
