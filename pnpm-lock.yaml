@@ -1,23 +1,24 @@
-lockfileVersion: 5.4
+lockfileVersion: '9.0'
 
-specifiers:
-  '@prettier/plugin-ruby': ^3.2.2
-  prettier: ^2.7.1
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
 
-devDependencies:
-  '@prettier/plugin-ruby': 3.2.2
-  prettier: 2.7.1
+importers:
+
+  .:
+    devDependencies:
+      prettier:
+        specifier: ^3.3.2
+        version: 3.3.2
 
 packages:
 
-  /@prettier/plugin-ruby/3.2.2:
-    resolution: {integrity: sha512-Vc7jVE39Fgswl517ET4kPtpnoRWE6XTi1Sivd84rZyomYnHYUmvUsEeoOf6tVhzTuIXE5XVQB1YCG2hulrwR3Q==}
-    dependencies:
-      prettier: 2.7.1
-    dev: true
-
-  /prettier/2.7.1:
-    resolution: {integrity: sha512-ujppO+MkdPqoVINuDFDRLClm7D78qbDt0/NR+wp5FqEZOoTNAjPHWj17QRhu7geIHJfcNhRk1XVQmF8Bp3ye+g==}
-    engines: {node: '>=10.13.0'}
+  prettier@3.3.2:
+    resolution: {integrity: sha512-rAVeHYMcv8ATV5d508CFdn+8/pHPpXeIid1DdrPwXnaAdH7cqjVbpJaT5eq4yRAFU/lsbwYwSF/n5iNrdJHPQA==}
+    engines: {node: '>=14'}
     hasBin: true
-    dev: true
+
+snapshots:
+
+  prettier@3.3.2: {}

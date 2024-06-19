@@ -1,5 +1,6 @@
 {
   "private": true,
+  "packageManager": "pnpm@9.4.0",
   "prettier": {
     "bracketSpacing": false,
     "printWidth": 120,
@@ -8,7 +9,6 @@
     "trailingComma": "all"
   },
   "devDependencies": {
-    "@prettier/plugin-ruby": "^3.2.2",
-    "prettier": "^2.7.1"
+    "prettier": "^3.3.2"
   }
 }
