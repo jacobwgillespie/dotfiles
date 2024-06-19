@@ -1,11 +1,11 @@
 {
   "apc.activityBar": {
     "hideSettings": true,
-    "position": "bottom",
     "size": 32
   },
   "apc.electron": {
-    "titleBarStyle": "hiddenInset"
+    "frame": false,
+    "titleBarStyle": "hidden"
   },
   "apc.stylesheet": {
     ".monaco-workbench .part.editor>.content .editor-group-container>.title .tabs-container": {
@@ -19,9 +19,10 @@
   "editor.bracketPairColorization.enabled": false,
   "editor.cursorSmoothCaretAnimation": "on",
   "editor.experimental.asyncTokenization": true,
-  "editor.fontFamily": "Berkeley Mono, JetBrains Mono, SF Mono, Fira Code, Hasklig, Source Code Pro, Menlo, Monaco, Consolas, 'Courier New', monospace",
+  "editor.fontFamily": "CommitMono, Berkeley Mono, JetBrains Mono, SF Mono, Fira Code, Hasklig, Source Code Pro, Menlo, Monaco, Consolas, 'Courier New', monospace",
   "editor.fontLigatures": true,
   "editor.fontSize": 14,
+  "editor.lineHeight": 1.618,
   "editor.formatOnSave": true,
   "editor.guides.indentation": false,
   "editor.hideCursorInOverviewRuler": true,
@@ -32,6 +33,7 @@
   "editor.renderWhitespace": "boundary",
   "editor.scrollbar.horizontal": "hidden",
   "editor.scrollBeyondLastLine": false,
+  "editor.stickyScroll.enabled": false,
   "editor.suggestSelection": "first",
   "editor.tabSize": 2,
   "emmet.showExpandedAbbreviation": "never",
@@ -59,11 +61,13 @@
   "git.autofetch": true,
   "git.confirmSync": false,
   "git.enableSmartCommit": true,
+  "github.copilot.editor.enableAutoCompletions": true,
   "github.copilot.enable": {
     "*": true,
-    "yaml": true,
     "plaintext": false,
-    "markdown": true
+    "markdown": true,
+    "scminput": false,
+    "yaml": true
   },
   "githubIssues.queries": [
     {
@@ -92,10 +96,11 @@
   "typescript.autoClosingTags": false,
   "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": false,
   "typescript.tsserver.maxTsServerMemory": 8192,
+  "update.mode": "manual",
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-  "window.commandCenter": true,
-  "window.nativeTabs": false,
+  "window.customTitleBarVisibility": "never",
   "window.titleBarStyle": "native",
+  "workbench.activityBar.location": "bottom",
   "workbench.colorTheme": "GitHub Dark",
   "workbench.iconTheme": "minimal-icons",
   "workbench.sideBar.location": "right",
@@ -132,6 +137,9 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[mdx]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[ruby]": {
