@@ -18,8 +18,6 @@ tap 'peak/tap'
 tap 'planetscale/tap'
 tap 'pulumi/tap'
 tap 'rwx-research/tap'
-tap 'superfly/tap'
-tap 'yt-dlp/taps'
 
 # Formulae
 brew 'ack'
@@ -38,7 +36,6 @@ brew 'cmake'
 brew 'coreutils'
 brew 'crane'
 brew 'deno'
-brew 'depot'
 brew 'diffutils'
 brew 'dive'
 brew 'entr'
@@ -51,7 +48,6 @@ brew 'gh'
 brew 'git'
 brew 'git-delta'
 brew 'git-filter-repo'
-brew 'jacobwgillespie/tap/git-sync'
 brew 'gnupg'
 brew 'go'
 brew 'golangci-lint'
@@ -82,7 +78,6 @@ brew 'nmap'
 brew 'node'
 brew 'openssh'
 brew 'oras'
-brew 'oven-sh/bun/bun'
 brew 'packer'
 brew 'postgresql@14'
 brew 'pkg-config'
@@ -90,15 +85,12 @@ brew 'pnpm'
 brew 'protobuf'
 brew 'protoc-gen-go'
 brew 'protoc-gen-go-grpc'
-brew 'pscale'
 brew 'qemu'
-brew 'qrencode'
 brew 'rbenv'
 brew 'rclone'
 brew 'redis'
 brew 'ripgrep'
 brew 'ruff'
-brew 'run'
 brew 'rustup'
 brew 'sccache'
 brew 'shellcheck'
@@ -111,7 +103,6 @@ brew 'telnet'
 brew 'temporal'
 brew 'terraform-docs'
 brew 'tflint'
-brew 'tf-shim'
 brew 'tokei'
 brew 'uv'
 brew 'wget'
@@ -129,6 +120,12 @@ brew 'zsh-history-substring-search'
 brew 'zsh-syntax-highlighting'
 
 brew 'dagger/tap/dagger'
+brew 'depot/tap/depot'
+brew 'jacobwgillespie/tap/git-sync'
+brew 'jacobwgillespie/tap/run'
+brew 'jacobwgillespie/tap/tf-shim'
+brew 'oven-sh/bun/bun'
+brew 'planetscale/tap/pscale'
 brew 'pulumi/tap/pulumi'
 brew 'pulumi/tap/pulumictl'
 brew 'rwx-research/tap/mint'
@@ -137,10 +134,11 @@ brew 'peak/tap/s5cmd'
 # Only install on macOS
 if /darwin/ =~ RUBY_PLATFORM
   # Formulae
-  brew 'displayplacer'
   brew 'lima'
   brew 'mas'
   brew 'pinentry-mac'
+
+  brew 'jakehilborn/jakehilborn/displayplacer'
 
   # Casks
   cask '1password-cli'
@@ -149,13 +147,11 @@ if /darwin/ =~ RUBY_PLATFORM
   cask 'affinity-designer'
   cask 'affinity-photo'
   cask 'affinity-publisher'
-  cask 'amie'
   cask 'arc'
   cask 'arq'
   cask 'audio-hijack'
   cask 'balenaetcher'
   cask 'battery'
-  cask 'betterdisplay'
   cask 'bettertouchtool'
   cask 'blitz'
   cask 'chatgpt'
@@ -178,7 +174,6 @@ if /darwin/ =~ RUBY_PLATFORM
   cask 'google-chrome'
   cask 'google-cloud-sdk'
   cask 'handbrake'
-  cask 'iconjar'
   cask 'iina'
   cask 'imageoptim'
   cask 'insomnia'
@@ -188,12 +183,10 @@ if /darwin/ =~ RUBY_PLATFORM
   cask 'league-of-legends'
   cask 'linearmouse'
   cask 'linear-linear'
-  cask 'logitech-g-hub'
   cask 'loopback'
   cask 'makemkv'
   cask 'meta'
   cask 'microsoft-auto-update'
-  cask 'microsoft-edge'
   cask 'minecraft'
   cask 'mullvadvpn'
   cask 'ngrok'
@@ -203,7 +196,6 @@ if /darwin/ =~ RUBY_PLATFORM
   cask 'obs'
   cask 'oracle-jdk'
   cask 'orion'
-  cask 'oso-cloud'
   cask 'pingplotter'
   cask 'plex'
   cask 'proxyman'
@@ -215,7 +207,6 @@ if /darwin/ =~ RUBY_PLATFORM
   cask 'sonos'
   cask 'sony-ps-remote-play'
   cask 'soundsource'
-  cask 'spacedrive'
   cask 'spotify'
   cask 'steam'
   cask 'sublime-text'
@@ -245,12 +236,9 @@ if /darwin/ =~ RUBY_PLATFORM
 
   # Mac App Store Applications
   mas '1Blocker', id: 1365531024
-  mas 'Camera Preview', id: 1632827132
   mas 'Dato', id: 1470584107
-  mas 'Endel', id: 1484348796
   mas 'Flighty', id: 1358823008
   mas 'Infuse', id: 1136220934
-  mas 'Jiffy', id: 1502527999
   mas 'Lungo', id: 1263070803
   mas 'Microsoft Excel', id: 462058435
   mas 'Microsoft Remote Desktop 10', id: 1295203466
@@ -261,8 +249,6 @@ if /darwin/ =~ RUBY_PLATFORM
   mas 'Refined GitHub', id: 1519867270
   mas 'Simplified for Twitter', id: 1479307973
   mas 'Simplify for Gmail', id: 1544668450
-  mas 'Tailscale', id: 1475387142
-  mas 'Tweetbot', id: 1384080005
   mas 'Ulysses', id: 1225570693
   mas 'WireGuard', id: 1451685025
   mas 'Xcode', id: 497799835
