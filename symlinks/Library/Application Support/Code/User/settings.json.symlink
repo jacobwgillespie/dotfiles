@@ -7,11 +7,6 @@
     "frame": false,
     "titleBarStyle": "hidden"
   },
-  "apc.stylesheet": {
-    ".monaco-workbench .part.editor>.content .editor-group-container>.title .tabs-container": {
-      "padding-left": "calc(var(--traffic-X)) !important"
-    }
-  },
   "breadcrumbs.enabled": false,
   "comments.openView": "never",
   "cSpell.enabled": false,
