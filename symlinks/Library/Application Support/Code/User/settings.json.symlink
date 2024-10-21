@@ -14,7 +14,7 @@
   "editor.bracketPairColorization.enabled": false,
   "editor.cursorSmoothCaretAnimation": "on",
   "editor.experimental.asyncTokenization": true,
-  "editor.fontFamily": "CommitMono, Berkeley Mono, JetBrains Mono, SF Mono, Fira Code, Hasklig, Source Code Pro, Menlo, Monaco, Consolas, 'Courier New', monospace",
+  "editor.fontFamily": "Berkeley Mono, JetBrains Mono, SF Mono, Fira Code, Hasklig, Source Code Pro, Menlo, Monaco, Consolas, 'Courier New', monospace",
   "editor.fontLigatures": true,
   "editor.fontSize": 14,
   "editor.lineHeight": 1.618,
@@ -37,9 +37,6 @@
   "explorer.fileNesting.enabled": true,
   "explorer.fileNesting.expand": false,
   "extensions.ignoreRecommendations": true,
-  "files.associations": {
-    "atlas.hcl": "atlas-config"
-  },
   "files.autoSave": "off",
   "files.exclude": {
     "**/.git": true,
@@ -94,10 +91,11 @@
   "update.mode": "manual",
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
   "window.customTitleBarVisibility": "never",
-  "window.titleBarStyle": "native",
+  "window.titleBarStyle": "custom",
   "workbench.activityBar.location": "bottom",
   "workbench.colorTheme": "GitHub Dark",
   "workbench.iconTheme": "minimal-icons",
+  "workbench.layoutControl.enabled": false,
   "workbench.sideBar.location": "right",
   "workbench.startupEditor": "newUntitledFile",
   "yaml.format.enable": true,
