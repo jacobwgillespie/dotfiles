@@ -1,0 +1,34 @@
+font-family = Berkeley Mono Variable
+font-size = 14
+
+# GitHub Dark, customized
+theme = GitHub Dark
+background = #24282c
+foreground = #fafafb
+palette = 0=#1d1f21
+palette = 1=#c5474e
+palette = 2=#68cd66
+palette = 3=#d4ac3a
+palette = 4=#4386f6
+palette = 5=#d856a6
+palette = 6=#6ae1e4
+palette = 7=#feffff
+palette = 8=#686767
+palette = 9=#c6474e
+palette = 10=#9ce5a3
+palette = 11=#d3ac3a
+palette = 12=#4386f6
+palette = 13=#d856a6
+palette = 14=#6ae1e4
+palette = 15=#feffff
+
+window-padding-x = 15
+window-padding-y = 10
+
+keybind = option+super+left=previous_tab
+keybind = option+super+right=next_tab
+
+macos-titlebar-style = tabs
+
+working-directory = home
+window-inherit-working-directory = false

@@ -9,7 +9,8 @@
     "*.json.symlink": "json",
     "*.plist.symlink": "xml",
     "*.symlink": "shellscript",
-    "*.yml.symlink": "yaml"
+    "*.yml.symlink": "yaml",
+    "**/.config/ghostty/config.symlink": "ini"
   },
   "editor.formatOnSave": true,
   "cSpell.words": ["brewfile", "dotfiles", "gitignore", "symlink", "symlinked", "symlinks", "tweetbot"],
