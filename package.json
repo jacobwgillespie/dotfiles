@@ -1,6 +1,6 @@
 {
   "private": true,
-  "packageManager": "pnpm@9.4.0",
+  "packageManager": "pnpm@9.15.1",
   "prettier": {
     "bracketSpacing": false,
     "printWidth": 120,
@@ -9,6 +9,6 @@
     "trailingComma": "all"
   },
   "devDependencies": {
-    "prettier": "^3.3.2"
+    "prettier": "^3.4.2"
   }
 }
