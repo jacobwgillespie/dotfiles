@@ -43,6 +43,6 @@ function _async_iterm2_print_user_vars() {
   export RPROMPT=""
 }
 
-if [ -e "$DOTFILES/config/iterm/shell-integration.zsh" ]; then
+if [[ "$TERM_PROGRAM" == "iTerm.app" ]] && [ -e "$DOTFILES/config/iterm/shell-integration.zsh" ]; then
   source "$DOTFILES/config/iterm/shell-integration.zsh"
 fi

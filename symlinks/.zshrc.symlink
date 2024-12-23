@@ -25,6 +25,9 @@ export PROJECTS=~/Code
 # Configure PATH
 export PATH="./bin:$HOME/bin:$DOTFILES/bin:$PATH"
 
+# load plugins
+source "$DOTFILES/plugins/zsh-defer.plugin.zsh"
+
 # load functions
 fpath=($DOTFILES/functions $fpath)
 autoload -U compinit
@@ -39,7 +42,11 @@ if type brew &>/dev/null; then
 fi
 
 # Setup completion
-compinit
+if [[ -f ~/.zcompdump(#qN.mh+24) ]]; then
+  compinit
+else
+  compinit -C
+fi
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}' # match lowercase as case-insensitive
 # zstyle ':completion:*' insert-tab pending # pasted tabs don't trigger completion
 zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS} # set file completion suggestions to ls colors
@@ -84,20 +91,20 @@ bindkey '^[[1;9C' end-of-line
 bindkey "^[[A" up-line-or-beginning-search # Up
 bindkey "^[[B" down-line-or-beginning-search # Down
 
-# Enable syntax highlighting
-if [ -f "$HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" ]; then
-  source "$HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
-fi
-
 # Enable auto-suggestions
 if [ -f "$HOMEBREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh" ]; then
-  source "$HOMEBREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
+  zsh-defer source "$HOMEBREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
   # Fetch suggestions asynchronously
   export ZSH_AUTOSUGGEST_USE_ASYNC=1
   # Suggest from completion first, then history if nothing is found
   export ZSH_AUTOSUGGEST_STRATEGY=(completion history)
   # Disable automatic rebind (better performance)
   export ZSH_AUTOSUGGEST_MANUAL_REBIND=1
+fi
+
+# Enable syntax highlighting
+if [ -f "$HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" ]; then
+  zsh-defer source "$HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
 fi
 
 # Enable substring history matching
