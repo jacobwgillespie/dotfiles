@@ -880,7 +880,7 @@
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>BerkeleyMonoVariable-Regular 14</string>
+			<string>TX-02-Regular 14</string>
 			<key>Only The Default BG Color Uses Transparency</key>
 			<false/>
 			<key>Option Key Sends</key>
@@ -944,7 +944,7 @@
 					<key>auto-rainbow style</key>
 					<integer>0</integer>
 					<key>font</key>
-					<string>BerkeleyMono-Regular 12</string>
+					<string>TX-02-Regular 12</string>
 					<key>remove empty components</key>
 					<false/>
 				</dict>
@@ -973,7 +973,7 @@
 								<key>auto-rainbow style</key>
 								<integer>0</integer>
 								<key>font</key>
-								<string>BerkeleyMono-Regular 12</string>
+								<string>TX-02-Regular 12</string>
 								<key>remove empty components</key>
 								<false/>
 							</dict>
@@ -996,18 +996,20 @@
 								<real>+infinity</real>
 								<key>minwidth</key>
 								<string>0</string>
+								<key>shared font</key>
+								<string></string>
 								<key>shared text color</key>
 								<dict>
 									<key>Alpha Component</key>
 									<real>1</real>
 									<key>Blue Component</key>
-									<real>1</real>
+									<real>0.96782380342483521</real>
 									<key>Color Space</key>
-									<string>sRGB</string>
+									<string>P3</string>
 									<key>Green Component</key>
-									<real>0.52941179275512695</real>
+									<real>0.52177315950393677</real>
 									<key>Red Component</key>
-									<real>0.13333334028720856</real>
+									<real>0.26289337873458862</real>
 								</dict>
 							</dict>
 							<key>layout advanced configuration dictionary value</key>
@@ -1017,7 +1019,7 @@
 								<key>auto-rainbow style</key>
 								<integer>0</integer>
 								<key>font</key>
-								<string>BerkeleyMono-Regular 12</string>
+								<string>TX-02-Regular 12</string>
 								<key>remove empty components</key>
 								<false/>
 							</dict>
@@ -1061,7 +1063,7 @@
 								<key>auto-rainbow style</key>
 								<integer>0</integer>
 								<key>font</key>
-								<string>BerkeleyMono-Regular 12</string>
+								<string>TX-02-Regular 12</string>
 								<key>remove empty components</key>
 								<false/>
 							</dict>
@@ -1105,7 +1107,7 @@
 								<key>auto-rainbow style</key>
 								<integer>0</integer>
 								<key>font</key>
-								<string>BerkeleyMono-Regular 12</string>
+								<string>TX-02-Regular 12</string>
 								<key>remove empty components</key>
 								<false/>
 							</dict>
@@ -1149,7 +1151,7 @@
 								<key>auto-rainbow style</key>
 								<integer>0</integer>
 								<key>font</key>
-								<string>BerkeleyMono-Regular 12</string>
+								<string>TX-02-Regular 12</string>
 								<key>remove empty components</key>
 								<false/>
 							</dict>
@@ -1193,7 +1195,7 @@
 								<key>auto-rainbow style</key>
 								<integer>0</integer>
 								<key>font</key>
-								<string>BerkeleyMono-Regular 12</string>
+								<string>TX-02-Regular 12</string>
 								<key>remove empty components</key>
 								<false/>
 							</dict>
@@ -1237,7 +1239,7 @@
 								<key>auto-rainbow style</key>
 								<integer>0</integer>
 								<key>font</key>
-								<string>BerkeleyMono-Regular 12</string>
+								<string>TX-02-Regular 12</string>
 								<key>remove empty components</key>
 								<false/>
 							</dict>
