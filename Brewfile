@@ -47,7 +47,6 @@ brew 'gh'
 brew 'git'
 brew 'git-delta'
 brew 'git-filter-repo'
-brew 'gnupg'
 brew 'go'
 brew 'golangci-lint'
 brew 'goreleaser'
@@ -136,7 +135,6 @@ if /darwin/ =~ RUBY_PLATFORM
   # Formulae
   brew 'lima'
   brew 'mas'
-  brew 'pinentry-mac'
 
   brew 'jakehilborn/jakehilborn/displayplacer'
 
