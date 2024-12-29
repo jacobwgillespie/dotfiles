@@ -32,3 +32,4 @@ macos-titlebar-style = tabs
 
 working-directory = home
 window-inherit-working-directory = false
+window-new-tab-position = end
