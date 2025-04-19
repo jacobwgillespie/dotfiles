@@ -6,9 +6,9 @@
 case "$OSTYPE" in
   darwin*)
     if [ "$1" = "" ] ; then
-      open -a 'Visual Studio Code' .
+      open -a 'Cursor' .
     else
-      open -a 'Visual Studio Code' "$@"
+      open -a 'Cursor' "$@"
     fi
     ;;
 
