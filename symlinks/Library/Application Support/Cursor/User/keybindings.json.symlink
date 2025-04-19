@@ -1,0 +1,39 @@
+// Place your key bindings in this file to overwrite the defaults
+[
+  {
+    "key": "ctrl+a",
+    "command": "explorer.newFile",
+    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceReadonly && !inputFocus"
+  },
+  {
+    "key": "ctrl+shift+a",
+    "command": "explorer.newFolder",
+    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceReadonly && !inputFocus"
+  },
+  {
+    "key": "cmd+s",
+    "command": "searchEditorApplyChanges.apply",
+    "when": "inSearchEditor"
+  },
+  {
+    "key": "alt+f",
+    "command": "rust-analyzer.toggleInlayHints",
+    "when": "editorTextFocus && editorLangId == 'rust'"
+  },
+  {
+    "key": "alt+cmd+left",
+    "command": "workbench.action.previousEditor"
+  },
+  {
+    "key": "alt+cmd+right",
+    "command": "workbench.action.nextEditor"
+  },
+  {
+    "key": "cmd+i",
+    "command": "composerMode.agent"
+  },
+  {
+    "key": "cmd+i",
+    "command": "composerMode.agent"
+  }
+]
