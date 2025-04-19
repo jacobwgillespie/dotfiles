@@ -21,6 +21,7 @@ brew 'ack'
 brew 'asdf'
 brew 'aws-vault'
 brew 'awscli'
+brew 'awsdac'
 brew 'bash'
 brew 'bash-completion'
 brew 'bat'
@@ -79,9 +80,10 @@ brew 'node'
 brew 'openssh'
 brew 'oras'
 brew 'packer'
-brew 'postgresql@14'
 brew 'pkg-config'
+brew 'plantuml'
 brew 'pnpm'
+brew 'postgresql@14'
 brew 'protobuf'
 brew 'protoc-gen-go'
 brew 'protoc-gen-go-grpc'
@@ -147,10 +149,11 @@ if /darwin/ =~ RUBY_PLATFORM
   cask 'affinity-designer'
   cask 'affinity-photo'
   cask 'affinity-publisher'
+  cask 'alcove'
   cask 'amazon-chime'
+  cask 'araxis-merge'
   cask 'arc'
   cask 'arq'
-  cask 'audio-hijack'
   cask 'balenaetcher'
   cask 'battery'
   cask 'bettertouchtool'
@@ -169,7 +172,6 @@ if /darwin/ =~ RUBY_PLATFORM
   cask 'elgato-camera-hub'
   cask 'elgato-control-center'
   cask 'elgato-stream-deck'
-  cask 'figma'
   cask 'firefox'
   cask 'focusrite-control'
   cask 'front'
@@ -181,7 +183,6 @@ if /darwin/ =~ RUBY_PLATFORM
   cask 'handbrake'
   cask 'iina'
   cask 'imageoptim'
-  cask 'insomnia'
   cask 'iterm2'
   cask 'kaleidoscope'
   cask 'kap'
@@ -199,19 +200,18 @@ if /darwin/ =~ RUBY_PLATFORM
   cask 'nosql-workbench'
   cask 'notion'
   cask 'notion-calendar'
-  cask 'obs'
   cask 'oracle-jdk'
   cask 'orion'
   cask 'pingplotter'
   cask 'plex'
   cask 'proxyman'
   cask 'raycast'
+  cask 'retcon'
   cask 'session-manager-plugin'
   cask 'shottr'
   cask 'slack'
   cask 'sonos'
   cask 'sony-ps-remote-play'
-  cask 'soundsource'
   cask 'spotify'
   cask 'steam'
   cask 'sublime-text'
@@ -219,13 +219,15 @@ if /darwin/ =~ RUBY_PLATFORM
   cask 'tableplus'
   cask 'tailscale'
   cask 'transmission'
-  cask 'transmit'
   cask 'unite'
   cask 'visual-studio-code'
   cask 'vlc'
   cask 'whatsapp@beta'
+  cask 'windsurf'
   cask 'wireshark'
   cask 'yaak'
+  cask 'zed'
+  cask 'zed@preview'
   cask 'zoom'
 
   # Fonts
@@ -246,7 +248,6 @@ if /darwin/ =~ RUBY_PLATFORM
   mas 'Dato', id: 1470584107
   mas 'Flighty', id: 1358823008
   mas 'Infuse', id: 1136220934
-  mas 'Lungo', id: 1263070803
   mas 'Microsoft Excel', id: 462058435
   mas 'Microsoft Remote Desktop 10', id: 1295203466
   mas 'Microsoft Word', id: 462054704
@@ -254,21 +255,21 @@ if /darwin/ =~ RUBY_PLATFORM
   mas 'Poolside FM', id: 1514817810
   mas 'Reeder 5', id: 1529448980
   mas 'Refined GitHub', id: 1519867270
-  mas 'Simplified for Twitter', id: 1479307973
   mas 'Simplify for Gmail', id: 1544668450
   mas 'Ulysses', id: 1225570693
-  mas 'WireGuard', id: 1451685025
   mas 'Xcode', id: 497799835
 
   # VS Code extensions
   vscode 'afzalsayed96.icones'
   vscode 'astro-build.astro-vscode'
   vscode 'bierner.color-info'
+  vscode 'biomejs.biome'
   vscode 'bradlc.vscode-tailwindcss'
   vscode 'bufbuild.vscode-buf'
   vscode 'charliermarsh.ruff'
   vscode 'dbaeumer.vscode-eslint'
   vscode 'deerawan.vscode-dash'
+  vscode 'docker.docker'
   vscode 'drcika.apc-extension'
   vscode 'EditorConfig.EditorConfig'
   vscode 'emeraldwalk.RunOnSave'
@@ -311,7 +312,6 @@ if /darwin/ =~ RUBY_PLATFORM
   vscode 'renesaarsoo.sql-formatter-vsc'
   vscode 'rust-lang.rust-analyzer'
   vscode 'Shopify.ruby-lsp'
-  vscode 'sswg.swift-lang'
   vscode 'streetsidesoftware.code-spell-checker'
   vscode 'tamasfe.even-better-toml'
   vscode 'temporal-technologies.temporalio'
