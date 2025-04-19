@@ -149,5 +149,6 @@
   },
   "[yaml]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  }
+  },
+  "github.copilot.nextEditSuggestions.enabled": true
 }
