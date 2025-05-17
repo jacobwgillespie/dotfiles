@@ -2,3 +2,4 @@
 node_modules/
 symlinks/.gitconfig.symlink
 Brewfile.lock.json
+.claude/settings.local.json
