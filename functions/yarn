@@ -1,5 +1,10 @@
 # Returns an error when executing yarn in a directory containing another package manager's lockfile
 
+if [ -f bun.lock ]; then
+  echo "Detected $(tput bold)bun.lock$(tput sgr0), did you mean $(tput bold)bun$(tput sgr0)?" 1>&2
+  return 1
+fi
+
 if [ -f pnpm-lock.yaml ]; then
   echo "Detected $(tput bold)pnpm-lock.yaml$(tput sgr0), did you mean $(tput bold)pnpm$(tput sgr0)?" 1>&2
   return 1
