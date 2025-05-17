@@ -28,6 +28,7 @@ window-padding-y = 10
 keybind = option+super+left=previous_tab
 keybind = option+super+right=next_tab
 keybind = super+f=write_screen_file:open
+keybind = shift+enter=text:\n
 
 macos-titlebar-style = tabs
 
