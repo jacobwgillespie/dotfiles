@@ -165,6 +165,7 @@ if /darwin/ =~ RUBY_PLATFORM
   cask 'bettertouchtool'
   cask 'blitz'
   cask 'chatgpt'
+  cask 'claude'
   cask 'cleanmymac'
   cask 'clickhouse'
   cask 'cloudflare-warp'
@@ -196,11 +197,11 @@ if /darwin/ =~ RUBY_PLATFORM
   cask 'lens'
   cask 'linearmouse'
   cask 'linear-linear'
-  cask 'loopback'
   cask 'makemkv'
   cask 'meta'
   cask 'microsoft-auto-update'
   cask 'microsoft-edge'
+  cask 'mimestream'
   cask 'ngrok'
   cask 'nosql-workbench'
   cask 'notion'
@@ -213,6 +214,7 @@ if /darwin/ =~ RUBY_PLATFORM
   cask 'plex'
   cask 'proxyman'
   cask 'raycast'
+  cask 'replacicon'
   cask 'retcon'
   cask 'session-manager-plugin'
   cask 'shottr'
@@ -252,9 +254,11 @@ if /darwin/ =~ RUBY_PLATFORM
 
   # Mac App Store Applications
   mas '1Blocker', id: 1365531024
+  mas 'Balatro+', id: 6502451661
   mas 'Dato', id: 1470584107
   mas 'Flighty', id: 1358823008
   mas 'Infuse', id: 1136220934
+  mas 'Ivory for Mastodon', id: 6444602274
   mas 'Microsoft Excel', id: 462058435
   mas 'Microsoft Remote Desktop 10', id: 1295203466
   mas 'Microsoft Word', id: 462054704
