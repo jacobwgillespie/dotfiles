@@ -208,7 +208,6 @@ if /darwin/ =~ RUBY_PLATFORM
   cask 'notion-calendar'
   cask 'notion-mail'
   cask 'oracle-jdk'
-  cask 'orbstack'
   cask 'orion'
   cask 'pingplotter'
   cask 'plex'
