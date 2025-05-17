@@ -6,7 +6,7 @@
   "editor.bracketPairColorization.enabled": false,
   "editor.cursorSmoothCaretAnimation": "on",
   "editor.experimental.asyncTokenization": true,
-  "editor.fontFamily": "Berkeley Mono, JetBrains Mono, SF Mono, Fira Code, Hasklig, Source Code Pro, Menlo, Monaco, Consolas, 'Courier New', monospace",
+  "editor.fontFamily": "TX-02, JetBrains Mono, SF Mono, Fira Code, Hasklig, Source Code Pro, Menlo, Monaco, Consolas, 'Courier New', monospace",
   "editor.fontLigatures": true,
   "editor.fontSize": 14,
   "editor.lineHeight": 1.618,
@@ -75,7 +75,6 @@
   "update.mode": "manual",
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
   "workbench.iconTheme": "minimal-icons",
-  "workbench.startupEditor": "newUntitledFile",
   "yaml.format.enable": true,
   "yaml.format.singleQuote": true,
   "yaml.schemas": {
