@@ -43,5 +43,10 @@
       "text": "\u001b\r"
     },
     "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+s",
+    "command": "workbench.action.tasks.runTask",
+    "args": "git-sync"
   }
 ]

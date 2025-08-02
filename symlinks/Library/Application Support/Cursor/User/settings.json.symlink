@@ -133,9 +133,7 @@
   "workbench.layoutControl.enabled": false,
   "workbench.navigationControl.enabled": false,
   "workbench.sideBar.location": "right",
-  "plantuml.render": "PlantUMLServer",
-  "plantuml.server": "https://www.plantuml.com/plantuml",
-  "plantuml.jar": "/opt/homebrew/Cellar/plantuml/1.2025.2/libexec/plantuml.jar",
   "hediet.vscode-drawio.resizeImages": null,
-  "editor.accessibilitySupport": "off"
+  "editor.accessibilitySupport": "off",
+  "excalidraw.theme": "light"
 }

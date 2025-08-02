@@ -22,6 +22,52 @@ palette = 13=#d856a6
 palette = 14=#6ae1e4
 palette = 15=#feffff
 
+# Kanso Ink
+# palette = 0=#14171d
+# palette = 1=#c4746e
+# palette = 2=#8a9a7b
+# palette = 3=#c4b28a
+# palette = 4=#8ba4b0
+# palette = 5=#a292a3
+# palette = 6=#8ea4a2
+# palette = 7=#a4a7a4
+# palette = 8=#5C6066
+# palette = 9=#e46876
+# palette = 10=#87a987
+# palette = 11=#e6c384
+# palette = 12=#7fb4ca
+# palette = 13=#938aa9
+# palette = 14=#7aa89f
+# palette = 15=#c5c9c7
+# background = #14171d
+# foreground = #c5c9c7
+# cursor-color = #c5c9c7
+# selection-background = #3e424a
+# selection-foreground = #c5c9c7
+
+# Kanso Zen
+# palette = 0=#090E13
+# palette = 1=#c4746e
+# palette = 2=#8a9a7b
+# palette = 3=#c4b28a
+# palette = 4=#8ba4b0
+# palette = 5=#a292a3
+# palette = 6=#8ea4a2
+# palette = 7=#a4a7a4
+# palette = 8=#5C6066
+# palette = 9=#e46876
+# palette = 10=#87a987
+# palette = 11=#e6c384
+# palette = 12=#7fb4ca
+# palette = 13=#938aa9
+# palette = 14=#7aa89f
+# palette = 15=#c5c9c7
+# background = #090E13
+# foreground = #c5c9c7
+# cursor-color = #c5c9c7
+# selection-background = #23252D
+# selection-foreground = #c5c9c7
+
 window-padding-x = 15
 window-padding-y = 10
 
@@ -31,7 +77,10 @@ keybind = super+f=write_screen_file:open
 keybind = shift+enter=text:\n
 
 macos-titlebar-style = tabs
+macos-icon = xray
 
 working-directory = home
 window-inherit-working-directory = false
 window-new-tab-position = end
+
+shell-integration-features = true
