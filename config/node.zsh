@@ -3,8 +3,6 @@ if (( $+commands[pnpm] )); then
   export PATH="$PNPM_HOME:$PATH"
 fi
 
-export N_PREFIX="$HOME/.n"
-export PATH="$N_PREFIX/bin:$PATH"
 export NPM_CONFIG_FUND=false
 
 # Integrate with modules using tabtab
