@@ -1,24 +1,22 @@
 #!/bin/zsh
 #
-# Quick shortcut to open VS Code. Run with no arguments to open the current directory.
+# Quick shortcut to open Cursor. Run with no arguments to open the current directory.
 
-# when on macOS, use `open` as it's faster than calling `code` directly
+# when on macOS, use `open` as it's faster than calling `cursor` directly
 case "$OSTYPE" in
   darwin*)
     if [ "$1" = "" ] ; then
-      # open -a 'Visual Studio Code' .
       open -a 'Cursor' .
     else
-      # open -a 'Visual Studio Code' "$@"
       open -a 'Cursor' "$@"
     fi
     ;;
 
   *)
-    code_cmd="code"
-    if [[ -n "$SSH_CLIENT" ]]; then
-      code_cmd="code-ssh"
-    fi
+    code_cmd="cursor"
+    # if [[ -n "$SSH_CLIENT" ]]; then
+    #   code_cmd="code-ssh"
+    # fi
     if [ "$1" = "" ] ; then
       $code_cmd .
     else

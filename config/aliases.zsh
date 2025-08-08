@@ -5,9 +5,6 @@ else
   alias clr="tput reset"
 fi
 
-# Restart audio service to fix issues
-alias fix-audio="sudo pkill coreaudiod; sudo pkill -9 bluetoothaudiod"
-
 # Flush DNS cache
 alias flush="sudo killall -HUP mDNSResponder"
 

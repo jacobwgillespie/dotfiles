@@ -38,8 +38,8 @@ This is a dotfiles repository for configuring macOS or Linux environments with Z
 
 ### Editor & Development
 
-- `e <file>` - Opens files in Cursor (macOS) or VS Code (Linux/SSH)
-- `b` - Quick script runner (in bin/)
+- `e <file>` - Opens files in Cursor (in bin/)
+- `b` - List, checkout, or create git branches (in bin/)
 - `+x` - Make file executable (in bin/)
 
 ### System Utilities
@@ -49,12 +49,10 @@ This is a dotfiles repository for configuring macOS or Linux environments with Z
 - `cleanup` - Recursively delete .DS_Store files
 - `loadenv` - Load environment variables from .env file
 - `extract <file>` - Extract various archive formats (tar, zip, dmg, etc.)
-- `fix-audio` - Restart audio service to fix issues (macOS)
 - `lscleanup` - Remove duplicates in "Open With" menu (macOS)
 - `show`/`hide` - Show/hide hidden files in Finder (macOS)
 - `fix-monitor` - Fix monitor issues (in bin/)
 - `ips` - Show IP addresses (in bin/)
-- `headers` - Show HTTP headers (in bin/)
 
 ## Architecture
 
@@ -97,7 +95,7 @@ This is a dotfiles repository for configuring macOS or Linux environments with Z
 4. **Tool Integrations**:
    - Language environments: Node.js, Go, Ruby, Rust, Java, Python (uv)
    - Cloud platforms: AWS, Google Cloud
-   - Container tools: Docker, Kubernetes, Colima
+   - Container tools: Docker, Kubernetes
    - Version managers: mise
    - Development tools: GitHub CLI (gh), Terraform, MySQL, Jujutsu (jj), Zoxide
    - Security: 1Password CLI integration
