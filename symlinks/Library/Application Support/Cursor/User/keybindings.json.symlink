@@ -48,5 +48,9 @@
     "key": "ctrl+s",
     "command": "workbench.action.tasks.runTask",
     "args": "git-sync"
+  },
+  {
+    "key": "cmd+e",
+    "command": "composerMode.background"
   }
 ]

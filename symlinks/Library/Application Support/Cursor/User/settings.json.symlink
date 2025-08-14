@@ -128,7 +128,7 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "cursor.cpp.disabledLanguages": ["plaintext", "scminput"],
-  "workbench.colorTheme": "GitHub Dark",
+  "workbench.colorTheme": "Cursor Dark Midnight",
   "update.releaseTrack": "prerelease",
   "workbench.layoutControl.enabled": false,
   "workbench.navigationControl.enabled": false,
