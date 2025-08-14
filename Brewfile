@@ -80,6 +80,7 @@ brew 'libssh2'
 brew 'logcli'
 brew 'massren'
 brew 'media-info'
+brew 'mise'
 brew 'mtr'
 brew 'mysql-client@8.4'
 brew 'nmap'
@@ -160,7 +161,6 @@ if /darwin/ =~ RUBY_PLATFORM
   # Casks
   cask '1password-cli'
   cask '1password'
-  cask 'ableton-live-intro'
   cask 'affinity-designer'
   cask 'affinity-photo'
   cask 'affinity-publisher'
@@ -175,6 +175,7 @@ if /darwin/ =~ RUBY_PLATFORM
   cask 'blitz'
   cask 'chatgpt'
   cask 'claude'
+  cask 'claude-code'
   cask 'cleanmymac'
   cask 'clickhouse'
   cask 'cloudflare-warp'
@@ -280,7 +281,7 @@ if /darwin/ =~ RUBY_PLATFORM
   mas 'Ulysses', id: 1225570693
   mas 'Xcode', id: 497799835
 
-  # VS Code extensions
+  # Cursor extensions
   vscode 'anthropic.claude-code'
   vscode 'biomejs.biome'
   vscode 'bradlc.vscode-tailwindcss'
@@ -298,19 +299,17 @@ if /darwin/ =~ RUBY_PLATFORM
   vscode 'jacobwgillespie.minimal-icons'
   vscode 'jakearl.search-editor-apply-changes'
   vscode 'jebbs.plantuml'
-  vscode 'jdinhlife.gruvbox'
+  vscode 'jjk.jjk'
   vscode 'ms-python.debugpy'
   vscode 'ms-python.python'
   vscode 'ms-python.vscode-pylance'
   vscode 'oven.bun-vscode'
   vscode 'redhat.vscode-yaml'
   vscode 'rust-lang.rust-analyzer'
-  vscode 'sourcegraph.amp'
   vscode 'tamasfe.even-better-toml'
   vscode 'unifiedjs.vscode-mdx'
   vscode 'usernamehw.errorlens'
   vscode 'wayou.vscode-todo-highlight'
-  vscode 'webhooked.kanso-theme'
   vscode 'YoavBls.pretty-ts-errors'
 
   USING_VSCODE = false
