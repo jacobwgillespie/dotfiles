@@ -1,50 +1,48 @@
 font-family = TX-02
 font-size = 14
 
+# Cursor Dark Midnight
+background = #191C21
+foreground = #D8DEE9
+cursor-color = #8FBCBA
+# selection-background = #272C36
+palette = 0=#272C36
+palette = 1=#BF616A
+palette = 2=#A3BE8C
+palette = 3=#EBCB8B
+palette = 4=#80A1C1
+palette = 5=#7D7C9C
+palette = 6=#88C1D0
+palette = 7=#E5E9F0
+palette = 8=#4C566A
+palette = 9=#BF616A
+palette = 10=#A3BE8C
+palette = 11=#EBCB8B
+palette = 12=#80A1C1
+palette = 13=#B48DAD
+palette = 14=#8FBCBA
+palette = 15=#EBEFF4
+
 # GitHub Dark, customized
-theme = GitHub Dark
-background = #24282c
-foreground = #fafafb
-palette = 0=#1d1f21
-palette = 1=#c5474e
-palette = 2=#68cd66
-palette = 3=#d4ac3a
-palette = 4=#4386f6
-palette = 5=#d856a6
-palette = 6=#6ae1e4
-palette = 7=#feffff
-palette = 8=#686767
-palette = 9=#c6474e
-palette = 10=#9ce5a3
-palette = 11=#d3ac3a
-palette = 12=#4386f6
-palette = 13=#d856a6
-palette = 14=#6ae1e4
-palette = 15=#feffff
-
-# Kanso Ink
-# palette = 0=#14171d
-# palette = 1=#c4746e
-# palette = 2=#8a9a7b
-# palette = 3=#c4b28a
-# palette = 4=#8ba4b0
-# palette = 5=#a292a3
-# palette = 6=#8ea4a2
-# palette = 7=#a4a7a4
-# palette = 8=#5C6066
-# palette = 9=#e46876
-# palette = 10=#87a987
-# palette = 11=#e6c384
-# palette = 12=#7fb4ca
-# palette = 13=#938aa9
-# palette = 14=#7aa89f
-# palette = 15=#c5c9c7
-# background = #14171d
-# foreground = #c5c9c7
-# cursor-color = #c5c9c7
-# selection-background = #3e424a
-# selection-foreground = #c5c9c7
-
+# theme = GitHub Dark
+# background = #24282c
+# foreground = #fafafb
+# palette = 0=#1d1f21
+# palette = 1=#c5474e
+# palette = 2=#68cd66
+# palette = 3=#d4ac3a
+# palette = 4=#4386f6
+# palette = 5=#d856a6
+# palette = 6=#6ae1e4
+# palette = 7=#feffff
+# palette = 8=#686767
+# palette = 9=#c6474e
+# palette = 10=#9ce5a3
+# palette = 11=#d3ac3a
+# palette = 12=#4386f6
+# palette = 13=#d856a6
+# palette = 14=#6ae1e4
+# palette = 15=#feffff
 
 window-padding-x = 15
 window-padding-y = 10
