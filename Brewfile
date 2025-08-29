@@ -8,7 +8,6 @@ tap 'github/gh'
 tap 'golangci/tap'
 tap 'hashicorp/tap'
 tap 'jacobwgillespie/tap'
-tap 'jakehilborn/jakehilborn'
 tap 'nats-io/nats-tools'
 tap 'oven-sh/bun'
 tap 'peak/tap'
@@ -157,18 +156,14 @@ if /darwin/ =~ RUBY_PLATFORM
   brew 'lima'
   brew 'mas'
 
-  brew 'jakehilborn/jakehilborn/displayplacer'
-
   # Casks
-  cask '1password-cli'
   cask '1password'
+  cask '1password-cli'
   cask 'affinity-designer'
   cask 'affinity-photo'
   cask 'affinity-publisher'
-  cask 'alcove'
   cask 'amazon-chime'
   cask 'araxis-merge'
-  cask 'arc'
   cask 'arq'
   cask 'balenaetcher'
   cask 'battery'
@@ -193,7 +188,6 @@ if /darwin/ =~ RUBY_PLATFORM
   cask 'elgato-stream-deck'
   cask 'firefox'
   cask 'focusrite-control'
-  cask 'front'
   cask 'gg'
   cask 'ghostty'
   cask 'github'
@@ -203,15 +197,12 @@ if /darwin/ =~ RUBY_PLATFORM
   cask 'handbrake'
   cask 'iina'
   cask 'imageoptim'
-  cask 'iterm2'
   cask 'kaleidoscope'
   cask 'kap'
   cask 'league-of-legends'
-  cask 'lens'
   cask 'linearmouse'
   cask 'linear-linear'
   cask 'makemkv'
-  cask 'meta'
   cask 'microsoft-auto-update'
   cask 'microsoft-edge'
   cask 'mimestream'
@@ -221,7 +212,6 @@ if /darwin/ =~ RUBY_PLATFORM
   cask 'notion-calendar'
   cask 'notion-mail'
   cask 'oracle-jdk'
-  cask 'orion'
   cask 'pingplotter'
   cask 'plex'
   cask 'proxyman'
@@ -242,14 +232,12 @@ if /darwin/ =~ RUBY_PLATFORM
   cask 'tower'
   cask 'transmission'
   cask 'unite'
-  # cask 'visual-studio-code'
   cask 'vlc'
   cask 'whatsapp@beta'
   cask 'windsurf'
   cask 'wireshark'
   cask 'yaak'
   cask 'zed'
-  cask 'zed@preview'
   cask 'zoom'
 
   # Fonts
@@ -266,7 +254,6 @@ if /darwin/ =~ RUBY_PLATFORM
   cask 'font-source-code-pro'
 
   # Mac App Store Applications
-  mas '1Blocker', id: 1365531024
   mas 'Balatro+', id: 6502451661
   mas 'Dato', id: 1470584107
   mas 'Flighty', id: 1358823008
@@ -281,6 +268,7 @@ if /darwin/ =~ RUBY_PLATFORM
   mas 'Refined GitHub', id: 1519867270
   mas 'Simplify for Gmail', id: 1544668450
   mas 'Ulysses', id: 1225570693
+  mas 'uBlock Origin Lite', id: 6745342698
   mas 'Xcode', id: 497799835
 
   # Cursor extensions
