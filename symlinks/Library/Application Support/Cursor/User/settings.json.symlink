@@ -1,8 +1,10 @@
 {
   "breadcrumbs.enabled": false,
   "comments.openView": "never",
-  "cSpell.enabled": false,
+  "cursor.composer.shouldChimeAfterChatFinishes": true,
+  "cursor.cpp.disabledLanguages": ["plaintext", "scminput"],
   "editor.acceptSuggestionOnCommitCharacter": false,
+  "editor.accessibilitySupport": "off",
   "editor.bracketPairColorization.enabled": false,
   "editor.cursorSmoothCaretAnimation": "on",
   "editor.experimental.asyncTokenization": true,
@@ -45,17 +47,6 @@
   "git.autofetch": true,
   "git.confirmSync": false,
   "git.enableSmartCommit": true,
-  "githubIssues.queries": [
-    {
-      "label": "My Issues",
-      "query": "default"
-    },
-    {
-      "label": "Created Issues",
-      "query": "author:${user} state:open repo:${owner}/${repository} sort:updated-desc"
-    }
-  ],
-  "githubPullRequests.pullBranch": "never",
   "go.formatTool": "goimports",
   "go.lintFlags": ["--fast"],
   "go.lintTool": "golangci-lint",
@@ -65,7 +56,6 @@
   "javascript.autoClosingTags": false,
   "javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": false,
   "redhat.telemetry.enabled": false,
-  "settingsSync.ignoredSettings": ["window.titleBarStyle"],
   "terminal.integrated.defaultProfile.linux": "zsh",
   "terminal.integrated.fontSize": 14,
   "terraform.languageServer.enable": true,
@@ -73,8 +63,12 @@
   "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": false,
   "typescript.tsserver.maxTsServerMemory": 8192,
   "update.mode": "manual",
-  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "update.releaseTrack": "prerelease",
+  "workbench.colorTheme": "Cursor Dark Midnight",
   "workbench.iconTheme": "minimal-icons",
+  "workbench.layoutControl.enabled": false,
+  "workbench.navigationControl.enabled": false,
+  "workbench.sideBar.location": "right",
   "yaml.format.enable": true,
   "yaml.format.singleQuote": true,
   "yaml.schemas": {
@@ -126,14 +120,5 @@
   },
   "[yaml]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "cursor.cpp.disabledLanguages": ["plaintext", "scminput"],
-  "workbench.colorTheme": "Cursor Dark Midnight",
-  "update.releaseTrack": "prerelease",
-  "workbench.layoutControl.enabled": false,
-  "workbench.navigationControl.enabled": false,
-  "workbench.sideBar.location": "right",
-  "hediet.vscode-drawio.resizeImages": null,
-  "editor.accessibilitySupport": "off",
-  "excalidraw.theme": "light"
+  }
 }
