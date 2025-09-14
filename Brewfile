@@ -273,6 +273,8 @@ if /darwin/ =~ RUBY_PLATFORM
 
   # Cursor extensions
   vscode 'anthropic.claude-code'
+  vscode 'anysphere.cursorpyright'
+  vscode 'astro-build.astro-vscode'
   vscode 'biomejs.biome'
   vscode 'bradlc.vscode-tailwindcss'
   vscode 'bufbuild.vscode-buf'

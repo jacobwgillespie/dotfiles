@@ -1,4 +1,6 @@
 [tools]
+amp = "latest"
 go = "1.24"
 golangci-lint = "2"
 node = "22"
+terraform = "1"
