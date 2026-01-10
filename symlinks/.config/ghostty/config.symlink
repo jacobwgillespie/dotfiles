@@ -50,10 +50,11 @@ window-padding-y = 10
 keybind = option+super+left=previous_tab
 keybind = option+super+right=next_tab
 keybind = super+f=write_screen_file:open
-keybind = shift+enter=text:\n
+keybind = shift+enter=text:\x1b\r
 
 macos-titlebar-style = tabs
 macos-icon = xray
+macos-option-as-alt = true
 
 working-directory = home
 window-inherit-working-directory = false
