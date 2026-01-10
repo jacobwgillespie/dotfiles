@@ -1,1 +1,0 @@
-export HOMEBREW_BOOTSNAP=1
