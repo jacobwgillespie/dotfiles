@@ -14,6 +14,5 @@
   },
   "editor.formatOnSave": true,
   "cSpell.words": ["brewfile", "dotfiles", "gitignore", "symlink", "symlinked", "symlinks", "tweetbot"],
-  "prettier.prettierPath": "node_modules/prettier/index.cjs",
-  "git.enabled": false
+  "prettier.prettierPath": "node_modules/prettier/index.cjs"
 }
