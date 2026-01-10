@@ -1,0 +1,9 @@
+#!/bin/bash
+
+export ANTHROPIC_BASE_URL=https://opencode.ai/zen
+export ANTHROPIC_API_KEY=$ZEN_API_KEY
+export ANTHROPIC_MODEL=claude-opus-4-5
+export ANTHROPIC_DEFAULT_HAIKU_MODEL=claude-haiku-4-5
+export ANTHROPIC_SMALL_FAST_MODEL=claude-haiku-4-5
+
+exec claude $@
