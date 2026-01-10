@@ -203,7 +203,6 @@ if /darwin/ =~ RUBY_PLATFORM
   cask 'nosql-workbench'
   cask 'notion'
   cask 'notion-calendar'
-  cask 'notion-mail'
   cask 'obsidian'
   cask 'oracle-jdk'
   cask 'orbstack'
