@@ -1,7 +1,10 @@
 {
   "breadcrumbs.enabled": false,
   "comments.openView": "never",
+  "cursor.agent_layout_browser_beta_setting": true,
   "cursor.composer.shouldChimeAfterChatFinishes": true,
+  "cursor.diffs.useCharacterLevelDiffs": true,
+  "cursor.enable_agent_window_setting": true,
   "cursor.cpp.disabledLanguages": ["plaintext", "scminput"],
   "editor.acceptSuggestionOnCommitCharacter": false,
   "editor.accessibilitySupport": "off",
@@ -53,6 +56,7 @@
   "go.toolsManagement.autoUpdate": true,
   "go.useLanguageServer": true,
   "html.autoClosingTags": false,
+  "json.schemaDownload.enable": true,
   "javascript.autoClosingTags": false,
   "javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": false,
   "redhat.telemetry.enabled": false,
@@ -62,11 +66,9 @@
   "typescript.autoClosingTags": false,
   "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": false,
   "typescript.tsserver.maxTsServerMemory": 8192,
-  "update.mode": "manual",
   "update.releaseTrack": "prerelease",
   "workbench.colorTheme": "Cursor Dark Midnight",
   "workbench.iconTheme": "minimal-icons",
-  "workbench.layoutControl.enabled": false,
   "workbench.navigationControl.enabled": false,
   "workbench.sideBar.location": "right",
   "yaml.format.enable": true,
@@ -81,6 +83,9 @@
   "[css]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": true
+  },
+  "[github-actions-workflow]": {
+    "editor.defaultFormatter": "redhat.vscode-yaml"
   },
   "[helm]": {
     "editor.formatOnSave": false
@@ -120,6 +125,5 @@
   },
   "[yaml]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "json.schemaDownload.enable": true
+  }
 }
