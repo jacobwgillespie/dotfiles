@@ -1,0 +1,13 @@
+#compdef run
+
+zstyle ':completion:*:*:run:*' group-name ''
+zstyle ':completion:*:*:run:*:descriptions' format '%F{green}-- %d --%f'
+
+local -a scripts bins
+IFS=$'\n' scripts=($(SHELL=zsh bun getcompletes s 2>/dev/null))
+IFS=$'\n' bins=($(SHELL=zsh bun getcompletes b 2>/dev/null))
+
+_alternative \
+  "scripts:script:((${scripts//:/\\\\:}))" \
+  "bins:bin:((${bins//:/\\\\:}))" \
+  "files:file:_files"
