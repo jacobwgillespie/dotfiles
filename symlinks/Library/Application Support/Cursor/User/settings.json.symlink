@@ -67,7 +67,6 @@
   "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": false,
   "typescript.tsserver.maxTsServerMemory": 8192,
   "update.releaseTrack": "prerelease",
-  "workbench.colorTheme": "Cursor Dark Midnight",
   "workbench.iconTheme": "minimal-icons",
   "workbench.navigationControl.enabled": false,
   "workbench.sideBar.location": "right",

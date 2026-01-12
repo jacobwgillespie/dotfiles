@@ -2,26 +2,48 @@ font-family = TX-02
 font-size = 14
 
 # Cursor Dark Midnight
-background = #191C21
-foreground = #D8DEE9
-cursor-color = #8FBCBA
+# background = #191C21
+# foreground = #D8DEE9
+# cursor-color = #8FBCBA
 # selection-background = #272C36
-palette = 0=#272C36
-palette = 1=#BF616A
-palette = 2=#A3BE8C
-palette = 3=#EBCB8B
+# palette = 0=#272C36
+# palette = 1=#BF616A
+# palette = 2=#A3BE8C
+# palette = 3=#EBCB8B
+# palette = 4=#80A1C1
+# palette = 5=#7D7C9C
+# palette = 6=#88C1D0
+# palette = 7=#E5E9F0
+# palette = 8=#4C566A
+# palette = 9=#BF616A
+# palette = 10=#A3BE8C
+# palette = 11=#EBCB8B
+# palette = 12=#80A1C1
+# palette = 13=#B48DAD
+# palette = 14=#8FBCBA
+# palette = 15=#EBEFF4
+
+# Cursor Dark
+background = #141414
+foreground = #D4D4D4
+selection-background = #2D2D2D
+selection-foreground = #eeeeee
+palette = 0=#242424
+palette = 1=#FB6B83
+palette = 2=#3FA266
+palette = 3=#D2943E
 palette = 4=#80A1C1
-palette = 5=#7D7C9C
+palette = 5=#B48DAD
 palette = 6=#88C1D0
-palette = 7=#E5E9F0
-palette = 8=#4C566A
-palette = 9=#BF616A
-palette = 10=#A3BE8C
-palette = 11=#EBCB8B
-palette = 12=#80A1C1
+palette = 7=#E4E4E4
+palette = 8=#3B3B3B
+palette = 9=#FB6B83
+palette = 10=#71B489
+palette = 11=#F1B567
+palette = 12=#87A6C4
 palette = 13=#B48DAD
-palette = 14=#8FBCBA
-palette = 15=#EBEFF4
+palette = 14=#88C1D0
+palette = 15=#E4E4E4
 
 # GitHub Dark, customized
 # theme = GitHub Dark
@@ -44,6 +66,30 @@ palette = 15=#EBEFF4
 # palette = 14=#6ae1e4
 # palette = 15=#feffff
 
+# OpenCode Dark
+# background = #141414
+# foreground = #eeeeee
+# selection-background = #323232
+# selection-foreground = #eeeeee
+# palette = 0=#0a0a0a
+# palette = 1=#e06c75
+# palette = 2=#7fd88f
+# palette = 3=#e5c07b
+# palette = 4=#5c9cf5
+# palette = 5=#9d7cd8
+# palette = 6=#56b6c2
+# palette = 7=#808080
+# palette = 8=#606060
+# palette = 9=#e06c75
+# palette = 10=#7fd88f
+# palette = 11=#f5a742
+# palette = 12=#5c9cf5
+# palette = 13=#9d7cd8
+# palette = 14=#56b6c2
+# palette = 15=#eeeeee
+
+cursor-style = block
+
 window-padding-x = 15
 window-padding-y = 10
 
@@ -60,4 +106,4 @@ working-directory = home
 window-inherit-working-directory = false
 window-new-tab-position = end
 
-shell-integration-features = true
+shell-integration-features = no-cursor
