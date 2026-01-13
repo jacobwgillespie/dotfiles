@@ -3,7 +3,7 @@
 max_retry=10
 
 for i in $(seq 1 $max_retry); do
-  recent_folder=$(find "$HOME/.cursor-server/bin/" -mindepth 3 -maxdepth 3 -type d 2>/dev/null | head -n"$i" | tail -1)
+  recent_folder=$(find "$HOME/.cursor-server/bin/" -mindepth 2 -maxdepth 2 -type d 2>/dev/null | head -n"$i" | tail -1)
   if [[ -z ${recent_folder} ]]; then
     echo "Cursor remote folder not found"
     exit 1
