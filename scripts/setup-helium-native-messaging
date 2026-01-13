@@ -1,0 +1,33 @@
+#!/bin/bash
+#
+# Sets up Native Messaging Host symlink for Helium browser
+# This allows Claude Code to communicate with its browser extension in Helium
+#
+
+set -e
+
+SOURCE_DIR="$HOME/Library/Application Support/Google/Chrome/NativeMessagingHosts"
+DEST_DIR="$HOME/Library/Application Support/net.imput.helium/NativeMessagingHosts"
+MANIFEST="com.anthropic.claude_code_browser_extension.json"
+
+if [[ ! -f "$SOURCE_DIR/$MANIFEST" ]]; then
+  echo "Error: Chrome native messaging host not found at:"
+  echo "  $SOURCE_DIR/$MANIFEST"
+  echo "Make sure Claude Code's Chrome extension is installed first."
+  exit 1
+fi
+
+mkdir -p "$DEST_DIR"
+
+if [[ -L "$DEST_DIR/$MANIFEST" ]]; then
+  echo "Symlink already exists, updating..."
+  rm "$DEST_DIR/$MANIFEST"
+elif [[ -f "$DEST_DIR/$MANIFEST" ]]; then
+  echo "Removing existing file..."
+  rm "$DEST_DIR/$MANIFEST"
+fi
+
+ln -s "$SOURCE_DIR/$MANIFEST" "$DEST_DIR/$MANIFEST"
+
+echo "Created symlink:"
+echo "  $DEST_DIR/$MANIFEST -> $SOURCE_DIR/$MANIFEST"
