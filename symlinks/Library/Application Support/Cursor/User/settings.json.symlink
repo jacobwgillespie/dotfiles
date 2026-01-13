@@ -124,5 +124,6 @@
   },
   "[yaml]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  }
+  },
+  "claudeCode.preferredLocation": "panel"
 }
