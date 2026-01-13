@@ -1,7 +1,7 @@
-# use VS Code as the system editor
-export EDITOR='code --wait'
+# use Cursor as the system editor
+export EDITOR='cursor --wait'
 
-# If SSH, alias the `code` command
+# If SSH, alias the `cursor` command
 if [[ -n "$SSH_CLIENT" ]]; then
-  alias code="code-ssh"
+  alias cursor="cursor-ssh"
 fi

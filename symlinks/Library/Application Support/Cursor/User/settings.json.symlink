@@ -125,5 +125,8 @@
   "[yaml]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "claudeCode.preferredLocation": "panel"
+  "claudeCode.preferredLocation": "panel",
+  "remote.SSH.remotePlatform": {
+    "mini": "linux"
+  }
 }

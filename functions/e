@@ -14,9 +14,9 @@ case "$OSTYPE" in
 
   *)
     code_cmd="cursor"
-    # if [[ -n "$SSH_CLIENT" ]]; then
-    #   code_cmd="code-ssh"
-    # fi
+    if [[ -n "$SSH_CLIENT" ]]; then
+      code_cmd="cursor-ssh"
+    fi
     if [ "$1" = "" ] ; then
       $code_cmd .
     else
