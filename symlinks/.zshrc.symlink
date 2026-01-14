@@ -62,21 +62,21 @@ SAVEHIST=10000
 
 # Set ZSH options
 setopt NO_BG_NICE # don't nice background tasks
-setopt NO_HUP
-setopt NO_LIST_BEEP
+setopt NO_HUP # don't kill background jobs when shell exits
+setopt NO_LIST_BEEP # don't beep on ambiguous completions
 setopt LOCAL_OPTIONS # allow functions to have local options
 setopt LOCAL_TRAPS # allow functions to have local traps
-setopt HIST_VERIFY
-setopt SHARE_HISTORY # share history between sessions ???
+setopt HIST_VERIFY # show command with history expansion before running
+setopt SHARE_HISTORY # share history between sessions
 setopt EXTENDED_HISTORY # add timestamps to history
-setopt PROMPT_SUBST
-setopt CORRECT
-setopt COMPLETE_IN_WORD
-setopt IGNORE_EOF
+setopt PROMPT_SUBST # allow variable substitution in prompts
+setopt CORRECT # suggest corrections for mistyped commands
+setopt COMPLETE_IN_WORD # allow completion from within a word
+setopt IGNORE_EOF # don't exit on Ctrl+D
 setopt APPEND_HISTORY # adds history
-setopt INC_APPEND_HISTORY SHARE_HISTORY  # adds history incrementally and share it across sessions
-setopt HIST_IGNORE_ALL_DUPS  # don't record dupes in history
-setopt HIST_REDUCE_BLANKS
+setopt INC_APPEND_HISTORY SHARE_HISTORY # adds history incrementally and share it across sessions
+setopt HIST_IGNORE_ALL_DUPS # don't record dupes in history
+setopt HIST_REDUCE_BLANKS # remove extra blanks from history entries
 
 # Configure zsh line editor
 zle -N newtab
@@ -84,12 +84,10 @@ zle -N up-line-or-beginning-search
 zle -N down-line-or-beginning-search
 
 # Configure keybinds
-bindkey '^[[1;3D' backward-word
-bindkey '^[[1;3C' forward-word
-bindkey '^[[1;9D' beginning-of-line
-bindkey '^[[1;9C' end-of-line
-bindkey "^[[A" up-line-or-beginning-search # Up
-bindkey "^[[B" down-line-or-beginning-search # Down
+bindkey '^[[1;3D' backward-word # Alt+Left
+bindkey '^[[1;3C' forward-word # Alt+Right
+bindkey '^[[1;9D' beginning-of-line # Cmd+Left
+bindkey '^[[1;9C' end-of-line # Cmd+Right
 
 # Enable auto-suggestions
 if [ -f "$HOMEBREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh" ]; then

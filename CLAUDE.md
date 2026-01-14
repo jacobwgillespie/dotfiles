@@ -44,7 +44,7 @@ This is a dotfiles repository for configuring macOS or Linux environments with Z
 
 ### System Utilities
 
-- `clr` - Clear terminal screen with proper support for iTerm2
+- `clr` - Clear terminal screen
 - `flush` - Flush DNS cache
 - `cleanup` - Recursively delete .DS_Store files
 - `loadenv` - Load environment variables from .env file
