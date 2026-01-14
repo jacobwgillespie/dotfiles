@@ -65,15 +65,11 @@ brew 'hadolint'
 brew 'hex'
 brew 'httpie'
 brew 'htop'
-brew 'kubectx'
-brew 'kustomize'
 brew 'hyperfine'
 brew 'imagemagick'
 brew 'jj'
 brew 'jjui'
 brew 'jq'
-brew 'k9s'
-brew 'kubernetes-cli'
 brew 'lazygit'
 brew 'librsvg'
 brew 'libssh2'
@@ -267,6 +263,7 @@ if /darwin/ =~ RUBY_PLATFORM
   # Cursor extensions
   vscode 'anthropic.claude-code'
   vscode 'anysphere.cursorpyright'
+  vscode 'anysphere.remote-ssh'
   vscode 'astro-build.astro-vscode'
   vscode 'biomejs.biome'
   vscode 'bradlc.vscode-tailwindcss'
@@ -299,25 +296,6 @@ if /darwin/ =~ RUBY_PLATFORM
   vscode 'usernamehw.errorlens'
   vscode 'wayou.vscode-todo-highlight'
   vscode 'YoavBls.pretty-ts-errors'
-
-  USING_VSCODE = false
-  if USING_VSCODE then
-    vscode 'github.codespaces'
-    vscode 'github.copilot-chat'
-    vscode 'github.copilot'
-    vscode 'github.vscode-pull-request-github'
-    vscode 'ms-azuretools.vscode-containers'
-    vscode 'ms-azuretools.vscode-docker'
-    vscode 'ms-python.vscode-pylance'
-    vscode 'ms-python.vscode-python-envs'
-    vscode 'ms-vscode-remote.remote-containers'
-    vscode 'ms-vscode-remote.remote-ssh-edit'
-    vscode 'ms-vscode-remote.remote-ssh'
-    vscode 'ms-vscode.cpptools'
-    vscode 'ms-vscode.remote-explorer'
-    vscode 'ms-vsliveshare.vsliveshare'
-    vscode 'visualstudioexptteam.vscodeintellicode'
-  end
 end
 
 # Only install on Linux
