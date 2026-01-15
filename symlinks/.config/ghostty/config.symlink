@@ -98,6 +98,9 @@ keybind = option+super+right=next_tab
 keybind = super+f=write_screen_file:open
 keybind = shift+enter=text:\x1b\r
 
+keybind = super+arrow_up=csi:1;9A
+keybind = super+arrow_down=csi:1;9B
+
 macos-titlebar-style = tabs
 macos-icon = xray
 macos-option-as-alt = true
