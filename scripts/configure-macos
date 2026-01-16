@@ -1,5 +1,31 @@
 #!/bin/bash
 
+# Remap Caps Lock to Escape for the built-in Apple keyboard
+get_apple_keyboard_id() {
+  # First, check for existing mapping with Apple's vendor ID (1452)
+  local existing
+  existing=$(defaults -currentHost read -g 2>/dev/null | grep -o 'com\.apple\.keyboard\.modifiermapping\.1452-[0-9\-]*' | head -1 | sed 's/com.apple.keyboard.modifiermapping.//')
+
+  if [[ -n "$existing" ]]; then
+    echo "$existing"
+    return
+  fi
+
+  # Otherwise, detect from hidutil (use LocationID 0 as macOS does)
+  local pid
+  pid=$(hidutil list 2>/dev/null | awk '/Apple Internal Keyboard/ && $4 == 1 && $5 == 6 {gsub("0x","",$2); print $2; exit}')
+  if [[ -n "$pid" ]]; then
+    printf "1452-%d-0\n" "0x$pid"
+  fi
+}
+
+keyboard_id=$(get_apple_keyboard_id)
+if [[ -n "$keyboard_id" ]]; then
+  # Caps Lock (0x700000039 = 30064771129) -> Escape (0x700000029 = 30064771113)
+  defaults -currentHost write -g "com.apple.keyboard.modifiermapping.$keyboard_id" -array \
+    '<dict><key>HIDKeyboardModifierMappingDst</key><integer>30064771113</integer><key>HIDKeyboardModifierMappingSrc</key><integer>30064771129</integer></dict>'
+fi
+
 # Switch to dark mode
 osascript -e 'tell application "System Events" to tell appearance preferences to set dark mode to 1'
 
