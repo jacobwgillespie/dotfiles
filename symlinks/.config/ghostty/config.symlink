@@ -1,3 +1,5 @@
+auto-update-channel = tip
+
 font-family = TX-02
 font-size = 14
 
@@ -92,10 +94,11 @@ cursor-style = block
 
 window-padding-x = 15
 window-padding-y = 10
+unfocused-split-opacity = 1
+background-opacity = 0.95
 
 keybind = option+super+left=previous_tab
 keybind = option+super+right=next_tab
-keybind = super+f=write_screen_file:open
 keybind = shift+enter=text:\x1b\r
 
 keybind = super+arrow_up=csi:1;9A
