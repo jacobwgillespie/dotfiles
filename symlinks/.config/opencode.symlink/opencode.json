@@ -3,5 +3,5 @@
   "theme": "cursor",
   "model": "anthropic/claude-opus-4-5",
   "autoupdate": true,
-  "plugin": ["opencode-anthropic-auth@0.0.8"]
+  "plugin": ["opencode-anthropic-auth@0.0.9", "@franlol/opencode-md-table-formatter@latest"]
 }
