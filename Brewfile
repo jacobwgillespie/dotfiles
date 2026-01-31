@@ -18,6 +18,7 @@ tap 'planetscale/tap'
 tap 'restatedev/tap'
 tap 'rwx-research/tap'
 tap 'steipete/tap'
+tap 'withgraphite/tap'
 
 # Formulae
 brew 'ack'
@@ -147,6 +148,7 @@ brew 'rwx-research/tap/mint'
 brew 'steipete/tap/spogo'
 brew 'turbot/tap/powerpipe'
 brew 'turbot/tap/steampipe'
+brew 'withgraphite/tap/graphite'
 
 # Only install on macOS
 if /darwin/ =~ RUBY_PLATFORM

@@ -95,7 +95,7 @@ cursor-style = block
 window-padding-x = 15
 window-padding-y = 10
 unfocused-split-opacity = 1
-background-opacity = 0.95
+background-opacity = 1
 
 keybind = option+super+left=previous_tab
 keybind = option+super+right=next_tab
