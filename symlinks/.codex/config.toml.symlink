@@ -1,0 +1,15 @@
+approval_policy = "never"
+sandbox_mode = "danger-full-access"
+model = "gpt-5.3-codex"
+model_reasoning_effort = "high"
+web_search = "live"
+suppress_unstable_features_warning = true
+personality = "none"
+
+[features]
+collab = true
+collaboration_modes = true
+steer = false
+unified_exec = false
+shell_snapshot = true
+remote_compaction = true

@@ -1,10 +1,7 @@
 {
   "breadcrumbs.enabled": false,
   "comments.openView": "never",
-  "cursor.agent_layout_browser_beta_setting": true,
   "cursor.composer.shouldChimeAfterChatFinishes": true,
-  "cursor.diffs.useCharacterLevelDiffs": true,
-  "cursor.enable_agent_window_setting": true,
   "cursor.cpp.disabledLanguages": ["plaintext", "scminput"],
   "editor.acceptSuggestionOnCommitCharacter": false,
   "editor.accessibilitySupport": "off",
