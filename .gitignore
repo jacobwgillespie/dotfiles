@@ -1,5 +1,6 @@
 *.log
 node_modules/
 symlinks/.gitconfig.symlink
+symlinks/.config/fish.symlink/fish_variables
 Brewfile.lock.json
 .claude/settings.local.json
