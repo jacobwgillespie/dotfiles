@@ -1,5 +1,0 @@
-pkg_lock_hint bun.lock bun || return 1
-pkg_lock_hint yarn.lock yarn || return 1
-pkg_lock_hint package-lock.json npm || return 1
-
-command pnpm "$@"
