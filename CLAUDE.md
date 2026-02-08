@@ -44,7 +44,7 @@ ZSH_PROF=1 zsh             # Profile shell startup time
 ### Directory Structure
 
 - **`bin/`** - Executable scripts added to `$PATH`
-- **`config/*.zsh`** - ZSH config modules, all sourced automatically by `.zshrc`
+- **`symlinks/.zshrc.symlink`** - Main ZSH configuration (env, aliases, completions, tool init)
 - **`functions/`** - ZSH functions and completion definitions
 - **`symlinks/`** - Files with `.symlink` suffix get linked to `$HOME` (suffix removed)
 - **`plugins/`** - ZSH plugins (notably `zsh-defer` for lazy loading)
@@ -61,7 +61,7 @@ Files ending in `.symlink` anywhere under `symlinks/` are symlinked to the equiv
 
 1. `.zshrc` sets up Homebrew environment
 2. Loads `zsh-defer` plugin for deferred loading
-3. Sources all files in `config/*.zsh`
+3. Applies integrated shell and tool configuration from `.zshrc`
 4. Sources `~/.localrc` if it exists (machine-specific overrides)
 5. Defers slow plugins (autosuggestions, syntax highlighting) for faster startup
 
@@ -69,13 +69,13 @@ Files ending in `.symlink` anywhere under `symlinks/` are symlinked to the equiv
 
 - **`Brewfile`** - All packages, casks, and VS Code extensions
 - **`symlinks/.gitconfig.symlink`** - Git config with SSH signing via 1Password
-- **`config/editor.zsh`** - Sets Cursor as default editor
-- **`config/node.zsh`** - Package manager detection (bun/pnpm/yarn)
-- **`config/mise.zsh`** - Mise version manager (Go, Node, Terraform)
+- **`symlinks/.zshrc.symlink`** - Consolidated ZSH config
+- **`config/starship/config.toml`** - Prompt configuration
+- **`symlinks/.config/fish.symlink/config.fish`** - Consolidated Fish config
 
 ### Adding New Configuration
 
-1. **New ZSH config**: Add `config/foo.zsh` - automatically sourced
+1. **New ZSH config**: Edit `symlinks/.zshrc.symlink`
 2. **New dotfile**: Add to `symlinks/` with `.symlink` suffix, run `./scripts/install-symlinks`
 3. **New executable**: Add to `bin/` - automatically in `$PATH`
 4. **New ZSH function**: Add to `functions/`

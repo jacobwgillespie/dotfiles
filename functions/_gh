@@ -1,0 +1,9 @@
+#compdef gh
+
+(( $+commands[gh] )) || return 1
+
+unfunction _gh 2>/dev/null
+eval "$(gh completion -s zsh)" || return 1
+(( $+functions[_gh] )) || return 1
+
+_gh "$@"

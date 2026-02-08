@@ -1,0 +1,10 @@
+#compdef terraform t
+
+(( $+commands[terraform] )) || return 1
+
+unfunction _terraform 2>/dev/null
+autoload -U +X bashcompinit && bashcompinit
+complete -o nospace -C terraform terraform
+compdef _bash_complete terraform t
+
+_bash_complete "$@"

@@ -1,0 +1,11 @@
+#compdef gcloud
+
+local completion_file="$HOMEBREW_PREFIX/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"
+[[ -r "$completion_file" ]] || return 1
+
+unfunction _gcloud 2>/dev/null
+source "$completion_file" || return 1
+autoload -U +X bashcompinit && bashcompinit
+compdef _bash_complete gcloud
+
+_bash_complete "$@"

@@ -1,61 +1,150 @@
-# If profiling is enabled, collect timing information
-if [ ! -z "$ZSH_PROF" ]; then
+# Profile startup when requested.
+if [[ -n "$ZSH_PROF" ]]; then
   zmodload zsh/zprof
 fi
 
-# Set Homebrew environment
-if [[ -f /opt/homebrew/bin/brew ]]; then
+# Homebrew environment.
+if [[ -x /opt/homebrew/bin/brew ]]; then
   eval "$(/opt/homebrew/bin/brew shellenv)"
-elif [[ -f /home/linuxbrew/.linuxbrew/bin/brew ]]; then
+elif [[ -x /home/linuxbrew/.linuxbrew/bin/brew ]]; then
   eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-elif [[ -f /usr/local/bin/brew ]]; then
+elif [[ -x /usr/local/bin/brew ]]; then
   eval "$(/usr/local/bin/brew shellenv)"
 fi
 
-# Enable CLI colors (https://geoff.greer.fm/lscolors/)
+# Base environment.
+export DOTFILES="$HOME/.dotfiles"
+export XDG_CONFIG_HOME="$HOME/.config"
+export PROJECTS="$HOME/Code"
+export GOPATH="$HOME/.go"
 export CLICOLOR=true
 export LSCOLORS="Gxfxcxdxbxegedabagacab"
 export LS_COLORS='no=00:fi=00:di=01;34:ln=00;36:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=41;33;01:ex=00;32:ow=0;41:*.cmd=00;32:*.exe=01;32:*.com=01;32:*.bat=01;32:*.btm=01;32:*.dll=01;32:*.tar=00;31:*.tbz=00;31:*.tgz=00;31:*.rpm=00;31:*.deb=00;31:*.arj=00;31:*.taz=00;31:*.lzh=00;31:*.lzma=00;31:*.zip=00;31:*.zoo=00;31:*.z=00;31:*.Z=00;31:*.gz=00;31:*.bz2=00;31:*.tb2=00;31:*.tz2=00;31:*.tbz2=00;31:*.avi=01;35:*.bmp=01;35:*.fli=01;35:*.gif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mng=01;35:*.mov=01;35:*.mpg=01;35:*.pcx=01;35:*.pbm=01;35:*.pgm=01;35:*.png=01;35:*.ppm=01;35:*.tga=01;35:*.tif=01;35:*.xbm=01;35:*.xpm=01;35:*.dl=01;35:*.gl=01;35:*.wmv=01;35:*.aiff=00;32:*.au=00;32:*.mid=00;32:*.mp3=00;32:*.ogg=00;32:*.voc=00;32:*.wav=00;32:*.patch=00;34:*.o=00;32:*.so=01;35:*.ko=01;31:*.la=00;33'
+export NPM_CONFIG_FUND=false
+export DOCKER_SCAN_SUGGEST=false
+export EDITOR='cursor --wait'
+export STARSHIP_CONFIG="$DOTFILES/config/starship/config.toml"
+export CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS=1
+export PROMPT_EOL_MARK=''
 
-# Configure directories
-export DOTFILES=$HOME/.dotfiles
-export XDG_CONFIG_HOME=$HOME/.config
-export PROJECTS=~/Code
-
-# Configure PATH
+# PATH.
 export PATH="./bin:$HOME/bin:$DOTFILES/bin:$PATH"
+export PATH="$HOME/.local/bin:$GOPATH/bin:$PATH"
 
-# load plugins
+if [[ -d /opt/homebrew/opt/mysql-client@8.4/bin ]]; then
+  export PATH="/opt/homebrew/opt/mysql-client@8.4/bin:$PATH"
+fi
+
+if (( $+commands[pnpm] )); then
+  export PNPM_HOME="$HOME/Library/pnpm"
+  export PATH="$PNPM_HOME:$PATH"
+fi
+
+if [[ -f "$HOME/.cargo/env" ]]; then
+  source "$HOME/.cargo/env"
+fi
+
+if [[ -d "$HOME/.cargo/bin" ]]; then
+  export PATH="$HOME/.cargo/bin:$PATH"
+fi
+
+# Cursor fallback in SSH sessions.
+if [[ -n "$SSH_CLIENT" ]]; then
+  alias cursor="cursor-ssh"
+fi
+
+# Plugins.
 source "$DOTFILES/plugins/zsh-defer.plugin.zsh"
 
-# load functions
-fpath=($DOTFILES/functions $fpath)
+# Functions and completion setup.
+fpath=("$DOTFILES/functions" $fpath)
 autoload -U compinit
 autoload -U up-line-or-beginning-search
 autoload -U down-line-or-beginning-search
-autoload -U $DOTFILES/functions/*(:t)
+autoload -U "$DOTFILES"/functions/*(:t)
 
 # If zsh complains about insecure directories, run:
 #   compaudit | xargs chmod g-w
 if type brew &>/dev/null; then
-  fpath=($HOMEBREW_PREFIX/share/zsh-completions $fpath)
+  fpath=("$HOMEBREW_PREFIX/share/zsh-completions" $fpath)
 fi
 
-# Setup completion
 if [[ -f ~/.zcompdump(#qN.mh+24) ]]; then
   compinit
 else
   compinit -C
 fi
-zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}' # match lowercase as case-insensitive
-# zstyle ':completion:*' insert-tab pending # pasted tabs don't trigger completion
-zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS} # set file completion suggestions to ls colors
 
-# Source configuration files
-for file in $DOTFILES/config/*.zsh; do source $file; done
-if [[ -a ~/.localrc ]]; then source ~/.localrc; fi
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
+zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 
-# Configure zsh history behavior
+# Integrations.
+if [[ -e "$HOME/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock" ]]; then
+  export SSH_AUTH_SOCK="$HOME/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock"
+fi
+
+if (( $+commands[mise] )); then
+  eval "$(mise activate zsh)"
+fi
+
+if (( $+commands[zoxide] )); then
+  eval "$(zoxide init zsh)"
+fi
+
+# Prompt.
+precmd_functions+=(set_window_title)
+if (( $+commands[starship] )); then
+  eval "$(starship init zsh)"
+fi
+
+# Aliases and shell helpers.
+alias clr="tput reset"
+alias flush="sudo killall -HUP mDNSResponder"
+alias lscleanup="/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user && killall Finder"
+command -v hd > /dev/null || alias hd="hexdump -C"
+alias cleanup="find . -type f -name '*.DS_Store' -ls -delete"
+alias show="defaults write com.apple.finder AppleShowAllFiles -bool true && killall Finder"
+alias hide="defaults write com.apple.finder AppleShowAllFiles -bool false && killall Finder"
+alias tada="open -g raycast://confetti"
+alias cc="claude --dangerously-skip-permissions"
+alias t="terraform"
+
+alias g=git
+alias glog="git log --graph --pretty=format:'%Cred%h%Creset %an: %s%Creset%C(yellow)%d%Creset %Cgreen(%cr)%Creset' --abbrev-commit --date=relative"
+alias gp='git push origin HEAD'
+alias gpf='git push origin HEAD --force-with-lease'
+alias gs='git status -sb'
+alias grb='git rebase --committer-date-is-author-date'
+alias s='git sync'
+
+if (( $+commands[eza] )); then
+  alias ls="eza -F auto"
+  alias l="eza -la"
+  alias ll="eza -l"
+  alias tree="eza -TF auto"
+else
+  alias ls="ls -F"
+  alias l="ls -lAh"
+  alias ll="ls -l"
+fi
+
+if (( $+commands[bat] )); then
+  alias cat=bat
+  export BAT_STYLE=plain
+  export BAT_THEME="ansi"
+fi
+
+if (( $+commands[grc] )) && (( $+commands[brew] )); then
+  source "$HOMEBREW_PREFIX/etc/grc.zsh"
+  unset -f docker 2>/dev/null
+fi
+
+# Host-specific local overrides.
+if [[ -a ~/.localrc ]]; then
+  source ~/.localrc
+fi
+
+# History.
 HISTFILE=~/.zsh_history
 HISTSIZE=10000
 SAVEHIST=10000
@@ -78,42 +167,46 @@ setopt INC_APPEND_HISTORY SHARE_HISTORY # adds history incrementally and share i
 setopt HIST_IGNORE_ALL_DUPS # don't record dupes in history
 setopt HIST_REDUCE_BLANKS # remove extra blanks from history entries
 
-# Configure zsh line editor
+# Line editor and keybinds.
 zle -N newtab
 zle -N up-line-or-beginning-search
 zle -N down-line-or-beginning-search
 
-# Configure keybinds
-bindkey '^[[1;3D' backward-word # Alt+Left
-bindkey '^[[1;3C' forward-word # Alt+Right
-bindkey '^[[1;9D' beginning-of-line # Cmd+Left
-bindkey '^[[1;9C' end-of-line # Cmd+Right
+bindkey '^[[1;3D' backward-word
+bindkey '^[[1;3C' forward-word
+bindkey '^[[1;9D' beginning-of-line
+bindkey '^[[1;9C' end-of-line
 
-# Enable auto-suggestions
-if [ -f "$HOMEBREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh" ]; then
+# Slow plugins are deferred for startup performance.
+if [[ -f "$HOMEBREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh" ]]; then
   zsh-defer source "$HOMEBREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
-  # Fetch suggestions asynchronously
   export ZSH_AUTOSUGGEST_USE_ASYNC=1
-  # Suggest from completion first, then history if nothing is found
   export ZSH_AUTOSUGGEST_STRATEGY=(completion history)
-  # Disable automatic rebind (better performance)
   export ZSH_AUTOSUGGEST_MANUAL_REBIND=1
 fi
 
-# Enable syntax highlighting
-if [ -f "$HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" ]; then
+if [[ -f "$HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" ]]; then
   zsh-defer source "$HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
 fi
 
-# Enable substring history matching
-if [ -f "$HOMEBREW_PREFIX/share/zsh-history-substring-search/zsh-history-substring-search.zsh" ]; then
+if [[ -f "$HOMEBREW_PREFIX/share/zsh-history-substring-search/zsh-history-substring-search.zsh" ]]; then
   source "$HOMEBREW_PREFIX/share/zsh-history-substring-search/zsh-history-substring-search.zsh"
-  bindkey "^[[A" history-substring-search-up # Up
-  bindkey "^[[B" history-substring-search-down # Down
+  bindkey "^[[A" history-substring-search-up
+  bindkey "^[[B" history-substring-search-down
   export HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_FOUND="bg=green,fg=white,bold"
 fi
 
-# If profiling is enabled, display timing information
-if [ ! -z "$ZSH_PROF" ]; then
+# Dynamic completions are loaded lazily from local shim files.
+# These compdefs keep command mappings fresh even with a cached .zcompdump.
+compdef _op op
+compdef _aws aws
+compdef _flyctl fly flyctl
+compdef _gh gh
+compdef _gcloud gcloud
+compdef _jj jj
+compdef _mise mise
+compdef _terraform terraform t
+
+if [[ -n "$ZSH_PROF" ]]; then
   zprof
 fi

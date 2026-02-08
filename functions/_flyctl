@@ -1,0 +1,10 @@
+#compdef fly flyctl
+
+(( $+commands[flyctl] )) || return 1
+
+unfunction _flyctl 2>/dev/null
+eval "$(flyctl completion zsh)" || return 1
+(( $+functions[_flyctl] )) || return 1
+compdef _flyctl fly flyctl
+
+_flyctl "$@"

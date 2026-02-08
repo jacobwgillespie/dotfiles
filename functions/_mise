@@ -1,0 +1,9 @@
+#compdef mise
+
+(( $+commands[mise] )) || return 1
+
+unfunction _mise 2>/dev/null
+eval "$(mise completion zsh)" || return 1
+(( $+functions[_mise] )) || return 1
+
+_mise "$@"

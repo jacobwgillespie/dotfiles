@@ -1,0 +1,13 @@
+#compdef jj
+
+(( $+commands[jj] )) || return 1
+
+unfunction _jj 2>/dev/null
+source <(COMPLETE=zsh jj) || return 1
+
+local completion="${_comps[jj]-}"
+[[ -n "$completion" ]] || return 1
+[[ "$completion" != "_jj" ]] || return 1
+compdef "$completion" jj
+
+"$completion" "$@"

@@ -1,0 +1,3 @@
+cat .env | grep -v '^#' | grep -v '^$' | while read -r a; do
+  export "$a"
+done

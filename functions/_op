@@ -1,0 +1,9 @@
+#compdef op
+
+(( $+commands[op] )) || return 1
+
+unfunction _op 2>/dev/null
+eval "$(op completion zsh)" || return 1
+(( $+functions[_op] )) || return 1
+
+_op "$@"

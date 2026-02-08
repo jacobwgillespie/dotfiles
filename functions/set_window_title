@@ -1,0 +1,9 @@
+print -n '\e]0;'
+
+# Show hostname when connected over SSH.
+[[ -n "$SSH_CONNECTION" ]] && print -Pn '(%m) '
+
+# Show last three directory components.
+print -Pn '%3~'
+
+print -n '\a'
