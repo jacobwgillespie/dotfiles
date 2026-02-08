@@ -198,13 +198,23 @@ fi
 
 # Dynamic completions are loaded lazily from local shim files.
 # These compdefs keep command mappings fresh even with a cached .zcompdump.
+compdef _1p 1p
 compdef _op op
 compdef _aws aws
+compdef _b b
+compdef _c c
+compdef _cargo cargo
 compdef _flyctl fly flyctl
 compdef _gh gh
 compdef _gcloud gcloud
 compdef _jj jj
+compdef _kc kc
+compdef _key key
+compdef _kn kn
 compdef _mise mise
+compdef _pr pr
+compdef _run run
+compdef _rustup rustup
 compdef _terraform terraform t
 
 if [[ -n "$ZSH_PROF" ]]; then
