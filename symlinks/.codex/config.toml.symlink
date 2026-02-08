@@ -1,10 +1,11 @@
 approval_policy = "never"
 sandbox_mode = "danger-full-access"
 model = "gpt-5.3-codex"
-model_reasoning_effort = "high"
+model_reasoning_effort = "xhigh"
 web_search = "live"
 suppress_unstable_features_warning = true
-personality = "none"
+personality = "pragmatic"
+# personality = "none"
 
 [features]
 collab = true
@@ -13,3 +14,6 @@ steer = false
 unified_exec = false
 shell_snapshot = true
 remote_compaction = true
+
+[mcp_servers.linear]
+url = "https://mcp.linear.app/mcp"
