@@ -20,6 +20,7 @@ set -gx DOCKER_SCAN_SUGGEST false
 set -gx EDITOR 'cursor --wait'
 set -gx STARSHIP_CONFIG "$DOTFILES/config/starship/config.toml"
 set -gx CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS 1
+set -gx OPENCODE_EXPERIMENTAL_MARKDOWN 1
 set -gx OPENCODE_ENABLE_EXA true
 set -g fish_color_command green
 set -g fish_greeting ''

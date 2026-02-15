@@ -2,6 +2,7 @@ auto-update-channel = tip
 
 font-family = TX-02
 font-size = 14
+# adjust-cell-height = 20%
 
 # Cursor Dark Midnight
 # background = #191C21

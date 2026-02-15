@@ -14,6 +14,8 @@ steer = false
 unified_exec = false
 shell_snapshot = true
 remote_compaction = true
+responses_websockets_v2 = true
 
 [mcp_servers.linear]
 url = "https://mcp.linear.app/mcp"
+enabled = false

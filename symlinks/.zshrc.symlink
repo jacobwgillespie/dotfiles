@@ -25,11 +25,17 @@ export DOCKER_SCAN_SUGGEST=false
 export EDITOR='cursor --wait'
 export STARSHIP_CONFIG="$DOTFILES/config/starship/config.toml"
 export CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS=1
+export OPENCODE_EXPERIMENTAL_MARKDOWN=1
+export OPENCODE_ENABLE_EXA=true
 export PROMPT_EOL_MARK=''
 
 # PATH.
 export PATH="./bin:$HOME/bin:$DOTFILES/bin:$PATH"
 export PATH="$HOME/.local/bin:$GOPATH/bin:$PATH"
+
+if [[ -d "$HOMEBREW_PREFIX/opt/rustup/bin" ]]; then
+  export PATH="$HOMEBREW_PREFIX/opt/rustup/bin:$PATH"
+fi
 
 if [[ -d /opt/homebrew/opt/mysql-client@8.4/bin ]]; then
   export PATH="/opt/homebrew/opt/mysql-client@8.4/bin:$PATH"
