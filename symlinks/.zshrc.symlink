@@ -4,7 +4,9 @@ if [[ -n "$ZSH_PROF" ]]; then
 fi
 
 # Homebrew environment.
-if [[ -x /opt/homebrew/bin/brew ]]; then
+if (( $+commands[brew] )); then
+  eval "$(brew shellenv)"
+elif [[ -x /opt/homebrew/bin/brew ]]; then
   eval "$(/opt/homebrew/bin/brew shellenv)"
 elif [[ -x /home/linuxbrew/.linuxbrew/bin/brew ]]; then
   eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
@@ -33,12 +35,12 @@ export PROMPT_EOL_MARK=''
 export PATH="./bin:$HOME/bin:$DOTFILES/bin:$PATH"
 export PATH="$HOME/.local/bin:$GOPATH/bin:$PATH"
 
-if [[ -d "$HOMEBREW_PREFIX/opt/rustup/bin" ]]; then
+if [[ -n "$HOMEBREW_PREFIX" ]] && [[ -d "$HOMEBREW_PREFIX/opt/rustup/bin" ]]; then
   export PATH="$HOMEBREW_PREFIX/opt/rustup/bin:$PATH"
 fi
 
-if [[ -d /opt/homebrew/opt/mysql-client@8.4/bin ]]; then
-  export PATH="/opt/homebrew/opt/mysql-client@8.4/bin:$PATH"
+if [[ -n "$HOMEBREW_PREFIX" ]] && [[ -d "$HOMEBREW_PREFIX/opt/mysql-client@8.4/bin" ]]; then
+  export PATH="$HOMEBREW_PREFIX/opt/mysql-client@8.4/bin:$PATH"
 fi
 
 if (( $+commands[pnpm] )); then
@@ -196,9 +198,9 @@ if [[ -f "$HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting
 fi
 
 if [[ -f "$HOMEBREW_PREFIX/share/zsh-history-substring-search/zsh-history-substring-search.zsh" ]]; then
-  source "$HOMEBREW_PREFIX/share/zsh-history-substring-search/zsh-history-substring-search.zsh"
-  bindkey "^[[A" history-substring-search-up
-  bindkey "^[[B" history-substring-search-down
+  zsh-defer source "$HOMEBREW_PREFIX/share/zsh-history-substring-search/zsh-history-substring-search.zsh"
+  zsh-defer bindkey "^[[A" history-substring-search-up
+  zsh-defer bindkey "^[[B" history-substring-search-down
   export HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_FOUND="bg=green,fg=white,bold"
 fi
 

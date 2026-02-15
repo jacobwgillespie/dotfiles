@@ -1,3 +1,31 @@
-cat .env | grep -v '^#' | grep -v '^$' | while read -r a; do
-  export "$a"
-done
+if [[ ! -f .env ]]; then
+  echo "loadenv: .env not found in $PWD" >&2
+  return 1
+fi
+
+while IFS= read -r line || [[ -n "$line" ]]; do
+  [[ -z "${line//[[:space:]]/}" ]] && continue
+  [[ "$line" == \#* ]] && continue
+  [[ "$line" == export\ * ]] && line="${line#export }"
+
+  key="${line%%=*}"
+  value="${line#*=}"
+
+  key="${key#"${key%%[![:space:]]*}"}"
+  key="${key%"${key##*[![:space:]]}"}"
+  value="${value#"${value%%[![:space:]]*}"}"
+  value="${value%"${value##*[![:space:]]}"}"
+
+  if [[ ! "$key" =~ '^[A-Za-z_][A-Za-z0-9_]*$' ]]; then
+    echo "loadenv: skipping invalid key '$key'" >&2
+    continue
+  fi
+
+  if [[ "$value" == \"*\" && "$value" == *\" ]]; then
+    value="${value:1:-1}"
+  elif [[ "$value" == \'*\' && "$value" == *\' ]]; then
+    value="${value:1:-1}"
+  fi
+
+  export "$key=$value"
+done < .env
