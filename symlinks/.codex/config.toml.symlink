@@ -1,21 +1,30 @@
 approval_policy = "never"
 sandbox_mode = "danger-full-access"
-model = "gpt-5.3-codex"
-model_reasoning_effort = "xhigh"
+model = "gpt-5.4"
+model_reasoning_effort = "high"
 web_search = "live"
 suppress_unstable_features_warning = true
 personality = "pragmatic"
 # personality = "none"
 
 [features]
-collab = true
-collaboration_modes = true
-steer = false
-unified_exec = false
-shell_snapshot = true
-remote_compaction = true
+apply_patch_freeform = true
+default_mode_request_user_input = true
+fast_mode = true
+multi_agent = true
+# realtime_conversation = true
 responses_websockets_v2 = true
+shell_snapshot = true
+steer = true
+unified_exec = true
+voice_transcription = true
 
 [mcp_servers.linear]
 url = "https://mcp.linear.app/mcp"
 enabled = false
+
+[tui]
+theme = "base16-eighties-dark"
+
+[projects."/Users/jacobwgillespie/Code/depot/app"]
+trust_level = "trusted"
