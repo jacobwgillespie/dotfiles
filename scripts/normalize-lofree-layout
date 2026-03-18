@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+layout_path="${1:-config/keyboard/lofree.layout.json}"
+tmp_file="$(mktemp)"
+
+jq '
+  def normalize_vendor_wireless_keycodes:
+    if . == "0x7793" then
+      "MT(MOD_RCTL | MOD_LSFT | MOD_LALT, KC_LANG4)"
+    elif . == "0x7794" then
+      "MT(MOD_RCTL | MOD_LSFT | MOD_LALT, KC_LANG5)"
+    elif . == "0x7795" then
+      "MT(MOD_RCTL | MOD_LSFT | MOD_LALT, KC_LANG6)"
+    elif . == "0x7785" then
+      "MT(MOD_RCTL | MOD_LSFT | MOD_LALT, KC_PCMM)"
+    else
+      .
+    end;
+
+  .layers |= map(map(normalize_vendor_wireless_keycodes))
+' "$layout_path" > "$tmp_file"
+
+mv "$tmp_file" "$layout_path"

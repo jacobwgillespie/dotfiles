@@ -18,6 +18,7 @@ Configuration files for the [Lofree Flow2](https://www.lofree.co/products/lofree
 3. Load `lofree.flow2.definition.json` as a custom definition (if not auto-detected)
 4. Import `lofree.layout.json` to apply the keymap
 5. After making changes, export the layout to update `lofree.layout.json`
+6. Run `./scripts/normalize-lofree-layout` before re-importing or committing the exported JSON
 
 ## Layout Overview
 
@@ -74,6 +75,19 @@ This configuration uses 6 layers:
 | `RESET`             | Enter bootloader mode                          |
 | `QK_CLEAR_EEPROM`   | Clear keyboard EEPROM                          |
 | `MAGIC_TOGGLE_NKRO` | Toggle N-key rollover                          |
+
+## VIA Quirk
+
+Via can export the Lofree wireless switching keys as raw hex values, but its layout importer does not round-trip those `0x....` strings reliably. The checked-in layout keeps import-safe QMK expressions that evaluate to the same bytes on-device:
+
+| Import-Safe Keycode                                  | Raw Code | Function             |
+| ---------------------------------------------------- | -------- | -------------------- |
+| `MT(MOD_RCTL | MOD_LSFT | MOD_LALT, KC_LANG4)`       | `0x7793` | Bluetooth Profile 1  |
+| `MT(MOD_RCTL | MOD_LSFT | MOD_LALT, KC_LANG5)`       | `0x7794` | Bluetooth Profile 2  |
+| `MT(MOD_RCTL | MOD_LSFT | MOD_LALT, KC_LANG6)`       | `0x7795` | Bluetooth Profile 3  |
+| `MT(MOD_RCTL | MOD_LSFT | MOD_LALT, KC_PCMM)`        | `0x7785` | 2.4GHz Wireless Mode |
+
+These should remain on the Fn-layer `Q`, `W`, `E`, and `R` positions for both Mac and Windows layers in `lofree.layout.json`. If Via exports raw hex again, run `./scripts/normalize-lofree-layout` before re-importing.
 
 ## Bluetooth Switching
 
