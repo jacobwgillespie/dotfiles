@@ -98,6 +98,9 @@ window-padding-y = 10
 unfocused-split-opacity = 1
 background-opacity = 1
 
+background-opacity = 0.95
+background-blur-radius = 20
+
 keybind = option+super+left=previous_tab
 keybind = option+super+right=next_tab
 keybind = shift+enter=text:\x1b\r
@@ -112,5 +115,7 @@ macos-option-as-alt = true
 working-directory = home
 window-inherit-working-directory = false
 window-new-tab-position = end
+window-colorspace = display-p3
 
 shell-integration-features = no-cursor
+shell-integration-features = ssh-terminfo
