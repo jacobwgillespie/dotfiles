@@ -198,9 +198,9 @@ if [[ -f "$HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting
 fi
 
 if [[ -f "$HOMEBREW_PREFIX/share/zsh-history-substring-search/zsh-history-substring-search.zsh" ]]; then
-  zsh-defer source "$HOMEBREW_PREFIX/share/zsh-history-substring-search/zsh-history-substring-search.zsh"
-  zsh-defer bindkey "^[[A" history-substring-search-up
-  zsh-defer bindkey "^[[B" history-substring-search-down
+  source "$HOMEBREW_PREFIX/share/zsh-history-substring-search/zsh-history-substring-search.zsh"
+  bindkey "^[[A" history-substring-search-up
+  bindkey "^[[B" history-substring-search-down
   export HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_FOUND="bg=green,fg=white,bold"
 fi
 
@@ -228,3 +228,6 @@ compdef _terraform terraform t
 if [[ -n "$ZSH_PROF" ]]; then
   zprof
 fi
+
+# Vite+ bin (https://viteplus.dev)
+. "$HOME/.vite-plus/env"
