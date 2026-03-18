@@ -48,5 +48,10 @@
     "key": "ctrl+s",
     "command": "workbench.action.tasks.runTask",
     "args": "git-sync"
+  },
+  {
+    "key": "alt+cmd+s",
+    "command": "workbench.action.toggleUnifiedSidebarFromKeyboard",
+    "when": "cursor.agentIdeUnification.enabled == true && !isAuxiliaryWindowFocusedContext"
   }
 ]
