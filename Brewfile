@@ -172,7 +172,7 @@ if /darwin/ =~ RUBY_PLATFORM
   cask 'balenaetcher'
   cask 'beeper'
   cask 'bettertouchtool'
-  cask 'blitz'
+  cask 'blitz-gg'
   cask 'chatgpt'
   cask 'claude'
   cask 'claude-code'
