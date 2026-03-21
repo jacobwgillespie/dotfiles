@@ -39,7 +39,7 @@
     "**/CVS": true,
     "**/.DS_Store": true,
     "**/*.pyc": true,
-    "**/node_modules/": true
+    "**/node_modules/": true,
   },
   "files.insertFinalNewline": true,
   "files.trimFinalNewlines": true,
@@ -63,7 +63,7 @@
   "typescript.autoClosingTags": false,
   "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": false,
   "typescript.tsserver.maxTsServerMemory": 8192,
-  "update.releaseTrack": "prerelease",
+  "update.releaseTrack": "dev",
   "workbench.iconTheme": "minimal-icons",
   "workbench.navigationControl.enabled": false,
   "workbench.sideBar.location": "right",
@@ -72,58 +72,59 @@
   "yaml.schemas": {
     "http://json.schemastore.org/github-workflow": [
       "**/.github/workflows/*.yaml",
-      "**/.github/workflows/*.yml"
+      "**/.github/workflows/*.yml",
     ],
-    "http://json.schemastore.org/github-action": ["action.yaml", "action.yml"]
+    "http://json.schemastore.org/github-action": ["action.yaml", "action.yml"],
   },
   "[css]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "editor.formatOnSave": true
+    "editor.formatOnSave": true,
   },
   "[github-actions-workflow]": {
-    "editor.defaultFormatter": "redhat.vscode-yaml"
+    "editor.defaultFormatter": "redhat.vscode-yaml",
   },
   "[helm]": {
-    "editor.formatOnSave": false
+    "editor.formatOnSave": false,
   },
   "[html]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
   "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
   "[javascriptreact]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
   "[json]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
   "[jsonc]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
   "[markdown]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
   "[mdx]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
   "[ruby]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
   "[sql]": {
-    "editor.formatOnSave": false
+    "editor.formatOnSave": false,
   },
   "[typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
   "[typescriptreact]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
   "[yaml]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
   "claudeCode.preferredLocation": "panel",
   "remote.SSH.remotePlatform": {
-    "mini": "linux"
-  }
+    "mini": "linux",
+  },
+  "window.commandCenter": true,
 }
