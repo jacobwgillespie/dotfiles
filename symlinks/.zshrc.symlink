@@ -56,6 +56,10 @@ if [[ -d "$HOME/.cargo/bin" ]]; then
   export PATH="$HOME/.cargo/bin:$PATH"
 fi
 
+if [[ -f "$HOME/.vite-plus/env" ]]; then
+  source "$HOME/.vite-plus/env"
+fi
+
 # Cursor fallback in SSH sessions.
 if [[ -n "$SSH_CLIENT" ]]; then
   alias cursor="cursor-ssh"
@@ -228,6 +232,3 @@ compdef _terraform terraform t
 if [[ -n "$ZSH_PROF" ]]; then
   zprof
 fi
-
-# Vite+ bin (https://viteplus.dev)
-. "$HOME/.vite-plus/env"
