@@ -10,7 +10,7 @@ indent() {
 
 echo
 echo "${bold}Remote IP${normal}"
-dig +short myip.opendns.com @resolver1.opendns.com | indent
+curl -s https://api.ipify.org?format=json | jq -r '.ip' | indent
 echo
 
 echo "${bold}Local IPs${normal}"

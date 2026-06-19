@@ -1,6 +1,7 @@
 [tools]
 amp = "latest"
-go = "1.24"
+go = "1.26"
 golangci-lint = "2"
 node = "22"
 terraform = "1"
+"npm:hunkdiff" = "latest"

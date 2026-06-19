@@ -1,12 +1,7 @@
 # Taps
 tap 'anomalyco/tap'
-tap 'aws/tap'
 tap 'axiomhq/tap'
-tap 'bufbuild/buf'
-tap 'cloudflare/cloudflare'
 tap 'depot/tap'
-tap 'github/gh'
-tap 'golangci/tap'
 tap 'hashicorp/tap'
 tap 'jacobwgillespie/tap'
 tap 'jnsahaj/lumen'
@@ -17,7 +12,6 @@ tap 'peak/tap'
 tap 'planetscale/tap'
 tap 'restatedev/tap'
 tap 'rwx-research/tap'
-tap 'steipete/tap'
 tap 'withgraphite/tap'
 
 # Formulae
@@ -107,13 +101,13 @@ brew 'skopeo'
 brew 'socat'
 brew 'spotify_player'
 brew 'starship'
+brew 'stripe-cli'
 brew 'subversion'
 brew 'sqlc'
 brew 'telnet'
 brew 'temporal'
 brew 'terraform-docs'
 brew 'tmux'
-brew 'tflint'
 brew 'tokei'
 brew 'uv'
 brew 'wget'
@@ -132,23 +126,22 @@ brew 'zsh-completions'
 brew 'zsh-history-substring-search'
 brew 'zsh-syntax-highlighting'
 
-brew 'anomalyco/tap/opencode'
-brew 'depot/tap/depot'
-brew 'hashicorp/tap/packer'
-brew 'jacobwgillespie/tap/git-sync'
-brew 'jnsahaj/lumen/lumen'
-brew 'nats-io/nats-tools/nats'
-brew 'oven-sh/bun/bun'
-brew 'peak/tap/s5cmd'
-brew 'planetscale/tap/pscale'
-brew 'restatedev/tap/restate'
-brew 'restatedev/tap/restatectl'
-brew 'restatedev/tap/restate-server'
-brew 'rwx-research/tap/mint'
-brew 'steipete/tap/spogo'
-brew 'turbot/tap/powerpipe'
-brew 'turbot/tap/steampipe'
-brew 'withgraphite/tap/graphite'
+brew 'anomalyco/tap/opencode', trusted: true
+brew 'depot/tap/depot', trusted: true
+brew 'hashicorp/tap/packer', trusted: true
+brew 'jacobwgillespie/tap/git-sync', trusted: true
+brew 'jnsahaj/lumen/lumen', trusted: true
+brew 'nats-io/nats-tools/nats', trusted: true
+brew 'oven-sh/bun/bun', trusted: true
+brew 'peak/tap/s5cmd', trusted: true
+brew 'planetscale/tap/pscale', trusted: true
+brew 'restatedev/tap/restate', trusted: true
+brew 'restatedev/tap/restatectl', trusted: true
+brew 'restatedev/tap/restate-server', trusted: true
+brew 'rwx-research/tap/mint', trusted: true
+brew 'turbot/tap/powerpipe', trusted: true
+brew 'turbot/tap/steampipe', trusted: true
+brew 'withgraphite/tap/graphite', trusted: true
 
 # Only install on macOS
 if /darwin/ =~ RUBY_PLATFORM
@@ -164,7 +157,6 @@ if /darwin/ =~ RUBY_PLATFORM
   cask 'araxis-merge'
   cask 'arq'
   cask 'balenaetcher'
-  cask 'bettertouchtool'
   cask 'blitz-gg'
   cask 'chatgpt'
   cask 'chatgpt-atlas'
@@ -196,9 +188,10 @@ if /darwin/ =~ RUBY_PLATFORM
   cask 'kaleidoscope'
   cask 'league-of-legends'
   cask 'linearmouse'
-  cask 'linear-linear'
+  cask 'linear'
   cask 'microsoft-auto-update'
   cask 'mimestream'
+  cask 'minecraft'
   cask 'nosql-workbench'
   cask 'notion'
   cask 'notion-calendar'
@@ -213,7 +206,6 @@ if /darwin/ =~ RUBY_PLATFORM
   cask 'session-manager-plugin'
   cask 'shottr'
   cask 'slack'
-  cask 'sonos'
   cask 'sony-ps-remote-play'
   cask 'spotify'
   cask 'steam'
@@ -222,6 +214,7 @@ if /darwin/ =~ RUBY_PLATFORM
   cask 't3-code'
   cask 'tableplus'
   cask 'tailscale-app'
+  cask 'thebrowsercompany-dia'
   cask 'tower'
   cask 'transmission'
   cask 'unite'
@@ -232,10 +225,11 @@ if /darwin/ =~ RUBY_PLATFORM
   cask 'zed'
   cask 'zoom'
 
-  cask 'axiomhq/tap/axiom'
-  cask 'nikitabobko/tap/aerospace'
+  cask 'axiomhq/tap/axiom', trusted: true
+  cask 'nikitabobko/tap/aerospace', trusted: true
 
   # Fonts
+  cask 'font-departure-mono'
   cask 'font-fira-code'
   cask 'font-hasklig'
   cask 'font-inter'
@@ -251,12 +245,19 @@ if /darwin/ =~ RUBY_PLATFORM
   mas '1Password for Safari', id: 1569813296
   mas 'Dato', id: 1470584107
   mas 'Flighty', id: 1358823008
+  mas 'GarageBand', id: 682658836
+  mas 'iMovie', id: 408981434
   mas 'Infuse', id: 1136220934
   mas 'Ivory for Mastodon', id: 6444602274
+  mas 'Keynote', id: 361285480
+  mas 'Keynote', id: 409183694
   mas 'Microsoft Excel', id: 462058435
   mas 'Microsoft Remote Desktop 10', id: 1295203466
   mas 'Microsoft Word', id: 462054704
+  mas 'Numbers', id: 409203825
+  mas 'Pages', id: 409201541
   mas 'Pixelmator Pro', id: 1289583905
+  mas 'Reeder 2', id: 6475002485
   mas 'Reeder 5', id: 1529448980
   mas 'Refined GitHub', id: 1519867270
   mas 'Simplify for Gmail', id: 1544668450
@@ -296,11 +297,11 @@ if /darwin/ =~ RUBY_PLATFORM
   vscode 'oxc.oxc-vscode'
   vscode 'redhat.vscode-yaml'
   vscode 'rust-lang.rust-analyzer'
-  vscode 'sst-dev.opencode'
   vscode 'tamasfe.even-better-toml'
   vscode 'tlaplus.vscode-ide'
   vscode 'unifiedjs.vscode-mdx'
   vscode 'usernamehw.errorlens'
+  vscode 'vitest.explorer'
   vscode 'wayou.vscode-todo-highlight'
   vscode 'YoavBls.pretty-ts-errors'
 end

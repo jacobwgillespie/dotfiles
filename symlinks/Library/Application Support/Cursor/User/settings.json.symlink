@@ -63,7 +63,6 @@
   "typescript.autoClosingTags": false,
   "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": false,
   "typescript.tsserver.maxTsServerMemory": 8192,
-  "update.releaseTrack": "dev",
   "workbench.iconTheme": "minimal-icons",
   "workbench.navigationControl.enabled": false,
   "workbench.sideBar.location": "right",
@@ -127,4 +126,7 @@
     "mini": "linux",
   },
   "window.commandCenter": true,
+  "cursor.general.fontSmoothingAntialiased": true,
+  "window.autoDetectColorScheme": false,
+  "workbench.agentsWindowButton.enabled": false,
 }
