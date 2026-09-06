@@ -1,6 +1,7 @@
 # Taps
 tap 'anomalyco/tap'
 tap 'axiomhq/tap'
+tap 'depot/internal'
 tap 'depot/tap'
 tap 'hashicorp/tap'
 tap 'jacobwgillespie/tap'
@@ -94,6 +95,7 @@ brew 'ripgrep'
 brew 'rsync'
 brew 'ruff'
 brew 'rustup'
+brew 'samply'
 brew 'sccache'
 brew 'shellcheck'
 brew 'shfmt'
@@ -181,6 +183,7 @@ if /darwin/ =~ RUBY_PLATFORM
   cask 'github'
   cask 'google-chrome'
   cask 'granola'
+  cask 'grok-build'
   cask 'helium-browser'
   cask 'iina'
   cask 'imageoptim'
@@ -206,6 +209,7 @@ if /darwin/ =~ RUBY_PLATFORM
   cask 'session-manager-plugin'
   cask 'shottr'
   cask 'slack'
+  cask 'slack-cli'
   cask 'sony-ps-remote-play'
   cask 'spotify'
   cask 'steam'
@@ -218,6 +222,7 @@ if /darwin/ =~ RUBY_PLATFORM
   cask 'tower'
   cask 'transmission'
   cask 'unite'
+  cask 'visual-studio-code'
   cask 'vlc'
   cask 'whatsapp@beta'
   cask 'wireshark-app'
@@ -226,6 +231,7 @@ if /darwin/ =~ RUBY_PLATFORM
   cask 'zoom'
 
   cask 'axiomhq/tap/axiom', trusted: true
+  cask 'depot/internal/controlctl', trusted: true
   cask 'nikitabobko/tap/aerospace', trusted: true
 
   # Fonts
@@ -304,6 +310,7 @@ if /darwin/ =~ RUBY_PLATFORM
   vscode 'vitest.explorer'
   vscode 'wayou.vscode-todo-highlight'
   vscode 'YoavBls.pretty-ts-errors'
+  vscode 'ms-python.vscode-python-envs'
 end
 
 # Only install on Linux
