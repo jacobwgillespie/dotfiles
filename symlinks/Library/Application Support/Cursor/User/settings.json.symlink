@@ -129,4 +129,14 @@
   "cursor.general.fontSmoothingAntialiased": true,
   "window.autoDetectColorScheme": false,
   "workbench.agentsWindowButton.enabled": false,
+  "yaml.disableSchemaDetection": [
+    "**/.github/workflows/*.yml",
+    "**/.github/workflows/*.yaml",
+    "**/.gitea/workflows/*.yml",
+    "**/.gitea/workflows/*.yaml",
+    "**/.forgejo/workflows/*.yml",
+    "**/.forgejo/workflows/*.yaml",
+  ],
+  "python.defaultInterpreterPath": "/Library/Developer/CommandLineTools/usr/bin/python3",
+  "cursor.composer.queueMessageDefaultBehavior": "steer",
 }
