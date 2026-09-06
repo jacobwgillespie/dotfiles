@@ -27,26 +27,46 @@ font-size = 14
 # palette = 15=#EBEFF4
 
 # Cursor Dark
-background = #141414
-foreground = #D4D4D4
-selection-background = #2D2D2D
-selection-foreground = #eeeeee
-palette = 0=#242424
-palette = 1=#FB6B83
-palette = 2=#3FA266
-palette = 3=#D2943E
-palette = 4=#80A1C1
-palette = 5=#B48DAD
-palette = 6=#88C1D0
-palette = 7=#E4E4E4
-palette = 8=#3B3B3B
-palette = 9=#FB6B83
-palette = 10=#71B489
-palette = 11=#F1B567
-palette = 12=#87A6C4
-palette = 13=#B48DAD
-palette = 14=#88C1D0
-palette = 15=#E4E4E4
+# background = #141414
+# foreground = #D4D4D4
+# selection-background = #2D2D2D
+# selection-foreground = #eeeeee
+# palette = 0=#242424
+# palette = 1=#FB6B83
+# palette = 2=#3FA266
+# palette = 3=#D2943E
+# palette = 4=#80A1C1
+# palette = 5=#B48DAD
+# palette = 6=#88C1D0
+# palette = 7=#E4E4E4
+# palette = 8=#3B3B3B
+# palette = 9=#FB6B83
+# palette = 10=#71B489
+# palette = 11=#F1B567
+# palette = 12=#87A6C4
+# palette = 13=#B48DAD
+# palette = 14=#88C1D0
+# palette = 15=#E4E4E4
+
+# Zed Min Dark (Solid)
+background = #1A1A1A
+foreground = #BBBBBB
+palette = 0=#1A1A1A
+palette = 1=#FA7584
+palette = 2=#79B8FF
+palette = 3=#FFAB70
+palette = 4=#B392F1
+palette = 5=#E394DC
+palette = 6=#79B8FF
+palette = 7=#BBBBBB
+palette = 8=#5C5C5C
+palette = 9=#FF9CAA
+palette = 10=#A3D0FF
+palette = 11=#FFC9A3
+palette = 12=#CFB8FF
+palette = 13=#F3B8EC
+palette = 14=#A3D0FF
+palette = 15=#F8F8F8
 
 # GitHub Dark, customized
 # theme = GitHub Dark
@@ -98,7 +118,7 @@ window-padding-y = 10
 unfocused-split-opacity = 1
 background-opacity = 1
 
-background-opacity = 0.95
+background-opacity = 1
 background-blur-radius = 20
 
 keybind = option+super+left=previous_tab
